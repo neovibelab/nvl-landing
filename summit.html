@@ -278,6 +278,30 @@ section{ padding:100px 0; }
   color:var(--lime);
 }
 
+/* ── MODERATOR ── */
+.moderator{
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+  border:1px solid rgba(214,255,146,0.3);
+  background:var(--lime-mid);
+  padding:20px 28px; margin-bottom:32px;
+}
+.moderator-label{
+  font-family:'Space Mono',monospace;
+  font-size:10px; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--lime);
+  padding-right:20px; border-right:1px solid var(--gray-line);
+}
+.moderator-info{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+.moderator-name{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:16px; font-weight:700; color:var(--white);
+}
+.moderator-name .en{ font-size:12px; font-weight:400; color:var(--gray); margin-left:6px; }
+.moderator-role{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:13px; color:var(--gray);
+}
+
 /* ── SPEAKERS ── */
 .speakers-grid{
   display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
@@ -730,6 +754,13 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
     <p class="stories-note kr fade-in">
       기술·자본·통찰. 세 개의 축으로 AI 시대의 IP를 묻습니다. 인터뷰는 순차 공개됩니다.
     </p>
+    <div class="moderator fade-in">
+      <span class="moderator-label">Moderator</span>
+      <div class="moderator-info">
+        <span class="moderator-name kr">차우진<span class="en">Woojin Cha</span></span>
+        <span class="moderator-role kr">엔터문화연구소(Neo Vibe Lab) 대표 · 세 개 대담 전체 진행</span>
+      </div>
+    </div>
     <div class="speakers-grid fade-in">
 
       <a href="https://maily.so/draft.briefing/posts/wjzdxxq0r3p" target="_blank" rel="noopener" class="speaker-card linked">
