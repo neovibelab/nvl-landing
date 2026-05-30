@@ -180,6 +180,22 @@ section{ padding:100px 0; }
 }
 .divider{ height:1px; background:var(--gray-line); }
 
+/* ── CONCEPT (OK, Computer) ── */
+.concept{ border-bottom:1px solid var(--gray-line); }
+.concept-quote{
+  font-family:'Space Mono',monospace;
+  font-size:clamp(26px,4.6vw,54px); font-weight:700;
+  line-height:1.18; letter-spacing:-0.02em;
+  color:var(--lime); margin-bottom:36px; max-width:920px;
+}
+.concept-quote .star{ color:rgba(214,255,146,0.55); font-weight:400; }
+.concept-note{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:clamp(13px,1.6vw,15px); color:var(--gray);
+  line-height:2; max-width:640px;
+}
+.concept-note .star{ color:var(--lime); font-weight:700; }
+
 /* ── ABOUT ── */
 .about-body{
   display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;
@@ -617,6 +633,20 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
   <span class="supported-label">Supported by</span>
   <span class="supported-name">Neutune</span>
 </div>
+
+<!-- ── CONCEPT (OK, Computer) ── -->
+<section class="concept">
+  <div class="container">
+    <p class="section-tag fade-in">Theme — OK, Computer</p>
+    <p class="concept-quote fade-in">“Okay, computer.<br>I want full manual control now.” <span class="star">*</span></p>
+    <p class="concept-note fade-in">
+      <span class="star">*</span> 소설 《은하계를 여행하는 히치하이커를 위한 안내서》(1979)의 이 대사는
+      라디오헤드의 《OK Computer》(1997)의 제목으로 쓰였습니다.
+      컴퓨터가 인류의 미래였던 시대를 지나, AI가 일상화된 지금,
+      이 프롬프트가 새삼 의미심장하게 다가옵니다.
+    </p>
+  </div>
+</section>
 
 <!-- ── ABOUT ── -->
 <section id="about">
