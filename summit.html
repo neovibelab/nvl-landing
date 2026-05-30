@@ -349,6 +349,56 @@ section{ padding:100px 0; }
 }
 .btn-form:hover{ background:transparent; color:var(--lime); }
 
+/* ── NETWORKING (자만추) ── */
+.net-lead{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:clamp(15px,2vw,17px); line-height:1.9;
+  color:var(--white); max-width:680px;
+  margin-top:-16px; margin-bottom:18px;
+}
+.net-lead strong{ color:var(--lime); font-weight:700; }
+.net-mech{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:13px; color:var(--gray); line-height:1.8;
+  max-width:680px; margin-bottom:44px;
+}
+.net-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+}
+.net-card{
+  border:1px solid var(--gray-line);
+  background:var(--lime-mid);
+  padding:30px 28px;
+  transition:border-color 0.25s, transform 0.25s, background 0.25s;
+}
+.net-card:hover{
+  border-color:rgba(214,255,146,0.45);
+  background:var(--lime-dim);
+  transform:translateY(-4px);
+}
+.net-drop{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:'Space Mono',monospace;
+  font-size:10px; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--lime); margin-bottom:18px;
+}
+.net-drop::before{
+  content:'';
+  width:16px; height:16px;
+  border:1px solid var(--lime); border-top:none;
+  position:relative;
+}
+.net-drop .arrow{ font-size:13px; line-height:1; margin-left:-22px; }
+.net-title{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:17px; font-weight:700; line-height:1.4;
+  color:var(--white); margin-bottom:12px;
+}
+.net-desc{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:13px; color:var(--gray); line-height:1.8;
+}
+
 /* ── TICKETS ── */
 .tickets-section{ background:var(--lime); color:var(--black); }
 .tickets-section .section-tag{ color:rgba(0,0,0,0.4); }
@@ -497,6 +547,7 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
   .about-body{ grid-template-columns:1fr; gap:40px; }
   .stories-grid{ grid-template-columns:1fr; gap:20px; }
   .speakers-grid{ grid-template-columns:1fr; gap:20px; }
+  .net-grid{ grid-template-columns:1fr; gap:16px; }
   .qa-card{ grid-template-columns:1fr; gap:28px; padding:36px 28px; }
   .btn-form{ width:100%; text-align:center; }
   .ticket-single{ max-width:100%; padding:40px 32px; }
@@ -755,6 +806,58 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
 
 <div class="divider"></div>
 
+<!-- ── NETWORKING (자만추) ── -->
+<section id="networking">
+  <div class="container">
+    <p class="section-tag fade-in">Networking</p>
+    <h2 class="section-title fade-in">서밋 당일, 자만추</h2>
+    <p class="net-lead kr fade-in">
+      뉴타입 엔터 서밋의 진짜 목적은 <strong>연결</strong>입니다.
+      그래서 ‘서밋 온리’ 참석자를 위한 <strong>자연스러운 만남</strong>의 자리를 따로 준비했습니다.
+    </p>
+    <p class="net-mech kr fade-in">
+      행사 현장에 놓인 주제 박스에 명함을 넣어 보세요.
+      같은 관심사를 가진 동료들과 자연스럽게 뒤풀이로 이어집니다.
+      관심 가는 주제를 미리 점찍어 두세요.
+    </p>
+    <div class="net-grid fade-in">
+
+      <div class="net-card">
+        <span class="net-drop"><span class="arrow">↓</span>명함 박스 01</span>
+        <h3 class="net-title kr">AI 실무 도입, 맨땅에 헤딩 중</h3>
+        <p class="net-desc kr">ChatGPT부터 생성형 툴까지, 실무에 쓰려니 막막했던 순간들. “나만 어렵나?” 싶었던 AI 활용 시행착오와 날것의 생존 팁을 나눕니다.</p>
+      </div>
+
+      <div class="net-card">
+        <span class="net-drop"><span class="arrow">↓</span>명함 박스 02</span>
+        <h3 class="net-title kr">글로벌 IP 유통·수출 비하인드</h3>
+        <p class="net-desc kr">한국을 넘어 세계로. 콘텐츠와 IP를 해외 시장에 유통·수출하며 겪은 생생한 경험담과 글로벌 진출 전략을 공유합니다.</p>
+      </div>
+
+      <div class="net-card">
+        <span class="net-drop"><span class="arrow">↓</span>명함 박스 03</span>
+        <h3 class="net-title kr">엔터 업계 연차별 생존기</h3>
+        <p class="net-desc kr">주니어의 패기부터 시니어의 노하우까지. 각자의 위치에서 겪는 치열한 커리어 고민과 일하는 이야기를 함께 나눕니다.</p>
+      </div>
+
+      <div class="net-card">
+        <span class="net-drop"><span class="arrow">↓</span>명함 박스 04</span>
+        <h3 class="net-title kr">서밋 후기 딥토크</h3>
+        <p class="net-desc kr">당일 가장 인상 깊었던 세션은 무엇이었나요? 범람하는 트렌드 속에서 발견한 인사이트를 서로 더 깊게 디깅합니다.</p>
+      </div>
+
+      <div class="net-card">
+        <span class="net-drop"><span class="arrow">↓</span>명함 박스 05</span>
+        <h3 class="net-title kr">그냥 가긴 아쉽고, 시원한 맥주 한 잔</h3>
+        <p class="net-desc kr">복잡한 비즈니스 얘기는 잠시 내려놓고. 오늘 서밋을 함께 즐긴 동료들과 생맥주 부딪치며 느슨한 업계 친구를 만들어 보세요.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ── TICKETS ── -->
 <section id="tickets" class="tickets-section">
   <div class="container">
@@ -768,7 +871,7 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
         <li>서밋 전 세션 참관</li>
         <li>키노트 — OK, Computer</li>
         <li>패널 디스커션</li>
-        <li>밍글링 네트워킹</li>
+        <li>자만추 뒤풀이 참여 (명함 박스)</li>
       </ul>
       <div class="ticket-cta-wrap">
         <a href="https://booking.naver.com/booking/5/bizes/666684/items/7673120" target="_blank" rel="noopener" class="btn-reserve">
