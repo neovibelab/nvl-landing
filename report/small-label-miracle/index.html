@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>중소의 기적 — 계보와 조건 | Neo Vibe Lab</title>
+<meta name="description" content="BTS부터 리센느까지, 27팀 전수 분석. 미디어 환경 × 돌파 유형 × 초기 팬 확보 × 지속 구조의 4축으로 읽는 중소 기획사 돌파의 구조.">
+<meta property="og:title" content="중소의 기적 — 계보와 조건">
+<meta property="og:description" content="27팀 전수 분석 · 4축 프레임 · 3개 시기 · 6개 시대불변 규칙. 엔터문화연구소 리서치 리포트.">
+<meta property="og:image" content="https://www.neovibelab.com/images/banner.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.neovibelab.com/report/small-label-miracle">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#D6FF92;--lime-dim:rgba(214,255,146,0.10);--black:#0A0A0A;--dark:#111;
+  --gray:#888;--gray-dark:#333;--gray-line:rgba(255,255,255,0.06);--white:#F0F0EA;
+  --paper:#F6F4EA;--lime-ink:#566B17;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit','Noto Sans KR',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--lime);color:var(--black)}
+img{display:block;max-width:100%}
+.mono{font-family:'DM Mono',monospace}
+.serif{font-family:'Noto Serif KR','Batang',serif}
+.label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime)}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+.narrow{max-width:800px;margin:0 auto;padding:0 40px}
+.btn{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
+.btn-lime{background:var(--lime);color:var(--black)}
+.btn-lime:hover{background:var(--white)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid var(--gray-dark)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+.btn-dark{background:var(--dark);color:var(--white);border:1px solid var(--gray-dark)}
+.btn-dark:hover{border-color:var(--lime)}
+
+/* ── Nav ── */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-line)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);text-decoration:none}
+.nav-logo img{width:28px;height:28px}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--lime)}
+.nav-links a.active{color:var(--lime)}
+.nav-links a.nav-summit{color:var(--lime);font-weight:500;font-family:'Noto Sans KR',sans-serif;text-transform:none;letter-spacing:0;white-space:nowrap}
+.nav-links a.nav-summit::before{content:"● ";font-size:8px;vertical-align:middle}
+
+/* ── Report Hero ── */
+.report-hero{padding:140px 0 80px;border-bottom:1px solid var(--gray-line)}
+.report-hero .label{margin-bottom:24px}
+.report-hero h1{font-family:'Noto Serif KR','Batang',serif;font-size:clamp(36px,6vw,64px);font-weight:900;line-height:1.15;margin-bottom:12px}
+.report-hero .sub{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:24px;max-width:640px}
+.report-meta{font-family:'DM Mono',monospace;font-size:12px;color:var(--gray-dark);letter-spacing:.06em;margin-bottom:36px;display:flex;flex-wrap:wrap;gap:20px}
+.report-meta span{color:var(--gray)}
+.report-hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ── Stats Bar ── */
+.stats-bar{background:var(--dark);border-bottom:1px solid var(--gray-line);padding:40px 0}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.stat-item{text-align:center;padding:20px}
+.stat-item .num{font-family:'DM Mono',monospace;font-size:36px;font-weight:500;color:var(--lime);display:block;line-height:1}
+.stat-item .lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);display:block;margin-top:6px}
+
+/* ── Framework ── */
+.framework{padding:80px 0;border-bottom:1px solid var(--gray-line)}
+.framework h2{font-size:24px;font-weight:700;margin-bottom:32px}
+.axes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
+.axis-card{border:1px solid var(--gray-dark);padding:28px;transition:border-color .3s}
+.axis-card:hover{border-color:var(--lime)}
+.axis-card .axis-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--lime);letter-spacing:.1em;margin-bottom:8px}
+.axis-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.axis-card p{font-size:13px;color:var(--gray);line-height:1.7}
+.thesis{background:var(--dark);border-left:3px solid var(--lime);padding:28px 32px;margin-top:40px}
+.thesis p{font-family:'Noto Serif KR','Batang',serif;font-size:16px;line-height:1.9;color:var(--white)}
+.thesis p strong{color:var(--lime)}
+
+/* ── TOC ── */
+.toc-section{padding:80px 0;border-bottom:1px solid var(--gray-line)}
+.toc-section h2{font-size:20px;font-weight:700;margin-bottom:32px}
+.toc-list{list-style:none;counter-reset:toc}
+.toc-list li{padding:14px 0;border-bottom:1px solid var(--gray-line);font-size:15px;color:var(--gray);display:flex;justify-content:space-between;align-items:baseline}
+.toc-list li .t{color:var(--white);font-weight:500}
+.toc-list li .rest{font-size:13px;color:var(--gray-dark)}
+
+/* ── Subscribe CTA ── */
+.subscribe-cta{padding:80px 0;background:var(--dark);border-bottom:1px solid var(--gray-line)}
+.subscribe-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.subscribe-left h2{font-size:24px;font-weight:700;margin-bottom:12px}
+.subscribe-left p{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:24px}
+.subscribe-left .highlight{font-size:13px;color:var(--lime);font-family:'DM Mono',monospace}
+.subscribe-form{min-height:320px}
+.subscribe-form iframe{width:100%;min-height:280px;border:none}
+
+/* ── Download CTA ── */
+.download-cta{background:var(--lime);color:var(--black);padding:60px 0}
+.download-inner{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.download-inner h2{font-size:24px;font-weight:700}
+.download-inner p{font-size:14px;color:rgba(0,0,0,0.5);margin-top:4px}
+.btn-pdf{background:var(--black);color:var(--lime);padding:16px 32px;font-size:13px}
+.btn-pdf:hover{background:var(--dark)}
+
+/* ── Footer ── */
+footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);letter-spacing:.05em}
+footer a{color:var(--gray);text-decoration:none}
+footer a:hover{color:var(--lime)}
+
+@media(max-width:900px){
+  nav{padding:16px 24px}.nav-links{gap:16px}
+  .container,.narrow{padding:0 24px}
+  .report-hero{padding:120px 0 60px}
+  .axes-grid,.subscribe-layout{grid-template-columns:1fr;gap:32px}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .download-inner{flex-direction:column;text-align:center}
+}
+@media(max-width:540px){
+  .stats-row{grid-template-columns:1fr 1fr}
+  .nav-links li:not(.nav-summit-li){display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ════ Nav ════ -->
+<nav>
+  <a href="/" class="nav-logo"><img src="/images/nvl-logo.png" alt="NVL">Neo Vibe Lab</a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#research" class="active">Research</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#newsletter">Newsletter</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li class="nav-summit-li"><a href="/summit" class="nav-summit">뉴타입 엔터 서밋 2026</a></li>
+  </ul>
+</nav>
+
+<!-- ════ Report Hero ════ -->
+<section class="report-hero">
+  <div class="container">
+    <p class="label">리서치 리포트 · ECRI Report Series</p>
+    <h1>중소의 기적</h1>
+    <p class="sub">계보와 조건 — 3개 시기로 읽는 중소 기획사 돌파의 구조</p>
+    <div class="report-meta">
+      <span>2026.06</span>
+      <span>엔터문화연구소</span>
+      <span>27팀 전수 분석</span>
+      <span>28p · 1.7MB</span>
+    </div>
+    <div class="cta-row">
+      <a href="/reports/small-label-miracle-2026.pdf" class="btn btn-lime">PDF 다운로드</a>
+      <a href="#subscribe" class="btn btn-ghost">뉴스레터 구독</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Stats Bar ════ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-item"><span class="num">27</span><span class="lbl">Teams Analyzed</span></div>
+      <div class="stat-item"><span class="num">4</span><span class="lbl">Analysis Axes</span></div>
+      <div class="stat-item"><span class="num">3</span><span class="lbl">Media Eras</span></div>
+      <div class="stat-item"><span class="num">6</span><span class="lbl">Timeless Rules</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ Framework ════ -->
+<section class="framework">
+  <div class="narrow">
+    <p class="label" style="margin-bottom:16px">Analytical Framework</p>
+    <h2>4축 분석 프레임</h2>
+    <div class="axes-grid">
+      <div class="axis-card">
+        <p class="axis-num">Axis 01</p>
+        <h3>미디어 환경</h3>
+        <p>발견의 조건 — 어떤 기적이 가능한지를 시대가 규정한다. 방송·음원(1기) → 유튜브·SNS(2기) → 숏폼·알고리즘(3기).</p>
+      </div>
+      <div class="axis-card">
+        <p class="axis-num">Axis 02</p>
+        <h3>돌파 유형</h3>
+        <p>음악중심형 · 바이럴형 · 틈새공략형 — 미디어 환경이 열릴수록 가능한 돌파의 종류가 늘어난다.</p>
+      </div>
+      <div class="axis-card">
+        <p class="axis-num">Axis 03</p>
+        <h3>초기 팬 확보</h3>
+        <p>어디서 첫 팬을 만들었나 — 발견과 지속 사이의 독립 변수. 음방 · SNS · 해외 · 숏폼 · 니치 커뮤니티.</p>
+      </div>
+      <div class="axis-card">
+        <p class="axis-num">Axis 04</p>
+        <h3>지속 구조</h3>
+        <p>음악 엔진 · 조직 안정성 · 자본 — 시대와 무관하게, 기적이 지속되려면 반드시 갖춰야 할 것들.</p>
+      </div>
+    </div>
+    <div class="thesis">
+      <p><strong>미디어 환경</strong>이 기적의 종류를 결정하고, <strong>초기 팬 확보</strong>가 기적의 시작을 결정하고, <strong>음악 엔진</strong>이 기적의 지속을 결정한다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Table of Contents ════ -->
+<section class="toc-section">
+  <div class="narrow">
+    <p class="label" style="margin-bottom:16px">Contents</p>
+    <h2>목차</h2>
+    <ul class="toc-list">
+      <li><span class="t">1. 용어의 탄생</span></li>
+      <li><span class="t">2. 시기별 그루핑</span><span class="rest">미디어 환경이 기적의 종류를 결정한다</span></li>
+      <li><span class="t">3. 시대 간 비교</span><span class="rest">미디어 환경이 바꾸는 것</span></li>
+      <li><span class="t">4. 4분면</span><span class="rest">미디어 전략 × 음악 엔진</span></li>
+      <li><span class="t">5. 교차 패턴</span></li>
+      <li><span class="t">6. 반례 분석</span></li>
+      <li><span class="t">7. 공통 조건 vs 시대 특수 조건</span></li>
+      <li><span class="t">8. 벤치마킹 전략</span><span class="rest">"다음 기회"를 어떻게 쓸 것인가</span></li>
+      <li><span class="t">9. 핵심 테제</span></li>
+      <li><span class="t">10. 시대불변 규칙</span><span class="rest">미디어가 뭘로 바뀌든</span></li>
+      <li><span class="t">11. 시장 구조 데이터</span><span class="rest">기적의 배경</span></li>
+      <li><span class="t">Sources</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════ Subscribe CTA ════ -->
+<section class="subscribe-cta" id="subscribe">
+  <div class="container">
+    <div class="subscribe-layout">
+      <div class="subscribe-left">
+        <p class="label" style="margin-bottom:16px">Newsletter</p>
+        <h2>이 프레임으로 매주 분석합니다</h2>
+        <p>차우진의 엔터문화연구소 뉴스레터를 구독하면 리서치 리포트, 산업 분석, 케이스 스터디를 정기적으로 받아볼 수 있습니다. 다음 리포트를 가장 먼저 받으세요.</p>
+        <p class="highlight">7,000+ subscribers · 주 2~3회 발행</p>
+      </div>
+      <div class="subscribe-form">
+        <iframe src="https://maily.so/draft.briefing/embed" style="width:100%;min-height:280px;border:none" loading="lazy" title="뉴스레터 구독"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Download CTA ════ -->
+<section class="download-cta">
+  <div class="container">
+    <div class="download-inner">
+      <div>
+        <h2>리포트 전문 PDF 다운로드</h2>
+        <p>28페이지 · 도식 4종 · 27팀 전수 분석 데이터</p>
+      </div>
+      <a href="/reports/small-label-miracle-2026.pdf" class="btn btn-pdf mono">↓ PDF · 1.7 MB</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Footer ════ -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 <a href="/">Neo Vibe Lab</a>, Seoul. 엔터문화연구소 · All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
