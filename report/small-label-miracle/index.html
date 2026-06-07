@@ -236,6 +236,25 @@ footer a:hover{color:var(--lime)}
   .report-hero .hero-grid{ grid-template-columns:1fr; gap:30px; }
   .hero-cover{ max-width:330px; }
 }
+/* ── 서밋 광고 (웹 노출) ── */
+.report-body .ad--banner{ margin:30px 0; background:var(--lime); border-radius:6px; padding:14px 18px; }
+.report-body .ad--banner .b-row{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.report-body .ad--banner .b-k{ font-size:13px; font-weight:800; color:#0a0a0a; }
+.report-body .ad--banner .b-t{ font-size:13px; color:#1a1a12; font-weight:600; }
+.report-body .ad--banner .b-cta{ margin-left:auto; font-size:12px; font-weight:800; color:var(--lime); background:#0a0a0a; padding:5px 14px; border-radius:3px; text-decoration:none; white-space:nowrap; }
+.report-body .ad--banner .b-meta{ font-size:11px; color:#3f3b2a; margin-top:6px; width:100%; }
+.report-body .ad--poster{ height:auto; break-before:auto; background:#0a0a0a; border:1px solid var(--gray-line); border-radius:8px; overflow:hidden; display:flex; flex-direction:column; align-items:center; position:relative; margin:36px 0; padding:0 0 20px; }
+.report-body .ad--poster .ad-badge{ position:absolute; top:12px; left:14px; z-index:3; font-size:10px; letter-spacing:.2em; color:var(--lime); font-weight:700; background:rgba(10,10,10,.55); padding:4px 9px; border-radius:3px; }
+.report-body .ad-poster-img{ display:block; width:100%; max-width:540px; height:auto; }
+.report-body .ad-poster-bar{ width:100%; display:flex; flex-direction:column; align-items:center; gap:14px; padding:18px 24px 0; text-align:center; }
+.report-body .ad-poster-bridge{ font-size:15px; line-height:1.6; color:#F2EEE0; font-weight:600; max-width:580px; }
+.report-body .ad-poster-bridge .ad-bridge-em{ color:var(--lime); font-weight:800; }
+.report-body .ad-poster-bar .ad-cta{ background:var(--lime); color:#0a0a0a; font-weight:800; font-size:14px; padding:12px 28px; border-radius:4px; text-decoration:none; }
+/* ── 위로 가기 플로팅 버튼 ── */
+#toTop{ position:fixed; bottom:28px; right:28px; z-index:300; width:48px; height:48px; border-radius:50%; border:none; background:var(--lime); color:#0a0a0a; font-size:20px; font-weight:800; cursor:pointer; opacity:0; pointer-events:none; transition:opacity .25s, transform .2s; box-shadow:0 4px 18px rgba(0,0,0,.45); }
+#toTop.show{ opacity:1; pointer-events:auto; }
+#toTop:hover{ transform:translateY(-3px); background:#fff; }
+@media(max-width:560px){ #toTop{ bottom:18px; right:18px; width:44px; height:44px; } }
 </style>
 </head>
 <body>
@@ -267,7 +286,7 @@ footer a:hover{color:var(--lime)}
         <span>38p · 10.5MB</span>
       </div>
       <div class="cta-row">
-        <a href="/reports/small-label-miracle-2026.pdf" class="btn btn-lime">PDF 다운로드</a>
+        <a href="/reports/small-label-miracle-2026.pdf" target="_blank" rel="noopener" class="btn btn-lime">PDF 다운로드</a>
         <a href="#subscribe" class="btn btn-ghost">뉴스레터 구독</a>
       </div>
       <p class="hero-contact"><b>강연 · 협업 문의</b> &nbsp;<a href="mailto:woojin@neovibelab.com" onclick="gtag('event','contact_click',{method:'email',location:'report'})">woojin@neovibelab.com</a></p>
@@ -276,51 +295,6 @@ footer a:hover{color:var(--lime)}
       <img src="cover-geoje.jpg" alt="'거제 야호' — 리센느 원이·미나미 (중소의 기적 표지)">
       <figcaption>리센느 '거제 야호' · 원이 유튜브 채널(솔파스튜디오)</figcaption>
     </figure>
-  </div>
-</section>
-
-<!-- ════ Stats Bar ════ -->
-<div class="stats-bar">
-  <div class="container">
-    <div class="stats-row">
-      <div class="stat-item"><span class="num">27</span><span class="lbl">Teams Analyzed</span></div>
-      <div class="stat-item"><span class="num">4</span><span class="lbl">Analysis Axes</span></div>
-      <div class="stat-item"><span class="num">3</span><span class="lbl">Media Eras</span></div>
-      <div class="stat-item"><span class="num">6</span><span class="lbl">Timeless Rules</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- ════ Framework ════ -->
-<section class="framework">
-  <div class="narrow">
-    <p class="label" style="margin-bottom:16px">Analytical Framework</p>
-    <h2>4축 분석 프레임</h2>
-    <div class="axes-grid">
-      <div class="axis-card">
-        <p class="axis-num">Axis 01</p>
-        <h3>미디어 환경</h3>
-        <p>발견의 조건 — 어떤 기적이 가능한지를 시대가 규정한다. 방송·음원(1기) → 유튜브·SNS(2기) → 숏폼·알고리즘(3기).</p>
-      </div>
-      <div class="axis-card">
-        <p class="axis-num">Axis 02</p>
-        <h3>돌파 유형</h3>
-        <p>음악중심형 · 바이럴형 · 틈새공략형 — 미디어 환경이 열릴수록 가능한 돌파의 종류가 늘어난다.</p>
-      </div>
-      <div class="axis-card">
-        <p class="axis-num">Axis 03</p>
-        <h3>초기 팬 확보</h3>
-        <p>어디서 첫 팬을 만들었나 — 발견과 지속 사이의 독립 변수. 음방 · SNS · 해외 · 숏폼 · 니치 커뮤니티.</p>
-      </div>
-      <div class="axis-card">
-        <p class="axis-num">Axis 04</p>
-        <h3>지속 구조</h3>
-        <p>음악 동력 · 조직 안정성 · 자본 — 시대와 무관하게, 기적이 지속되려면 반드시 갖춰야 할 것들.</p>
-      </div>
-    </div>
-    <div class="thesis">
-      <p><strong>미디어 환경</strong>이 기적의 종류를 결정하고, <strong>초기 팬 확보</strong>가 기적의 시작을 결정하고, <strong>음악 동력</strong>이 기적의 지속을 결정한다.</p>
-    </div>
   </div>
 </section>
 
@@ -708,7 +682,10 @@ footer a:hover{color:var(--lime)}
 <p><strong>해외 우회가 본격적 전략이 됐다.</strong> 에이티즈(빌보드 200 1위 2회), 키오프(빌보드 200 진입). 국내 벽이 대형사 장악+시장 축소로 높아진 반면, 글로벌 K-pop 팬덤은 커졌다. 해외에서 먼저 규모를 만들고 국내로 역수입하는 경로가 전략적 선택지가 됨.</p>
 </div><hr>
 
-<h2 class="part-start" id="sec-3"><span class="part-eyebrow"><span class="pk">Ⅲ · 구조 분석</span><span class="pd">무엇이 기적을 만드는가</span></span>3. 시대 간 비교: 미디어 환경이 바꾸는 것</h2>
+<div class="ad ad--banner">
+  <div class="b-row"><span class="b-k">[뉴타입 엔터 서밋 2026 Summer]</span><span class="b-t">AI 시대의 엔터테인먼트 IP 비즈니스</span><a target="_blank" rel="noopener" class="b-cta" href="https://www.neovibelab.com/summit">예약 →</a></div>
+  <div class="b-meta">2026.06.12 FRI · TARTINE · Supported by Neutune · neovibelab.com/summit</div>
+</div><h2 class="part-start" id="sec-3"><span class="part-eyebrow"><span class="pk">Ⅲ · 구조 분석</span><span class="pd">무엇이 기적을 만드는가</span></span>3. 시대 간 비교: 미디어 환경이 바꾸는 것</h2>
 <h3>유형 분포의 변화</h3>
 <table>
 <thead>
@@ -1153,7 +1130,14 @@ footer a:hover{color:var(--lime)}
 </tbody></table>
 <hr>
 
-<h2 class="part-start" id="sec-8"><span class="part-eyebrow"><span class="pk">Ⅳ · 전략과 결론</span><span class="pd">그래서 어떻게 해야 할까?</span></span>8. 벤치마킹 전략: &quot;다음 기회&quot;를 어떻게 쓸 것인가</h2>
+<section class="ad ad--poster">
+  <div class="ad-badge">ADVERTISEMENT</div>
+  <img class="ad-poster-img" src="summit-kv.png" alt="뉴타입 엔터 서밋 2026 Summer — OK, Computer">
+  <div class="ad-poster-bar">
+    <div class="ad-poster-bridge">「중소의 기적」은 미디어 변화 덕분이었습니다. 그럼 AI 시대의 기적은 어디서 가능할까요?<br>엔터·플랫폼·기술·투자업계가 모이는 <b class="ad-bridge-em">[뉴타입 엔터 서밋 2026]</b>에서 확인하세요.</div>
+    <a target="_blank" rel="noopener" class="ad-cta" href="https://www.neovibelab.com/summit">예약하기 → neovibelab.com/summit</a>
+  </div>
+</section><h2 class="part-start" id="sec-8"><span class="part-eyebrow"><span class="pk">Ⅳ · 전략과 결론</span><span class="pd">그래서 어떻게 해야 할까?</span></span>8. 벤치마킹 전략: &quot;다음 기회&quot;를 어떻게 쓸 것인가</h2>
 <h3>전제: 미디어 환경 읽기가 1단계, 초기 팬 설계가 2단계다</h3>
 <p>기적의 유형이 뭐든, <strong>당대의 미디어 환경에서 대형사가 아직 장악하지 않은 채널을 식별하는 것</strong>이 첫 번째 과제이고, <strong>그 채널에서 첫 팬을 어떻게 만들지 설계하는 것</strong>이 두 번째 과제다. 3기에서는 이 두 과제가 완전히 다른 역량을 요구한다. 2026년 현재:</p>
 <ul>
@@ -1430,7 +1414,10 @@ footer a:hover{color:var(--lime)}
 <p><strong>6개 규칙의 우선순위</strong>: 5(조직) → 6(동력) → 1(기회 식별) → 3(채널 선점) → 4(팬 전환) → 2(속도). 5와 6이 없으면 나머지가 무의미하고, 1~4는 미디어가 바뀔 때마다 실행 방법이 달라지지만 규칙 자체는 동일하다.</p>
 <hr>
 
-<h2 class="part-start" id="sec-11"><span class="part-eyebrow"><span class="pk">참고 · Appendix</span><span class="pd">데이터 · 출처 · 더 읽을거리</span></span>11. 시장 구조 데이터: 기적의 배경</h2>
+<div class="ad ad--banner">
+  <div class="b-row"><span class="b-k">[뉴타입 엔터 서밋 2026 Summer]</span><span class="b-t">AI 시대의 엔터테인먼트 IP 비즈니스</span><a target="_blank" rel="noopener" class="b-cta" href="https://www.neovibelab.com/summit">예약 →</a></div>
+  <div class="b-meta">2026.06.12 FRI · TARTINE · Supported by Neutune · neovibelab.com/summit</div>
+</div><h2 class="part-start" id="sec-11"><span class="part-eyebrow"><span class="pk">참고 · Appendix</span><span class="pd">데이터 · 출처 · 더 읽을거리</span></span>11. 시장 구조 데이터: 기적의 배경</h2>
 <h3>K-pop 수출액 추이 (KOCCA)</h3>
 <table>
 <thead>
@@ -1728,7 +1715,7 @@ footer a:hover{color:var(--lime)}
         <h2>리포트 전문 PDF 다운로드</h2>
         <p>38페이지 · 도식 4종 · 27팀 전수 분석 데이터</p>
       </div>
-      <a href="/reports/small-label-miracle-2026.pdf" class="btn btn-pdf mono">↓ PDF · 10.5 MB</a>
+      <a href="/reports/small-label-miracle-2026.pdf" target="_blank" rel="noopener" class="btn btn-pdf mono">↓ PDF · 10.5 MB</a>
     </div>
   </div>
 </section>
@@ -1740,5 +1727,9 @@ footer a:hover{color:var(--lime)}
   </div>
 </footer>
 
+<button id="toTop" aria-label="위로 가기" title="위로 가기">↑</button>
+<script>
+(function(){var b=document.getElementById('toTop');if(!b)return;addEventListener('scroll',function(){b.classList.toggle('show',(window.scrollY||document.documentElement.scrollTop)>500);},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();
+</script>
 </body>
 </html>
