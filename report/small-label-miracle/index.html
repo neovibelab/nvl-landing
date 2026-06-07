@@ -222,6 +222,20 @@ footer a:hover{color:var(--lime)}
   .report-body .rb-inner{ padding:0 24px; font-size:15px; }
   .report-body h2{ font-size:25px; margin-top:56px; }
 }
+/* ── Hero 2-col + 커버 이미지 ── */
+.report-hero .hero-grid{ display:grid; grid-template-columns:1fr 320px; gap:48px; align-items:center; }
+.hero-cover{ margin:0; }
+.hero-cover img{ width:100%; border-radius:8px; border:1px solid var(--gray-line); display:block; }
+.hero-cover figcaption{ font-family:'DM Mono',monospace; font-size:10px; color:var(--gray-dark); margin-top:9px; letter-spacing:.02em; line-height:1.5; }
+/* ── 목차 그룹 헤더 ── */
+.toc-list li.toc-grp{ display:block; border-bottom:none; padding:26px 0 4px; }
+.toc-list li.toc-grp:first-child{ padding-top:0; }
+.toc-grp .g{ font-family:'DM Mono',monospace; font-size:13px; font-weight:700; color:var(--lime); letter-spacing:.04em; }
+.toc-grp .gd{ font-size:12px; color:var(--gray); margin-left:10px; }
+@media(max-width:860px){
+  .report-hero .hero-grid{ grid-template-columns:1fr; gap:30px; }
+  .hero-cover{ max-width:330px; }
+}
 </style>
 </head>
 <body>
@@ -231,7 +245,7 @@ footer a:hover{color:var(--lime)}
   <a href="/" class="nav-logo"><img src="/images/nvl-logo.png" alt="NVL">Neo Vibe Lab</a>
   <ul class="nav-links">
     <li><a href="/#about">About</a></li>
-    <li><a href="/#research" class="active">Research</a></li>
+    <li><a href="/#report" class="active">Report</a></li>
     <li><a href="/#services">Services</a></li>
     <li><a href="/#newsletter">Newsletter</a></li>
     <li><a href="/#contact">Contact</a></li>
@@ -241,21 +255,27 @@ footer a:hover{color:var(--lime)}
 
 <!-- ════ Report Hero ════ -->
 <section class="report-hero">
-  <div class="container">
-    <p class="label">리서치 리포트 · ECRI Report Series</p>
-    <h1>'중소의 기적'을 만드는 전략</h1>
-    <p class="sub">'거제 야호'의 법칙: 2009~26년 중소 돌파 구조 분석</p>
-    <div class="report-meta">
-      <span>2026.06</span>
-      <span>엔터문화연구소</span>
-      <span>27팀 전수 분석</span>
-      <span>38p · 10.5MB</span>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="label">리서치 리포트 · ECRI Report Series</p>
+      <h1>'중소의 기적'을 만드는 전략</h1>
+      <p class="sub">'거제 야호'의 법칙: 2009~26년 중소 돌파 구조 분석</p>
+      <div class="report-meta">
+        <span>2026.06</span>
+        <span>엔터문화연구소</span>
+        <span>27팀 전수 분석</span>
+        <span>38p · 10.5MB</span>
+      </div>
+      <div class="cta-row">
+        <a href="/reports/small-label-miracle-2026.pdf" class="btn btn-lime">PDF 다운로드</a>
+        <a href="#subscribe" class="btn btn-ghost">뉴스레터 구독</a>
+      </div>
+      <p class="hero-contact"><b>강연 · 협업 문의</b> &nbsp;<a href="mailto:woojin@neovibelab.com" onclick="gtag('event','contact_click',{method:'email',location:'report'})">woojin@neovibelab.com</a></p>
     </div>
-    <div class="cta-row">
-      <a href="/reports/small-label-miracle-2026.pdf" class="btn btn-lime">PDF 다운로드</a>
-      <a href="#subscribe" class="btn btn-ghost">뉴스레터 구독</a>
-    </div>
-    <p class="hero-contact"><b>강연 · 협업 문의</b> &nbsp;<a href="mailto:woojin@neovibelab.com" onclick="gtag('event','contact_click',{method:'email',location:'report'})">woojin@neovibelab.com</a></p>
+    <figure class="hero-cover">
+      <img src="cover-geoje.jpg" alt="'거제 야호' — 리센느 원이·미나미 (중소의 기적 표지)">
+      <figcaption>리센느 '거제 야호' · 원이 유튜브 채널(솔파스튜디오)</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -310,16 +330,21 @@ footer a:hover{color:var(--lime)}
     <p class="label" style="margin-bottom:16px">Contents</p>
     <h2>목차</h2>
     <ul class="toc-list">
+      <li class="toc-grp"><span class="g">Ⅰ · 개념 정의</span><span class="gd">'중소의 기적'이란 무엇인가</span></li>
       <li><a href="#sec-1"><span class="t">1. 용어의 탄생</span><span class="rest">'중소돌의 기적'은 어떻게 산업 담론이 됐나</span></a></li>
+      <li class="toc-grp"><span class="g">Ⅱ · 실증 리서치</span><span class="gd">27팀 전수 분류</span></li>
       <li><a href="#sec-2"><span class="t">2. 시기별 특징</span><span class="rest">미디어 환경이 기적의 종류를 결정한다</span></a></li>
+      <li class="toc-grp"><span class="g">Ⅲ · 구조 분석</span><span class="gd">무엇이 기적을 만드는가</span></li>
       <li><a href="#sec-3"><span class="t">3. 시대 간 비교</span><span class="rest">미디어가 바뀌면 발견과 지속의 조건도 바뀐다</span></a></li>
       <li><a href="#sec-4"><span class="t">4. 기적의 4분면</span><span class="rest">미디어 전략 × 음악 동력</span></a></li>
       <li><a href="#sec-5"><span class="t">5. 교차 패턴</span><span class="rest">시대를 관통해 반복되는 구조</span></a></li>
       <li><a href="#sec-6"><span class="t">6. 반례 분석</span><span class="rest">기적에 실패한 팀들이 알려주는 것</span></a></li>
       <li><a href="#sec-7"><span class="t">7. 공통 조건 vs 특수 조건</span><span class="rest">시대마다 변하지 않는 것과 변하는 것</span></a></li>
+      <li class="toc-grp"><span class="g">Ⅳ · 전략과 결론</span><span class="gd">그래서 어떻게 해야 할까?</span></li>
       <li><a href="#sec-8"><span class="t">8. 벤치마킹 전략</span><span class="rest">'다음 기회'를 어떻게 선점할 것인가</span></a></li>
       <li><a href="#sec-9"><span class="t">9. 핵심 테제</span><span class="rest">미디어·초기 팬·음악이 기적을 결정한다</span></a></li>
       <li><a href="#sec-10"><span class="t">10. 시대불변 규칙</span><span class="rest">미디어가 어떻게 바뀌든 유효한 여섯 가지</span></a></li>
+      <li class="toc-grp"><span class="g">참고 · Appendix</span><span class="gd">데이터 · 출처 · 더 읽을거리</span></li>
       <li><a href="#sec-11"><span class="t">11. 시장 구조 데이터</span><span class="rest">기적의 배경이 된 산업 지표</span></a></li>
       <li><a href="#sec-12"><span class="t">Sources</span><span class="rest">인용·참고 출처</span></a></li>
     </ul>
@@ -330,7 +355,11 @@ footer a:hover{color:var(--lime)}
 <section class="report-body"><div class="rb-inner">
 <hr>
 <h2 class="part-start" id="sec-1"><span class="part-eyebrow"><span class="pk">Ⅰ · 개념 정의</span><span class="pd">'중소의 기적'이란 무엇인가</span></span>1. 용어의 탄생</h2>
-<p>&quot;중소의 기적&quot;은 2009~2011년 비스트를 기점으로 형성. <strong>2011년 비스트가 3대 기획사 바깥 남자 그룹으로서 MMA 대상(올해의 아티스트)을 수상하면서 결정화됐다.</strong> 비(非)빅3 남자 아이돌의 대상 수상은 극히 이례적인 사건이었다. 카라(2007~)는 DSP미디어가 구 대형사였으므로 &#39;넘어진 대형사의 회생&#39;에 가까우나, 한승연의 &#39;소녀가장&#39; 서사는 이후 <strong>모든 중소돌 서사의 감정적 원형</strong>이 된다.</p>
+<p>&quot;중소의 기적&quot;은 2009~2011년 비스트를 기점으로 형성. <strong>2011년 비스트가 3대 기획사 바깥 남자 그룹으로서 MMA 대상(올해의 아티스트)을 수상하면서 결정화됐다.</strong> 비(非)빅3 남자 아이돌의 대상 수상은 극히 이례적인 사건이었다. 카라(2007~)는 DSP미디어가 구 대형사였으므로 &#39;넘어진 대형사의 회생&#39;에 가까우나, 한승연의 &#39;소녀가장&#39; 서사는 이후 <strong>모든 중소돌 서사의 감정적 원형</strong>이 된다.</p><div class="photo-block photo-block--duo">
+    <div class="photo-duo"><img src="img-kara-2.jpg" alt="카라 한승연 '한듣보' 시절 예능 출연"><img src="img-kara-1.jpg" alt="카라 한승연 '한듣보' 시절 예능 출연"></div>
+    <div class="photo-caption">카라 한승연의 '한듣보' 시절. 데뷔 초 예능에서 카라를 알리는 데 앞장선 '소녀가장' 서사의 완성.</div>
+    <div class="photo-credit">MBC every1 「가족이 닮았네」</div>
+  </div>
 <hr>
 <h2 class="part-start" id="sec-2"><span class="part-eyebrow"><span class="pk">Ⅱ · 실증 리서치</span><span class="pd">27팀 전수 분류</span></span>2. 시기별 특징: 미디어 환경이 기적의 종류를 결정한다</h2>
 <p>27팀을 **미디어 환경 기준 3개 시기〈중소의 기적 1기·2기·3기〉**로 나누고(본문·표에서는 짧게 1기·2기·3기로 표기), 각 시기 안에서 <strong>돌파 유형</strong>을 분류한다.</p>
@@ -583,7 +612,11 @@ footer a:hover{color:var(--lime)}
 <li>해외 투어 직접 뚫기(빌보드 우회)</li>
 <li>멜론 24Hits 차트 개편(2020)으로 조직적 스트리밍 영향력 약화 → 비팬덤 소규모 아티스트에 상대적 유리</li>
 <li>다만 <strong>2024~2025년 침체기</strong>(앨범 판매 −19.6%, 빅4 주가 동반 하락, 중소돌 대량 해체)가 틈의 활용 자체를 어렵게 만드는 구조적 압력</li>
-</ul>
+</ul><div class="photo-block">
+    <img src="img-geoje-meme.jpg" alt="리센느 '거제 야호' 밈">
+    <div class="photo-caption">리센느 '거제 야호' 밈: 원이·미나미의 거제 여행 숏폼에서 나온 장면. 이 캐릭터 콘텐츠가 「러브 어택」 338일 역주행의 방아쇠가 됐다.</div>
+    <div class="photo-credit">원이 유튜브 채널(솔파스튜디오)</div>
+  </div>
 <table>
 <thead>
 <tr>
