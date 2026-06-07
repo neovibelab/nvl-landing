@@ -130,6 +130,98 @@ footer a:hover{color:var(--lime)}
   .stats-row{grid-template-columns:1fr 1fr}
   .nav-links li:not(.nav-summit-li){display:none}
 }
+
+/* ════ Full Report Body (엔진 본문 이식 — 전문 공개) ════ */
+.report-body{ --ink:#ECE8DA; --paper-2:#1B1B17; --line:#33312A; --muted:#8E8A79; --fail:#E05656; --lime-ink:#CBEE82;
+  padding:20px 0 80px; border-bottom:1px solid var(--gray-line); }
+.report-body .rb-inner{ max-width:820px; margin:0 auto; padding:0 40px; color:var(--ink);
+  font-family:'Noto Sans KR',sans-serif; font-size:16px; line-height:1.8; }
+.report-body h2{ font-size:30px; font-weight:800; letter-spacing:-.02em; margin:72px 0 22px; padding-top:18px;
+  border-top:4px solid var(--lime); color:var(--white); scroll-margin-top:84px; }
+.report-body h2::before{ content:""; display:block; width:56px; height:8px; background:var(--lime); margin-bottom:16px; }
+.report-body h2 .part-eyebrow{ display:block; margin-bottom:12px; }
+.report-body .part-eyebrow .pk{ display:block; font-size:13px; font-weight:800; color:var(--lime); letter-spacing:.07em; }
+.report-body .part-eyebrow .pd{ display:block; font-size:12px; color:var(--muted); margin-top:3px; font-weight:500; }
+.report-body h3{ font-size:18px; font-weight:800; margin:34px 0 12px; color:var(--white);
+  background:var(--paper-2); padding:10px 16px 10px 20px; border-left:5px solid var(--lime); }
+.report-body p{ margin:13px 0; }
+.report-body strong{ font-weight:700; color:#F6F3E7; }
+.report-body a{ color:var(--lime); word-break:break-all; }
+.report-body ul,.report-body ol{ margin:13px 0; padding-left:22px; }
+.report-body li{ margin:6px 0; }
+.report-body hr{ border:0; border-top:1px solid var(--line); margin:24px 0; }
+.report-body blockquote{ font-family:'Noto Serif KR',serif; margin:22px 0; padding:6px 0 6px 24px;
+  border-left:4px solid var(--lime); font-size:18px; line-height:1.7; color:#DCD8CA; }
+.report-body blockquote p{ margin:0; font-weight:500; }
+.report-body table{ width:100%; border-collapse:collapse; margin:18px 0; font-size:13.5px; display:block; overflow-x:auto; }
+.report-body th{ text-align:left; padding:9px 11px; font-weight:800; font-size:13px; border-bottom:2.5px solid var(--lime); color:var(--white); white-space:nowrap; }
+.report-body td{ padding:9px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+.report-body tbody tr:nth-child(even){ background:var(--paper-2); }
+.report-body table strong{ color:#F6F3E7; }
+.report-body .tag{ display:inline-block; padding:2px 9px; border-radius:10px; font-size:11px; font-weight:700; white-space:nowrap; }
+.report-body .tag-a{ background:#2c2c25; color:#fff; border:1px solid #43423a; }
+.report-body .tag-b{ background:var(--lime); color:#1a1a1a; }
+.report-body .tag-c{ background:transparent; color:#c2bca8; border:1px solid #4d493d; }
+.report-body .tag-d{ background:var(--fail); color:#fff; }
+.report-body .tag-e{ background:#000; color:var(--lime); border:1px solid #3a3a32; }
+.report-body .tag-f{ background:#8a8576; color:#15140f; }
+.report-body .callout{ margin:30px 0; background:var(--paper-2); border:1px solid var(--line); border-left:5px solid var(--lime);
+  border-radius:0 4px 4px 0; padding:18px 22px 8px; }
+.report-body .callout-head{ display:inline-block; background:var(--lime); color:#10100C; font-weight:800;
+  font-size:15px; padding:7px 16px; border-radius:3px; margin:0 0 14px; }
+.report-body .callout p{ margin:0 0 12px; }
+.report-body .callout > p:last-child,.report-body .callout > ul:last-child{ margin-bottom:0; }
+.report-body .figure{ --ink:#16160F; --lime-ink:#566B17; margin:30px 0; background:#FBFAF4; border:1px solid #E4E0CF;
+  border-top:3px solid var(--lime); border-radius:5px; padding:18px; }
+.report-body .figure svg{ width:100%; height:auto; }
+.report-body .fig-title{ font-size:14px; font-weight:800; fill:var(--lime-ink); }
+.report-body .band-k{ font-size:14px; font-weight:700; }
+.report-body .yr{ font-size:11px; fill:#5a5648; font-weight:600; }
+.report-body .mk{ font-size:10px; fill:var(--ink); font-weight:600; }
+.report-body .sub{ font-size:11px; fill:#3a3a30; font-weight:600; }
+.report-body .grp{ font-size:10.5px; fill:#6c6857; }
+.report-body .note{ font-size:10px; fill:#7c7868; }
+.report-body .axis-k{ font-size:12px; font-weight:700; fill:var(--ink); }
+.report-body .barnum{ font-size:12px; font-weight:700; }
+.report-body .barcap{ font-size:11.5px; font-weight:700; fill:var(--ink); }
+.report-body .lg{ font-size:10.5px; fill:#3a3a30; }
+.report-body .axc{ font-size:12px; font-weight:700; fill:var(--ink); }
+.report-body .axs{ font-size:10px; fill:#6c6857; font-weight:600; }
+.report-body .qh{ font-size:14px; font-weight:800; fill:var(--ink); }
+.report-body .qt{ font-size:10px; fill:#6c6857; font-weight:600; }
+.report-body .qt-em{ fill:var(--ink); font-weight:700; }
+.report-body .qm{ font-size:10.5px; fill:#2a2a20; font-weight:600; }
+.report-body .qn{ font-size:9px; fill:#7c7868; }
+.report-body .winlab{ font-size:11px; font-weight:700; fill:var(--ink); }
+.report-body .adaptlab{ font-size:9.5px; font-weight:600; }
+.report-body .photo-block{ margin:24px 0; text-align:center; }
+.report-body .photo-block img{ max-width:100%; height:auto; border-radius:4px; }
+.report-body .photo-block--duo .photo-duo{ display:flex; gap:12px; justify-content:center; align-items:flex-start; }
+.report-body .photo-block--duo .photo-duo img{ width:auto; max-width:47%; }
+.report-body .photo-caption{ font-family:'Noto Serif KR',serif; font-size:13.5px; color:var(--ink); margin-top:9px; font-weight:600; }
+.report-body .photo-credit{ font-size:11px; color:var(--muted); margin-top:3px; }
+.report-body .related-reads{ margin-top:48px; }
+.report-body .rr-intro{ color:var(--muted); font-size:14px; margin:0 0 18px; }
+.report-body .rr-list{ list-style:none; padding:0; margin:0; counter-reset:rr; }
+.report-body .rr-item{ position:relative; margin:0 0 12px; }
+.report-body .rr-item::before{ counter-increment:rr; content:counter(rr); position:absolute; left:18px; top:16px;
+  font-weight:800; font-size:20px; color:var(--lime); }
+.report-body .rr-card{ display:block; position:relative; text-decoration:none; color:var(--ink); background:var(--paper-2);
+  border:1px solid var(--line); border-left:4px solid var(--lime); border-radius:0 4px 4px 0; padding:15px 48px 16px 52px; transition:background .15s,border-color .15s; }
+.report-body .rr-card:hover{ background:#23231d; border-color:var(--lime); }
+.report-body .rr-title{ font-weight:700; font-size:15px; color:var(--ink); }
+.report-body .rr-card:hover .rr-title{ color:var(--lime); }
+.report-body .rr-meta{ font-size:11px; color:var(--muted); margin-top:4px; }
+.report-body .rr-why{ font-family:'Noto Serif KR',serif; font-size:13px; color:#CFCBBC; margin-top:7px; }
+.report-body .rr-go{ position:absolute; top:14px; right:16px; color:var(--lime); font-size:17px; font-weight:800; }
+.report-body .sources-sec ~ ul a,.report-body .sources-sec + ul a{ color:#a7a08c; word-break:break-all; }
+.report-body .task-list-item{ list-style:none; }
+.toc-list li a{ text-decoration:none; color:inherit; display:flex; justify-content:space-between; align-items:baseline; width:100%; transition:color .15s; }
+.toc-list li a:hover .t{ color:var(--lime); }
+@media(max-width:900px){
+  .report-body .rb-inner{ padding:0 24px; font-size:15px; }
+  .report-body h2{ font-size:25px; margin-top:56px; }
+}
 </style>
 </head>
 <body>
@@ -218,21 +310,1365 @@ footer a:hover{color:var(--lime)}
     <p class="label" style="margin-bottom:16px">Contents</p>
     <h2>목차</h2>
     <ul class="toc-list">
-      <li><span class="t">1. 용어의 탄생</span></li>
-      <li><span class="t">2. 시기별 그루핑</span><span class="rest">미디어 환경이 기적의 종류를 결정한다</span></li>
-      <li><span class="t">3. 시대 간 비교</span><span class="rest">미디어 환경이 바꾸는 것</span></li>
-      <li><span class="t">4. 기적의 4분면</span><span class="rest">미디어 전략 × 음악 동력</span></li>
-      <li><span class="t">5. 교차 패턴</span></li>
-      <li><span class="t">6. 반례 분석</span></li>
-      <li><span class="t">7. 공통 조건 vs 시대 특수 조건</span></li>
-      <li><span class="t">8. 벤치마킹 전략</span><span class="rest">"다음 기회"를 어떻게 쓸 것인가</span></li>
-      <li><span class="t">9. 핵심 테제</span></li>
-      <li><span class="t">10. 시대불변 규칙</span><span class="rest">미디어가 뭘로 바뀌든</span></li>
-      <li><span class="t">11. 시장 구조 데이터</span><span class="rest">기적의 배경</span></li>
-      <li><span class="t">Sources</span></li>
+      <li><a href="#sec-1"><span class="t">1. 용어의 탄생</span><span class="rest">'중소돌의 기적'은 어떻게 산업 담론이 됐나</span></a></li>
+      <li><a href="#sec-2"><span class="t">2. 시기별 특징</span><span class="rest">미디어 환경이 기적의 종류를 결정한다</span></a></li>
+      <li><a href="#sec-3"><span class="t">3. 시대 간 비교</span><span class="rest">미디어가 바뀌면 발견과 지속의 조건도 바뀐다</span></a></li>
+      <li><a href="#sec-4"><span class="t">4. 기적의 4분면</span><span class="rest">미디어 전략 × 음악 동력</span></a></li>
+      <li><a href="#sec-5"><span class="t">5. 교차 패턴</span><span class="rest">시대를 관통해 반복되는 구조</span></a></li>
+      <li><a href="#sec-6"><span class="t">6. 반례 분석</span><span class="rest">기적에 실패한 팀들이 알려주는 것</span></a></li>
+      <li><a href="#sec-7"><span class="t">7. 공통 조건 vs 특수 조건</span><span class="rest">시대마다 변하지 않는 것과 변하는 것</span></a></li>
+      <li><a href="#sec-8"><span class="t">8. 벤치마킹 전략</span><span class="rest">'다음 기회'를 어떻게 선점할 것인가</span></a></li>
+      <li><a href="#sec-9"><span class="t">9. 핵심 테제</span><span class="rest">미디어·초기 팬·음악이 기적을 결정한다</span></a></li>
+      <li><a href="#sec-10"><span class="t">10. 시대불변 규칙</span><span class="rest">미디어가 어떻게 바뀌든 유효한 여섯 가지</span></a></li>
+      <li><a href="#sec-11"><span class="t">11. 시장 구조 데이터</span><span class="rest">기적의 배경이 된 산업 지표</span></a></li>
+      <li><a href="#sec-12"><span class="t">Sources</span><span class="rest">인용·참고 출처</span></a></li>
     </ul>
   </div>
 </section>
+
+<!-- BODY:START (web-build.mjs 자동 생성 — 직접 수정 금지) -->
+<section class="report-body"><div class="rb-inner">
+<hr>
+<h2 class="part-start" id="sec-1"><span class="part-eyebrow"><span class="pk">Ⅰ · 개념 정의</span><span class="pd">'중소의 기적'이란 무엇인가</span></span>1. 용어의 탄생</h2>
+<p>&quot;중소의 기적&quot;은 2009~2011년 비스트를 기점으로 형성. <strong>2011년 비스트가 3대 기획사 바깥 남자 그룹으로서 MMA 대상(올해의 아티스트)을 수상하면서 결정화됐다.</strong> 비(非)빅3 남자 아이돌의 대상 수상은 극히 이례적인 사건이었다. 카라(2007~)는 DSP미디어가 구 대형사였으므로 &#39;넘어진 대형사의 회생&#39;에 가까우나, 한승연의 &#39;소녀가장&#39; 서사는 이후 <strong>모든 중소돌 서사의 감정적 원형</strong>이 된다.</p>
+<hr>
+<h2 class="part-start" id="sec-2"><span class="part-eyebrow"><span class="pk">Ⅱ · 실증 리서치</span><span class="pd">27팀 전수 분류</span></span>2. 시기별 특징: 미디어 환경이 기적의 종류를 결정한다</h2>
+<p>27팀을 **미디어 환경 기준 3개 시기〈중소의 기적 1기·2기·3기〉**로 나누고(본문·표에서는 짧게 1기·2기·3기로 표기), 각 시기 안에서 <strong>돌파 유형</strong>을 분류한다.</p>
+<p>돌파 유형은 3가지:</p>
+<ul>
+<li><strong>음악중심형</strong>: 작곡가/프로듀서의 연속 히트로 점진 상승. 음악이 성장의 1차 동력</li>
+<li><strong>바이럴형</strong>: 비음악 콘텐츠(직캠·밈·바이럴)가 1차 트리거</li>
+<li><strong>틈새공략형</strong>: 메인스트림 공식을 거부하고 독자 경로</li>
+</ul>
+<hr>
+
+<figure class="figure">
+<svg viewBox="0 0 720 250" role="img" aria-label="FIGURE 01 · 미디어 환경 3개 시기: 발견의 조건이 바뀐다">
+  <text x="0" y="18" class="fig-title">FIGURE 01 · 미디어 환경 3개 시기: 발견의 조건이 바뀐다</text>
+  <rect x="0" y="70" width="240" height="46" fill="#1a1a1a"/><text x="120" y="98" text-anchor="middle" class="band-k" fill="#fff">1기 · 방송·음원</text><rect x="240" y="70" width="220" height="46" fill="#555"/><text x="350" y="98" text-anchor="middle" class="band-k" fill="#fff">2기 · 유튜브·SNS</text><rect x="460" y="70" width="260" height="46" fill="#D6FF92"/><text x="590" y="98" text-anchor="middle" class="band-k" fill="#111">3기 · 숏폼·알고리즘</text><text x="0" y="135"  class="yr">2009</text><text x="240" y="135" text-anchor="middle" class="yr">2013</text><text x="460" y="135" text-anchor="middle" class="yr">2018</text><text x="720" y="135" text-anchor="end" class="yr">2026</text><line x1="240" y1="60" x2="240" y2="150" stroke="#111" stroke-dasharray="3 3"/><text x="240" y="52" text-anchor="middle" class="mk">유튜브·SNS 전환</text><line x1="460" y1="60" x2="460" y2="150" stroke="#111" stroke-dasharray="3 3"/><text x="460" y="52" text-anchor="middle" class="mk">숏폼·알고리즘 전환</text><text x="120" y="170" text-anchor="middle" class="sub">음악중심형</text><text x="350" y="170" text-anchor="middle" class="sub">+ 바이럴형</text><text x="590" y="170" text-anchor="middle" class="sub">+ 틈새공략형 (3유형 공존)</text><text x="120" y="200" text-anchor="middle" class="grp">비스트 · 인피니트 · 씨스타</text><text x="350" y="200" text-anchor="middle" class="grp">BTS · EXID · 마마무</text><text x="590" y="200" text-anchor="middle" class="grp">에이티즈 · QWER · 리센느</text><text x="0" y="232" class="note">대형사 적응 속도: 3~5년 → 1~2년 → 6개월~1년(추정) · 중소사 선점 윈도우가 매 전환마다 절반으로</text>
+</svg>
+</figure><h3>중소의 기적 1기: 방송·음원 시대 (2009~2013)</h3><div class="photo-block">
+    <img src="img-era1-beast.jpg" alt="BEAST (비스트): 1기 대표 중소돌">
+    <div class="photo-caption">1기의 아이콘, 비스트(현 하이라이트). 방송·음원 시대의 정석적 돌파.</div>
+    <div class="photo-credit">Photo: Highlight · Wikimedia Commons</div>
+  </div>
+<p><strong>미디어 환경</strong></p>
+<ul>
+<li>지상파 3사 + 케이블(엠넷·MBC에브리원)</li>
+<li>디지털 음원 스트리밍 본격화: 멜론(2004 론칭, 2009~ LOEN 운영 체제로 디지털 음원 시장 선두 사업자. 60%+ 점유율 도달은 이후)</li>
+<li>인터넷 커뮤니티(DC인사이드·팬카페)가 팬덤 허브</li>
+<li>유튜브는 보조 매체(SM 2006년, JYP 2008년 공식 채널 개설했으나 MV 아카이브 용도)</li>
+<li>연간 데뷔 그룹 수: 2009년 15팀 → 2012년 40팀으로 급증, 중소사 난립 시작</li>
+</ul>
+<p><strong>대형기획사 영향력</strong></p>
+<ul>
+<li>지상파 완전 장악, 케이블은 경시</li>
+<li>앨범 판매+콘서트 모델에 집중, 음원 시장은 아직 보조 수익원 취급</li>
+<li>K-pop 수출액 2012년 $2.35억(아직 내수 중심)</li>
+</ul>
+<p><strong>중소기획사 전략</strong></p>
+<ul>
+<li>케이블 리얼리티(예능 노출 → 캐릭터 인지도)</li>
+<li>디지털 음원 차트(방송 없이도 수익 가능한 새 모델)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>그룹</th>
+<th>소속사</th>
+<th>유형</th>
+<th>돌파 무기</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>비스트</strong></td>
+<td>큐브</td>
+<td><span class="tag tag-a">음악중심</span></td>
+<td>신사동호랭이(&quot;Fiction&quot;) + 용준형 자작곡 동력, &quot;Fiction&quot; 7관왕→MMA 대상(2011)</td>
+</tr>
+<tr>
+<td><strong>인피니트</strong></td>
+<td>울림</td>
+<td><span class="tag tag-a">음악중심</span></td>
+<td>스윗튠 프로듀싱, 칼군무, 케이블 리얼리티→콘서트 매진</td>
+</tr>
+<tr>
+<td><strong>씨스타</strong></td>
+<td>스타쉽</td>
+<td><span class="tag tag-a">음악중심</span></td>
+<td>시즌 히트 모델(&quot;썸머퀸&quot;), 음원 차트 장악</td>
+</tr>
+<tr>
+<td><strong>걸스데이</strong></td>
+<td>드림티</td>
+<td><span class="tag tag-a">음악중심</span></td>
+<td>&quot;기대해&quot;로 그룹 부활→연속 히트. &quot;小(소)의 기적&quot;</td>
+</tr>
+<tr>
+<td><strong>에이핑크</strong></td>
+<td>A큐브(현 IST)</td>
+<td><span class="tag tag-a">음악중심</span></td>
+<td>청순 콘셉트 장수, 연속 히트</td>
+</tr>
+<tr>
+<td><strong>VIXX</strong></td>
+<td>젤리피쉬</td>
+<td><span class="tag tag-a">음악중심</span></td>
+<td>콘셉트돌 원형, 다크 세계관 차별화</td>
+</tr>
+<tr>
+<td><strong>틴탑</strong></td>
+<td>탑미디어</td>
+<td><span class="tag tag-a">음악중심△</span></td>
+<td>2012 음방 1위. 돌파 규모 제한적</td>
+</tr>
+<tr>
+<td><strong>B1A4</strong></td>
+<td>WM</td>
+<td><span class="tag tag-a">음악중심△</span></td>
+<td>&quot;초통령&quot;. 돌파 규모 제한적</td>
+</tr>
+<tr>
+<td><strong>블락비</strong></td>
+<td>스타덤(현 KQ)</td>
+<td><span class="tag tag-c">틈새공략</span></td>
+<td>힙합/개성파, 지코 개인 활동 시너지</td>
+</tr>
+<tr>
+<td><strong>B.A.P</strong></td>
+<td>TS엔터</td>
+<td><span class="tag tag-d">반례</span></td>
+<td>빌보드 월드 앨범 <strong>1위</strong>→소속사 소송(2014)→해체(2019)</td>
+</tr>
+<tr>
+<td><strong>AOA</strong></td>
+<td>FNC</td>
+<td><span class="tag tag-d">반례</span></td>
+<td>용감한형제 프로듀싱→멤버 간 괴롭힘 폭로(2020) 종결</td>
+</tr>
+</tbody></table>
+<div class="callout"><div class="callout-head">이 시대의 특징</div><p><strong>음악중심형이 거의 유일한 경로다.</strong> 11팀 중 바이럴형 0, 틈새공략형 1(블락비). 이유는 명확하다. 바이럴 메커니즘이 없었다. 유튜브는 보조 매체, 직캠 문화는 미성숙, SNS는 태동기. 음방에 반복 출연하려면 좋은 곡이 계속 나와야 했고, 좋은 곡을 계속 내려면 작곡 동력이 필요했다.</p>
+<p><strong>작곡가가 곧 무기였다.</strong> 신사동호랭이(비스트), 스윗튠(인피니트), 용감한형제(씨스타·AOA). 이 시대의 기적은 특정 프로듀서의 이름과 묶인다. 프로듀서가 곧 중소사의 경쟁력이었고, 프로듀서가 떠나거나 역량이 떨어지면 팀도 같이 내려갔다.</p>
+<p><strong>발견은 어렵지만, 발견되면 비교적 안정적이었다.</strong> 음방 게이트키퍼를 뚫는 게 가장 어렵고, 뚫고 나면 음원 수익+콘서트로 안정적 비즈니스 모델 구축 가능. 이 시대 음악중심형의 장기 생존율이 가장 높다.</p>
+<p><strong>초기 팬 확보 경로가 방송에 집중돼 있었다.</strong> 음방 출연 → 팬카페 가입 → 앨범 구매가 핵심 루트. 케이블 예능(인피니트 &quot;넌 내 운명&quot;, VIXX &quot;마이돌&quot;), DC인사이드 갤러리(비스트 &quot;재활용돌&quot; 서사), 한승연 같은 멤버 개인의 예능 활약이 보조적 경로로 작동했지만, 이것들도 결국 음방 노출이 전제이거나 음방 노출로 연결돼야 팬덤으로 전환됐다. <strong>팬 확보·음악 노출·방송 출연이 높은 비율로 묶여 있었기 때문에</strong>(예능·라디오가 보조했지만 음방이 중심축), 음악중심형(좋은 곡→음방 반복 출연)이 지배적 경로였던 것이다.</p>
+</div><hr>
+<h3>중소의 기적 2기: 유튜브·SNS 시대 (2013~2018)</h3><div class="photo-block">
+    <img src="img-era2-bts.jpg" alt="BTS (방탄소년단): 2기 대표 중소돌">
+    <div class="photo-caption">2기의 아이콘, 방탄소년단. 유튜브·SNS 시대의 선점형 돌파가 산업을 재편했다.</div>
+    <div class="photo-credit">Photo: BTS · White House · Wikimedia Commons</div>
+  </div>
+<p><strong>미디어 환경</strong></p>
+<ul>
+<li>유튜브가 &#39;보조&#39;에서 &#39;주력 발견 채널&#39;로 전환</li>
+<li>트위터가 글로벌 팬 연결의 핵심: 팬카페(다음·네이버)의 한국어 전용 게이트키핑을 우회해 &quot;누구나 팔로우만 하면 스탠&quot;이 가능한 오픈 팬덤 시대 개막</li>
+<li><strong>페이스북이 일반 대중과 팬덤을 잇는 역주행 채널로 부상</strong>: &quot;일반인들의소름돋는라이브&quot; 같은 큐레이션 페이지가 비팬층에게 아이돌 영상을 노출</li>
+<li>네이버 V앱(2015.08 베타, 09 정식) 등장, 직캠 문화 본격화(엠넷 M2 직캠 2014.05~)</li>
+<li>지상파 음방 영향력 점진 하락(시청률 1% 미만)</li>
+<li><strong>&quot;역주행&quot; 현상이 이 시대에 처음 등장</strong>: 발매 후 시차를 두고 재발견되는 메커니즘은 SNS+커뮤니티 바이럴이 전제</li>
+<li>연간 데뷔 그룹 수: 2014년 60팀 → 2017년 <strong>86팀</strong>(역대 최다), 중소사 과잉 공급 심화</li>
+<li>전 세계 한류 팬 수 2012년 926만 → 2017년 <strong>7,312만</strong>(8배), 서구권 급증</li>
+</ul>
+<p><strong>대형기획사 영향력</strong></p>
+<ul>
+<li>여전히 지상파+음방 중심 프로모션, SNS·페이스북은 보조 채널 취급</li>
+<li>SM·JYP 유튜브는 2006~2008년 개설했으나 MV 아카이브 용도, 트위터도 2010~2012년 개별 채택 수준(기획사 차원 전략화는 느림)</li>
+<li><strong>BTS 이후에야 SNS 전략 본격 체계화</strong>: 2012~2013년 빅3 전부 SNS 마케팅 체계화(학술 연구 확인)</li>
+<li>대형사 적응 속도: 3~5년</li>
+<li>K-pop 수출액 2016년 $4.43억 → 2018년 $5.64억</li>
+</ul>
+<p><strong>SNS 채널의 제도화</strong>: 초기 성공 사례(직캠 역주행, 트위터 팬 소통)가 나오자 산업이 빠르게 따라왔다. SNS 전문 콘텐츠 채널들이 등장하고(2015~), 홍보 에이전시들이 페이스북 페이지·커뮤니티를 전략 도구로 운영하기 시작했다. 음원사재기 논란(2012~)이 불거지고, 경쟁 아티스트를 겨냥한 역바이럴(조직적 부정 여론 조성) 관행이 퍼지면서 커뮤니티 자체가 바이럴 전장이 됐다. <strong>처음에 유기적으로 열린 채널이 제도화되면서 닫히는 패턴</strong>: 중소사가 SNS에서 찾은 틈이 홍보 산업에 의해 포장·상품화되는 과정이다. 이 패턴은 3기에서 더 빠른 속도로 반복된다.</p>
+<p><strong>중소기획사 전략</strong></p>
+<ul>
+<li>SNS 직접소통(PR팀 아닌 멤버 본인)</li>
+<li>유튜브 자체 콘텐츠(브이로그·커버·리얼리티)</li>
+<li>직캠·페이스북·커뮤니티가 만드는 바이럴+역주행 가능성</li>
+<li>P2P·커뮤니티 등 비공식 채널을 통한 초기 팬 확보</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>그룹</th>
+<th>소속사</th>
+<th>유형</th>
+<th>돌파 무기</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>BTS</strong></td>
+<td>빅히트</td>
+<td><span class="tag tag-e">동력+신규채널</span></td>
+<td>Pdogg 동력 + 트위터 직접소통 + 방탄로그. 음악과 채널 전략 동시 혁신</td>
+</tr>
+<tr>
+<td><strong>마마무</strong></td>
+<td>RBW</td>
+<td><span class="tag tag-e">동력+신규채널</span></td>
+<td>김도훈 프로듀싱 + 데뷔 전 협업 싱글(범키·케이윌) 선공개 + 보컬 실력 기반 차별화</td>
+</tr>
+<tr>
+<td><strong>오마이걸</strong></td>
+<td>WM</td>
+<td><span class="tag tag-a">음악중심</span></td>
+<td>1,009일 점진 상승, &quot;살짝 설렜어&quot; 멜론 1위. 주류 채널(음방+음원)</td>
+</tr>
+<tr>
+<td><strong>EXID</strong></td>
+<td>예당엔터(현 바나나컬처)</td>
+<td><span class="tag tag-b">바이럴</span></td>
+<td>하니 직캠(2014) → &quot;위아래&quot; 역주행. 🔑 EXID를 알리기 위해 P2P 사이트나 DC인사이드를 활용했다는 얘기가 있을 정도로 인터넷 밈을 적극 활용했고, 그 경로로 유입된 팬의 직캠이 페이스북·커뮤니티에서 폭발했다. <strong>초기 팬 확보 → 팬 생산 콘텐츠 → 역주행의 3단계</strong></td>
+</tr>
+<tr>
+<td><strong>크레용팝</strong></td>
+<td>크롬</td>
+<td><span class="tag tag-b">바이럴</span></td>
+<td>🔑 음방·무한도전 출연이 불가능해서 유튜브에서 무한도전 컨셉으로 자체 예능을 제작: 매니저가 촬영, 멤버들이 아이디어. 동시에 홍대·강남 등 젊은이 밀집 지역을 돌며 길거리 공연. 이 두 채널로 초기 팬 기반을 만든 뒤 &quot;빠빠빠&quot;가 터짐. 뮤비 제작비는 겨우 수십 만원으로 알려졌다.</td>
+</tr>
+<tr>
+<td><strong>여자친구</strong></td>
+<td>쏘스뮤직</td>
+<td><span class="tag tag-b">바이럴</span></td>
+<td>넘어져도 춤추는 영상 바이럴 → 음방 장악으로 전환</td>
+</tr>
+<tr>
+<td><strong>모모랜드</strong></td>
+<td>MLD</td>
+<td><span class="tag tag-b">바이럴</span></td>
+<td>&quot;뿜뿜&quot; 유튜브 조회수 + 동남아 바이럴</td>
+</tr>
+<tr>
+<td><strong>드림캐쳐</strong></td>
+<td>드림캐쳐컴퍼니</td>
+<td><span class="tag tag-c">틈새공략</span></td>
+<td>록/다크 판타지, 해외 투어 선행. 데뷔 8개월 만에 월드투어</td>
+</tr>
+</tbody></table>
+<div class="callout"><div class="callout-head">이 시대의 특징</div><p><strong>바이럴형이 처음 등장한다.</strong> 8팀 중 바이럴형 4팀. 유튜브+SNS+페이스북이 &quot;우연을 기회로 바꾸는 메커니즘&quot;을 제공한 것이다. 그리고 이 시대에 <strong>&quot;역주행&quot;이라는 현상이 처음 등장</strong>한다. 발매 후 수개월~수년이 지나 재발견되는 메커니즘은 SNS·커뮤니티 바이럴이 있어야 가능했다. EXID의 &quot;위아래&quot;(2014)가 최초의 본격 역주행 사례.</p>
+<p><strong>초기 팬 확보 방법이 결정적으로 달라진다.</strong> 방송 시대에는 음방 노출→팬카페 가입이 압도적으로 지배적인 경로였다(예능·라디오 등 보조 경로는 있었지만 음방을 대체하진 못함). 이 시대에는 각 팀이 서로 다른 방식으로 &#39;첫 100명&#39;을 만들었다:</p>
+<ul>
+<li><strong>EXID</strong>: 하니 직캠(2014) → &quot;위아래&quot; 역주행. EXID를 알리기 위해 P2P 사이트나 DC인사이드를 활용했다는 얘기가 있을 정도로 인터넷 밈을 적극 활용했고, 그 경로로 유입된 팬의 직캠이 페이스북·커뮤니티에서 폭발했다. <strong>초기 팬 확보 → 팬 생산 콘텐츠 → 역주행의 3단계.</strong></li>
+<li><strong>크레용팝</strong>: 유튜브 자체 예능(무한도전 컨셉) + 홍대·강남 길거리 공연으로 동네 젊은이를 직접 만남. <strong>온라인(유튜브)과 오프라인(길거리)의 동시 운영</strong>이 초기 팬 기반.</li>
+<li><strong>BTS</strong>: 트위터에서 멤버가 직접 팬과 1:1 소통. PR팀이 아닌 본인이 셀카, 감정 고백, 일상을 올림. 팬이 &#39;소비자&#39;가 아니라 &#39;같이 성장하는 여정의 주체&#39;라는 정체성을 형성. <strong>관계의 질이 초기 팬의 충성도를 결정</strong>.</li>
+<li><strong>마마무</strong>: 데뷔 전 협업 싱글 선공개(범키 &quot;Don&#39;t Be Happy&quot;, 케이윌 &quot;Peppermint Chocolate&quot;, 빌보드 K-Pop Hot 100 7위) → 업계 관계자와 음악 마니아를 먼저 팬으로 확보. 퀸시 존스 2013년 한국 콘서트 무대에도 데뷔 전 섬. <strong>전문가 입소문이 일반 팬 유입으로 전환.</strong></li>
+</ul>
+<p><strong>동력+신규채널 조합이 가장 파괴적이다.</strong> BTS와 마마무. 둘 다 음악 동력(Pdogg, 에스나)을 갖고 있었고, 동시에 뉴미디어(트위터, 유튜브)를 대형사보다 먼저 주력으로 활용했다. 특히 BTS는 음악 동력과 채널 전략이 상호 강화하는 구조를 만들었다. 좋은 곡이 SNS에서 확산되고, SNS 관계가 다음 곡에 대한 기대를 쌓고, 그 기대가 앨범 판매로 이어졌다. 이건 방송 시대에는 불가능한 성장 루프였다.</p>
+<p><strong>바이럴 후 전환의 첫 사례가 나온다.</strong> EXID는 직캠 역주행 이후 신사동호랭이+LE 자작곡 동력으로 전환해 &quot;아예&quot; &quot;L.I.E&quot; 연속 히트. 여자친구는 바이럴 이후 음방 장악으로 전환. 두 팀 모두 바이럴이 열어준 문 안에서 동력을 만들었다. 반면 크레용팝과 모모랜드는 전환에 실패했다.</p>
+</div><hr>
+<h3>중소의 기적 3기: 숏폼·알고리즘 시대 (2018~2026)</h3><div class="photo-block">
+    <img src="img-era3-ateez.jpg" alt="ATEEZ (에이티즈): 3기 대표 중소돌">
+    <div class="photo-caption">3기의 아이콘, 에이티즈. 숏폼·알고리즘 시대에 글로벌 팬덤을 직접 구축한 B사분면의 대표 주자.</div>
+    <div class="photo-credit">Photo: ATEEZ · KQ Entertainment · Wikimedia Commons</div>
+  </div>
+<p><strong>미디어 환경</strong></p>
+<ul>
+<li>틱톡(2017 한국 도입, <strong>2020년 지코 &quot;아무노래&quot; 챌린지로 K-pop 전략 도구 본격화</strong>, 10일 만에 1억 뷰)·유튜브 쇼츠(2021.07)·인스타 릴스(2020 글로벌, 2022.04 한국)가 발견(discovery)의 핵심 동력</li>
+<li><strong>팔로워 관계가 아니라 AI 추천 알고리즘이 노출을 결정</strong>: Gen Z의 51%가 틱톡을 주요 음악 발견 채널로 지목(라디오 6%), 2024년 빌보드 Global 200 진입곡의 84%가 틱톡에서 먼저 트랙션 확보</li>
+<li>K-pop 글로벌 확장: 수출액 2019년 $6.8억 → 2023년 <strong>$12.2억</strong>(사상 최초 $10억 돌파)</li>
+<li>실물 앨범 판매 2018년 2천만장 → 2023년 <strong>1억 1,570만장</strong>(5.7배 폭증, 세븐틴 &quot;FML&quot; 639만장 역대 1위) → 2024년 9,330만장(9년 만의 첫 역성장)</li>
+<li>대형사가 플랫폼 자체를 소유하기 시작: 위버스(HYBE, 2019.06, V라이브 2022.12 흡수), 디어유 버블(SM, 2020.02), 비욘드라이브(SM+JYP+네이버, 2020.04)</li>
+<li>전 세계 한류 팬 수 2020년 1.22억 → 2023년 <strong>2.25억</strong>(2012년 대비 24배)</li>
+</ul>
+<p><strong>대형기획사 영향력</strong></p>
+<ul>
+<li>숏폼 챌린지까지 체계적 관리: 2021~2022년이면 모든 컴백 필수 프로모션으로 표준화</li>
+<li>플랫폼 직접 소유로 팬 데이터·결제 내재화(&quot;플랫폼화된 팬덤&quot;), SNS 전략 완전 내재화</li>
+<li><strong>대형사 적응 속도: 1~2년</strong>(2기보다 2배 이상 빨라짐)</li>
+<li>빅4 합산 매출 2019년 ~1.3조 원 → 2023년 ~4조 원(3배)</li>
+<li>2020년 빅히트 IPO(시총 8.7조 원)가 &quot;기획사도 대형 투자 대상&quot; 인식을 확산 → 카카오·네이버의 엔터 진입 가속</li>
+</ul>
+<p><strong>중소기획사 전략</strong></p>
+<ul>
+<li>멤버 개인 날것 유튜브(아직 대형사가 전략적으로 관리 안 함)</li>
+<li>알고리즘 역주행(과거 콘텐츠의 시차 재발견)</li>
+<li>서브컬처·니치 커뮤니티(게임·스트리밍·인디 씬)</li>
+<li>해외 투어 직접 뚫기(빌보드 우회)</li>
+<li>멜론 24Hits 차트 개편(2020)으로 조직적 스트리밍 영향력 약화 → 비팬덤 소규모 아티스트에 상대적 유리</li>
+<li>다만 <strong>2024~2025년 침체기</strong>(앨범 판매 −19.6%, 빅4 주가 동반 하락, 중소돌 대량 해체)가 틈의 활용 자체를 어렵게 만드는 구조적 압력</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>그룹</th>
+<th>소속사</th>
+<th>유형</th>
+<th>돌파 무기</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>에이티즈</strong></td>
+<td>KQ</td>
+<td><span class="tag tag-e">동력+신규채널</span></td>
+<td>에덴 프로듀싱 + 해외 투어→빌보드 200 1위 2회. 중소 최초</td>
+</tr>
+<tr>
+<td><strong>키스오브라이프(키오프)</strong></td>
+<td>S2</td>
+<td><span class="tag tag-e">동력+신규채널</span></td>
+<td>스트로베리바나나클럽 프로듀싱 + R&amp;B 차별화. 52억 투자유치</td>
+</tr>
+<tr>
+<td><strong>스테이씨</strong></td>
+<td>하이업</td>
+<td><span class="tag tag-a">음악중심</span></td>
+<td>블랙아이드필승 프로듀싱, &quot;ASAP&quot; 히트. 주류 채널</td>
+</tr>
+<tr>
+<td><strong>QWER</strong></td>
+<td>타마고 프로덕션</td>
+<td><span class="tag tag-c">틈새공략</span></td>
+<td>걸밴드 + 서브컬처(유튜버 기획, 게임 커뮤니티). &quot;고민중독&quot; 멜론 4위</td>
+</tr>
+<tr>
+<td><strong>트리플에스</strong></td>
+<td>모드하우스</td>
+<td><span class="tag tag-c">틈새공략</span></td>
+<td>팬 투표 유닛 구성, 블록체인 참여형 모델</td>
+</tr>
+<tr>
+<td><strong>영파씨</strong></td>
+<td>DSP/비츠</td>
+<td><span class="tag tag-c">틈새공략</span></td>
+<td>힙합 걸그룹 차별화</td>
+</tr>
+<tr>
+<td><strong>브레이브걸스</strong></td>
+<td>브레이브</td>
+<td><span class="tag tag-b">바이럴</span></td>
+<td>군 위문공연 유튜브 영상 → 알고리즘·댓글로 확산 → &quot;롤린&quot; <strong>4년 만에</strong> 역주행(2017→2021). 방송 출연은 그 뒤</td>
+</tr>
+<tr>
+<td><strong>라붐</strong></td>
+<td>글로벌에이치</td>
+<td><span class="tag tag-b">바이럴</span></td>
+<td>&quot;상상더하기&quot; 2021 역주행 붐 속 SNS·유튜브로 재발견, <strong>5년 만에</strong> 역주행(2016→2021)</td>
+</tr>
+<tr>
+<td><strong>리센느</strong></td>
+<td>더뮤즈(THE MUZE)</td>
+<td><span class="tag tag-b">바이럴</span></td>
+<td>전문 콘텐츠 스튜디오 솔파스튜디오가 원이 유튜브를 캐릭터 콘텐츠로 기획·제작(미나미 &#39;갸루&#39;·제나 &#39;신라공주&#39; 등) → &quot;러브 어택&quot; 338일 만에 역주행</td>
+</tr>
+<tr>
+<td><strong>피프티피프티</strong></td>
+<td>어트랙트</td>
+<td><span class="tag tag-d">반례</span></td>
+<td>TikTok &quot;큐피드&quot;→핫100 17위→4자 분쟁→공중분해</td>
+</tr>
+<tr>
+<td><strong>하이키</strong></td>
+<td>GLG</td>
+<td><span class="tag tag-f">진행중</span></td>
+<td>&quot;건물 사이에 피어난 장미&quot;. 유형 미확정</td>
+</tr>
+</tbody></table>
+<div class="callout"><div class="callout-head">이 시대의 특징</div><p><strong>세 유형이 공존한다.</strong> 음악중심형 3팀, 바이럴형 3팀, 틈새공략형 3팀. 미디어 환경이 다양해지면서 돌파 경로도 다양해졌다. 방송 시대에는 음악중심형만 가능했고, SNS 시대에는 음악중심형+바이럴형이었으며, 숏폼 시대에 와서야 세 유형이 모두 성립한다.</p>
+<p><strong>알고리즘 역주행이 본격화된다.</strong> 역주행 자체는 2기에서 SNS·커뮤니티 바이럴로 시작됐지만(EXID 2014), 3기에서는 <strong>유튜브·숏폼 알고리즘이 발견을 주도</strong>한다: 브레이브걸스(군 위문공연 영상→유튜브 알고리즘, 4년), 라붐(SNS 역주행 연쇄, 5년), 리센느(숏폼, 1년). <strong>방송 출연조차 알고리즘 화제의 결과로 따라온다.</strong> 2020년대의 예능 출연은 대개 SNS 역주행이 먼저고 방송이 그 뒤다. 곡의 유통기한이 사실상 사라졌다.</p>
+<p><strong>발견 장벽은 역대 가장 낮고, 지속 장벽은 역대 가장 높다.</strong> 팔로워 0에서도 알고리즘에 태울 수 있다. 그러나 알고리즘이 준 관심은 알고리즘이 가져간다. 주의력 경쟁이 역대 가장 치열. 이 시대의 바이럴형 3팀 중 아직 동력 전환에 성공한 팀이 없다(리센느 시도 중, 브레이브걸스 해산, 라붐 활동 제한).</p>
+<p><strong>기회의 수명이 가장 짧다.</strong> 대형사가 숏폼 전략까지 1~2년 만에 체계화했고, 플랫폼 자체를 소유하기 시작했다(위버스·디어유·비욘드라이브). 리센느의 &quot;멤버 개인 날것 유튜브&quot;라는 기회도 대형사가 벤치마킹하면 닫힌다. <strong>기회가 열려 있는 시간이 점점 짧아지고 있다.</strong></p>
+<p><strong>초기 팬 확보가 극도로 분산·개인화됐다.</strong> 1기에서는 음방 노출=음악 노출=팬 확보가 동시에 일어났다. 3기에서는 이 세 가지가 완전히 분리됐다:</p>
+<ul>
+<li><strong>리센느</strong>: 원이 개인 유튜브 채널(&quot;안녕하세요 원이입니다&quot;)은 멤버가 자생적으로 굴리는 채널이 아니라 <strong>전문 콘텐츠 스튜디오 솔파스튜디오가 기획·제작하는 캐릭터 콘텐츠 채널</strong>이다(솔파스튜디오의 오리지널 채널 중 하나). 담당 PD와 멤버가 함께 만든다: 멤버가 각자 캐릭터 아이디어를 PD·원이에게 제안하면 PD가 채택·제작하는 구조다. 미나미의 &#39;갸루&#39;, 제나의 &#39;신라공주(사투리 세계관)&#39;처럼, 제작진은 멤버를 억지로 캐릭터화하지 않고, 각자가 원래 가진 매력이 가장 잘 드러나도록 기획·연출·편집한다(원이의 트레이닝복 차림도 의도된 연출). 즉 아이돌이 직접 운영하는 &#39;MCN&#39;이 아니라 <strong>전문 콘텐츠 스튜디오가 멤버 개인 채널을 캐릭터 IP 공장처럼 가동</strong>하는 모델이다. 시청자는 이 채널을 통해 그룹 전원과 관계를 맺고, 그 관계가 음원 소비로 전환돼 &quot;러브 어택&quot; 338일 역주행으로 이어졌다. 멤버 개인이 팀 유입 경로가 된 사례는 이전에도 있었지만(한승연의 예능→카라, 수지의 드라마→미쓰에이, 지코의 솔로→블락비), 리센느가 다른 건 ① <strong>경로가 개인 숏폼 유튜브</strong>이고 ② <strong>음악과 무관한 캐릭터 콘텐츠</strong>이며 ③ <strong>1인이 아니라 멤버 전원의 캐릭터를 한 채널에서 동반 성장시키는 구조</strong>이고 ④ 그 동력이 아이돌 본인이 아니라 <strong>전문 콘텐츠 스튜디오의 기획·제작력</strong>이라는 점이다.</li>
+<li><strong>QWER</strong>: 유튜버 출신 멤버의 <strong>기존 서브컬처 팬층</strong>이 밴드 팬으로 전환. 게임·스트리밍 커뮤니티가 초기 팬 확보처. 팬 확보 경로가 음악이 아니라 커뮤니티.</li>
+<li><strong>에이티즈</strong>: 데뷔 초기부터 <strong>해외 소규모 투어</strong>(미니 팬미팅)로 해외 팬을 먼저 조직 → 조직적 스트리밍/구매로 차트 성과 → 국내 관심 역수입. 팬 확보 경로가 음방이 아니라 현장.</li>
+<li><strong>키오프</strong>: 유튜브 커버/릴스 + R&amp;B 차별화로 <strong>음악 마니아</strong>를 먼저 확보. 마마무(2기)와 유사한 &quot;전문가 입소문 → 일반 팬 전환&quot; 패턴.</li>
+</ul>
+<p>3기의 공통점은 <strong>&quot;팀의 음악&quot;이 아닌 다른 경로로 첫 팬을 만든다</strong>는 것이다. 멤버 캐릭터, 서브컬처 기존 팬층, 해외 현장, 음악 마니아. 음악 노출 이전에 관계가 형성되고, 그 관계가 음악 소비로 전환된다. 음방 노출=팬 확보였던 1기와 정반대 구조.</p>
+<p><strong>해외 우회가 본격적 전략이 됐다.</strong> 에이티즈(빌보드 200 1위 2회), 키오프(빌보드 200 진입). 국내 벽이 대형사 장악+시장 축소로 높아진 반면, 글로벌 K-pop 팬덤은 커졌다. 해외에서 먼저 규모를 만들고 국내로 역수입하는 경로가 전략적 선택지가 됨.</p>
+</div><hr>
+
+<h2 class="part-start" id="sec-3"><span class="part-eyebrow"><span class="pk">Ⅲ · 구조 분석</span><span class="pd">무엇이 기적을 만드는가</span></span>3. 시대 간 비교: 미디어 환경이 바꾸는 것</h2>
+<h3>유형 분포의 변화</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>음악중심형</th>
+<th>바이럴형</th>
+<th>틈새공략형</th>
+<th>반례</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1기</strong> (방송+음원)</td>
+<td>8팀</td>
+<td><strong>0팀</strong></td>
+<td>1팀</td>
+<td>2팀</td>
+</tr>
+<tr>
+<td><strong>2기</strong> (유튜브+SNS)</td>
+<td>3팀</td>
+<td><strong>4팀</strong></td>
+<td>1팀</td>
+<td>0팀</td>
+</tr>
+<tr>
+<td><strong>3기</strong> (숏폼+알고리즘)</td>
+<td>3팀</td>
+<td><strong>3팀</strong></td>
+<td>3팀</td>
+<td>1팀</td>
+</tr>
+</tbody></table>
+
+<figure class="figure">
+<svg viewBox="0 0 720 300" role="img" aria-label="FIGURE 02 · 미디어가 열릴수록 '가능한 기적의 종류'가 늘어난다">
+  <text x="0" y="18" class="fig-title">FIGURE 02 · 미디어가 열릴수록 '가능한 기적의 종류'가 늘어난다</text>
+  <rect x="106.66666666666667" y="106" width="90" height="144" fill="#1a1a1a" /><text x="151.66666666666669" y="182" text-anchor="middle" class="barnum" fill="#fff">8</text><rect x="106.66666666666667" y="88" width="90" height="18" fill="#bdbdbd" stroke="#999"/><text x="151.66666666666669" y="101" text-anchor="middle" class="barnum" fill="#111">1</text><rect x="106.66666666666667" y="52" width="90" height="36" fill="#D64545" /><text x="151.66666666666669" y="74" text-anchor="middle" class="barnum" fill="#fff">2</text><text x="151.66666666666669" y="272" text-anchor="middle" class="axis-k">1기</text><text x="151.66666666666669" y="44" text-anchor="middle" class="barcap">11팀</text><rect x="270" y="196" width="90" height="54" fill="#1a1a1a" /><text x="315" y="227" text-anchor="middle" class="barnum" fill="#fff">3</text><rect x="270" y="124" width="90" height="72" fill="#D6FF92" /><text x="315" y="164" text-anchor="middle" class="barnum" fill="#111">4</text><rect x="270" y="106" width="90" height="18" fill="#bdbdbd" stroke="#999"/><text x="315" y="119" text-anchor="middle" class="barnum" fill="#111">1</text><text x="315" y="272" text-anchor="middle" class="axis-k">2기</text><text x="315" y="98" text-anchor="middle" class="barcap">8팀</text><rect x="433.33333333333337" y="196" width="90" height="54" fill="#1a1a1a" /><text x="478.33333333333337" y="227" text-anchor="middle" class="barnum" fill="#fff">3</text><rect x="433.33333333333337" y="142" width="90" height="54" fill="#D6FF92" /><text x="478.33333333333337" y="173" text-anchor="middle" class="barnum" fill="#111">3</text><rect x="433.33333333333337" y="88" width="90" height="54" fill="#bdbdbd" stroke="#999"/><text x="478.33333333333337" y="119" text-anchor="middle" class="barnum" fill="#111">3</text><rect x="433.33333333333337" y="70" width="90" height="18" fill="#D64545" /><text x="478.33333333333337" y="83" text-anchor="middle" class="barnum" fill="#fff">1</text><text x="478.33333333333337" y="272" text-anchor="middle" class="axis-k">3기</text><text x="478.33333333333337" y="62" text-anchor="middle" class="barcap">10팀</text><g transform="translate(588,150)"><rect x="0" y="0" width="14" height="14" fill="#1a1a1a" /><text x="20" y="12" class="lg">음악중심형</text><rect x="0" y="22" width="14" height="14" fill="#D6FF92" /><text x="20" y="34" class="lg">바이럴형</text><rect x="0" y="44" width="14" height="14" fill="#bdbdbd" stroke="#999"/><text x="20" y="56" class="lg">틈새공략형</text><rect x="0" y="66" width="14" height="14" fill="#D64545" /><text x="20" y="78" class="lg">반례(탈락)</text></g>
+</svg>
+</figure><p><strong>핵심</strong>: 미디어 환경이 바뀌면서 <strong>가능한 기적의 종류가 늘어난다.</strong> 방송 시대에는 음악중심형만 가능. 유튜브가 열리면서 바이럴형이 탄생. 숏폼/알고리즘 시대에 와서야 세 유형이 공존.</p>
+<h3>발견 장벽 vs 지속 장벽</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>발견 장벽</th>
+<th>지속 장벽</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1기</strong></td>
+<td><strong>높음</strong> (음방 게이트키퍼)</td>
+<td><strong>낮음</strong> (발견되면 안정)</td>
+<td>기적 수 적고 장기 생존율 높음</td>
+</tr>
+<tr>
+<td><strong>2기</strong></td>
+<td><strong>중간</strong> (SNS/유튜브 직접 접점)</td>
+<td><strong>중간</strong> (경쟁 심화)</td>
+<td>기적 수 늘고 성패 분화</td>
+</tr>
+<tr>
+<td><strong>3기</strong></td>
+<td><strong>낮음</strong> (알고리즘이 밀어줌)</td>
+<td><strong>높음</strong> (주의력 경쟁 극심)</td>
+<td>기적 수 많고 소멸도 빠름</td>
+</tr>
+</tbody></table>
+<p><strong>역설</strong>: 미디어가 민주화될수록 발견은 쉬워지지만 생존은 어려워진다.</p>
+<h3>대형사 적응 속도와 기회의 수명</h3>
+<table>
+<thead>
+<tr>
+<th>미디어 전환</th>
+<th>대형사 적응 기간</th>
+<th>적응 근거</th>
+<th>중소사 기회의 수명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>케이블TV → SNS (2013~)</td>
+<td>3~5년</td>
+<td>SM·JYP 유튜브 2006~08 개설→MV 아카이브 용도. 트위터 2010~12 개별 채택. 기획사 전략화 2012~13. BTS 후 전면 체계화</td>
+<td>BTS가 기회를 쓴 기간: ~4년 (2013~2017 빌보드 수상)</td>
+</tr>
+<tr>
+<td>SNS → 숏폼 (2020~)</td>
+<td>1~2년</td>
+<td>지코 &quot;아무노래&quot; 2020.01 전환점. 2021~22년이면 빅4 전부 숏폼 챌린지를 컴백 필수 프로모션으로 표준화</td>
+<td>리센느가 쓴 기회: ~1년</td>
+</tr>
+<tr>
+<td>숏폼 → ?</td>
+<td>6개월~1년 (추정)</td>
+<td>대형사 채용 공고·전략 발표가 &quot;기회가 닫히고 있다&quot;는 신호</td>
+<td>점점 짧아지는 추세</td>
+</tr>
+</tbody></table>
+<p><strong>시사점</strong>: 기회는 열리자마자 닫히기 시작한다. 다음 미디어 전환에서 중소사가 쓸 수 있는 시간은 더 짧을 것이다. 음악방송 시청률이 1% 미만으로 하락했지만, SBS·KBS·MBC의 K-pop 유튜브 채널(각 700~1,000만+ 구독)이 새로운 노출 경로가 됨: 음방 1위의 상업적 의미는 줄었으나 직캠·무대 영상의 유튜브 발견 효과는 기획사 규모와 무관하게 퍼포먼스 품질에 의존.</p>
+<h3>초기 팬 확보 방법론의 변화</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>주요 경로</th>
+<th>팬 확보의 전제</th>
+<th>음악과의 관계</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1기</strong></td>
+<td>음방 → 팬카페 (보조: 예능·라디오)</td>
+<td>방송 출연</td>
+<td>음악 노출 ≈ 팬 확보 (거의 동시)</td>
+</tr>
+<tr>
+<td><strong>2기</strong></td>
+<td>SNS 직접소통, 유튜브, P2P, 길거리</td>
+<td>채널 선점</td>
+<td>음악 + 비음악 경로 병행</td>
+</tr>
+<tr>
+<td><strong>3기</strong></td>
+<td>개인 유튜브, 서브컬처, 해외 투어, 커버</td>
+<td>인물·커뮤니티·현장</td>
+<td>음악 이전에 관계 형성 → 음악으로 전환</td>
+</tr>
+</tbody></table>
+<p><strong>핵심</strong>: 음악 노출과 팬 확보가 분리되는 속도가 시대마다 빨라진다. 1기에서 높은 중첩을 보였던 것이, 3기에서는 완전히 다른 행위가 됐다. &quot;좋은 곡을 쓰면 팬이 생긴다&quot;는 전제가 무력화된다. 좋은 곡은 여전히 필요하지만, 그 곡을 들을 사람을 먼저 만드는 별도의 전략이 필요해졌다.</p>
+<hr>
+<h2 id="sec-4">4. 기적의 4분면: 미디어 전략 × 음악 동력</h2>
+
+<figure class="figure">
+<svg viewBox="0 0 720 520" role="img" aria-label="FIGURE 03 · 4분면: 미디어 전략 × 음악 동력">
+  <text x="0" y="18" class="fig-title">FIGURE 03 · 4분면: 미디어 전략 × 음악 동력</text>
+  
+  <text x="360" y="44" text-anchor="middle" class="axc">미디어 전략 →</text>
+  <text x="190" y="60" text-anchor="middle" class="axs">주류 채널 (음방·음원)</text>
+  <text x="540" y="60" text-anchor="middle" class="axs">신규 채널 (SNS·유튜브·숏폼·해외)</text>
+  <text x="22" y="300" text-anchor="middle" class="axc" transform="rotate(-90 22 300)">← 음악 동력</text>
+  <text x="46" y="160" text-anchor="middle" class="axs" transform="rotate(-90 46 160)">있음</text>
+  <text x="46" y="430" text-anchor="middle" class="axs" transform="rotate(-90 46 430)">없음</text>
+  <rect x="70" y="70" width="290" height="200" fill="#fafafa" stroke="#ddd"/>
+  <rect x="360" y="70" width="290" height="200" fill="#D6FF92"/>
+  <rect x="70" y="270" width="290" height="200" fill="#fafafa" stroke="#ddd"/>
+  <rect x="360" y="270" width="290" height="200" fill="#f7f7f7" stroke="#ddd"/>
+  <text x="86" y="96" class="qh">A · 정석의 기적</text><text x="86" y="114" class="qt">1기 집중 · 가장 안정적</text><text x="86" y="140" class="qm">비스트 · 인피니트 · 씨스타</text><text x="86" y="158" class="qm">에이핑크 · VIXX · 걸스데이</text><text x="86" y="176" class="qm">오마이걸 · 스테이씨</text><text x="376" y="96" class="qh">B · 선점의 기적</text><text x="376" y="114" class="qt qt-em">가장 파괴적: 산업을 재편</text><text x="376" y="140" class="qm">BTS · 마마무 · 에이티즈</text><text x="376" y="158" class="qm">키오프 · 드림캐쳐 · QWER</text><text x="376" y="184" class="qn">동력 × 신규채널이 상호 강화하는 성장 루프</text><text x="86" y="296" class="qh">C · 미완의 기적</text><text x="86" y="314" class="qt">거의 빈 칸</text><text x="86" y="340" class="qm">틴탑 · B1A4</text><text x="86" y="366" class="qn">음방 시대엔 동력 없이 반복 히트가 불가능</text><text x="376" y="296" class="qh">D · 시대의 기적</text><text x="376" y="314" class="qt">2~3기에만 존재 · 화려하나 짧음</text><text x="376" y="340" class="qm">크레용팝 · 모모랜드</text><text x="376" y="358" class="qm">브레이브걸스 · 라붐 · 피프티피프티</text><text x="376" y="384" class="qn">바이럴형 = 뉴미디어가 만든 현상</text>
+  <text x="0" y="498" class="note">전환 D→A EXID·여자친구 / D→B 리센느(진행 중) · 탈락 B.A.P·피프티피프티·AOA · 틈새공략형(블락비·영파씨·트리플에스)은 B·D 사이 독자 경로</text>
+</svg>
+</figure>
+<h3>4분면이 말해주는 것</h3>
+<p><strong>(1) A는 방송 시대의 산물이고, B는 뉴미디어 시대의 산물이다.</strong></p>
+<p>A사분면(정석의 기적) 8팀 중 6팀이 1기(방송+음원). B사분면(선점의 기적) 6팀 전부가 2~3기. 이건 우연이 아니다. 뉴미디어 환경이 &quot;동력+신규채널&quot; 조합을 가능케 했다. 방송 시대에는 좋은 곡이 있어도 음방이라는 단일 채널에만 의존했고, SNS/유튜브/숏폼이 열리면서 동력의 전달 경로가 다양해졌다.</p>
+<p><strong>(2) D는 뉴미디어 환경의 부산물이다. C가 비는 것과 대칭.</strong></p>
+<p>C(미완의 기적)가 거의 비어 있는 건, 음방 시대에 동력 없이 반복 출연→히트가 불가능했기 때문. 반면 D(시대의 기적)는 유튜브·숏폼이 만든 바이럴 메커니즘 위에서만 존재한다. <strong>바이럴형이라는 현상 자체가 뉴미디어의 산물이다.</strong></p>
+<p><strong>(3) B가 가장 파괴적이다.</strong></p>
+<p>BTS(트위터+Pdogg), 에이티즈(해외투어+에덴), 키오프(숏폼+스트로베리바나나클럽). 음악 동력과 채널 전략이 상호 강화하는 성장 루프를 만든 팀들. A(정석의 기적)는 안정적이고, D(시대의 기적)는 화려하지만, <strong>산업을 재편한 건 B(선점의 기적)다.</strong> BTS 이후 모든 대형사가 SNS 전략을 체계화한 건 B의 위력에 대한 반응이었다.</p>
+<p><strong>(4) 시대가 가면서 B와 D의 비중이 커지고, A는 줄어든다.</strong></p>
+<p>이건 미디어 환경이 &quot;마케팅의 비중&quot;을 키우고 있다는 뜻이다. 방송 시대에는 곡만 좋으면 됐다(A). 뉴미디어 시대에는 곡도 좋아야 하고 채널 전략도 있어야 한다(B). 또는 채널 전략만으로 순간적 기적이 가능하다(D). <strong>음악 산업에서 미디어 리터러시의 가치가 시대마다 올라가고 있다.</strong></p>
+<hr>
+<h2 id="sec-5">5. 교차 패턴</h2>
+<h3>패턴 ①: 글로벌 우회(3기에서 본격화)</h3>
+<table>
+<thead>
+<tr>
+<th>팀</th>
+<th>경로</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BTS</td>
+<td>트위터→빌보드 (2기)</td>
+<td>지속</td>
+</tr>
+<tr>
+<td>에이티즈</td>
+<td>해외투어→빌보드 200 (3기)</td>
+<td>지속</td>
+</tr>
+<tr>
+<td>드림캐쳐</td>
+<td>해외 페스티벌→월드투어 7회 (2~3기)</td>
+<td>국내 제한, 해외 지속</td>
+</tr>
+<tr>
+<td>B.A.P</td>
+<td>빌보드 월드 앨범 (1기)</td>
+<td>조직 파괴</td>
+</tr>
+<tr>
+<td>피프티피프티</td>
+<td>TikTok→핫100 (3기)</td>
+<td>조직 파괴</td>
+</tr>
+</tbody></table>
+<p>국내 벽이 대형사 장악+시장 축소로 높아진 반면 글로벌 K-pop 시장은 커짐. 3기에서 해외 우회가 &quot;어쩔 수 없는 선택&quot;에서 &quot;전략적 선택&quot;으로 전환. 다만 해외 성공은 조직 안정성에 더 큰 압력을 준다(B.A.P·피프티피프티).</p>
+<h3>패턴 ②: 역주행의 진화(SNS 역주행 2기 → 알고리즘 역주행 3기)</h3>
+<p>역주행은 3기의 고유 현상이 아니다. <strong>2기(2014~)에 처음 등장</strong>하고 3기에서 메커니즘이 바뀌었다.</p>
+<p><strong>2기: SNS·커뮤니티 기반 역주행</strong>(사람이 큐레이션)</p>
+<table>
+<thead>
+<tr>
+<th>팀</th>
+<th>원곡 발매</th>
+<th>역주행 시점</th>
+<th>시차</th>
+<th>역주행 트리거</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>EXID</td>
+<td>2014.08</td>
+<td>2014.10</td>
+<td>2개월</td>
+<td>팬 직캠 → 커뮤니티·페이스북 바이럴</td>
+</tr>
+<tr>
+<td>여자친구</td>
+<td>2015.01</td>
+<td>2015.09</td>
+<td>8개월</td>
+<td>사고 영상 → 유튜브·커뮤니티 바이럴</td>
+</tr>
+</tbody></table>
+<p>역주행의 트리거가 <strong>사람의 행위</strong>(직캠 촬영, 영상 공유, 페이스북 큐레이션 페이지)였다. &quot;일반인들의소름돋는라이브&quot; 같은 페이스북 채널이 비팬 일반인에게 아이돌 영상을 노출시키면서, 팬덤 바깥→안으로의 유입이 <strong>대규모·비의도적으로</strong> 일어나기 시작했다(이전에도 예능·드라마를 통한 비팬 유입은 있었지만, SNS 바이럴은 규모와 속도가 달랐다).</p>
+<p><strong>3기: 알고리즘 기반 역주행</strong>(유튜브·숏폼이 발견을 주도, 방송은 결과)</p>
+<table>
+<thead>
+<tr>
+<th>팀</th>
+<th>원곡 발매</th>
+<th>역주행 시점</th>
+<th>시차</th>
+<th>역주행 트리거</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>브레이브걸스</td>
+<td>2017</td>
+<td>2021</td>
+<td>4년</td>
+<td>군 위문공연 유튜브 영상 → 알고리즘·댓글 확산 (방송 출연은 이후)</td>
+</tr>
+<tr>
+<td>라붐</td>
+<td>2016</td>
+<td>2021</td>
+<td>5년</td>
+<td>SNS·유튜브 역주행 연쇄(2021 붐)</td>
+</tr>
+<tr>
+<td>리센느</td>
+<td>2024</td>
+<td>2025</td>
+<td>1년</td>
+<td>멤버 유튜브 → 숏폼 알고리즘 → 음원 재발견</td>
+</tr>
+</tbody></table>
+<p>유튜브·숏폼 알고리즘이 과거 콘텐츠를 직접 끌어올리고(댓글·커뮤니티가 증폭), 방송 출연은 그 결과로 따라온다. 시차가 수년 단위로 늘어남. 곡의 유통기한이 사실상 사라졌다.</p>
+<p><strong>진화의 핵심</strong>: 2기 역주행이 팬·커뮤니티의 손을 거쳤다면, 3기에서는 유튜브·숏폼 알고리즘이 발견을 주도하고 방송·예능은 그 뒤에 따라온다. 발견의 민주화가 한 단계 더 진행된 것. 다만 <strong>역주행 이후 동력 전환 난이도도 함께 올라갔다.</strong> 관심의 속도가 빨라진 만큼 이탈도 빠르다.</p>
+<h3>패턴 ③: 바이럴→음악중심 전환 (전 시대 공통)</h3>
+<table>
+<thead>
+<tr>
+<th>팀</th>
+<th>시대</th>
+<th>전환 성공</th>
+<th>전환 무기</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>EXID</td>
+<td>2</td>
+<td>O</td>
+<td>신사동호랭이 + LE 자작곡</td>
+</tr>
+<tr>
+<td>여자친구</td>
+<td>2</td>
+<td>O</td>
+<td>음방 장악 + 팬덤 기반</td>
+</tr>
+<tr>
+<td>크레용팝</td>
+<td>2</td>
+<td>X</td>
+<td>프로듀서 1회성</td>
+</tr>
+<tr>
+<td>모모랜드</td>
+<td>2</td>
+<td>X</td>
+<td>해외 바이럴 재현 불가</td>
+</tr>
+<tr>
+<td>브레이브걸스</td>
+<td>3</td>
+<td>X</td>
+<td>짧은 전성기 후 해산</td>
+</tr>
+<tr>
+<td>라붐</td>
+<td>3</td>
+<td>X</td>
+<td>활동 제한</td>
+</tr>
+<tr>
+<td>리센느</td>
+<td>3</td>
+<td>?</td>
+<td>진행 중</td>
+</tr>
+</tbody></table>
+<p>전환율: 2기에서 2/4(50%), 3기에서 0/3(0%, 리센느 진행 중). <strong>시대가 가면서 전환이 더 어려워지는 추세</strong>. 이유: 관심 사이클이 짧아져 동력 구축에 쓸 수 있는 시간이 줄었다.</p>
+<h3>패턴 ④: 초기 팬 확보 ≠ 팬 유지(두 방법론의 분리)</h3>
+<p>발견(미디어 환경이 제공)과 지속(음악 동력이 결정) 사이에 **&quot;첫 100명을 만드는 기술&quot;**이라는 독립 변수가 있다. 이 기술은 시대마다 완전히 다르다.</p>
+<table>
+<thead>
+<tr>
+<th>시대</th>
+<th>초기 팬 확보의 핵심 기술</th>
+<th>팬 유지의 핵심 기술</th>
+<th>두 기술의 관계</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1</strong></td>
+<td>음방 출연 + 예능 (보조)</td>
+<td>좋은 곡을 계속 내는 것 (=동력)</td>
+<td><strong>높은 중첩</strong>: 확보와 유지가 거의 같은 행위 (예능 보조 경로 존재하나 음방이 전제)</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>SNS 직접소통, 유튜브, P2P, 길거리</td>
+<td>동력 + 팬 관계의 질(BTS 모델)</td>
+<td><strong>분리 시작</strong>: 확보는 채널, 유지는 음악+관계</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>캐릭터, 서브컬처, 해외 현장, 커버</td>
+<td>동력 + 알고리즘 적응 + 글로벌 스케일</td>
+<td><strong>완전 분리</strong>: 확보는 비음악, 유지는 음악+구조</td>
+</tr>
+</tbody></table>
+<p><strong>이 분리가 의미하는 것</strong>: &quot;좋은 곡을 쓰면 팬이 온다&quot;는 1기의 전제가 3기에서는 성립하지 않는다. 좋은 곡은 유지의 조건이지 확보의 조건이 아니다. 초기 팬을 만드는 건 별도의 기술이고, 그 기술은 음악 역량과 전혀 다른 역량(캐릭터 구축, 커뮤니티 침투, 현장 운영)을 요구한다.</p>
+<p><strong>전환의 문제</strong>: 비음악 경로로 확보한 팬을 음악 팬으로 전환하는 것은 새로운 과제다. 리센느는 캐릭터 팬→음악 팬 전환을 시도 중이고, QWER는 서브컬처 팬→밴드 팬 전환에 부분 성공했다(&quot;고민중독&quot; 멜론 4위). 이 <strong>비음악 팬→음악 팬 전환율</strong>이 3기에서 &quot;바이럴→음악중심 전환&quot;만큼이나 중요한 변수가 될 것이다.</p>
+<hr>
+<h2 id="sec-6">6. 반례 분석</h2>
+<h3>B.A.P: 동력+해외 우회, 그러나 조직 파괴</h3>
+<p>TS엔터 소속, 2012 데뷔. 파워풀 퍼포먼스로 빌보드 월드 앨범 차트 <strong>1위</strong>(2014, &quot;First Sensibility&quot;). B사분면(선점의 기적) 위치. 그러나 2014년 11월 전속계약·수익 분배 소송(3년간 90억 수입 중 멤버 1인당 ~2천만원 지급 주장), 장기 활동 중단 후 2019년 해체.</p>
+<h3>피프티피프티: 3기의 극단적 D→탈락</h3>
+<p>&quot;큐피드&quot;로 빌보드 핫100 17위(데뷔 4개월). D사분면(시대의 기적)에서 시작해 전환 시도 전에 4자 분쟁으로 와해. 브랜드 평판 347만점→15만점.</p>
+<h3>크레용팝: D사분면의 전형</h3>
+<p>뮤비 38만원(스토리 버전 기준, 안무 버전도 대표가 중고 카메라 1대로 직접 촬영), 유튜브 누적 6,600만+ 조회, 빌보드 K-Pop Hot 100 1위. 그러나 후속곡 임팩트 실패. 프로듀서 동력 1회성 + B급 콘셉트 반복 한계. D(시대의 기적)에서 A(정석의 기적)·B(선점의 기적)로의 전환 실패.</p>
+<p><strong>공통 교훈</strong>: 사분면(A 정석·B 선점·C 미완·D 시대의 기적) 위치와 무관하게, ① 조직 안정성(B.A.P·피프티피프티)과 ② 동력 지속성(크레용팝)이 없으면 기적은 끝난다. 이 두 가지는 미디어 환경과 무관한 <strong>시대불문 필요조건</strong>.</p>
+<hr>
+<h2 id="sec-7">7. 공통 조건 vs 특수 조건: 시대마다 변하지 않는 것과 변하는 것</h2>
+<h3>시대불문: 미디어가 뭐든 변하지 않는 것</h3>
+<table>
+<thead>
+<tr>
+<th>조건</th>
+<th>설명</th>
+<th>사분면에서의 역할</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>음악 동력</strong></td>
+<td>연속 히트 가능한 작곡 구조</td>
+<td>A·B 진입의 전제. 없으면 C·D</td>
+</tr>
+<tr>
+<td><strong>조직 안정성</strong></td>
+<td>아티스트-소속사 신뢰</td>
+<td>어떤 사분면이든 이것 없으면 탈락</td>
+</tr>
+<tr>
+<td><strong>서사의 힘</strong></td>
+<td>다윗 vs 골리앗 언더독 구도</td>
+<td>팬덤 감정 투자의 연료</td>
+</tr>
+<tr>
+<td><strong>최소 자본</strong></td>
+<td>데뷔 후 1~2년 생존 체력</td>
+<td>모든 유형의 전제</td>
+</tr>
+</tbody></table>
+<h3>시대 특수: 미디어가 바뀌면 같이 바뀌는 것</h3>
+<table>
+<thead>
+<tr>
+<th>조건</th>
+<th>1기</th>
+<th>2기</th>
+<th>3기</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>발견 채널</strong></td>
+<td>케이블 예능+음방</td>
+<td>유튜브+트위터+직캠</td>
+<td>숏폼+AI 추천+해외투어</td>
+</tr>
+<tr>
+<td><strong>바이럴 가능 여부</strong></td>
+<td>불가능</td>
+<td>가능 (유튜브)</td>
+<td>가능+역주행(알고리즘)</td>
+</tr>
+<tr>
+<td><strong>대형사와의 간극</strong></td>
+<td>케이블 경시 (3~5년)</td>
+<td>SNS 보조 취급 (3~5년)</td>
+<td>숏폼 빠른 적응 (1~2년)</td>
+</tr>
+<tr>
+<td><strong>초기 팬 확보</strong></td>
+<td>음방→팬카페 + 예능 보조</td>
+<td>SNS·유튜브·P2P·길거리 (복수)</td>
+<td>캐릭터·서브컬처·해외·커버 (분산)</td>
+</tr>
+<tr>
+<td><strong>팬 확보 ↔ 음악의 관계</strong></td>
+<td>높은 중첩</td>
+<td>분리 시작</td>
+<td>완전 분리</td>
+</tr>
+<tr>
+<td><strong>기적의 주요 유형</strong></td>
+<td>음악중심형만</td>
+<td>음악중심+바이럴</td>
+<td>음악중심+바이럴+틈새공략</td>
+</tr>
+<tr>
+<td><strong>지속의 난이도</strong></td>
+<td>낮음</td>
+<td>중간</td>
+<td>높음</td>
+</tr>
+</tbody></table>
+<hr>
+
+<h2 class="part-start" id="sec-8"><span class="part-eyebrow"><span class="pk">Ⅳ · 전략과 결론</span><span class="pd">그래서 어떻게 해야 할까?</span></span>8. 벤치마킹 전략: &quot;다음 기회&quot;를 어떻게 쓸 것인가</h2>
+<h3>전제: 미디어 환경 읽기가 1단계, 초기 팬 설계가 2단계다</h3>
+<p>기적의 유형이 뭐든, <strong>당대의 미디어 환경에서 대형사가 아직 장악하지 않은 채널을 식별하는 것</strong>이 첫 번째 과제이고, <strong>그 채널에서 첫 팬을 어떻게 만들지 설계하는 것</strong>이 두 번째 과제다. 3기에서는 이 두 과제가 완전히 다른 역량을 요구한다. 2026년 현재:</p>
+<ul>
+<li><strong>닫히고 있는 기회</strong>: 숏폼 챌린지(대형사 기본 전략화), 팬 커뮤니티 앱(위버스·디어유 등 대형사 직접 소유)</li>
+<li><strong>아직 열려 있는 기회</strong>: 전문 스튜디오 제작형 멤버 유튜브(리센느가 선점, 전문 콘텐츠 스튜디오 솔파스튜디오가 멤버 개인 채널을 캐릭터 콘텐츠로 기획·제작해 전원을 동반 성장시키는 구조), 로컬 정체성의 글로벌 밈화(거제 사투리→글로벌), 서브컬처 커뮤니티(QWER 모델), 오프라인↔디지털 하이브리드</li>
+<li><strong>다음 전환 후보</strong>: AI 생성/큐레이션 콘텐츠, 몰입형 경험(VR/AR), 라이브 커머스 연동</li>
+</ul>
+<p><strong>단, 기회의 수명이 점점 짧아지고 있다.</strong> 2기에서 BTS가 기회를 쓴 기간은 ~4년. 3기에서 리센느가 쓴 기회는 ~1년. 다음 전환에서 쓸 수 있는 시간은 더 짧을 것. <strong>미디어 전략의 민첩성(speed)이 과거보다 중요해졌다.</strong></p>
+<h3>사분면별 전략</h3>
+
+<figure class="figure">
+<svg viewBox="0 0 720 520" role="img" aria-label="FIGURE 03 · 4분면: 미디어 전략 × 음악 동력 (전략 참고용 재게재)">
+  <text x="0" y="18" class="fig-title">FIGURE 03 · 4분면: 미디어 전략 × 음악 동력 (전략 참고용 재게재)</text>
+  
+  <text x="360" y="44" text-anchor="middle" class="axc">미디어 전략 →</text>
+  <text x="190" y="60" text-anchor="middle" class="axs">주류 채널 (음방·음원)</text>
+  <text x="540" y="60" text-anchor="middle" class="axs">신규 채널 (SNS·유튜브·숏폼·해외)</text>
+  <text x="22" y="300" text-anchor="middle" class="axc" transform="rotate(-90 22 300)">← 음악 동력</text>
+  <text x="46" y="160" text-anchor="middle" class="axs" transform="rotate(-90 46 160)">있음</text>
+  <text x="46" y="430" text-anchor="middle" class="axs" transform="rotate(-90 46 430)">없음</text>
+  <rect x="70" y="70" width="290" height="200" fill="#fafafa" stroke="#ddd"/>
+  <rect x="360" y="70" width="290" height="200" fill="#D6FF92"/>
+  <rect x="70" y="270" width="290" height="200" fill="#fafafa" stroke="#ddd"/>
+  <rect x="360" y="270" width="290" height="200" fill="#f7f7f7" stroke="#ddd"/>
+  <text x="86" y="96" class="qh">A · 정석의 기적</text><text x="86" y="114" class="qt">1기 집중 · 가장 안정적</text><text x="86" y="140" class="qm">비스트 · 인피니트 · 씨스타</text><text x="86" y="158" class="qm">에이핑크 · VIXX · 걸스데이</text><text x="86" y="176" class="qm">오마이걸 · 스테이씨</text><text x="376" y="96" class="qh">B · 선점의 기적</text><text x="376" y="114" class="qt qt-em">가장 파괴적: 산업을 재편</text><text x="376" y="140" class="qm">BTS · 마마무 · 에이티즈</text><text x="376" y="158" class="qm">키오프 · 드림캐쳐 · QWER</text><text x="376" y="184" class="qn">동력 × 신규채널이 상호 강화하는 성장 루프</text><text x="86" y="296" class="qh">C · 미완의 기적</text><text x="86" y="314" class="qt">거의 빈 칸</text><text x="86" y="340" class="qm">틴탑 · B1A4</text><text x="86" y="366" class="qn">음방 시대엔 동력 없이 반복 히트가 불가능</text><text x="376" y="296" class="qh">D · 시대의 기적</text><text x="376" y="314" class="qt">2~3기에만 존재 · 화려하나 짧음</text><text x="376" y="340" class="qm">크레용팝 · 모모랜드</text><text x="376" y="358" class="qm">브레이브걸스 · 라붐 · 피프티피프티</text><text x="376" y="384" class="qn">바이럴형 = 뉴미디어가 만든 현상</text>
+  <text x="0" y="498" class="note">전환 D→A EXID·여자친구 / D→B 리센느(진행 중) · 탈락 B.A.P·피프티피프티·AOA · 틈새공략형(블락비·영파씨·트리플에스)은 B·D 사이 독자 경로</text>
+</svg>
+</figure><p><strong>B를 노린다면: 가장 파괴적, 가장 어려움</strong></p>
+<ul>
+<li>음악 동력(작곡진) + 신규 채널 선점을 동시에</li>
+<li>BTS 모델: 동력과 채널이 상호 강화하는 루프 설계</li>
+<li>리스크: 두 가지를 동시에 해야 하므로 역량·자본 요구 높음</li>
+<li>이 전략이 성공하면 산업을 재편한다</li>
+</ul>
+<p><strong>A를 노린다면: 가장 안정적, 시간이 걸림</strong></p>
+<ul>
+<li>작곡 동력에 집중, 채널은 당대 주류를 따라감</li>
+<li>오마이걸 모델: 1,009일 점진 상승</li>
+<li>리스크: 3기에서 A의 난이도가 올라감 (대형사의 주류 채널 장악이 더 강해졌으므로)</li>
+</ul>
+<p><strong>D→B 전환을 노린다면: 바이럴 후 빠른 동력 구축</strong></p>
+<ul>
+<li>밈 가능한 콘텐츠 자산을 의도적으로 심되, 바이럴에 의존하지 않음</li>
+<li><strong>바이럴 후 1~2년이 결정적.</strong> 3기에서는 이 기간이 더 짧을 수 있음</li>
+<li>EXID 모델: 직캠 역주행 직후 신사동호랭이+LE 자작곡 동력 가동</li>
+</ul>
+<p><strong>틈새를 노린다면: 가장 현실적, 스케일 제한</strong></p>
+<ul>
+<li>메인스트림 차트가 아닌 니치 시장에서 지속 가능 모델</li>
+<li>드림캐쳐 모델: 해외 투어 기반 수익, 국내 차트에 의존하지 않음</li>
+<li>QWER 모델: 서브컬처 커뮤니티 기반 진입 → 메인스트림 크로스오버</li>
+</ul>
+<h3>초기 팬 전략: 4축의 새 변수</h3>
+<p>사분면과 별도로, **&quot;첫 100명을 어디서 어떻게 만들 것인가&quot;**를 설계해야 한다. 2026년 기준으로 작동하는 초기 팬 확보 경로:</p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>전문 스튜디오 제작형 멤버 유튜브</strong>: 리센느가 선점. 멤버 개인 채널을 전문 콘텐츠 스튜디오(솔파스튜디오)가 캐릭터 콘텐츠로 제작·편성해 그룹 전원을 동반 성장시키는 구조. 핵심은 아이돌의 자생적 운영이 아니라 전문 스튜디오의 기획·제작력. 그룹 아이덴티티 이전에 인물 매력으로 팬 유입 → 음악 전환. 대형사가 벤치마킹하기 전까지 유효</li>
+<li><input disabled="" type="checkbox"> <strong>서브컬처 커뮤니티 침투</strong>: QWER 모델. 기존 커뮤니티(게임·스트리밍·인디 씬)의 팬을 밴드 팬으로 전환. 커뮤니티가 깊을수록 전환율 높음</li>
+<li><input disabled="" type="checkbox"> <strong>해외 소규모 투어/팬미팅</strong>: 에이티즈 모델. 국내 인지도가 낮을 때 해외에서 먼저 직접 만남. 조직적 팬덤의 씨앗</li>
+<li><input disabled="" type="checkbox"> <strong>전문가·마니아 입소문</strong>: 키오프·마마무 모델. 업계 관계자나 음악 마니아를 먼저 팬으로 확보 → 신뢰 기반 확산</li>
+</ul>
+<p><strong>주의</strong>: 초기 팬 확보와 팬 유지는 다른 기술이다. 비음악 경로로 모은 팬을 음악 팬으로 전환하는 2단계 설계가 필수. 전환에 실패하면 캐릭터 팬·밈 팬으로 머물다 이탈한다.</p>
+<h3>공통: 시대와 유형 무관</h3>
+<ul>
+<li><input disabled="" type="checkbox"> 조직 안정성: 아티스트-소속사 신뢰. B.A.P·피프티피프티가 증명한 반례</li>
+<li><input disabled="" type="checkbox"> 음악 동력: 1곡이 아니라 3년치 레퍼토리 설계. 크레용팝이 증명한 반례</li>
+<li><input disabled="" type="checkbox"> 최소 자본: 키오프 52억 투자유치, 리센느 버클리 출신 경영진. 열정만으로 안 됨</li>
+<li><input disabled="" type="checkbox"> 서사 아카이빙: 실제 과정의 기록. 날조가 아닌 아카이빙 (리센느 흙바닥 영상, BTS FESTA)</li>
+</ul>
+<hr>
+<h2 id="sec-9">9. 핵심 테제</h2>
+<blockquote>
+<p><strong>미디어 환경이 기적의 종류를 결정하고,<br>초기 팬 확보가 기적의 시작을 결정하고,<br>음악 동력이 기적의 지속을 결정한다.</strong></p>
+</blockquote>
+<ol>
+<li><p><strong>발견의 조건은 시대에 달렸다.</strong> 방송 시대에는 음악중심형만, SNS 시대에는 바이럴형 추가, 숏폼 시대에는 세 유형 공존. 어떤 기적이 가능한지를 미디어 환경이 규정한다.</p>
+</li>
+<li><p><strong>&quot;첫 100명&quot;을 만드는 기술이 시대마다 완전히 바뀐다.</strong> 1기에서는 음방 노출이 곧 팬 확보와 거의 동일한 행위였다(예능 보조 경로는 있었지만 음방 전제). 3기에서는 음악 이전에 캐릭터·커뮤니티·현장으로 관계를 먼저 만들어야 한다. 초기 팬 확보는 발견(미디어)과 지속(동력) 사이에 있는 독립 변수이고, 이 변수의 난이도가 올라가고 있다. &quot;좋은 곡을 쓰면 팬이 온다&quot;는 전제는 3기에서 성립하지 않는다.</p>
+</li>
+<li><p><strong>지속의 조건은 시대와 무관하다.</strong> 음악 동력·조직 안정성·자본. 이건 방송 시대에도, 숏폼 시대에도 똑같이 필요하다. 미디어가 바뀌어도 이 세 가지는 변하지 않는다.</p>
+</li>
+<li><p><strong>미디어 리터러시의 가치는 시대마다 올라간다.</strong> 방송 시대에는 곡만 좋으면 됐다. 지금은 곡도 좋아야 하고, 어떤 채널에서 어떻게 발견되게 할지도 설계해야 하고, 그 곡을 들을 사람을 먼저 만드는 전략도 필요하다. B사분면(선점의 기적)이 가장 파괴적인 건, 세 역량을 동시에 갖추기 때문이다.</p>
+</li>
+<li><p><strong>기회는 열리자마자 닫히기 시작한다.</strong> 대형사의 적응 속도가 빨라지고 있다. 다음 미디어 전환에서 중소사가 쓸 수 있는 시간은 더 짧을 것. 기적의 난이도는 시대마다 올라간다.</p>
+</li>
+<li><p><strong>초기 팬 확보와 팬 유지는 다른 기술이다.</strong> 비음악 경로로 모은 팬을 음악 팬으로 전환하는 것은 3기의 새로운 과제다. EXID의 &quot;바이럴→음악중심 전환&quot;이 2기의 핵심 과제였다면, &quot;비음악 팬→음악 팬 전환&quot;이 3기의 핵심 과제다. 이 전환에 성공하는 팀만이 기적을 지속할 수 있다.</p>
+</li>
+<li><p><strong>기적이 반복된다면 패턴이다.</strong> 그리고 이 패턴의 세 축은 &quot;시대의 기회를 읽는 눈&quot;(미디어 전략), &quot;첫 팬을 만드는 기술&quot;(초기 팬 확보), &quot;기회를 채울 실력&quot;(음악 동력)이다. 셋 다 통제 가능한 영역에 있다. 운이 필요한 건 바이럴 타이밍뿐이고, 바이럴 없이도 기적은 일어난다. A사분면(정석의 기적)이 그 증거다.</p>
+</li>
+</ol>
+<hr>
+<h2 id="sec-10">10. 시대불변 규칙: 미디어가 뭘로 바뀌든 적용되는 것</h2>
+<p>핵심 테제가 &quot;1~3기에서 뭘 배웠나&quot;라면, 이 섹션은 **&quot;4기가 와도 작동하는 규칙&quot;**이다. 1~3기를 관통해 검증된 것만 남겼다.</p>
+<hr>
+<h3>규칙 1: 기회의 반감기</h3>
+<blockquote>
+<p><strong>매 미디어 전환마다 중소사가 쓸 수 있는 기회의 유효 기간이 절반으로 줄어든다.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>전환</th>
+<th>대형사 적응</th>
+<th>선점 윈도우</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>방송→SNS</td>
+<td>3~5년</td>
+<td>BTS ~4년</td>
+</tr>
+<tr>
+<td>SNS→숏폼</td>
+<td>1~2년</td>
+<td>리센느 ~1년</td>
+</tr>
+<tr>
+<td>숏폼→?</td>
+<td>6개월~1년 (추정)</td>
+<td>?</td>
+</tr>
+</tbody></table>
+
+<figure class="figure">
+<svg viewBox="0 0 720 250" role="img" aria-label="FIGURE 04 · 기회의 반감기: 선점 윈도우가 매 전환마다 절반으로">
+  <text x="0" y="18" class="fig-title">FIGURE 04 · 기회의 반감기: 선점 윈도우가 매 전환마다 절반으로</text>
+  
+      <text x="138" y="76" text-anchor="end" class="axis-k">방송 → SNS</text>
+      <rect x="150" y="55" width="360" height="34" fill="#D6FF92" stroke="#111"/>
+      <text x="520" y="76" class="winlab">선점 ~4년 (BTS)</text>
+      <text x="158" y="76" class="adaptlab" fill="#111">대형사 적응 3~5년</text>
+      <text x="138" y="136" text-anchor="end" class="axis-k">SNS → 숏폼</text>
+      <rect x="150" y="115" width="150" height="34" fill="#D6FF92" stroke="#111"/>
+      <text x="310" y="136" class="winlab">선점 ~1년 (리센느)</text>
+      <text x="158" y="136" class="adaptlab" fill="#111">대형사 적응 1~2년</text>
+      <text x="138" y="196" text-anchor="end" class="axis-k">숏폼 → ?</text>
+      <rect x="150" y="175" width="70" height="34" fill="#D64545" />
+      <text x="230" y="196" class="winlab">선점 &lt;1년 (?)</text>
+      <text x="158" y="196" class="adaptlab" fill="#fff">대형사 적응 6개월~1년(추정)</text><text x="0" y="238" class="note">대형사가 새 채널을 진지하게 취급하기 시작하면 기회는 닫힌다: 채용 공고·전략 발표가 그 신호</text>
+</svg>
+</figure><p><strong>적용법</strong>: 새 미디어가 등장하면, &quot;대형사가 이걸 진지하게 취급하기까지 얼마나 걸리나&quot;를 추정하라. 그 기간의 전반부에 포지션을 잡아야 한다. 후반부에 진입하면 이미 늦다. 대형사의 채용 공고·전략 발표가 역설적으로 &quot;이 기회가 닫히고 있다&quot;는 신호다.</p>
+<hr>
+<h3>규칙 2: 동력 선행 원칙</h3>
+<blockquote>
+<p><strong>음악 동력이 바이럴보다 선행할수록 생존 확률이 올라간다. 바이럴 후 동력 구축에 쓸 수 있는 시간은 시대마다 짧아진다.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>순서</th>
+<th>사례</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>동력 선행</td>
+<td>비스트, 인피니트, BTS, 마마무, 에이티즈</td>
+<td>전원 장기 생존</td>
+</tr>
+<tr>
+<td>바이럴 선행 → 동력 성공</td>
+<td>EXID, 여자친구</td>
+<td>생존 (전환기 리스크)</td>
+</tr>
+<tr>
+<td>바이럴 선행 → 동력 실패</td>
+<td>크레용팝, 모모랜드, 브레이브걸스</td>
+<td>소멸</td>
+</tr>
+</tbody></table>
+<p>전환 성공률: 2기에서 50%(2/4), 3기에서 0%(0/3, 리센느 진행 중).</p>
+<p><strong>적용법</strong>: 데뷔 전에 음악 동력(인하우스 프로듀서 또는 장기 계약 외부 프로듀서)을 확보하는 게 이상적이다. 바이럴이 먼저 터졌다면, 12개월 이내에 동력을 가동해야 한다. 3기 기준이고 4기에서는 이 기간이 더 짧아질 것이다. 바이럴 마케팅에 투자하기 전에 3년치 음악 레퍼토리를 먼저 설계하라.</p>
+<hr>
+<h3>규칙 3: 대형사 무관심 지점 = 다음 기회</h3>
+<blockquote>
+<p><strong>중소사의 다음 기회는 &quot;대형사가 지금 무시하고 있는 채널&quot;에 있다. 대형사가 체계적으로 관리하기 시작하면 기회는 닫힌다.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>시대</th>
+<th>대형사가 무시한 것</th>
+<th>중소사가 선점한 것</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>케이블 예능</td>
+<td>인피니트·VIXX 리얼리티</td>
+</tr>
+<tr>
+<td>2</td>
+<td>트위터·유튜브 직접소통</td>
+<td>BTS·마마무·크레용팝</td>
+</tr>
+<tr>
+<td>3</td>
+<td>멤버 개인 날것 유튜브</td>
+<td>리센느</td>
+</tr>
+</tbody></table>
+<p><strong>적용법</strong>: &quot;대형사가 지금 뭘 안 하고 있나&quot;를 정기적으로 스캔하라. 대형사가 하지 않는 이유가 &quot;아직 모른다&quot;인지 &quot;전략적으로 버렸다&quot;인지를 구분하라. 전자가 기회다. 대형사가 해당 채널 전담팀을 만들거나 인력을 뽑기 시작하면 카운트다운이 시작된 것이다.</p>
+<hr>
+<h3>규칙 4: 초기 팬 확보와 음악의 거리가 멀수록 전환 설계가 필수</h3>
+<blockquote>
+<p><strong>초기 팬 확보 경로가 음악에서 멀어질수록, 음악 팬으로의 전환을 위한 명시적 퍼널이 필요하다. 전환 없이는 캐릭터 팬·밈 팬으로 머물다 이탈한다.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>시대</th>
+<th>팬 확보↔음악 거리</th>
+<th>전환 설계 필요도</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>거리 최소 (음방≈팬 확보, 예능 보조)</td>
+<td>낮음</td>
+</tr>
+<tr>
+<td>2</td>
+<td>가까움 (SNS지만 음악 콘텐츠)</td>
+<td>낮음~중간</td>
+</tr>
+<tr>
+<td>3</td>
+<td>멂 (캐릭터·서브컬처·현장)</td>
+<td>높음</td>
+</tr>
+</tbody></table>
+<p><strong>적용법</strong>: 초기 팬 확보 채널을 정했으면, <strong>그 채널에서 음악 소비까지의 전환 경로를 3단계 이내로 설계</strong>하라. 리센느: 원이 유튜브 → 그룹 유튜브 → 음원. QWER: 게임 커뮤니티 → 라이브 영상 → 음원. 3단계를 넘으면 이탈률이 급증한다. 4기에서는 초기 팬 확보가 음악에서 더 멀어질 것이므로 이 설계의 중요도가 올라간다.</p>
+<hr>
+<h3>규칙 5: 조직 안정성은 모든 전략의 전제조건</h3>
+<blockquote>
+<p><strong>아티스트-소속사 관계가 깨지면 어떤 사분면이든, 어떤 미디어 환경이든 기적은 끝난다. 이건 1기에서도, 3기에서도 똑같았다.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>사례</th>
+<th>사분면</th>
+<th>시대</th>
+<th>파괴 원인</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B.A.P</td>
+<td>B (동력+해외)</td>
+<td>1</td>
+<td>전속계약 소송</td>
+</tr>
+<tr>
+<td>피프티피프티</td>
+<td>D (바이럴)</td>
+<td>3</td>
+<td>4자 분쟁</td>
+</tr>
+<tr>
+<td>AOA</td>
+<td>A (동력+주류)</td>
+<td>1</td>
+<td>내부 스캔들</td>
+</tr>
+</tbody></table>
+<p><strong>적용법</strong>: 미디어 전략·음악 동력·초기 팬 전략보다 <strong>계약 구조·수익 분배·의사결정 참여</strong> 3가지를 먼저 설계하라. 이 셋이 조직 안정성의 선행 지표다. 해외 성공이 클수록 조직에 가해지는 압력도 커지므로(B.A.P·피프티피프티), 글로벌 전략을 택할수록 조직 설계에 더 투자해야 한다.</p>
+<hr>
+<h3>규칙 6: 바이럴은 가속기, 동력은 필수조건</h3>
+<blockquote>
+<p><strong>바이럴 없이 기적은 일어난다(A사분면 8팀). 동력 없이 기적이 지속된 사례는 0이다.</strong></p>
+</blockquote>
+<p>A사분면(바이럴 없이 동력만으로): 비스트, 인피니트, 씨스타, 에이핑크, VIXX, 걸스데이, 오마이걸, 스테이씨. D사분면(동력 없이 바이럴만으로): 장기 생존 0팀.</p>
+<p><strong>적용법</strong>: 바이럴은 있으면 좋고 없어도 되는 것이다. 동력은 없으면 안 되는 것이다. 자원이 제한됐을 때 바이럴 마케팅과 음악 동력 중 하나만 택할 수 있다면, 동력이다. 바이럴이 와도 동력이 없으면 소비되고 끝이고, 동력이 있으면 바이럴 없이도 A사분면에서 생존한다.</p>
+<hr>
+<p><strong>6개 규칙의 우선순위</strong>: 5(조직) → 6(동력) → 1(기회 식별) → 3(채널 선점) → 4(팬 전환) → 2(속도). 5와 6이 없으면 나머지가 무의미하고, 1~4는 미디어가 바뀔 때마다 실행 방법이 달라지지만 규칙 자체는 동일하다.</p>
+<hr>
+
+<h2 class="part-start" id="sec-11"><span class="part-eyebrow"><span class="pk">참고 · Appendix</span><span class="pd">데이터 · 출처 · 더 읽을거리</span></span>11. 시장 구조 데이터: 기적의 배경</h2>
+<h3>K-pop 수출액 추이 (KOCCA)</h3>
+<table>
+<thead>
+<tr>
+<th>연도</th>
+<th>수출액 (USD)</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2012</td>
+<td>$2.35억</td>
+<td>내수 중심</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>$3.81억</td>
+<td></td>
+</tr>
+<tr>
+<td>2018</td>
+<td>$5.64억</td>
+<td>BTS 빌보드 효과</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>$7.56억</td>
+<td>코로나에도 성장</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><strong>$12.23억</strong></td>
+<td>사상 최초 $10억 돌파</td>
+</tr>
+</tbody></table>
+<h3>실물 앨범 판매 추이 (써클차트/가온차트, Top 400 기준)</h3>
+<table>
+<thead>
+<tr>
+<th>연도</th>
+<th>판매량</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>~2017</td>
+<td>~1,600~1,800만</td>
+<td>BTS &quot;Love Yourself: Her&quot; = 2001년 이후 첫 밀리언셀러</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>2,000만+</td>
+<td></td>
+</tr>
+<tr>
+<td>2020</td>
+<td>4,000만+</td>
+<td>BTS &quot;MOTS:7&quot; = 역대 첫 400만+</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>5,700만</td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td><strong>1억 1,570만</strong></td>
+<td>세븐틴 &quot;FML&quot; 639만장 역대 1위</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>9,330만</td>
+<td><strong>9년 만의 첫 역성장 (−19.6%)</strong></td>
+</tr>
+</tbody></table>
+<h3>연간 데뷔 그룹 수</h3>
+<table>
+<thead>
+<tr>
+<th>연도</th>
+<th>팀 수</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2009~10</td>
+<td>각 15</td>
+<td>1기 초기</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>40</td>
+<td>중소사 난립 시작</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>60</td>
+<td>2기</td>
+</tr>
+<tr>
+<td>2017</td>
+<td><strong>86</strong></td>
+<td>역대 최다. 과잉 공급 피크</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>61</td>
+<td>코로나 감소</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>63</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>전 세계 한류 팬 수 (한국국제교류재단)</h3>
+<table>
+<thead>
+<tr>
+<th>연도</th>
+<th>팬 수</th>
+<th>조사 대상국</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2012</td>
+<td>926만</td>
+<td>85개국</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>7,312만</td>
+<td>92개국</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>1억 2,151만</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><strong>2억 2,500만</strong></td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>2012→2023: <strong>24배 성장</strong>. 아메리카 지역 팬 2022→2023 102% 증가(1,459만→2,888만).</p>
+<h3>투자 환경과 중소사</h3>
+<p><strong>전환점: 빅히트 IPO (2020.10)</strong></p>
+<ul>
+<li>SV Investment가 2011~12년에 빅히트에 <strong>40억 원</strong> 투자 → 2015~18년 <strong>1,088억 원</strong> 회수(27배 수익). BTS 데뷔 전, 연습생만 있던 시점의 투자.</li>
+<li>빅히트 KOSPI 상장 첫날 시총 <strong>8.7조 원</strong>. &quot;기획사도 대형 투자 대상&quot;이라는 인식 확산.</li>
+<li>이후 카카오(SM 지분 39.87% 인수), 네이버(YG·SM 투자), 컴투스(RBW 투자) 등 플랫폼·게임사의 엔터 시장 진입 가속.</li>
+</ul>
+<p><strong>2024~2025년: 중소사 투자 새 물결</strong></p>
+<ul>
+<li>더블랙레이블: 시리즈B <strong>1,200억 원</strong> (기업가치 1조 원, Krafton+Tencent Music 리드)</li>
+<li>DSC Investment(한국 최대 VC): QWER 소속사 3Y Corporation, 가상 아이돌 Playve 개발사 Vlast 등에 투자</li>
+<li>K-pop 프로젝트 파이낸싱 사례 등장 (IRR 30% 수준 회수)</li>
+<li>키오프 소속사 S2엔터: 52억 원 시리즈A (한국투자파트너스·유니온투자파트너스·퓨처플레이)</li>
+</ul>
+<p><strong>2024~2025년 침체가 중소사에 미친 영향</strong></p>
+<ul>
+<li>중소돌 대량 해체·활동 종료: 위클리, 에버글로우, 퍼플키스, 네이처, 체리블렛, 시그니처, 로켓펀치 등 (2024~2025)</li>
+<li>&quot;빅4 기획사와 무관한 신인 팀의 시장 안착은 해를 거듭할수록 어려워지고 있다&quot;: <strong>양극화 심화가 이 리포트의 현재적 맥락</strong></li>
+</ul>
+<h3>구조적 변수: 멜론 차트 개혁·코로나·프로듀스101</h3>
+<p><strong>멜론 차트 개혁 (2017, 2020)</strong></p>
+<ul>
+<li>2017: 문체부 음원 발매 시간 제한(정오~18시)으로 차트 조작 억제</li>
+<li>2020.07: 실시간 차트 폐지 → &quot;24Hits&quot; 체계(1인 1곡 1일 1회 반영, 19시 갱신). <strong>소규모·비팬덤 아티스트에게 유리</strong>한 구조 변화: 조직적 스트리밍의 차트 영향력 약화</li>
+</ul>
+<p><strong>코로나 (2020~2021)</strong></p>
+<ul>
+<li>오프라인 행사 온라인 전환 → 영상통화 팬사인회 표준화. <strong>소규모 기획사의 상대적 평등화</strong>: 대규모 콘서트장 확보 능력과 무관하게 팬 관계 구축 가능</li>
+</ul>
+<p><strong>프로듀스 101 (2016~2019)</strong></p>
+<ul>
+<li>소규모 기획사 연습생이 전국 노출 가능한 경로를 제공. 그러나 IP·수익이 Mnet/CJ에 집중되는 구조. 2019년 투표 조작 스캔들(안준영 PD 유죄)로 경로 붕괴</li>
+</ul>
+<hr>
+
+<section class="related-reads">
+  <h2 id="related">함께 읽으면 좋은 글</h2>
+  <p class="rr-intro">이 리포트의 주제·축·사례와 직접 맞닿는 차우진의 뉴스레터. 각 글이 리포트의 어느 지점과 이어지는지 함께 적었다.</p>
+  <ol class="rr-list">
+    <li class="rr-item">
+      <a target="_blank" rel="noopener" class="rr-card" href="https://maily.so/draft.briefing/posts/5xrx1pqyz2v">
+        <div class="rr-title">피프티 피프티, 어떻게 이해할 것인가 (feat. DBR)</div>
+        <div class="rr-meta">2023.12 · 칼럼</div>
+        <div class="rr-why">'중소돌의 기적'이라는 말이 산업 담론에 본격 등장한 글. 본 리포트가 분석한 대표 반례(B사분면 → 탈락)의 출발점이다.</div>
+        <span class="rr-go" aria-hidden="true">↗</span>
+      </a>
+    </li>
+    <li class="rr-item">
+      <a target="_blank" rel="noopener" class="rr-card" href="https://maily.so/draft.briefing/posts/jl1zq68no5x">
+        <div class="rr-title">팬덤을 어떻게 재정의할까: 팬덤 비즈니스 전략</div>
+        <div class="rr-meta">2021.03 · 이론</div>
+        <div class="rr-why">리포트의 ③ 초기 팬 확보 축을 떠받치는 이론. 팬덤을 비용이 아니라 성장 동력으로 다시 정의한다.</div>
+        <span class="rr-go" aria-hidden="true">↗</span>
+      </a>
+    </li>
+    <li class="rr-item">
+      <a target="_blank" rel="noopener" class="rr-card" href="https://maily.so/draft.briefing/posts/1do1xk60zx6">
+        <div class="rr-title">음악이 공짜인 시대에 음악은 왜 가장 중요할까?</div>
+        <div class="rr-meta">2022.08 · 칼럼</div>
+        <div class="rr-why">리포트의 핵심 테제 '음악 동력이 기적의 지속을 결정한다'의 토대. 음악이 공짜가 된 시대에도(아니 그럴수록) 음악 자체가 비즈니스의 본질이라는 관점.</div>
+        <span class="rr-go" aria-hidden="true">↗</span>
+      </a>
+    </li>
+    <li class="rr-item">
+      <a target="_blank" rel="noopener" class="rr-card" href="https://maily.so/draft.briefing/posts/vpzl2020rk9">
+        <div class="rr-title">대중성의 해부학: 틈새 시장의 대중성 전략</div>
+        <div class="rr-meta">2024.06 · 이론</div>
+        <div class="rr-why">3유형 중 틈새공략형의 이론적 배경. 대중이 흩어진 시대에 좁고 깊은 팬을 먼저 잡는 전략.</div>
+        <span class="rr-go" aria-hidden="true">↗</span>
+      </a>
+    </li>
+    <li class="rr-item">
+      <a target="_blank" rel="noopener" class="rr-card" href="https://maily.so/draft.briefing/posts/32z84e61rn4">
+        <div class="rr-title">케이팝은 정말 '글로벌 음악'이 된 걸까?</div>
+        <div class="rr-meta">2026.03 · 리포트</div>
+        <div class="rr-why">3기 핵심 전략인 「해외 우회」를 IFPI·Luminate·MIDiA 데이터로 검증한다. 케이팝의 독점적 지위에 켜진 경고등.</div>
+        <span class="rr-go" aria-hidden="true">↗</span>
+      </a>
+    </li>
+    <li class="rr-item">
+      <a target="_blank" rel="noopener" class="rr-card" href="https://maily.so/draft.briefing/posts/knrjpd60rld">
+        <div class="rr-title">2026년의 케이팝은 달라져야 한다</div>
+        <div class="rr-meta">2025.12 · 칼럼</div>
+        <div class="rr-why">리포트 8장 「'다음 기회'를 어떻게 쓸 것인가」의 연장. 숏폼 다음 국면에서 중소가 무엇을 준비해야 하는지.</div>
+        <span class="rr-go" aria-hidden="true">↗</span>
+      </a>
+    </li></ol>
+</section><h2 id="sec-12" class="sources-sec">Sources</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.khan.co.kr/article/202304041545011">경향신문 — 대형 걸그룹이 점령한 가요계서 피어난 &#39;중소의 기적&#39;들 (2023.04)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sedaily.com/NewsView/29O4UB7IA6">서울경제 — 피프티 피프티·하이키, &#39;중소의 기적&#39;에는 다 이유가 있다</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ilyo.co.kr/?ac=article_view&entry_id=468149">일요신문 — &#39;중소돌의 기적&#39; 옛말?</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.newscj.com/news/articleView.html?idxno=3090082">천지일보 — 에이티즈, 계속되는 K팝 흙수저 중소돌의 기적</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.edaily.co.kr/News/Read?newsId=03444006645477456&mediaCodeNo=257">이데일리 — 흙바닥 운동장서 행사 뛰던 리센느, 중소돌 기적 새 주자로 (2026.06)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hankyung.com/article/2024080273647">한국경제 — 키스오브라이프 성공 뒤에는</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.asiae.co.kr/article/2023072505585392617">아시아경제 — 드림캐쳐, 틈새시장 공략</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sportsseoul.com/news/read/1435834">스포츠서울 — 에이티즈-키오라-하이키-영파씨, 중소돌 매운맛</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11954321">DBpia — 에이티즈 중소연예기획사 성공 요인 분석 논문</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.dailian.co.kr/news/view/1276832">데일리안 — &#39;중소돌의 기적&#39; 피프티에겐 없고, BTS에겐 있는 것</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.unicornfactory.co.kr/article/2025080117011771957">유니콘팩토리 — 키오프 소속사, 52억 투자유치</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.wikitree.co.kr/articles/1139041">위키트리 — 338일 만에 차트 뚫고 공약까지, 중소돌 리센느의 반란</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.etoday.co.kr/news/view/2587998">이투데이 — 리센느 원이 유튜브, 심상찮은 떡상</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.artinsight.co.kr/news/view.php?no=81055">아트인사이트 — 거제 야호 뒤에는 이들이 있었다 (Opinion · 리센느 원이 채널 제작진 솔파스튜디오, 2026.05)</a></li>
+<li><a target="_blank" rel="noopener" href="https://teamsolfa.com/work">솔파스튜디오(team solfa) 작업물 — &#39;안녕하세요 원이입니다&#39; 오리지널 채널 제작</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.library.hbs.edu/working-knowledge/building-an-army-of-fans-marketing-lessons-from-kpop-sensation-bts">HBS Working Knowledge — Building an &#39;ARMY&#39; of Fans: Marketing Lessons from BTS</a></li>
+<li><a target="_blank" rel="noopener" href="https://news.nate.com/view/20250805n20804">K팝 침체기, &#39;중소돌&#39;에 직격타 — 네이트뉴스</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.statista.com/statistics/625158/south-korea-export-music-industry/">Statista — South Korea music industry export value 2005-2024</a></li>
+<li><a target="_blank" rel="noopener" href="https://musically.com/2024/01/17/south-korean-album-sales-surged-to-115-1m-units-in-2023/">Music Ally — South Korean album sales surged to 115.1M units in 2023</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.musicbusinessworldwide.com/k-pop-in-crisis-around-93m-albums-were-sold-in-south-korea-in-2024-23m-fewer-than-in-2023/">Music Business Worldwide — K-pop in crisis? ~93M albums sold in 2024</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.morganstanley.com/ideas/k-pop-investment-potential">Morgan Stanley — K-pop Investment Potential</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.kedglobal.com/venture-capital/newsView/ked202509110004">KED Global — VCs step up K-pop startup bets (2025.09)</a></li>
+<li><a target="_blank" rel="noopener" href="https://cm.asiae.co.kr/en/article/2025061315553327397">아시아경제 — SV Investment, 빅히트에 BTS 데뷔 전 40억 투자</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.korea.net/NewsFocus/Society/view?articleId=248349">Korea.net — 전 세계 한류 팬 2023년 2.25억 돌파</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.socialfansgeek.com/blog/details/k-pop-fans-demographics-global-popularity-and-key-statistics">SocialFansGeek — K-pop Fans Demographics and Statistics 2024</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2024/ugc-videos-music-discovery.html">Deloitte — User-generated video content fuels music discovery (2024)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.koreaboo.com/lists/kpop-groups-many-debuted-year-since-1990s-least/">Koreaboo — K-pop groups debuted per year since 1990s</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.koreaherald.com/article/3025916">Korea Herald — Annual physical sales, YouTube vs Melon</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npr.org/2020/02/21/808049441/inside-sajaegi-k-pops-open-secret">NPR — Inside Sajaegi: K-pop&#39;s open secret</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.nme.com/news/music/zico-apologises-popularising-tiktok-dance-challenge-k-pop-3589268">NME — Zico apologises for popularising TikTok challenges in K-pop</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnbc.com/2024/11/18/hybe-sm-and-yg-posts-worse-third-quarter-results-jyp-a-bright-spot.html">CNBC — K-pop agencies Q3 2024 results</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.musicbusinessworldwide.com/hybe-posts-record-annual-revenues-of-1-86bn-for-2025-as-k-pop-firms-concert-revenues-hit-all-time-high-but-operating-profit-plunged-73/">HYBE 2025 Annual — MBW</a></li>
+</ul>
+</div></section>
+<!-- BODY:END -->
+
 
 <!-- ════ Subscribe CTA ════ -->
 <section class="subscribe-cta" id="subscribe">
