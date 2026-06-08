@@ -67,6 +67,14 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;j
 .report-hero .hero-contact b{color:var(--white);font-weight:500}
 .report-hero .hero-contact a{color:var(--lime);text-decoration:none;border-bottom:1px solid rgba(214,255,146,.35)}
 .report-hero .hero-contact a:hover{border-color:var(--lime)}
+/* ── 커버(히어로) 하단 서밋 배너 ── */
+.summit-banner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:15px 22px;background:var(--lime);color:#0a0a0a;text-decoration:none;border-radius:6px}
+.summit-banner .sb-k{font-family:'DM Mono','Noto Sans KR',monospace;font-weight:800;font-size:13px}
+.summit-banner .sb-t{font-size:14px;font-weight:600;color:#1a1a12}
+.summit-banner .sb-meta{font-size:11px;color:#3f3b2a}
+.summit-banner .sb-cta{margin-left:auto;font-family:'DM Mono',monospace;font-weight:800;font-size:12px;color:var(--lime);background:#0a0a0a;padding:6px 16px;border-radius:3px;white-space:nowrap;transition:background .2s}
+.summit-banner:hover .sb-cta{background:#222}
+@media(max-width:600px){.summit-banner .sb-meta{display:none}}
 
 /* ── Stats Bar ── */
 .stats-bar{background:var(--dark);border-bottom:1px solid var(--gray-line);padding:40px 0}
@@ -297,6 +305,14 @@ footer a:hover{color:var(--lime)}
     </figure>
   </div>
 </section>
+
+<!-- ════ Summit Banner (커버 하단) ════ -->
+<div class="container" style="margin-top:10px"><a href="/summit" target="_blank" rel="noopener" class="summit-banner">
+  <span class="sb-k">[뉴타입 엔터 서밋 2026 Summer]</span>
+  <span class="sb-t">AI 시대의 엔터테인먼트 IP 비즈니스</span>
+  <span class="sb-meta">2026.06.12 FRI · TARTINE</span>
+  <span class="sb-cta">예약 →</span>
+</a></div>
 
 <!-- ════ Table of Contents ════ -->
 <section class="toc-section">
