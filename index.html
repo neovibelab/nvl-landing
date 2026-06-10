@@ -138,6 +138,20 @@ section{padding:100px 0}
 .nl-form{background:var(--dark);border:1px solid var(--gray-dark);padding:32px;min-height:340px;display:flex;flex-direction:column}
 .nl-form iframe{flex:1;width:100%;min-height:280px;border:none}
 .nl-form-note{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);margin-top:12px;text-align:center}
+.nl-recent{margin-top:64px}
+.nl-recent-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px}
+.nl-archive-link{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);text-decoration:none;transition:color .2s}
+.nl-archive-link:hover{color:var(--lime)}
+.nl-recent-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.letter-card{display:block;background:var(--dark);border:1px solid var(--gray-line);padding:28px;text-decoration:none;transition:border-color .25s}
+.letter-card:hover{border-color:var(--lime)}
+.letter-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-family:'DM Mono',monospace}
+.letter-date{font-size:11px;color:var(--gray);letter-spacing:.06em}
+.letter-badge{font-size:10px;letter-spacing:.1em;padding:3px 8px;border:1px solid var(--gray-dark);color:var(--gray)}
+.letter-badge.free{color:var(--lime);border-color:rgba(214,255,146,0.35)}
+.letter-badge.paid{color:var(--white);border-color:var(--gray)}
+.letter-title{font-size:17px;font-weight:700;color:var(--white);line-height:1.45;margin-bottom:8px}
+.letter-sub{font-size:13px;color:var(--gray);line-height:1.6}
 
 /* ── Summit CTA ── */
 .summit-cta{background:var(--lime);color:var(--black);padding:80px 0}
@@ -157,6 +171,18 @@ section{padding:100px 0}
 .contact-link span{font-size:12px;color:var(--gray);text-transform:uppercase;min-width:70px}
 .contact-right{display:flex;flex-direction:column;justify-content:center}
 .contact-right .kr{font-size:14px;color:var(--gray);line-height:1.9}
+.b2b-form{display:flex;flex-direction:column;gap:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
+.form-input{font-family:'Noto Sans KR',sans-serif;font-size:14px;color:var(--white);background:var(--black);border:1px solid var(--gray-dark);padding:12px 14px;border-radius:0;width:100%;transition:border-color .2s}
+.form-input:focus{outline:none;border-color:var(--lime)}
+select.form-input{cursor:pointer}
+select.form-input:invalid{color:var(--gray)}
+textarea.form-input{resize:vertical;min-height:120px}
+.form-note{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray-dark)}
+.form-success{border:1px solid rgba(214,255,146,0.35);background:var(--lime-dim);padding:32px;font-size:15px;line-height:1.8;color:var(--white)}
+.form-error{font-size:13px;color:#E08585;line-height:1.7;margin-top:4px}
 
 /* ── Footer ── */
 footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);letter-spacing:.05em}
@@ -173,6 +199,7 @@ footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-siz
   .about-layout{grid-template-columns:1fr;gap:40px}
   .profile-photo{max-width:280px}
   .about-grid,.cred-row,.nl-layout,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .nl-recent-grid{grid-template-columns:1fr}
   .domains-grid{grid-template-columns:1fr 1fr}
   .services-grid{grid-template-columns:1fr}
   .summit-cta-inner{flex-direction:column;text-align:center}
@@ -180,6 +207,7 @@ footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-siz
 @media(max-width:540px){
   .domains-grid{grid-template-columns:1fr}
   .report-stats{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
   .nav-links li:not(.nav-summit-li){display:none}
   .nav-summit-li a.nav-summit{padding:8px 14px;border:1px solid var(--lime);border-radius:2px}
 }
@@ -384,6 +412,26 @@ footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-siz
         <p class="nl-form-note">Powered by Maily</p>
       </div>
     </div>
+    <div class="nl-recent fade">
+      <div class="nl-recent-head">
+        <p class="label">최근 발행</p>
+        <a href="https://maily.so/draft.briefing" target="_blank" rel="noopener" class="nl-archive-link" onclick="gtag('event','nl_archive_click')">전체 아카이브 →</a>
+      </div>
+      <div class="nl-recent-grid">
+        <!-- RECENT-LETTERS:START — scripts/update_recent_letters.py가 자동 갱신. 직접 수정 금지 -->
+        <a class="letter-card" href="https://maily.so/draft.briefing/posts/w6ovpe0yok5" target="_blank" rel="noopener" onclick="gtag('event','recent_letter_click',{letter_id:'w6ovpe0yok5'})">
+          <div class="letter-meta"><span class="letter-date">2026.06.09</span><span class="letter-badge free">FREE</span></div>
+          <h4 class="letter-title kr">📊 &#x27;거제 야호&#x27;의 법칙: 중소의 기적을 만드는 전략을 찾아서</h4>
+          <p class="letter-sub kr">오리지널 리포트 | 비스트에서 리센느까지, 17년 간 27팀 사례 분석 리포트</p>
+        </a>
+        <a class="letter-card" href="https://maily.so/draft.briefing/posts/wdr9qg1golx" target="_blank" rel="noopener" onclick="gtag('event','recent_letter_click',{letter_id:'wdr9qg1golx'})">
+          <div class="letter-meta"><span class="letter-date">2026.06.08</span><span class="letter-badge free">FREE</span></div>
+          <h4 class="letter-title kr">🎧 &quot;한 번 듣고 마는 음원도 나올 수 있지 않을까요?&quot; 신기헌 크리에이티브 디렉터</h4>
+          <p class="letter-sub kr">뉴타입엔터서밋2026 | IP의 개념을 재정의하는 생성형 AI</p>
+        </a>
+        <!-- RECENT-LETTERS:END -->
+      </div>
+    </div>
   </div>
 </section>
 
@@ -416,7 +464,48 @@ footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-siz
         </div>
       </div>
       <div class="contact-right">
-        <p class="kr">강연, 자문, 콘텐츠 기획, 기고 등 협업에 관심이 있으시면 이메일로 문의해주세요. 48시간 내에 회신드리겠습니다.</p>
+        <form id="b2bForm" class="b2b-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="bf-name">이름 *</label>
+              <input class="form-input" id="bf-name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="bf-company">회사 · 소속 *</label>
+              <input class="form-input" id="bf-company" name="company" type="text" required autocomplete="organization">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="bf-email">이메일 *</label>
+              <input class="form-input" id="bf-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="bf-type">문의 유형 *</label>
+              <select class="form-input" id="bf-type" name="inquiry_type" required>
+                <option value="" disabled selected>선택해주세요</option>
+                <option>강연 · 키노트</option>
+                <option>전략 자문</option>
+                <option>리서치 · 분석</option>
+                <option>콘텐츠 기획</option>
+                <option>워크숍 · 커리큘럼</option>
+                <option>광고 · 스폰서십</option>
+                <option>기타</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="bf-msg">문의 내용 *</label>
+            <textarea class="form-input" id="bf-msg" name="message" rows="5" required placeholder="프로젝트 배경, 일정, 예산 범위를 간단히 알려주세요."></textarea>
+          </div>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn btn-lime" id="bf-submit">문의 보내기</button>
+          <p class="form-error" id="bf-error" hidden>전송에 실패했습니다. <a href="mailto:woojin@neovibelab.com" style="color:var(--lime)">woojin@neovibelab.com</a>으로 직접 보내주세요.</p>
+          <p class="form-note">48시간 내에 회신드립니다.</p>
+        </form>
+        <div id="bf-success" class="form-success" hidden>
+          <p class="kr"><strong>문의가 접수됐습니다.</strong><br>확인 후 48시간 내에 회신드리겠습니다.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -433,6 +522,33 @@ const observer=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
 },{threshold:0.12});
 document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+
+// B2B 문의 폼 — FormSubmit AJAX (백엔드 없는 정적 사이트용)
+const bf=document.getElementById('b2bForm');
+if(bf){
+  bf.addEventListener('submit',async e=>{
+    e.preventDefault();
+    if(!bf.checkValidity()){bf.reportValidity();return}
+    const btn=document.getElementById('bf-submit');
+    btn.disabled=true;btn.textContent='전송 중…';
+    document.getElementById('bf-error').hidden=true;
+    const fd=new FormData(bf);
+    fd.append('_subject','[neovibelab.com] B2B 문의 — '+fd.get('inquiry_type'));
+    fd.append('_template','table');
+    fd.append('_captcha','false');
+    try{
+      const r=await fetch('https://formsubmit.co/ajax/woojin@neovibelab.com',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
+      const j=await r.json().catch(()=>null);
+      if(!r.ok||!j||String(j.success)!=='true')throw new Error('submit failed');
+      bf.hidden=true;
+      document.getElementById('bf-success').hidden=false;
+      gtag('event','b2b_form_submit',{inquiry_type:fd.get('inquiry_type')});
+    }catch(err){
+      btn.disabled=false;btn.textContent='문의 보내기';
+      document.getElementById('bf-error').hidden=false;
+    }
+  });
+}
 </script>
 </body>
 </html>

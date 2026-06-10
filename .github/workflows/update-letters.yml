@@ -1,0 +1,44 @@
+name: 최근 레터 자동 갱신
+
+# index.html의 RECENT-LETTERS 블록을 Maily API 최신 발행본으로 갱신.
+# 변경이 있을 때만 커밋 → push → Vercel 자동 배포.
+
+on:
+  schedule:
+    - cron: '0 3,14 * * *'   # 12:00 / 23:00 KST (발행이 주로 오전·저녁이라 2회)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-letters
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 최근 레터 블록 갱신
+        env:
+          MAILY_API_KEY: ${{ secrets.MAILY_API_KEY }}
+        run: python scripts/update_recent_letters.py
+
+      - name: 변경 시 커밋·푸시
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "변경 없음 — 종료"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.html
+            git commit -m "chore: 최근 레터 자동 갱신"
+            git push
+          fi
