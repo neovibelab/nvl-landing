@@ -82,11 +82,25 @@ section{padding:100px 0}
 
 /* ── Featured Report ── */
 .report-featured{padding:100px 0;background:var(--dark);border-top:1px solid var(--gray-line);border-bottom:1px solid var(--gray-line)}
-.report-card{display:grid;grid-template-columns:260px 1fr;gap:56px;align-items:center}
+.report-card{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .report-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .stat{text-align:center;padding:24px 16px;border:1px solid var(--gray-line);background:var(--black)}
 .stat-num{font-family:'DM Mono',monospace;font-size:44px;font-weight:500;color:var(--lime);display:block;line-height:1}
 .stat-label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.06em;color:var(--gray);display:block;margin-top:8px}
+/* 리포트 본문 FIGURE 인용 카드 (report/small-label-miracle 도식과 동일 스타일) */
+.report-figure{--ink:#16160F;--lime-ink:#566B17;display:block;background:#FBFAF4;border:1px solid #E4E0CF;border-top:3px solid var(--lime);border-radius:5px;padding:18px;transition:box-shadow .25s}
+.report-figure:hover{box-shadow:0 0 0 1px var(--lime)}
+.report-figure svg{width:100%;height:auto;display:block}
+.report-figure svg text{font-family:'Noto Sans KR',sans-serif}
+.report-figure .fig-title{font-size:14px;font-weight:800;fill:var(--lime-ink)}
+.report-figure .axc{font-size:12px;font-weight:700;fill:var(--ink)}
+.report-figure .axs{font-size:10px;fill:#6c6857;font-weight:600}
+.report-figure .qh{font-size:14px;font-weight:800;fill:var(--ink)}
+.report-figure .qt{font-size:10px;fill:#6c6857;font-weight:600}
+.report-figure .qt-em{fill:var(--ink);font-weight:700}
+.report-figure .qm{font-size:10.5px;fill:#2a2a20;font-weight:600}
+.report-figure .qn{font-size:9px;fill:#7c7868}
+.report-figure .note{font-size:10px;fill:#7c7868}
 .report-info .report-date{font-family:'DM Mono',monospace;font-size:12px;color:var(--gray);letter-spacing:.06em;margin-bottom:16px}
 .report-info .report-title{font-family:'Outfit','Noto Sans KR',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:900;line-height:1.2;letter-spacing:-.02em;margin-bottom:8px}
 .report-info .report-subtitle{font-size:16px;color:var(--gray);margin-bottom:20px;line-height:1.6}
@@ -256,12 +270,23 @@ footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-siz
       <h2 class="section-title">대표 리포트</h2>
     </div>
     <div class="report-card fade">
-      <div class="report-stats">
-        <div class="stat"><span class="stat-num">27</span><span class="stat-label">팀 분석</span></div>
-        <div class="stat"><span class="stat-num">4</span><span class="stat-label">분석 축</span></div>
-        <div class="stat"><span class="stat-num">3</span><span class="stat-label">미디어 시기</span></div>
-        <div class="stat"><span class="stat-num">6</span><span class="stat-label">불변 규칙</span></div>
-      </div>
+      <a class="report-figure" href="/report/small-label-miracle#sec-4" aria-label="리포트 본문에서 FIGURE 03 보기">
+        <svg viewBox="0 0 720 520" role="img" aria-label="FIGURE 03 · 4분면: 미디어 전략 × 음악 동력">
+          <text x="0" y="18" class="fig-title">FIGURE 03 · 4분면: 미디어 전략 × 음악 동력</text>
+          <text x="360" y="44" text-anchor="middle" class="axc">미디어 전략 →</text>
+          <text x="190" y="60" text-anchor="middle" class="axs">주류 채널 (음방·음원)</text>
+          <text x="540" y="60" text-anchor="middle" class="axs">신규 채널 (SNS·유튜브·숏폼·해외)</text>
+          <text x="22" y="300" text-anchor="middle" class="axc" transform="rotate(-90 22 300)">← 음악 동력</text>
+          <text x="46" y="160" text-anchor="middle" class="axs" transform="rotate(-90 46 160)">있음</text>
+          <text x="46" y="430" text-anchor="middle" class="axs" transform="rotate(-90 46 430)">없음</text>
+          <rect x="70" y="70" width="290" height="200" fill="#fafafa" stroke="#ddd"/>
+          <rect x="360" y="70" width="290" height="200" fill="#D6FF92"/>
+          <rect x="70" y="270" width="290" height="200" fill="#fafafa" stroke="#ddd"/>
+          <rect x="360" y="270" width="290" height="200" fill="#f7f7f7" stroke="#ddd"/>
+          <text x="86" y="96" class="qh">A · 정석의 기적</text><text x="86" y="114" class="qt">1기 집중 · 가장 안정적</text><text x="86" y="140" class="qm">비스트 · 인피니트 · 씨스타</text><text x="86" y="158" class="qm">에이핑크 · VIXX · 걸스데이</text><text x="86" y="176" class="qm">오마이걸 · 스테이씨</text><text x="376" y="96" class="qh">B · 선점의 기적</text><text x="376" y="114" class="qt qt-em">가장 파괴적: 산업을 재편</text><text x="376" y="140" class="qm">BTS · 마마무 · 에이티즈</text><text x="376" y="158" class="qm">키오프 · 드림캐쳐 · QWER</text><text x="376" y="184" class="qn">동력 × 신규채널이 상호 강화하는 성장 루프</text><text x="86" y="296" class="qh">C · 미완의 기적</text><text x="86" y="314" class="qt">거의 빈 칸</text><text x="86" y="340" class="qm">틴탑 · B1A4</text><text x="86" y="366" class="qn">음방 시대엔 동력 없이 반복 히트가 불가능</text><text x="376" y="296" class="qh">D · 시대의 기적</text><text x="376" y="314" class="qt">2~3기에만 존재 · 화려하나 짧음</text><text x="376" y="340" class="qm">크레용팝 · 모모랜드</text><text x="376" y="358" class="qm">브레이브걸스 · 라붐 · 피프티피프티</text><text x="376" y="384" class="qn">바이럴형 = 뉴미디어가 만든 현상</text>
+          <text x="0" y="498" class="note">전환 D→A EXID·여자친구 / D→B 리센느(진행 중) · 탈락 B.A.P·피프티피프티·AOA · 틈새공략형(블락비·영파씨·트리플에스)은 B·D 사이 독자 경로</text>
+        </svg>
+      </a>
       <div class="report-info">
         <p class="report-date">2026.06 · 엔터문화연구소</p>
         <h3 class="report-title">'중소의 기적'을 만드는 전략</h3>
