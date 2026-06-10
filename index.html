@@ -102,6 +102,9 @@ section{padding:100px 0}
 .press-list{list-style:none}
 .press-list li{font-size:14px;color:var(--gray);padding:10px 0;border-bottom:1px solid var(--gray-line)}
 .press-list li strong{color:var(--white);font-weight:600}
+.press-list a{color:var(--gray);text-decoration:none;border-bottom:1px dotted var(--gray-dark);transition:color .2s,border-color .2s}
+.press-list a:hover{color:var(--lime);border-color:var(--lime)}
+.press-list a::after{content:" ↗";font-size:11px}
 
 /* ── About ── */
 .about-layout{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start}
@@ -299,9 +302,14 @@ footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-siz
       <div class="cred-col">
         <h3 class="mono">주요 매체 보도</h3>
         <ul class="press-list">
+          <li><strong>뉴욕타임스</strong> · <a href="https://www.nytimes.com/2025/06/21/world/asia/south-korea-kpop-culture.html" target="_blank" rel="noopener">한국은 어떻게 문화 강국이 됐나 (2025)</a></li>
+          <li><strong>파이낸셜타임스</strong> · <a href="https://www.ft.com/content/304ff2ce-c285-4c23-b129-0d073730f0cb" target="_blank" rel="noopener">K팝 멀티레이블 시스템 분석</a></li>
+          <li><strong>가디언</strong> · <a href="https://www.theguardian.com/world/2026/may/25/galaxy-robot-park-in-seoul-south-korea-world-first" target="_blank" rel="noopener">K팝과 로봇 엔터테인먼트 실험 (2026)</a></li>
+          <li><strong>르몽드</strong> · <a href="https://www.lemonde.fr/en/economy/article/2023/08/06/k-pop-advent-of-virtual-bands-disrupts-korean-music-industry_6082724_19.html" target="_blank" rel="noopener">버추얼 아이돌과 음악 산업 (2023)</a></li>
+          <li><strong>로이터</strong> · <a href="https://www.reuters.com/article/us-southkorea-kpop-elderly-trot/trot-is-hot-its-not-just-k-pop-in-south-korea-idUSKBN27T0ES" target="_blank" rel="noopener">트로트 리바이벌과 세대 팬덤 (2020)</a></li>
+          <li><strong>AP통신</strong> · <a href="https://apnews.com/article/music-south-korea-government-and-politics-0ef58e0f071ac4894034de219afb1184" target="_blank" rel="noopener">BTS 군 복무와 산업 영향 (2022)</a></li>
+          <li><strong>니케이 아시아</strong> · <a href="https://asia.nikkei.com/spotlight/big-in-asia/south-korean-ruling-party-lawmaker-strikes-chord-with-votes-to-impeach-yoon" target="_blank" rel="noopener">K팝 팬덤과 정치 참여</a></li>
           <li><strong>블룸버그</strong> · K팝 산업 분석</li>
-          <li><strong>뉴욕타임스</strong> · 한국 엔터테인먼트 경제</li>
-          <li><strong>르몽드</strong> · K컬처의 글로벌 확장</li>
           <li><strong>NHK</strong> · 팬덤과 디지털 문화</li>
         </ul>
         <h3 class="mono" style="margin-top:32px">저서</h3>
