@@ -231,33 +231,6 @@ section{ padding:100px 0; }
 }
 .about-detail p+p{ margin-top:16px; }
 
-/* ── PROGRAM ── */
-.program-note{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:13px; color:var(--gray); line-height:1.9;
-  margin-top:-20px; margin-bottom:40px;
-}
-.program-list{ display:flex; flex-direction:column; gap:1px; }
-.program-item{
-  display:grid; grid-template-columns:150px 1fr; gap:32px; align-items:start;
-  padding:24px 0;
-  border-bottom:1px solid var(--gray-line);
-  transition:background 0.25s;
-}
-.program-item:first-child{ border-top:1px solid var(--gray-line); }
-.program-time{
-  font-family:'Space Mono',monospace;
-  font-size:13px; color:var(--lime); font-weight:700;
-}
-.program-body h3{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:16px; font-weight:700; margin-bottom:4px;
-}
-.program-body p{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:13px; color:var(--gray); line-height:1.7;
-}
-
 /* ── STORIES ── */
 .stories-note{
   font-family:'Noto Sans KR',sans-serif;
@@ -387,143 +360,6 @@ section{ padding:100px 0; }
   color:var(--lime);
 }
 .speaker-read.soon{ color:var(--gray); }
-
-/* ── QUESTIONS ── */
-.qa-card{
-  border:1px solid rgba(214,255,146,0.3);
-  background:var(--lime-mid);
-  padding:48px 56px;
-  display:grid; grid-template-columns:1fr auto; gap:48px; align-items:center;
-}
-.qa-text .section-tag{ margin-bottom:16px; }
-.qa-text h2{
-  font-family:'Space Mono',monospace;
-  font-size:clamp(20px,2.6vw,28px); font-weight:700;
-  letter-spacing:-0.02em; line-height:1.3;
-  color:var(--white); margin-bottom:18px;
-}
-.qa-text p{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:14px; color:var(--gray); line-height:1.9; max-width:560px;
-}
-.qa-cta{ flex-shrink:0; }
-.btn-form{
-  display:inline-block; white-space:nowrap;
-  font-family:'Space Mono',monospace;
-  font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
-  background:var(--lime); color:var(--black);
-  text-decoration:none; padding:18px 40px;
-  border:2px solid var(--lime);
-  transition:background 0.2s, color 0.2s;
-}
-.btn-form:hover{ background:transparent; color:var(--lime); }
-
-/* ── NETWORKING (자만추) ── */
-.net-lead{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:clamp(15px,2vw,17px); line-height:1.9;
-  color:var(--white); max-width:680px;
-  margin-top:-16px; margin-bottom:18px;
-}
-.net-lead strong{ color:var(--lime); font-weight:700; }
-.net-mech{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:13px; color:var(--gray); line-height:1.8;
-  max-width:680px; margin-bottom:44px;
-}
-.net-grid{
-  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
-}
-.net-card{
-  border:1px solid var(--gray-line);
-  background:var(--lime-mid);
-  padding:30px 28px;
-  transition:border-color 0.25s, transform 0.25s, background 0.25s;
-}
-.net-card:hover{
-  border-color:rgba(214,255,146,0.45);
-  background:var(--lime-dim);
-  transform:translateY(-4px);
-}
-.net-drop{
-  display:inline-flex; align-items:center; gap:7px;
-  font-family:'Space Mono',monospace;
-  font-size:10px; letter-spacing:0.16em; text-transform:uppercase;
-  color:var(--lime); margin-bottom:18px;
-}
-.net-drop::before{
-  content:'';
-  width:16px; height:16px;
-  border:1px solid var(--lime); border-top:none;
-  position:relative;
-}
-.net-drop .arrow{ font-size:13px; line-height:1; margin-left:-22px; }
-.net-title{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:17px; font-weight:700; line-height:1.4;
-  color:var(--white); margin-bottom:12px;
-}
-.net-desc{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:13px; color:var(--gray); line-height:1.8;
-}
-
-/* ── TICKETS ── */
-.tickets-section{ background:var(--lime); color:var(--black); }
-.tickets-section .section-tag{ color:rgba(0,0,0,0.4); }
-.tickets-section .section-title{ color:var(--black); }
-.ticket-single{
-  max-width:560px;
-  background:rgba(0,0,0,0.07);
-  padding:52px 56px;
-}
-.ticket-tier{
-  font-family:'Space Mono',monospace;
-  font-size:10px; letter-spacing:0.2em; text-transform:uppercase;
-  color:rgba(0,0,0,0.5); margin-bottom:10px;
-}
-.ticket-type{
-  font-family:'Space Mono',monospace;
-  font-size:28px; font-weight:700;
-  color:var(--black); margin-bottom:24px;
-  line-height:1.1;
-}
-.ticket-price{
-  font-family:'Space Mono',monospace;
-  font-size:48px; font-weight:700;
-  color:var(--black); margin-bottom:24px;
-  letter-spacing:-0.03em;
-}
-.ticket-price .unit{
-  font-size:16px; font-weight:400;
-  letter-spacing:0; margin-left:4px;
-}
-.ticket-includes{
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:13px; color:rgba(0,0,0,0.55);
-  line-height:1.9; margin-bottom:36px;
-}
-.ticket-includes li{ list-style:none; padding-left:0; }
-.ticket-includes li::before{ content:"— "; }
-.ticket-cta-wrap{
-  margin-top:48px;
-  display:flex; justify-content:flex-start;
-}
-.btn-reserve{
-  display:inline-block;
-  font-family:'Space Mono',monospace;
-  font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
-  background:var(--black); color:var(--lime);
-  text-decoration:none; padding:18px 56px;
-  border:2px solid var(--black);
-  transition:background 0.2s, color 0.2s;
-}
-.btn-reserve:hover{ background:transparent; color:var(--black); border-color:var(--black); }
-.ticket-notice{
-  margin-top:20px;
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:12px; color:rgba(0,0,0,0.4);
-}
 
 /* ── ORGANIZER ── */
 .org-grid{
@@ -695,11 +531,6 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
   .press-grid{ grid-template-columns:1fr; gap:16px; }
   .voice-grid{ grid-template-columns:1fr; gap:16px; }
   .speakers-grid{ grid-template-columns:1fr; gap:20px; }
-  .net-grid{ grid-template-columns:1fr; gap:16px; }
-  .qa-card{ grid-template-columns:1fr; gap:28px; padding:36px 28px; }
-  .btn-form{ width:100%; text-align:center; }
-  .ticket-single{ max-width:100%; padding:40px 32px; }
-  .ticket-cta-wrap{ justify-content:center; }
   .org-grid{ grid-template-columns:1fr; gap:40px; }
   .hero-meta{ flex-direction:column; gap:0; }
   .hero-meta-item{ border-right:none; border-bottom:1px solid rgba(214,255,146,0.2); }
@@ -709,12 +540,7 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
   nav{ padding:14px 20px; }
   .nav-back{ display:none; }
   section{ padding:72px 0; }
-  .program-item{ grid-template-columns:1fr; gap:6px; }
-  .program-time{ font-size:12px; }
   .hero-theme{ font-size:clamp(44px,16vw,80px); }
-  .ticket-single{ padding:32px 24px; }
-  .ticket-price{ font-size:36px; }
-  .btn-reserve{ width:100%; text-align:center; padding:18px 32px; }
 }
 </style>
 </head>
