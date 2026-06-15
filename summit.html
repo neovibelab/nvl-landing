@@ -598,6 +598,83 @@ footer a{
 }
 footer a:hover{ color:var(--lime); border-color:var(--lime); }
 
+/* ── HERO STATUS (concluded) ── */
+.hero-status{
+  margin-top:24px;
+  font-family:'Space Mono',monospace;
+  font-size:clamp(10px,1.4vw,12px);
+  letter-spacing:0.04em; line-height:1.7;
+  color:var(--gray); max-width:520px;
+  opacity:0; animation:fadeUp 0.8s 0.65s forwards;
+}
+.hero-status a{ color:var(--lime); text-decoration:none; border-bottom:1px solid rgba(214,255,146,0.35); }
+.hero-status a:hover{ border-color:var(--lime); }
+
+/* ── PRESS ARCHIVE ── */
+.press-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+.press-card{
+  display:flex; flex-direction:column;
+  background:var(--lime-mid);
+  border:1px solid var(--gray-line);
+  padding:28px 30px 26px; text-decoration:none;
+  transition:border-color 0.25s, transform 0.25s, background 0.25s;
+}
+.press-card:hover{ border-color:rgba(214,255,146,0.4); background:var(--lime-dim); transform:translateY(-4px); }
+.press-head{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:14px; }
+.press-outlet{
+  font-family:'Space Mono',monospace;
+  font-size:12px; letter-spacing:0.05em; font-weight:700; color:var(--lime);
+}
+.press-date{
+  font-family:'Space Mono',monospace;
+  font-size:10px; letter-spacing:0.1em; color:var(--gray);
+}
+.press-title{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:16px; font-weight:700; line-height:1.45;
+  color:var(--white); margin-bottom:14px;
+}
+.press-quote{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:13px; color:var(--gray); line-height:1.8; flex:1;
+}
+.press-read{
+  margin-top:20px;
+  font-family:'Space Mono',monospace;
+  font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--lime);
+}
+.press-more{
+  margin-top:34px;
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:13px; color:var(--gray); line-height:2;
+}
+.press-more a{ color:var(--lime); text-decoration:none; border-bottom:1px solid rgba(214,255,146,0.25); }
+.press-more a:hover{ border-color:var(--lime); }
+
+/* ── VOICES (SNS 후기) ── */
+.voices-tag{ margin-top:64px; }
+.voice-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:8px; }
+.voice-card{
+  display:flex; flex-direction:column;
+  background:var(--lime-mid); border:1px solid var(--gray-line);
+  padding:26px 26px 24px; text-decoration:none;
+  transition:border-color 0.25s, transform 0.25s, background 0.25s;
+}
+.voice-card:hover{ border-color:rgba(214,255,146,0.4); background:var(--lime-dim); transform:translateY(-4px); }
+.voice-plat{
+  font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--lime); margin-bottom:16px;
+}
+.voice-quote{
+  font-family:'Noto Sans KR',sans-serif; font-size:14px; line-height:1.75;
+  color:var(--white); flex:1;
+}
+.voice-author{
+  margin-top:18px; font-family:'Space Mono',monospace; font-size:12px;
+  letter-spacing:0.03em; color:var(--gray);
+}
+.voice-author::before{ content:'— '; }
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp{
   from{ opacity:0; transform:translateY(20px); }
@@ -615,6 +692,8 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
   .container{ padding:0 24px; }
   .about-body{ grid-template-columns:1fr; gap:40px; }
   .stories-grid{ grid-template-columns:1fr; gap:20px; }
+  .press-grid{ grid-template-columns:1fr; gap:16px; }
+  .voice-grid{ grid-template-columns:1fr; gap:16px; }
   .speakers-grid{ grid-template-columns:1fr; gap:20px; }
   .net-grid{ grid-template-columns:1fr; gap:16px; }
   .qa-card{ grid-template-columns:1fr; gap:28px; padding:36px 28px; }
@@ -645,7 +724,7 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
 <nav>
   <a href="/" class="nav-back">← neovibelab.com</a>
   <span class="nav-label">뉴타입 엔터 서밋 2026</span>
-  <a href="#tickets" class="nav-cta">예매하기</a>
+  <a href="#archive" class="nav-cta">후기 ↓</a>
 </nav>
 
 <!-- ── HERO ── -->
@@ -668,8 +747,9 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
         <span class="val">Neutune</span>
       </div>
     </div>
+    <p class="hero-status mono">이 행사는 2026년 6월 12일에 종료되었습니다 — 아래에서 <a href="#archive">후기와 언론 보도</a>를 모았습니다.</p>
   </div>
-  <div class="hero-scroll">Scroll ↓</div>
+  <div class="hero-scroll">후기 보기 ↓</div>
 </section>
 
 <div class="supported">
@@ -830,30 +910,6 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
 
 <div class="divider"></div>
 
-<!-- ── QUESTIONS ── -->
-<section id="questions">
-  <div class="container">
-    <div class="qa-card fade-in">
-      <div class="qa-text">
-        <p class="section-tag">Your Questions</p>
-        <h2>대담에서 듣고 싶은<br>질문을 남겨주세요</h2>
-        <p class="kr">
-          뉴타입 엔터 서밋은 엔터 업계의 ‘작지만 밀도 높은 네트워크’를 지향합니다.
-          연사들의 사전 인터뷰를 읽고, 평소 궁금했던 점이나 대담에서 다뤄지길 바라는
-          질문을 자유롭게 남겨주세요. 보내주신 질문은 세션 진행에 적극 반영됩니다.
-        </p>
-      </div>
-      <div class="qa-cta">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHWuyxevVjQsngKr74rXTbJXSav8zguHdyx0fA8HyRhEcvGw/viewform" target="_blank" rel="noopener" class="btn-form">
-          질문 남기기 →
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
 <!-- ── PROGRAM ── -->
 <section id="program">
   <div class="container">
@@ -977,27 +1033,77 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
 
 <div class="divider"></div>
 
-<!-- ── TICKETS ── -->
-<section id="tickets" class="tickets-section">
+<!-- ── ARCHIVE (후기 / 언론 보도) ── -->
+<section id="archive">
   <div class="container">
-    <p class="section-tag fade-in">Tickets</p>
-    <h2 class="section-title fade-in">예매 안내</h2>
-    <div class="ticket-single fade-in">
-      <p class="ticket-tier">Summit ONLY</p>
-      <h3 class="ticket-type">뉴타입 엔터 서밋<br>2026 Summer</h3>
-      <p class="ticket-price">₩88,000<span class="unit">원</span></p>
-      <ul class="ticket-includes kr">
-        <li>서밋 전 세션 참관</li>
-        <li>키노트 — OK, Computer</li>
-        <li>패널 디스커션</li>
-        <li>자만추 뒤풀이 참여 (명함 박스)</li>
-      </ul>
-      <div class="ticket-cta-wrap">
-        <a href="https://booking.naver.com/booking/5/bizes/666684/items/7673120" target="_blank" rel="noopener" class="btn-reserve">
-          네이버 예약으로 이동하기 →
-        </a>
-      </div>
-      <p class="ticket-notice kr">결제는 네이버 예약 플랫폼에서 진행됩니다. 취소·환불 정책은 예매 페이지에서 확인하세요.</p>
+    <p class="section-tag fade-in">Archive — 후기</p>
+    <h2 class="section-title fade-in">서밋, 이렇게 기록됐습니다</h2>
+    <p class="stories-note kr fade-in">
+      2026년 6월 12일, 첫 번째 뉴타입 엔터 서밋이 한남동 타르틴에서 열렸습니다.
+      AI 시대의 IP를 기술·자본·통찰 세 축으로 물었던 하루를, 여러 매체가 현장에서 기록했습니다.
+    </p>
+    <div class="press-grid fade-in">
+
+      <a href="https://www.newsis.com/view/NISX20260612_0003667075" target="_blank" rel="noopener" class="press-card">
+        <div class="press-head"><span class="press-outlet">뉴시스</span><span class="press-date">2026.06.12</span></div>
+        <h3 class="press-title">조각화된 플랫폼 생태계에서, 음악은 ‘재료’가 된다</h3>
+        <p class="press-quote">“음악이 결국 하나의 ‘재료’로서 기능하게 됩니다.” — 이종필 뉴튠 대표가 AI 시대 음악 유통의 구조 변화를 짚었다.</p>
+        <span class="press-read">기사 읽기 →</span>
+      </a>
+
+      <a href="https://www.mt.co.kr/amp/future/2026/06/14/2026061213394272926" target="_blank" rel="noopener" class="press-card">
+        <div class="press-head"><span class="press-outlet">머니투데이</span><span class="press-date">2026.06.14</span></div>
+        <h3 class="press-title">“AI가 만든 음악, 누구 것인가” — K팝 업계, 저작권의 새 질서를 묻다</h3>
+        <p class="press-quote">전훈표 새한벤처스 파트너는 ‘얼마나 많이 만드느냐보다 무엇을 선택하느냐’가 경쟁력이라 봤고, 차우진은 ‘기술이 만들어내는 변화’에 주목했다.</p>
+        <span class="press-read">기사 읽기 →</span>
+      </a>
+
+      <a href="https://www.fortunekorea.co.kr/news/articleView.html?idxno=52824" target="_blank" rel="noopener" class="press-card">
+        <div class="press-head"><span class="press-outlet">포춘코리아</span><span class="press-date">2026.06.12</span></div>
+        <h3 class="press-title">‘뉴타입 엔터 서밋 2026’ 개최 — 생성형 AI 시대의 IP를 묻다</h3>
+        <p class="press-quote">수노·유디오의 무단 학습이라는 문제의식에서 출발해, 권리자 동의와 공정한 수익 분배에 기반한 AI 활용 방안을 논의했다.</p>
+        <span class="press-read">기사 읽기 →</span>
+      </a>
+
+      <a href="https://news.nate.com/view/20260615n02104" target="_blank" rel="noopener" class="press-card">
+        <div class="press-head"><span class="press-outlet">노컷뉴스</span><span class="press-date">2026.06.15</span></div>
+        <h3 class="press-title">스트리밍 AI 시대, “음악 저작권의 출처를 명확히 할 필요가 있다”</h3>
+        <p class="press-quote">AI 학습에 쓰인 원본 음악의 기여도를 추적해, 창작자에게 정당한 보상이 돌아가는 ‘출처 표준화’가 핵심 화두로 다뤄졌다.</p>
+        <span class="press-read">기사 읽기 →</span>
+      </a>
+
+    </div>
+    <p class="press-more kr fade-in">
+      이 외에도
+      <a href="https://www.epnc.co.kr/news/articleView.html?idxno=402547" target="_blank" rel="noopener">테크월드</a> ·
+      <a href="https://www.startupn.kr/news/articleView.html?idxno=58131" target="_blank" rel="noopener">스타트업엔</a> ·
+      <a href="https://www.nc.press/news/articleView.html?idxno=617037" target="_blank" rel="noopener">뉴스컬처</a> ·
+      <a href="http://www.ikoreanspirit.com/news/articleView.html?idxno=85707" target="_blank" rel="noopener">아이코리안스피릿</a>
+      등 여러 매체가 서밋을 다뤘습니다.
+    </p>
+
+    <p class="section-tag voices-tag fade-in">Voices — 현장의 목소리</p>
+    <p class="stories-note kr fade-in" style="margin-top:0;">서밋을 다녀간 분들이 SNS에 남긴 후기입니다.</p>
+    <div class="voice-grid fade-in">
+
+      <a href="https://www.linkedin.com/posts/patrickwjhan_%EC%97%94%ED%84%B0%ED%85%8C%ED%81%AC-ip-%EB%B6%84%EC%95%BC%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EC%98%81%ED%96%A5%EB%A0%A5-%EC%9E%88%EC%9C%BC%EC%8B%A0-woojin-cha-%EC%B0%A8%EC%9A%B0%EC%A7%84%EB%8B%98%EA%BB%98%EC%84%9C-ugcPost-7471877393515708416-H7fV" target="_blank" rel="noopener" class="voice-card">
+        <span class="voice-plat">LinkedIn</span>
+        <p class="voice-quote">“티켓 값이 꽤 있음에도 다리가 꽉 찰 정도로 150명 넘게 보인 듯한 게 우선 압도적이었고 … 큰 행사 치르시느라 고생 정말 많으셨습니다 🚀”</p>
+        <span class="voice-author">Patrick H.</span>
+      </a>
+
+      <a href="https://www.instagram.com/p/DZh8xCsmL9t/" target="_blank" rel="noopener" class="voice-card">
+        <span class="voice-plat">Instagram</span>
+        <p class="voice-quote">“최근 만나본 이벤트 중 가장 ‘인사이트풀’한 시간이 아니었나 싶습니다. … 일년에 딱 세 번 정도만 하면 좋겠다고 주최측에 건의해야겠습니다.”</p>
+        <span class="voice-author">@kiiwoong.nam</span>
+      </a>
+
+      <a href="https://www.threads.com/@joohimchan/post/DZjBD7fD7FQ" target="_blank" rel="noopener" class="voice-card">
+        <span class="voice-plat">Threads</span>
+        <p class="voice-quote">“유튜버 산업은, 음악 산업을 따라가게 될지도 모릅니다.” — 서밋이 던진 ‘음악이 모든 엔터의 교본’이라는 화두를 자신의 업계로 끌고 갔다.</p>
+        <span class="voice-author">HimChan Joo</span>
+      </a>
+
     </div>
   </div>
 </section>
@@ -1048,10 +1154,10 @@ footer a:hover{ color:var(--lime); border-color:var(--lime); }
 <!-- ── CTA BAND ── -->
 <section class="cta-band">
   <div class="container">
-    <h2 class="fade-in">2026.06.12 FRI<br>TARTINE</h2>
-    <p class="kr fade-in">자리가 한정되어 있습니다. 지금 바로 예매하세요.</p>
-    <a href="https://booking.naver.com/booking/5/bizes/666684/items/7673120" target="_blank" rel="noopener" class="btn-cta-main fade-in">
-      지금 예매하기
+    <h2 class="fade-in">OK, Computer.<br>그리고 다음 이야기</h2>
+    <p class="kr fade-in">서밋은 끝났지만 대화는 계속됩니다. 다음 서밋 소식과 더 깊은 이야기는 뉴스레터로 가장 먼저 전해드립니다.</p>
+    <a href="https://maily.so/draft.briefing" target="_blank" rel="noopener" class="btn-cta-main fade-in">
+      뉴스레터 구독하기 →
     </a>
   </div>
 </section>
