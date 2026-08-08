@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H72LNH62LJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-H72LNH62LJ');</script>
+<title>라이브러리 — 엔터문화연구소가 쓰는 분석 프레임 | Neo Vibe Lab</title>
+<meta name="description" content="엔터문화연구소가 엔터·콘텐츠 산업을 읽을 때 쓰는 분석 프레임 모음. 팬덤 최적화 모델, IP 7단계 파이프라인, 저작권의 자산화, 티켓 가격의 경제학 등 17개 프레임의 정의와 다른 업종의 적용점.">
+<meta property="og:title" content="라이브러리 — 엔터문화연구소가 쓰는 분석 프레임">
+<meta property="og:description" content="엔터는 산업 섹터가 아니라 타 산업의 레퍼런스입니다. 각 프레임 아래에 '다른 업종이 가져갈 것'을 함께 적었습니다.">
+<meta property="og:image" content="https://www.neovibelab.com/images/banner.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.neovibelab.com/library">
+<link rel="canonical" href="https://www.neovibelab.com/library">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+/* ── Tokens (brand-tokens.md 정본) ── */
+:root{
+  --lime:#D6FF92;
+  --lime-dim:rgba(214,255,146,0.10);
+  --lime-mid:rgba(214,255,146,0.06);
+  --black:#0A0A0A;
+  --dark:#111;
+  --gray:#888;
+  --gray-dark:#333;
+  --gray-line:rgba(255,255,255,0.06);
+  --white:#F0F0EA;
+}
+
+/* ── Reset ── */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit','Noto Sans KR',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--lime);color:var(--black)}
+img{display:block;max-width:100%}
+.mono{font-family:'DM Mono','Noto Sans KR',monospace}
+.label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime)}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade.visible{opacity:1;transform:translateY(0)}
+
+/* ── Nav ── */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-line)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);text-decoration:none}
+.nav-logo img{width:28px;height:28px}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;letter-spacing:.04em;color:var(--gray);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--lime)}
+
+/* ── Buttons ── */
+.btn{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
+.btn-lime{background:var(--lime);color:var(--black)}
+.btn-lime:hover{background:var(--white)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid var(--gray-dark)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+
+/* ── Page head ── */
+.page-head{padding:160px 0 72px}
+.page-title{font-size:clamp(30px,4.6vw,56px);font-weight:800;line-height:1.16;letter-spacing:-.03em;margin:14px 0 22px}
+.page-title .lime{color:var(--lime)}
+.page-sub{font-size:16px;color:var(--gray);line-height:1.85;max-width:640px}
+.page-sub strong{color:var(--white);font-weight:500}
+
+.divider{height:1px;background:var(--gray-line)}
+section{padding:88px 0}
+.section-head{margin-bottom:44px}
+.section-title{font-size:clamp(22px,2.6vw,32px);font-weight:700;letter-spacing:-.02em;margin-top:12px}
+.section-note{font-size:14px;color:var(--gray);line-height:1.8;margin-top:14px;max-width:660px}
+
+/* ── Frame grid ── */
+.group-label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);padding-bottom:12px;margin:56px 0 22px;border-bottom:1px solid var(--gray-line)}
+.group-label:first-of-type{margin-top:0}
+.frames{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.frame{border:1px solid var(--gray-line);background:var(--dark);padding:30px 28px;display:flex;flex-direction:column;gap:14px;transition:border-color .25s}
+.frame:hover{border-color:var(--gray-dark)}
+.frame-n{font-family:'DM Mono',monospace;font-size:11px;color:var(--lime);letter-spacing:.1em}
+.frame-name{font-size:19px;font-weight:700;line-height:1.35;letter-spacing:-.01em}
+.frame-def{font-size:14.5px;line-height:1.85;color:var(--white)}
+.frame-apply{font-size:13.5px;line-height:1.8;color:var(--gray);border-left:2px solid var(--lime-dim);padding-left:14px}
+.frame-apply b{color:var(--lime);font-weight:500;font-family:'DM Mono','Noto Sans KR',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+.frame-src{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:var(--gray);margin-top:auto;padding-top:6px}
+.frame-src a{color:var(--gray);text-decoration:none;border-bottom:1px solid var(--gray-dark);transition:color .2s,border-color .2s}
+.frame-src a:hover{color:var(--lime);border-color:var(--lime)}
+
+/* ── Theory frames (인용 가능 블록) ── */
+.theory{border:1px solid var(--gray-line);background:var(--dark);padding:32px 30px;margin-bottom:16px}
+.theory-name{font-size:20px;font-weight:700;letter-spacing:-.01em;margin-bottom:12px}
+.theory-def{font-size:15px;line-height:1.85;margin-bottom:18px}
+.theory-quote{border-left:2px solid var(--lime);padding:4px 0 4px 18px;font-size:14px;line-height:1.9;color:var(--gray);font-family:'Noto Sans KR',sans-serif}
+.theory-src{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:var(--gray);margin-top:16px}
+.theory-src a{color:var(--lime);text-decoration:none;border-bottom:1px solid var(--lime-dim)}
+.theory-src a:hover{border-color:var(--lime)}
+
+/* ── Report ── */
+.report-band{background:var(--dark);border-top:1px solid var(--gray-line);border-bottom:1px solid var(--gray-line)}
+.report-row{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.report-row h3{font-size:clamp(21px,2.4vw,30px);font-weight:700;line-height:1.35;letter-spacing:-.02em;margin:12px 0 16px}
+.report-row p{font-size:15px;line-height:1.85;color:var(--gray);margin-bottom:26px}
+.report-cta{display:flex;gap:12px;flex-wrap:wrap}
+.report-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{text-align:center;padding:26px 16px;border:1px solid var(--gray-line);background:var(--black)}
+.stat-num{font-family:'DM Mono',monospace;font-size:40px;font-weight:500;color:var(--lime);display:block;line-height:1}
+.stat-label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.06em;color:var(--gray);display:block;margin-top:8px}
+
+/* ── CTA ── */
+.cta{text-align:center;padding:100px 0}
+.cta h2{font-size:clamp(22px,3vw,34px);font-weight:700;letter-spacing:-.02em;margin-bottom:18px}
+.cta p{font-size:15px;color:var(--gray);line-height:1.85;max-width:520px;margin:0 auto 32px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{padding:44px 0;border-top:1px solid var(--gray-line);text-align:center}
+footer p{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:var(--gray);letter-spacing:.04em}
+
+@media(max-width:900px){
+  nav{padding:16px 20px}
+  .nav-links{gap:16px}
+  .container{padding:0 20px}
+  .frames{grid-template-columns:1fr}
+  .report-row{grid-template-columns:1fr;gap:32px}
+  .page-head{padding:130px 0 56px}
+  section{padding:64px 0}
+}
+@media(max-width:560px){
+  .nav-links li:not(:last-child){display:none}
+  .report-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="images/nvl-logo.png" alt="NVL">Neo Vibe Lab</a>
+  <ul class="nav-links">
+    <li><a href="/#about">소개</a></li>
+    <li><a href="/#report">리포트</a></li>
+    <li><a href="/library" class="active">라이브러리</a></li>
+    <li><a href="/#newsletter">뉴스레터</a></li>
+    <li><a href="/#contact">문의</a></li>
+  </ul>
+</nav>
+
+<!-- ════ Page head ════ -->
+<header class="page-head">
+  <div class="container">
+    <span class="label">Library</span>
+    <h1 class="page-title">우리가 산업을 읽을 때<br>쓰는 <span class="lime">프레임</span></h1>
+    <p class="page-sub">
+      엔터문화연구소가 엔터·콘텐츠 산업을 분석할 때 반복적으로 꺼내 쓰는 도구들입니다.
+      6년치 뉴스레터와 리서치에서 시의성 있는 사례를 걷어내고 <strong>시대가 바뀌어도 작동하는 해석틀</strong>만 남겼습니다.<br><br>
+      엔터테인먼트는 산업 섹터가 아니라 <strong>다른 산업이 참조하는 레퍼런스</strong>라고 봅니다.
+      그래서 각 프레임 아래에 <strong>“다른 업종이 가져갈 것”</strong>을 함께 적었습니다. 팬을 필요로 하는 모든 업종에서 같은 구조가 반복됩니다.
+    </p>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ════ 분석 프레임 12 ════ -->
+<section>
+  <div class="container">
+    <div class="section-head fade">
+      <span class="label">Analytical Frames</span>
+      <h2 class="section-title">분석 프레임 12</h2>
+      <p class="section-note">각 항목은 정의 한 줄과 적용점 한 줄로 이뤄져 있습니다. 근거가 되는 발행본이 있으면 함께 걸었습니다.</p>
+    </div>
+
+    <div class="group-label">팬덤 · 모델</div>
+    <div class="frames">
+      <article class="frame fade">
+        <span class="frame-n">01</span>
+        <h3 class="frame-name">장르가 아니라 팬덤 최적화 모델</h3>
+        <p class="frame-def">케이팝은 음악의 종류가 아니라 팬을 만들어내는 방법론입니다. “K가 무엇인가”를 소리로 규명하려는 시도가 번번이 실패한 이유가 여기 있습니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>카테고리 정의로 자기 사업을 설명하려다 막힌다면, 정의해야 할 대상은 상품이 아니라 <em>고객을 만드는 절차</em>일 수 있습니다.</p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">02</span>
+        <h3 class="frame-name">팬덤 비즈니스 5단계</h3>
+        <p class="frame-def">팬은 CONTACT → DIVE → PLAY → LOVE → DEVOTION의 층으로 나뉘고, 각 층은 다른 것을 원합니다. 전제는 팬을 고객이 아니라 동료로 두는 것입니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>멤버십·커뮤니티를 단일 집단으로 다루는 조직은 <em>가장 깊은 층에 맞춘 혜택을 가장 얕은 층에 지출</em>하고 있을 확률이 높습니다.</p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">03</span>
+        <h3 class="frame-name">기획사 · 아티스트 · 팬 삼각구조와 7년</h3>
+        <p class="frame-def">세 주체의 이해는 애초에 일치하지 않습니다. 표준계약의 7년이라는 시한이 그 불일치를 주기적으로 압축해 터뜨립니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>계약 만료일이 갈등의 원인처럼 보이지만, 실제로는 <em>평소 분산돼 있던 이해 충돌이 한 시점에 모이는 자리</em>입니다. 대리점·프랜차이즈·전속 구조 전반에 같은 역학이 있습니다.</p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">04</span>
+        <h3 class="frame-name">콘텐츠 비즈니스의 역설</h3>
+        <p class="frame-def">돈을 벌지 못하는 콘텐츠가 비즈니스의 필요조건입니다. 수익이 안 나는 활동을 접으면 수익이 나는 활동의 근거도 함께 사라집니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>손익만으로 사업부를 정리한 조직이 몇 년 뒤 <em>왜 아무도 우리를 찾지 않는지</em> 모르게 되는 이유입니다. 규모가 아니라 밀도의 문제입니다.</p>
+        <p class="frame-src">근거 · <a href="https://maily.so/draft.briefing/posts/10z3k6yjrlw" target="_blank" rel="noopener">콘텐츠 비즈니스의 역설</a></p>
+      </article>
+    </div>
+
+    <div class="group-label">산업 구조 · 권리</div>
+    <div class="frames">
+      <article class="frame fade">
+        <span class="frame-n">05</span>
+        <h3 class="frame-name">IP 비즈니스 7단계 파이프라인</h3>
+        <p class="frame-def">창작 → 권리 → 1차 상품화 → 미디어믹스 → 라이선싱 → 경험 → 금융화. IP를 갖는다는 건 콘텐츠를 갖는 게 아니라 <em>연결의 권한</em>을 갖는 것입니다. 한국은 앞의 세 단계가 세계 최고 수준인데 뒤의 네 단계가 비어 있습니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>잘 만드는 능력과 오래 버는 구조는 다른 문제입니다. <em>자기 회사가 파이프라인의 어느 칸에서 멈춰 있는지</em>를 묻는 진단 도구로 씁니다.</p>
+        <p class="frame-src">근거 · <a href="https://maily.so/draft.briefing/posts/l1zqg8g4r5x" target="_blank" rel="noopener">한스 짐머는 어떻게 재능을 IP 비즈니스로 확장했을까</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">06</span>
+        <h3 class="frame-name">저작권의 자산화</h3>
+        <p class="frame-def">음악 카탈로그가 금융 상품이 된 과정입니다. 마스터권과 출판권이 갈라지고 헤지펀드·사모펀드가 매수자로 들어오면서, 창작물은 <em>소유자가 움직이지 않아도 수익을 내는 자산</em>이 됐습니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>무형자산을 <em>팔 수 있는 형태로 정리해 두는 일</em>이 곧 밸류에이션입니다. 브랜드·레시피·특허·데이터 모두 같은 경로를 밟습니다.</p>
+        <p class="frame-src">근거 · <a href="https://maily.so/draft.briefing/posts/knrj1p57rld" target="_blank" rel="noopener">마이클 잭슨과 ‘저작권의 자산화’</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">07</span>
+        <h3 class="frame-name">②단계가 무너지면 ⑤단계가 없다</h3>
+        <p class="frame-def">권리 관리가 부실하면 라이선싱은 원리적으로 작동하지 않습니다. 케이팝이 음악 사업이라기보다 매니지먼트 사업에 가까운 이유가 여기 있습니다. 음악의 권리가 대체로 회사 바깥에 있기 때문입니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>유통·수익화를 고민하기 전에 <em>권리 장부가 정리돼 있는지</em>부터 봅니다. 앞 칸이 비면 뒷 칸은 설계해도 돌지 않습니다.</p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">08</span>
+        <h3 class="frame-name">창작자 3단계 성장 모델</h3>
+        <p class="frame-def">재능의 발견 → 자원의 활용 → 재능의 자산화. 3단계로 넘어가는 조건은 규모가 아니라 <em>권리를 직접 소유·관리하는 구조</em>입니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>프리랜서·1인 사업자가 2단계에서 멈추는 건 실력 문제가 아니라 <em>자기 산출물의 권리를 남이 쥐고 있기 때문</em>인 경우가 많습니다.</p>
+        <p class="frame-src">근거 · 차우진 『관점을 파는 일』(2025) 5부</p>
+      </article>
+    </div>
+
+    <div class="group-label">시장 · 가격</div>
+    <div class="frames">
+      <article class="frame fade">
+        <span class="frame-n">09</span>
+        <h3 class="frame-name">케이팝의 글로벌 비대칭</h3>
+        <p class="frame-def">글로벌은 하나가 아닙니다. 앨범이 팔리는 시장과 스트리밍이 도는 시장이 다르고, 케이팝의 위치는 시장마다 완전히 다릅니다. “글로벌에 성공했다”는 문장이 가리는 것이 이 비대칭입니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>해외 진출 성과를 단일 지표로 합산하는 순간 <em>어느 시장에서 실제로 돈이 나오는지가 사라집니다.</em></p>
+        <p class="frame-src">근거 · <a href="https://maily.so/draft.briefing/posts/32z84e61rn4" target="_blank" rel="noopener">케이팝은 정말 ‘글로벌 음악’이 된 걸까?</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">10</span>
+        <h3 class="frame-name">라이브 티켓 가격의 경제학</h3>
+        <p class="frame-def">티켓값은 원가가 아니라 시장이 견디는 한계선에서 정해집니다. 리셀 가격이 그 한계를 재는 자이고, 다이내믹 프라이싱은 원래 가격과 한계 사이의 간격을 판매자가 회수하는 장치입니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>수요가 공급을 크게 넘는 상품의 가격 결정은 원가 계산이 아니라 <em>지불 의사 상한의 탐색</em>입니다. 그 상한을 남이 회수하고 있다면 구조 설계의 문제입니다.</p>
+        <p class="frame-src">근거 · <a href="https://maily.so/draft.briefing/posts/knrj13q0rld" target="_blank" rel="noopener">공연 티켓값은 왜 계속 오를까?</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">11</span>
+        <h3 class="frame-name">중소의 기적 — 돌파의 조건</h3>
+        <p class="frame-def">비주류 기획사의 성공은 운이 아니라 반복되는 구조입니다. 미디어 환경이 기적의 <em>종류</em>를, 초기 팬 확보가 <em>시작</em>을, 음악 엔진이 <em>지속</em>을 결정합니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>자원이 적은 쪽의 돌파는 <em>대형 사업자가 관심을 두지 않는 구간</em>에서 일어납니다. 그 구간을 찾는 것이 전략의 시작입니다.</p>
+        <p class="frame-src">근거 · <a href="/report/small-label-miracle">리포트 「중소의 기적」</a> · <a href="https://maily.so/draft.briefing/posts/w6ovpe0yok5" target="_blank" rel="noopener">‘거제 야호’의 법칙</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">12</span>
+        <h3 class="frame-name">기술 복제 시대의 진정성</h3>
+        <p class="frame-def">팬이 거부하는 건 ‘AI를 썼다’는 사실이 아니라 <em>사람의 노동 흔적이 지워졌다는 감각</em>입니다. 그래서 판단 기준은 누가 만들었느냐가 아니라 무엇을 어떻게 전달했느냐가 됩니다.</p>
+        <p class="frame-apply"><b>다른 업종이 가져갈 것</b>AI 도입 공개 여부를 <em>숨김이냐 밝힘이냐</em>의 이분법으로 다루면 집니다. 어느 지점에 사람이 남아 있는지를 특정해 밝히는 쪽이 실효가 있습니다.</p>
+        <p class="frame-src">근거 · <a href="https://maily.so/draft.briefing/posts/e9o0yl7nr8w" target="_blank" rel="noopener">AI 아티스트는 정말로 팬을 모을 수 없을까</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ Theory 프레임 5 ════ -->
+<section>
+  <div class="container">
+    <div class="section-head fade">
+      <span class="label">Theory Index</span>
+      <h2 class="section-title">인용 가능한 프레임 5</h2>
+      <p class="section-note">강연·리포트에서 그대로 호출되는 프레임입니다. 정의와 핵심 대목을 함께 실었습니다.</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">콘텐츠 · 커뮤니티 · 커머스 (3C) 연결 구조</h3>
+      <p class="theory-def">콘텐츠 비즈니스의 미래는 콘텐츠·커뮤니티·커머스가 분리되지 않고 서로를 매개하는 구조에 있습니다.</p>
+      <blockquote class="theory-quote">제품과 사업이 분리된 시점에서 커뮤니티는 더 중요해진다. 지금은 음악과 콘텐츠뿐 아니라 제조업이든 금융업이든 웬만해선 누구나 커뮤니티와 팬덤을 원하는 시대가 되었다. 중요한 건 규모가 아니라 밀도다.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/10z3k6yjrlw" target="_blank" rel="noopener">콘텐츠 비즈니스의 역설</a> (2022.12)</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">팬 본질론</h3>
+      <p class="theory-def">팬은 일반 소비자가 아니라 특수 소비자입니다. 정체성·소속감·문화 코드로 움직이며, 가격·기능·합리성으로는 닿을 수 없습니다.</p>
+      <blockquote class="theory-quote">팬을 원하는 것에 그치지 말고 어떤 팬을 원하는지 찾아서 집중해야 한다. 매스 미디어 시대가 끝났기 때문에, 역설적으로 단 한 명의 팬 혹은 고객이 중요해진다. 이런 구조에서 메시지보다 경험이, 이미지보다 본질이 더 큰 가치를 가진다.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/mvpzlydxok9" target="_blank" rel="noopener">단 한 명의 팬이 중요하다</a> (2022.07)</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">차세대 음악 비즈니스 모델 — 인터랙션과 인게이지먼트</h3>
+      <p class="theory-def">스트리밍 이후 음악 산업의 핵심은 청취량이 아니라 인터랙션과 인게이지먼트의 깊이입니다.</p>
+      <blockquote class="theory-quote">핵심은 상호작용이다. 조만간 음악의 영향력과 성과는 앨범 판매량이나 재생 수가 아니라 사용자 참여를 기준으로 삼을 때가 올지 모른다. 앞으로 엔터테인먼트는 모든 영역에서 이 상호작용의 가치를 얼마나 끌어올리느냐를 기준으로 평가받을 가능성이 높다.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/8mo5e0p7o9p" target="_blank" rel="noopener">내일의 음악 산업: 인터랙션과 인게이지먼트</a> (2024.06)</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">AI 시대 아티스트 리더십</h3>
+      <p class="theory-def">AI 시대의 아티스트는 단순 창작자가 아니라 팬덤·기술·산업을 통합하는 리더로 작동해야 합니다. 인디와 케이팝 모두에 해당합니다.</p>
+      <blockquote class="theory-quote">케이팝 아티스트에게도 최우선적으로 필요한 건 ‘인성’이 아니라 ‘리더십’이다. 아티스트가 능동적으로 팬들과 함께 고민하고 성장하는 관계를 유지해야 팬덤이 유지되고 확장된다. 그리고 이러한 리더십은 케이팝에만 국한되지 않는다.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/1gz24ledr3q" target="_blank" rel="noopener">AI 시대의 아티스트에게 리더십이 꼭 필요한 이유</a> (2025.02)</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">스트리밍 이후 AI 에이전트 구조</h3>
+      <p class="theory-def">스트리밍 이후의 음악 산업은 AI 에이전트가 큐레이션·발견·매칭의 중심 매개자가 되는 구조로 재편됩니다.</p>
+      <blockquote class="theory-quote">문제의 핵심은 제품과 프로세스의 충돌에 있다. 기존 스트리밍 인프라는 음악을 완성된 ‘제품’으로 취급하지만, 생성형 AI는 음악을 상호작용을 통해 반복적으로 수정되는 ‘프로세스’로 다룬다. 해결책은 AI를 통제하는 것이 아니라, AI가 생성하는 가치가 원본 창작자에게 투명하게 환원되는 기반 시스템을 구축하는 것이다.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/x1zgwn25oqg" target="_blank" rel="noopener">AI 음악 논문에 어드바이저로 참여했습니다</a> (2025.11)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Report ════ -->
+<section class="report-band">
+  <div class="container">
+    <div class="report-row fade">
+      <div>
+        <span class="label">Research Report</span>
+        <h3>중소의 기적 — 돌파의 조건</h3>
+        <p>비주류 기획사 27팀을 전수 분석해 “기적은 운이 아니라 반복되는 구조”임을 확인한 리포트입니다. 미디어 환경·돌파 유형·초기 팬·지속의 4축으로 분해했습니다.</p>
+        <div class="report-cta">
+          <a href="/report/small-label-miracle" class="btn btn-lime">전문 읽기 →</a>
+          <a href="/reports/small-label-miracle-2026.pdf" target="_blank" rel="noopener" class="btn btn-ghost">PDF 다운로드</a>
+        </div>
+      </div>
+      <div class="report-stats">
+        <div class="stat"><span class="stat-num">27</span><span class="stat-label">분석 팀</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">분석 축</span></div>
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">시대불변 규칙</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">사분면</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CTA ════ -->
+<section class="cta">
+  <div class="container">
+    <h2>이 프레임들은 매주 갱신됩니다</h2>
+    <p>뉴스레터에서 새 사례로 검증하고, 작동하지 않으면 폐기합니다. 프레임이 만들어지는 과정을 함께 보시려면.</p>
+    <div class="cta-btns">
+      <a href="https://maily.so/draft.briefing" target="_blank" rel="noopener" class="btn btn-lime">뉴스레터 구독</a>
+      <a href="/#contact" class="btn btn-ghost">B2B 문의</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 엔터문화연구소 (Neo Vibe Lab) · Seoul</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": "엔터문화연구소 분석 프레임 라이브러리",
+  "description": "엔터·콘텐츠 산업 분석에 쓰이는 프레임 모음. 각 프레임에 정의와 타 산업 적용점을 포함한다.",
+  "url": "https://www.neovibelab.com/library",
+  "publisher": {
+    "@type": "Organization",
+    "name": "엔터문화연구소 (Neo Vibe Lab)",
+    "url": "https://www.neovibelab.com"
+  },
+  "hasDefinedTerm": [
+    {"@type":"DefinedTerm","name":"장르가 아니라 팬덤 최적화 모델","description":"케이팝은 음악의 종류가 아니라 팬을 만들어내는 방법론이다."},
+    {"@type":"DefinedTerm","name":"팬덤 비즈니스 5단계","description":"팬은 CONTACT·DIVE·PLAY·LOVE·DEVOTION의 층으로 나뉘고 각 층은 다른 것을 원한다."},
+    {"@type":"DefinedTerm","name":"기획사·아티스트·팬 삼각구조와 7년","description":"세 주체의 이해는 일치하지 않으며 표준계약 7년이 그 불일치를 주기적으로 압축한다."},
+    {"@type":"DefinedTerm","name":"콘텐츠 비즈니스의 역설","description":"돈을 벌지 못하는 콘텐츠가 비즈니스의 필요조건이다."},
+    {"@type":"DefinedTerm","name":"IP 비즈니스 7단계 파이프라인","description":"창작·권리·1차 상품화·미디어믹스·라이선싱·경험·금융화. IP를 갖는다는 것은 연결의 권한을 갖는 것이다."},
+    {"@type":"DefinedTerm","name":"저작권의 자산화","description":"음악 카탈로그가 금융 상품이 되어, 소유자가 움직이지 않아도 수익을 내는 자산이 된 과정."},
+    {"@type":"DefinedTerm","name":"②단계가 무너지면 ⑤단계가 없다","description":"권리 관리가 부실하면 라이선싱은 원리적으로 작동하지 않는다."},
+    {"@type":"DefinedTerm","name":"창작자 3단계 성장 모델","description":"재능의 발견에서 자원의 활용을 거쳐 재능의 자산화로. 조건은 권리를 직접 소유·관리하는 구조다."},
+    {"@type":"DefinedTerm","name":"케이팝의 글로벌 비대칭","description":"글로벌은 단일하지 않으며 케이팝의 위치는 시장마다 완전히 다르다."},
+    {"@type":"DefinedTerm","name":"라이브 티켓 가격의 경제학","description":"티켓값은 원가가 아니라 시장이 견디는 한계선에서 정해진다."},
+    {"@type":"DefinedTerm","name":"중소의 기적 — 돌파의 조건","description":"미디어 환경이 기적의 종류를, 초기 팬 확보가 시작을, 음악 엔진이 지속을 결정한다."},
+    {"@type":"DefinedTerm","name":"기술 복제 시대의 진정성","description":"팬이 거부하는 것은 AI 사용 자체가 아니라 사람의 노동 흔적이 지워졌다는 감각이다."}
+  ]
+}
+</script>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
+},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
