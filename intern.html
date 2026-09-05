@@ -43,13 +43,16 @@ img{display:block;max-width:100%}
 nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-line)}
 .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);text-decoration:none}
 .nav-logo img{width:28px;height:28px}
-.nav-right{display:flex;gap:20px;align-items:center}
-.nav-right a{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;letter-spacing:.04em;color:var(--gray);text-decoration:none;transition:color .2s}
-.nav-right a:hover{color:var(--lime)}
-.lang-toggle{display:flex;border:1px solid var(--gray-dark);border-radius:2px;overflow:hidden}
-.lang-toggle button{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;padding:6px 12px;background:transparent;color:var(--gray);border:none;cursor:pointer;transition:all .2s}
-.lang-toggle button.on{background:var(--lime);color:var(--black)}
-
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;letter-spacing:.04em;color:var(--gray);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--lime)}
+.nav-links a.active{color:var(--white)}
+.nav-links li.lang-li{display:flex}
+.lang-toggle{display:flex;border:1px solid var(--gray-dark);border-radius:2px;overflow:hidden;margin-left:6px}
+.lang-toggle a,.lang-toggle button{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;padding:5px 10px;background:transparent;color:var(--gray);border:none;cursor:pointer;text-decoration:none;transition:all .2s;line-height:1.4}
+.lang-toggle a.on,.lang-toggle button.on{background:var(--lime);color:var(--black)}
+.lang-toggle a:hover:not(.on),.lang-toggle button:hover:not(.on){color:var(--lime)}
+@media(max-width:900px){nav{padding:16px 24px}.nav-links{gap:16px}.nav-links li:not(.lang-li){display:none}}
 /* ── Buttons ── */
 .btn{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
 .btn-lime{background:var(--lime);color:var(--black)}
@@ -163,7 +166,6 @@ html[data-ui="en"] [data-lang="en"]{display:block}
 @media(max-width:540px){
   .metrics{grid-template-columns:1fr}
   .metrics div:last-child{grid-column:auto}
-  .nav-right a.nav-home{display:none}
 }
 </style>
 </head>
@@ -171,13 +173,15 @@ html[data-ui="en"] [data-lang="en"]{display:block}
 
 <nav>
   <a href="/" class="nav-logo"><img src="images/nvl-logo.png" alt="NVL">Neo Vibe Lab</a>
-  <div class="nav-right">
-    <a href="/" class="nav-home">← 엔터문화연구소</a>
-    <div class="lang-toggle" role="group" aria-label="언어">
-      <button type="button" data-set="ko" class="on">KO</button>
-      <button type="button" data-set="en">EN</button>
-    </div>
-  </div>
+  <ul class="nav-links">
+    <li><a data-ko="/#method" data-en="/en#method" data-ko-t="읽는 법" data-en-t="Method" href="/#method">읽는 법</a></li>
+    <li><a data-ko="/#report" data-en="/en#report" data-ko-t="리포트" data-en-t="Report" href="/#report">리포트</a></li>
+    <li><a data-ko="/library" data-en="/library-en" data-ko-t="라이브러리" data-en-t="Library" href="/library">라이브러리</a></li>
+    <li><a data-ko="/#services" data-en="/en#services" data-ko-t="함께 일하기" data-en-t="Work with us" href="/#services">함께 일하기</a></li>
+    <li><a data-ko="/#newsletter" data-en="/en#newsletter" data-ko-t="뉴스레터" data-en-t="Newsletter" href="/#newsletter">뉴스레터</a></li>
+    <li><a data-ko="/#contact" data-en="/en#contact" data-ko-t="문의" data-en-t="Contact" href="/#contact">문의</a></li>
+    <li class="lang-li"><span class="lang-toggle" role="group" aria-label="Language"><button type="button" data-set="ko" class="on">KO</button><button type="button" data-set="en">EN</button></span></li>
+  </ul>
 </nav>
 
 <!-- ══════════════════════════ 한국어 ══════════════════════════ -->
@@ -619,6 +623,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
   function apply(l){
     ui=l; root.setAttribute('data-ui',l); root.setAttribute('lang',l);
     document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('on',b.dataset.set===l));
+    document.querySelectorAll('.nav-links a[data-ko]').forEach(a=>{a.href=a.dataset[l];a.textContent=a.dataset[l+'T'];});
     try{localStorage.setItem('intern-lang',l)}catch(e){}
     // 새로 보이는 요소의 fade 재관찰
     document.querySelectorAll('[data-lang="'+l+'"] .fade').forEach(el=>{el.classList.add('visible')});

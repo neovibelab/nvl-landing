@@ -49,12 +49,16 @@ img{display:block;max-width:100%}
 nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-line)}
 .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);text-decoration:none}
 .nav-logo img{width:28px;height:28px}
-.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;margin:0;padding:0}
 .nav-links a{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;letter-spacing:.04em;color:var(--gray);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--lime)}
-.nav-links a.nav-summit{color:var(--lime);font-weight:500;font-family:'Noto Sans KR','DM Mono',sans-serif;text-transform:none;letter-spacing:0;white-space:nowrap}
-.nav-links a.nav-summit::before{content:"● ";font-size:8px;vertical-align:middle}
-
+.nav-links a.active{color:var(--white)}
+.nav-links li.lang-li{display:flex}
+.lang-toggle{display:flex;border:1px solid var(--gray-dark);border-radius:2px;overflow:hidden;margin-left:6px}
+.lang-toggle a,.lang-toggle button{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;padding:5px 10px;background:transparent;color:var(--gray);border:none;cursor:pointer;text-decoration:none;transition:all .2s;line-height:1.4}
+.lang-toggle a.on,.lang-toggle button.on{background:var(--lime);color:var(--black)}
+.lang-toggle a:hover:not(.on),.lang-toggle button:hover:not(.on){color:var(--lime)}
+@media(max-width:900px){nav{padding:16px 24px}.nav-links{gap:16px}.nav-links li:not(.lang-li){display:none}}
 /* ── Buttons ── */
 .btn{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
 .btn-lime{background:var(--lime);color:var(--black)}
@@ -120,8 +124,6 @@ footer{padding:44px 0;border-top:1px solid var(--gray-line);text-align:center}
 footer p{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:var(--gray);letter-spacing:.04em}
 
 @media(max-width:900px){
-  nav{padding:16px 24px}
-  .nav-links{gap:16px}
   .container{padding:0 24px}
   .frames{grid-template-columns:1fr}
   .report-row{grid-template-columns:1fr;gap:32px}
@@ -130,8 +132,6 @@ footer p{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:v
 }
 @media(max-width:540px){
   .report-stats{grid-template-columns:1fr 1fr}
-  .nav-links li:not(.nav-summit-li){display:none}
-  .nav-summit-li a.nav-summit{padding:8px 14px;border:1px solid var(--lime);border-radius:2px}
 }
 </style>
 </head>
@@ -140,13 +140,13 @@ footer p{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:v
 <nav>
   <a href="/" class="nav-logo"><img src="images/nvl-logo.png" alt="NVL">Neo Vibe Lab</a>
   <ul class="nav-links">
-    <li><a href="/en#about">About</a></li>
+    <li><a href="/en#method">Method</a></li>
     <li><a href="/en#report">Report</a></li>
-    <li><a href="/library-en">Library</a></li>
+    <li><a href="/library-en" class="active">Library</a></li>
     <li><a href="/en#services">Work with us</a></li>
     <li><a href="/en#newsletter">Newsletter</a></li>
     <li><a href="/en#contact">Contact</a></li>
-    <li class="nav-summit-li"><a href="/library" class="nav-summit" style="color:var(--gray)">한국어</a></li>
+    <li class="lang-li"><span class="lang-toggle" role="group" aria-label="Language"><a href="/library" class="" hreflang="ko">KO</a><a href="/library-en" class="on" hreflang="en">EN</a></span></li>
   </ul>
 </nav>
 
