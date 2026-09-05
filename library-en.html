@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H72LNH62LJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-H72LNH62LJ');</script>
+<title>Library: the frames Neo Vibe Lab reads the industry with</title>
+<meta name="description" content="The analysis frames Neo Vibe Lab uses to read the entertainment and content industry. Seventeen frames, from the fandom optimization model to the seven-stage IP pipeline, copyright as an asset and the economics of ticket pricing, each with what another industry can take.">
+<meta property="og:title" content="Library: the frames Neo Vibe Lab reads the industry with">
+<meta property="og:description" content="Entertainment is a reference for other industries. Under every frame we wrote what another industry can take.">
+<meta property="og:image" content="https://www.neovibelab.com/images/banner.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.neovibelab.com/library-en">
+<link rel="canonical" href="https://www.neovibelab.com/library-en">
+<link rel="alternate" hreflang="ko" href="https://www.neovibelab.com/library">
+<link rel="alternate" hreflang="en" href="https://www.neovibelab.com/library-en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+/* ── Tokens (brand-tokens.md 정본) ── */
+:root{
+  --lime:#D6FF92;
+  --lime-dim:rgba(214,255,146,0.10);
+  --lime-mid:rgba(214,255,146,0.06);
+  --black:#0A0A0A;
+  --dark:#111;
+  --gray:#888;
+  --gray-dark:#333;
+  --gray-line:rgba(255,255,255,0.06);
+  --white:#F0F0EA;
+}
+
+/* ── Reset ── */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit','Noto Sans KR',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--lime);color:var(--black)}
+img{display:block;max-width:100%}
+.mono{font-family:'DM Mono','Noto Sans KR',monospace}
+.label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime)}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade.visible{opacity:1;transform:translateY(0)}
+
+/* ── Nav ── */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-line)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);text-decoration:none}
+.nav-logo img{width:28px;height:28px}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;letter-spacing:.04em;color:var(--gray);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--lime)}
+.nav-links a.nav-summit{color:var(--lime);font-weight:500;font-family:'Noto Sans KR','DM Mono',sans-serif;text-transform:none;letter-spacing:0;white-space:nowrap}
+.nav-links a.nav-summit::before{content:"● ";font-size:8px;vertical-align:middle}
+
+/* ── Buttons ── */
+.btn{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
+.btn-lime{background:var(--lime);color:var(--black)}
+.btn-lime:hover{background:var(--white)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid var(--gray-dark)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+
+/* ── Page head ── */
+.page-head{padding:160px 0 72px}
+.page-title{font-size:clamp(30px,4.6vw,56px);font-weight:800;line-height:1.16;letter-spacing:-.03em;margin:14px 0 22px}
+.page-title .lime{color:var(--lime)}
+.page-sub{font-size:16px;color:var(--gray);line-height:1.85;max-width:640px}
+.page-sub strong{color:var(--white);font-weight:500}
+
+.divider{height:1px;background:var(--gray-line)}
+section{padding:88px 0}
+.section-head{margin-bottom:44px}
+.section-title{font-size:clamp(22px,2.6vw,32px);font-weight:700;letter-spacing:-.02em;margin-top:12px}
+.section-note{font-size:14px;color:var(--gray);line-height:1.8;margin-top:14px;max-width:660px}
+
+/* ── Frame grid ── */
+.group-label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);padding-bottom:12px;margin:56px 0 22px;border-bottom:1px solid var(--gray-line)}
+.group-label:first-of-type{margin-top:0}
+.frames{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.frame{border:1px solid var(--gray-line);background:var(--dark);padding:30px 28px;display:flex;flex-direction:column;gap:14px;transition:border-color .25s}
+.frame:hover{border-color:var(--gray-dark)}
+.frame-n{font-family:'DM Mono',monospace;font-size:11px;color:var(--lime);letter-spacing:.1em}
+.frame-name{font-size:19px;font-weight:700;line-height:1.35;letter-spacing:-.01em}
+.frame-def{font-size:14.5px;line-height:1.85;color:var(--white)}
+.frame-apply{font-size:13.5px;line-height:1.8;color:var(--gray);border-left:2px solid var(--lime-dim);padding-left:14px}
+.frame-apply b{color:var(--lime);font-weight:500;font-family:'DM Mono','Noto Sans KR',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+.frame-src{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:var(--gray);margin-top:auto;padding-top:6px}
+.frame-src a{color:var(--gray);text-decoration:none;border-bottom:1px solid var(--gray-dark);transition:color .2s,border-color .2s}
+.frame-src a:hover{color:var(--lime);border-color:var(--lime)}
+
+/* ── Theory frames (인용 가능 블록) ── */
+.theory{border:1px solid var(--gray-line);background:var(--dark);padding:32px 30px;margin-bottom:16px}
+.theory-name{font-size:20px;font-weight:700;letter-spacing:-.01em;margin-bottom:12px}
+.theory-def{font-size:15px;line-height:1.85;margin-bottom:18px}
+.theory-quote{border-left:2px solid var(--lime);padding:4px 0 4px 18px;font-size:14px;line-height:1.9;color:var(--gray);font-family:'Noto Sans KR',sans-serif}
+.theory-src{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:var(--gray);margin-top:16px}
+.theory-src a{color:var(--lime);text-decoration:none;border-bottom:1px solid var(--lime-dim)}
+.theory-src a:hover{border-color:var(--lime)}
+
+/* ── Report ── */
+.report-band{background:var(--dark);border-top:1px solid var(--gray-line);border-bottom:1px solid var(--gray-line)}
+.report-row{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.report-row h3{font-size:clamp(21px,2.4vw,30px);font-weight:700;line-height:1.35;letter-spacing:-.02em;margin:12px 0 16px}
+.report-row p{font-size:15px;line-height:1.85;color:var(--gray);margin-bottom:26px}
+.report-cta{display:flex;gap:12px;flex-wrap:wrap}
+.report-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{text-align:center;padding:26px 16px;border:1px solid var(--gray-line);background:var(--black)}
+.stat-num{font-family:'DM Mono',monospace;font-size:40px;font-weight:500;color:var(--lime);display:block;line-height:1}
+.stat-label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.06em;color:var(--gray);display:block;margin-top:8px}
+
+/* ── CTA ── */
+.cta{text-align:center;padding:100px 0}
+.cta h2{font-size:clamp(22px,3vw,34px);font-weight:700;letter-spacing:-.02em;margin-bottom:18px}
+.cta p{font-size:15px;color:var(--gray);line-height:1.85;max-width:520px;margin:0 auto 32px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{padding:44px 0;border-top:1px solid var(--gray-line);text-align:center}
+footer p{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:var(--gray);letter-spacing:.04em}
+
+@media(max-width:900px){
+  nav{padding:16px 24px}
+  .nav-links{gap:16px}
+  .container{padding:0 24px}
+  .frames{grid-template-columns:1fr}
+  .report-row{grid-template-columns:1fr;gap:32px}
+  .page-head{padding:130px 0 56px}
+  section{padding:64px 0}
+}
+@media(max-width:540px){
+  .report-stats{grid-template-columns:1fr 1fr}
+  .nav-links li:not(.nav-summit-li){display:none}
+  .nav-summit-li a.nav-summit{padding:8px 14px;border:1px solid var(--lime);border-radius:2px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="images/nvl-logo.png" alt="NVL">Neo Vibe Lab</a>
+  <ul class="nav-links">
+    <li><a href="/en#about">About</a></li>
+    <li><a href="/en#report">Report</a></li>
+    <li><a href="/library-en">Library</a></li>
+    <li><a href="/en#services">Work with us</a></li>
+    <li><a href="/en#newsletter">Newsletter</a></li>
+    <li><a href="/en#contact">Contact</a></li>
+    <li class="nav-summit-li"><a href="/library" class="nav-summit" style="color:var(--gray)">한국어</a></li>
+  </ul>
+</nav>
+
+<!-- ════ Page head ════ -->
+<header class="page-head">
+  <div class="container">
+    <span class="label">Library</span>
+    <h1 class="page-title">The <span class="lime">frames</span> we read<br>the industry with</h1>
+    <p class="page-sub">
+      The tools Neo Vibe Lab reaches for again and again when it analyzes the entertainment and content industry.
+      Six years of newsletters and research, with the timely cases stripped away, leaving only <strong>the readings that keep working as the era changes</strong>.<br><br>
+      We treat entertainment as <strong>a reference other industries consult</strong>, and music as the place where the next change shows up first.
+      So under every frame we wrote <strong>"what another industry can take"</strong>. The same structure repeats in every business that needs fans. The source newsletters linked below are in Korean.
+    </p>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ════ Twelve frames ════ -->
+<section>
+  <div class="container">
+    <div class="section-head fade">
+      <span class="label">Analytical Frames</span>
+      <h2 class="section-title">Twelve analysis frames</h2>
+      <p class="section-note">Each frame is one line of definition and one line of application. Where a published piece backs it, the link is attached (Korean).</p>
+    </div>
+
+    <div class="group-label">Fandom · Models</div>
+    <div class="frames">
+      <article class="frame fade">
+        <span class="frame-n">01</span>
+        <h3 class="frame-name">A fandom optimization model, not a genre</h3>
+        <p class="frame-def">K-pop is not a type of music but a methodology for creating fans. This is why every attempt to define "what K is" through sound alone has failed.</p>
+        <p class="frame-apply"><b>What another industry can take</b>If explaining your business through a category definition gets you stuck, what needs defining may not be the product but the <em>process of creating customers</em>.</p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">02</span>
+        <h3 class="frame-name">The five stages of fandom business</h3>
+        <p class="frame-def">Fans are divided into layers: CONTACT → DIVE → PLAY → LOVE → DEVOTION, and each layer wants something different. The premise is treating fans as colleagues, not customers.</p>
+        <p class="frame-apply"><b>What another industry can take</b>An organization that treats membership and community as a single group is likely <em>spending benefits meant for the deepest layer on the shallowest one</em>.</p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">03</span>
+        <h3 class="frame-name">The agency, artist, and fan triangle, and the 7 years</h3>
+        <p class="frame-def">The interests of the three parties never align from the start. The 7-year term of the standard contract periodically compresses that misalignment and lets it burst.</p>
+        <p class="frame-apply"><b>What another industry can take</b>The contract expiration date looks like the cause of conflict, but it is actually <em>the point where conflicts of interest, normally scattered, converge at a single moment</em>. The same dynamic exists across dealer, franchise, and exclusive-contract structures.</p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">04</span>
+        <h3 class="frame-name">The paradox of the content business</h3>
+        <p class="frame-def">Content that does not make money is a necessary condition for the business. If you cut unprofitable activities, the basis for profitable activities disappears with them.</p>
+        <p class="frame-apply"><b>What another industry can take</b>This is why organizations that restructure divisions based on profit and loss alone find themselves, years later, wondering <em>why no one comes to them anymore</em>. It is a matter of density, not scale.</p>
+        <p class="frame-src">Source · <a href="https://maily.so/draft.briefing/posts/10z3k6yjrlw?utm_source=nvl-library" target="_blank" rel="noopener">콘텐츠 비즈니스의 역설</a></p>
+      </article>
+    </div>
+
+    <div class="group-label">Industry structure · Rights</div>
+    <div class="frames">
+      <article class="frame fade">
+        <span class="frame-n">05</span>
+        <h3 class="frame-name">The 7-stage IP business pipeline</h3>
+        <p class="frame-def">Creation → Rights → Primary commercialization → Media mix → Licensing → Experience → Financialization. Having IP is not about owning content but about owning <em>the authority to connect</em>. Korea is world-class at the first three stages but leaves the latter four empty.</p>
+        <p class="frame-apply"><b>What another industry can take</b>The ability to make things well and a structure that earns over the long term are different problems. Use this as a diagnostic tool to ask <em>at which stage of the pipeline your own company is stuck</em>.</p>
+        <p class="frame-src">Source · <a href="https://maily.so/draft.briefing/posts/l1zqg8g4r5x?utm_source=nvl-library" target="_blank" rel="noopener">한스 짐머는 어떻게 재능을 IP 비즈니스로 확장했을까</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">06</span>
+        <h3 class="frame-name">The assetization of copyright</h3>
+        <p class="frame-def">This is the process by which music catalogs became financial products. As master rights and publishing rights split, and hedge funds and private equity entered as buyers, creative works became <em>assets that generate income without the owner having to do anything</em>.</p>
+        <p class="frame-apply"><b>What another industry can take</b>Organizing intangible assets <em>into a sellable form</em> is itself valuation. Brands, recipes, patents, and data all follow the same path.</p>
+        <p class="frame-src">Source · <a href="https://maily.so/draft.briefing/posts/knrj1p57rld?utm_source=nvl-library" target="_blank" rel="noopener">마이클 잭슨과 ‘저작권의 자산화’</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">07</span>
+        <h3 class="frame-name">If stage 2 collapses, stage 5 does not exist</h3>
+        <p class="frame-def">If rights management is weak, licensing cannot function in principle. This is why K-pop is closer to a management business than a music business: the rights to the music largely sit outside the company.</p>
+        <p class="frame-apply"><b>What another industry can take</b>Before worrying about distribution and monetization, check whether <em>the rights ledger is in order</em>. If the earlier stage is empty, designing the later stages will not make them work.</p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">08</span>
+        <h3 class="frame-name">The 3-stage creator growth model</h3>
+        <p class="frame-def">Discovery of talent → Utilization of resources → Assetization of talent. The condition for moving to stage 3 is not scale but <em>a structure in which one directly owns and manages one's rights</em>.</p>
+        <p class="frame-apply"><b>What another industry can take</b>Freelancers and solo business owners often get stuck at stage 2 not because of a lack of skill but because <em>someone else holds the rights to their output</em>.</p>
+        <p class="frame-src">Source · Woojin Cha, Selling a Point of View (2025), Part 5</p>
+      </article>
+    </div>
+
+    <div class="group-label">Markets · Pricing</div>
+    <div class="frames">
+      <article class="frame fade">
+        <span class="frame-n">09</span>
+        <h3 class="frame-name">The global asymmetry of K-pop</h3>
+        <p class="frame-def">There is no single "global." The market where albums sell and the market where streaming runs are different, and K-pop's position varies completely from market to market. This asymmetry is what the phrase "succeeded globally" conceals.</p>
+        <p class="frame-apply"><b>What another industry can take</b>The moment you aggregate overseas performance into a single metric, <em>you lose sight of which market the money is actually coming from.</em></p>
+        <p class="frame-src">Source · <a href="https://maily.so/draft.briefing/posts/32z84e61rn4?utm_source=nvl-library" target="_blank" rel="noopener">케이팝은 정말 ‘글로벌 음악’이 된 걸까?</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">10</span>
+        <h3 class="frame-name">The economics of live ticket pricing</h3>
+        <p class="frame-def">Ticket prices are set not by cost but by the ceiling the market can bear. The resale price is the ruler that measures that ceiling, and dynamic pricing is the mechanism by which the seller recovers the gap between the original price and that ceiling.</p>
+        <p class="frame-apply"><b>What another industry can take</b>For products where demand far exceeds supply, pricing is not a matter of cost calculation but <em>a search for the upper limit of willingness to pay</em>. If someone else is capturing that upper limit, it is a structural design problem.</p>
+        <p class="frame-src">Source · <a href="https://maily.so/draft.briefing/posts/knrj13q0rld?utm_source=nvl-library" target="_blank" rel="noopener">공연 티켓값은 왜 계속 오를까?</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">11</span>
+        <h3 class="frame-name">The miracle of the mid-size players: conditions for breakthrough</h3>
+        <p class="frame-def">The success of non-mainstream agencies is not luck but a repeating structure. The media environment determines the <em>type</em> of miracle, securing early fans determines the <em>start</em>, and the music engine determines <em>sustainability</em>.</p>
+        <p class="frame-apply"><b>What another industry can take</b>Breakthroughs by resource-poor players happen in <em>the zone that large players do not bother with</em>. Finding that zone is where strategy begins.</p>
+        <p class="frame-src">Source · <a href="/report/small-label-miracle">Report: How small labels make miracles</a> · <a href="https://maily.so/draft.briefing/posts/w6ovpe0yok5?utm_source=nvl-library" target="_blank" rel="noopener">‘거제 야호’의 법칙</a></p>
+      </article>
+
+      <article class="frame fade">
+        <span class="frame-n">12</span>
+        <h3 class="frame-name">Authenticity in the age of technical reproduction</h3>
+        <p class="frame-def">What fans reject is not the fact that "AI was used" but <em>the sense that traces of human labor have been erased</em>. So the standard of judgment becomes not who made it but what and how it was delivered.</p>
+        <p class="frame-apply"><b>What another industry can take</b>Treating AI disclosure as a binary of <em>hide or reveal</em> is a losing approach. Specifying exactly where a human remains involved is what actually works.</p>
+        <p class="frame-src">Source · <a href="https://maily.so/draft.briefing/posts/e9o0yl7nr8w?utm_source=nvl-library" target="_blank" rel="noopener">AI 아티스트는 정말로 팬을 모을 수 없을까</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ Five theory frames ════ -->
+<section>
+  <div class="container">
+    <div class="section-head fade">
+      <span class="label">Theory Index</span>
+      <h2 class="section-title">Five citable frames</h2>
+      <p class="section-note">Frames quoted as they are in talks and reports, with the definition and the key passage.</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">The connected structure of content, community, and commerce (3C)</h3>
+      <p class="theory-def">The future of the content business lies in a structure where content, community, and commerce are not separated but mediate one another.</p>
+      <blockquote class="theory-quote">Community becomes more important at the point where product and business separate. Now, in nearly every field, not just music and content but manufacturing and finance alike, almost everyone wants community and fandom. What matters is not scale but density.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/10z3k6yjrlw?utm_source=nvl-library" target="_blank" rel="noopener">콘텐츠 비즈니스의 역설</a> (2022.12)</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">The essential nature of fans</h3>
+      <p class="theory-def">A fan is not an ordinary consumer but a special one. They are moved by identity, belonging, and cultural code, and cannot be reached through price, function, or rationality.</p>
+      <blockquote class="theory-quote">Don't stop at wanting fans. Find and focus on what kind of fans you want. Because the mass media era has ended, paradoxically a single fan or customer becomes important. In this structure, experience matters more than message, and substance matters more than image.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/mvpzlydxok9?utm_source=nvl-library" target="_blank" rel="noopener">단 한 명의 팬이 중요하다</a> (2022.07)</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">The next-generation music business model: interaction and engagement</h3>
+      <p class="theory-def">After streaming, the core of the music industry is not listening volume but the depth of interaction and engagement.</p>
+      <blockquote class="theory-quote">The core is interaction. Before long, the influence and performance of music may come to be measured not by album sales or play counts but by user engagement. Going forward, entertainment across every domain will likely be evaluated by how much it can raise the value of this interaction.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/8mo5e0p7o9p?utm_source=nvl-library" target="_blank" rel="noopener">내일의 음악 산업: 인터랙션과 인게이지먼트</a> (2024.06)</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">Artist leadership in the age of AI</h3>
+      <p class="theory-def">In the age of AI, artists must function not as mere creators but as leaders who integrate fandom, technology, and industry. This applies to both indie artists and K-pop.</p>
+      <blockquote class="theory-quote">What K-pop artists need most is not "good character" but "leadership." Fandom is maintained and expanded only when the artist actively engages with fans, thinking and growing together with them. And this kind of leadership is not limited to K-pop.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/1gz24ledr3q?utm_source=nvl-library" target="_blank" rel="noopener">AI 시대의 아티스트에게 리더십이 꼭 필요한 이유</a> (2025.02)</p>
+    </div>
+
+    <div class="theory fade">
+      <h3 class="theory-name">The post-streaming AI agent structure</h3>
+      <p class="theory-def">After streaming, the music industry will be reorganized into a structure where AI agents become the central mediators of curation, discovery, and matching.</p>
+      <blockquote class="theory-quote">The core of the problem lies in the clash between product and process. Existing streaming infrastructure treats music as a finished "product," but generative AI treats music as a "process" that is repeatedly revised through interaction. The solution is not to control AI, but to build an underlying system in which the value AI generates is transparently returned to the original creator.</blockquote>
+      <p class="theory-src"><a href="https://maily.so/draft.briefing/posts/x1zgwn25oqg?utm_source=nvl-library" target="_blank" rel="noopener">AI 음악 논문에 어드바이저로 참여했습니다</a> (2025.11)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Report ════ -->
+<section class="report-band">
+  <div class="container">
+    <div class="report-row fade">
+      <div>
+        <span class="label">Research Report</span>
+        <h3>How small labels make miracles</h3>
+        <p>A full analysis of 27 acts from non-major agencies, confirming that the miracle is a repeating structure, not luck. Broken down on four axes: media environment, breakthrough type, early fans, staying power. Report in Korean.</p>
+        <div class="report-cta">
+          <a href="/report/small-label-miracle" class="btn btn-lime">Read (Korean) →</a>
+          <a href="/reports/small-label-miracle-2026.pdf" target="_blank" rel="noopener" class="btn btn-ghost">PDF</a>
+        </div>
+      </div>
+      <div class="report-stats">
+        <div class="stat"><span class="stat-num">27</span><span class="stat-label">acts analyzed</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">axes</span></div>
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">rules that hold</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">quadrants</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CTA ════ -->
+<section class="cta">
+  <div class="container">
+    <h2>These frames are updated every week</h2>
+    <p>We test them against new cases in the newsletter and retire the ones that stop working. To watch the frames being made, subscribe to the English edition on LinkedIn.</p>
+    <div class="cta-btns">
+      <a href="https://linkedin.com/in/woojin-cha" target="_blank" rel="noopener" class="btn btn-lime">Subscribe on LinkedIn</a>
+      <a href="/en#contact" class="btn btn-ghost">Work with us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Neo Vibe Lab · Seoul</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "DefinedTermSet",
+ "name": "Neo Vibe Lab analysis frame library",
+ "description": "The frames used to analyze the entertainment and content industry, each with a definition and what another industry can take.",
+ "url": "https://www.neovibelab.com/library",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Neo Vibe Lab",
+  "url": "https://www.neovibelab.com"
+ },
+ "hasDefinedTerm": [
+  {
+   "@type": "DefinedTerm",
+   "name": "A fandom optimization model, not a genre",
+   "description": "K-pop is not a type of music but a methodology for creating fans. This is why every attempt to define \"what K is\" through sound alone has failed."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The five stages of fandom business",
+   "description": "Fans are divided into layers: CONTACT → DIVE → PLAY → LOVE → DEVOTION, and each layer wants something different. The premise is treating fans as colleagues, not customers."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The agency, artist, and fan triangle, and the 7 years",
+   "description": "The interests of the three parties never align from the start. The 7-year term of the standard contract periodically compresses that misalignment and lets it burst."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The paradox of the content business",
+   "description": "Content that does not make money is a necessary condition for the business. If you cut unprofitable activities, the basis for profitable activities disappears with them."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The 7-stage IP business pipeline",
+   "description": "Creation → Rights → Primary commercialization → Media mix → Licensing → Experience → Financialization. Having IP is not about owning content but about owning the authority to connect. Korea is world-class at the first three stages but leaves the latter four empty."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The assetization of copyright",
+   "description": "This is the process by which music catalogs became financial products. As master rights and publishing rights split, and hedge funds and private equity entered as buyers, creative works became assets that generate income without the owner having to do anything."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "If stage 2 collapses, stage 5 does not exist",
+   "description": "If rights management is weak, licensing cannot function in principle. This is why K-pop is closer to a management business than a music business: the rights to the music largely sit outside the company."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The 3-stage creator growth model",
+   "description": "Discovery of talent → Utilization of resources → Assetization of talent. The condition for moving to stage 3 is not scale but a structure in which one directly owns and manages one's rights."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The global asymmetry of K-pop",
+   "description": "There is no single \"global.\" The market where albums sell and the market where streaming runs are different, and K-pop's position varies completely from market to market. This asymmetry is what the phrase \"succeeded globally\" conceals."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The economics of live ticket pricing",
+   "description": "Ticket prices are set not by cost but by the ceiling the market can bear. The resale price is the ruler that measures that ceiling, and dynamic pricing is the mechanism by which the seller recovers the gap between the original price and that ceiling."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "The miracle of the mid-size players: conditions for breakthrough",
+   "description": "The success of non-mainstream agencies is not luck but a repeating structure. The media environment determines the type of miracle, securing early fans determines the start, and the music engine determines sustainability."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Authenticity in the age of technical reproduction",
+   "description": "What fans reject is not the fact that \"AI was used\" but the sense that traces of human labor have been erased. So the standard of judgment becomes not who made it but what and how it was delivered."
+  }
+ ]
+}
+</script>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
+},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
