@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/intern", "destination": "/lab/ai-intern", "permanent": true },
+    { "source": "/ai-intern", "destination": "/lab/ai-intern", "permanent": true }
+  ]
 }

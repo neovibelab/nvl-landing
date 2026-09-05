@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 비공개 단계: 검색 제외 · 사이트맵 미등록 · nav 항목 hidden (2026-09-06). 공개 시 이 meta를 빼고 sitemap에 넣는다. -->
+<meta name="robots" content="noindex,nofollow">
+<title>실험실 · 엔터문화연구소 (Neo Vibe Lab)</title>
+<meta name="description" content="엔터문화연구소가 직접 돌리고 결과를 공개하는 실험들. 지금은 AI 인턴 01이 매일 엔터 산업을 읽고 씁니다.">
+<meta property="og:title" content="실험실 · 엔터문화연구소">
+<meta property="og:description" content="연구소가 직접 돌리고 결과를 공개하는 실험들. 지금은 AI 인턴 01.">
+<meta property="og:image" content="https://www.neovibelab.com/images/banner.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.neovibelab.com/lab">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+
+/* ── Tokens (brand-tokens.md 정본, index.html과 동일) ── */
+:root{
+  --lime:#D6FF92;
+  --lime-dim:rgba(214,255,146,0.10);
+  --lime-mid:rgba(214,255,146,0.06);
+  --black:#0A0A0A;
+  --dark:#111;
+  --gray:#888;
+  --gray-dark:#333;
+  --gray-line:rgba(255,255,255,0.06);
+  --white:#F0F0EA;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit','Noto Sans KR',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--lime);color:var(--black)}
+img{display:block;max-width:100%}
+.mono{font-family:'DM Mono','Noto Sans KR',monospace}
+.label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime)}
+.container{max-width:860px;margin:0 auto;padding:0 40px}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade.visible{opacity:1;transform:translateY(0)}
+
+/* ── Nav ── */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-line)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);text-decoration:none}
+.nav-logo img{width:28px;height:28px}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;letter-spacing:.04em;color:var(--gray);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--lime)}
+.nav-links a.active{color:var(--white)}
+.nav-links li.lang-li{display:flex}
+.lang-toggle{display:flex;border:1px solid var(--gray-dark);border-radius:2px;overflow:hidden;margin-left:6px}
+.lang-toggle a,.lang-toggle button{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;padding:5px 10px;background:transparent;color:var(--gray);border:none;cursor:pointer;text-decoration:none;transition:all .2s;line-height:1.4}
+.lang-toggle a.on,.lang-toggle button.on{background:var(--lime);color:var(--black)}
+.lang-toggle a:hover:not(.on),.lang-toggle button:hover:not(.on){color:var(--lime)}
+@media(max-width:900px){nav{padding:16px 24px}.nav-links{gap:16px}.nav-links li:not(.lang-li){display:none}}
+/* ── Buttons ── */
+.btn{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
+.btn-lime{background:var(--lime);color:var(--black)}
+.btn-lime:hover{background:var(--white)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid var(--gray-dark)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+
+/* ── Masthead ── */
+.masthead{padding:140px 0 56px;border-bottom:1px solid var(--gray-line)}
+.masthead .eyebrow{display:flex;gap:14px;align-items:center;margin-bottom:22px;flex-wrap:wrap}
+.pill{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;padding:4px 10px;border:1px solid var(--gray-dark);color:var(--gray);text-transform:uppercase}
+.pill.lime{color:var(--lime);border-color:rgba(214,255,146,0.35)}
+.masthead h1{font-size:clamp(36px,6vw,72px);font-weight:900;line-height:1.05;letter-spacing:-.03em;margin-bottom:22px}
+.masthead h1 .lime{color:var(--lime)}
+.masthead .sub{font-size:17px;color:var(--gray);line-height:1.8;max-width:640px}
+.masthead .sub strong{color:var(--white);font-weight:500}
+
+
+/* ── Prose ── */
+section{padding:72px 0;border-bottom:1px solid var(--gray-line)}
+.section-title{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:-.02em;margin-top:10px;margin-bottom:22px}
+.note{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);line-height:1.8;margin-top:22px;padding-top:18px;border-top:1px solid var(--gray-line)}
+footer{padding:44px 0;text-align:center}
+footer p{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11.5px;color:var(--gray);letter-spacing:.04em}
+footer a{color:var(--gray)}
+[data-lang]{display:none}
+html[data-ui="ko"] [data-lang="ko"]{display:block}
+html[data-ui="en"] [data-lang="en"]{display:block}
+
+/* ── 실험 카드 ── */
+.exps{display:flex;flex-direction:column;gap:1px;background:var(--gray-dark);border:1px solid var(--gray-dark);margin:34px 0 8px}
+.exp{background:var(--black);padding:30px 28px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:start}
+.exp .head{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.exp h2{font-size:23px;font-weight:800;letter-spacing:-.02em}
+.exp h2 a{color:var(--white);text-decoration:none}.exp h2 a:hover{color:var(--lime)}
+.exp .what{font-size:14.5px;color:var(--gray);line-height:1.8;max-width:560px}
+.exp .what strong{color:var(--white);font-weight:500}
+.exp .stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px}
+.exp .stat{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray)}
+.exp .stat b{display:block;font-size:19px;color:var(--lime);font-weight:500;margin-bottom:3px}
+.exp .go{white-space:nowrap}
+.exp.soon{opacity:.55}
+.exp.soon h2{color:var(--gray)}
+.status{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(214,255,146,.35);color:var(--lime)}
+.status.off{border-color:var(--gray-dark);color:var(--gray)}
+.lead-p{font-size:17px;color:var(--gray);line-height:1.85;max-width:660px}
+.lead-p strong{color:var(--white);font-weight:500}
+@media(max-width:700px){.exp{grid-template-columns:1fr}.exp .go{justify-self:start}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="/images/nvl-logo.png" alt="NVL">Neo Vibe Lab</a>
+  <ul class="nav-links">
+    <li><a data-ko="/#method" data-en="/en#method" data-ko-t="읽는 법" data-en-t="Method" href="/#method">읽는 법</a></li>
+    <li><a data-ko="/#report" data-en="/en#report" data-ko-t="리포트" data-en-t="Report" href="/#report">리포트</a></li>
+    <li><a data-ko="/library" data-en="/library-en" data-ko-t="라이브러리" data-en-t="Library" href="/library">라이브러리</a></li>
+    <li class="lab-li"><a data-ko="/lab" data-en="/lab" data-ko-t="실험실" data-en-t="Lab" href="/lab" class="active">실험실</a></li>
+    <li><a data-ko="/#services" data-en="/en#services" data-ko-t="함께 일하기" data-en-t="Work with us" href="/#services">함께 일하기</a></li>
+    <li><a data-ko="/#newsletter" data-en="/en#newsletter" data-ko-t="뉴스레터" data-en-t="Newsletter" href="/#newsletter">뉴스레터</a></li>
+    <li><a data-ko="/#contact" data-en="/en#contact" data-ko-t="문의" data-en-t="Contact" href="/#contact">문의</a></li>
+    <li class="lang-li"><span class="lang-toggle" role="group" aria-label="Language"><button type="button" data-set="ko" class="on">KO</button><button type="button" data-set="en">EN</button></span></li>
+  </ul>
+</nav>
+
+<div data-lang="ko">
+
+<header class="masthead">
+  <div class="container">
+    <div class="eyebrow fade"><span class="pill lime">Lab</span><span class="pill">Neo Vibe Lab</span></div>
+    <h1 class="fade">엔터문화연구소의<br><span class="lime">실험</span>들</h1>
+    <p class="sub fade"><strong>연구소가 직접 해보고 결과를 공개하는 자리입니다.</strong> 잘된 것만 남기지 않습니다. 무엇을 걸었고 어떻게 틀렸는지까지 같이 둡니다.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <p class="label fade">Running</p>
+    <h2 class="section-title fade">지금 돌아가는 실험</h2>
+    <p class="lead-p fade">엔터 산업을 읽는 일을 사람 대신 AI가 끝까지 해보면 어디까지 되는지 봅니다. 소재 선택부터 발행까지 사람이 손대지 않습니다.</p>
+
+    <div class="exps fade">
+      <article class="exp">
+        <div>
+          <div class="head"><span class="status" data-run>진행 중</span><span class="pill">매일 · 한국어 / English</span></div>
+          <h2><a href="/lab/ai-intern">AI 인턴 01 · 엔터 바이브 리서치</a></h2>
+          <p class="what">AI 인턴이 매일 글로벌 엔터 산업 뉴스를 읽고 <strong>아직 오지 않은 변화의 조짐</strong>을 한 편 씁니다. 소재도 관점도 사람이 고르지 않고, 틀린 날도 그대로 남깁니다. 맞았는지는 90일 뒤 스스로 채점합니다.</p>
+          <div class="stats">
+            <span class="stat"><b data-k="day">-</b>일째</span>
+            <span class="stat"><b data-k="pieces">-</b>편 발행</span>
+            <span class="stat"><b data-k="verified">-</b>사실 검증</span>
+            <span class="stat"><b data-k="cells">-</b>격자 칸</span>
+          </div>
+        </div>
+        <a href="/lab/ai-intern" class="btn btn-lime go">보러 가기 →</a>
+      </article>
+
+      <article class="exp soon">
+        <div>
+          <div class="head"><span class="status off">준비 중</span></div>
+          <h2>다음 실험</h2>
+          <p class="what">엔터 산업의 일하는 방식을 바꿀 만한 것을 골라 같은 방식으로 공개합니다. 제안은 <a href="/#contact" style="color:var(--lime)">문의</a>로 받습니다.</p>
+        </div>
+      </article>
+    </div>
+    <p class="note">숫자는 인턴 사이트의 공개 기록에서 실시간으로 읽어 옵니다.</p>
+  </div>
+</section>
+
+<footer><div class="container"><p>© 2026 엔터문화연구소 (Neo Vibe Lab) · Seoul · <a href="/">neovibelab.com</a></p></div></footer>
+</div>
+
+<div data-lang="en">
+
+<header class="masthead">
+  <div class="container">
+    <div class="eyebrow fade"><span class="pill lime">Lab</span><span class="pill">Neo Vibe Lab</span></div>
+    <h1 class="fade">Our<br><span class="lime">experiments</span></h1>
+    <p class="sub fade"><strong>Things we run ourselves and publish in the open.</strong> Not only the ones that worked. What we bet and how we got it wrong stays up too.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <p class="label fade">Running</p>
+    <h2 class="section-title fade">Running now</h2>
+    <p class="lead-p fade">How far an AI gets when it does the whole job of reading an industry, from picking the story to publishing it, with no human in the loop.</p>
+
+    <div class="exps fade">
+      <article class="exp">
+        <div>
+          <div class="head"><span class="status" data-run>Running</span><span class="pill">Daily · English / 한국어</span></div>
+          <h2><a href="/lab/ai-intern?lang=en">AI Intern 01 · Entertainment Vibe Research</a></h2>
+          <p class="what">An AI intern reads the global entertainment industry every day and writes one piece on <strong>what has not arrived yet but is showing signs</strong>. No human picks the topic or edits the text, and the days it gets things wrong stay up. It scores itself 90 days later.</p>
+          <div class="stats">
+            <span class="stat"><b data-k="day">-</b> days in</span>
+            <span class="stat"><b data-k="pieces">-</b> pieces</span>
+            <span class="stat"><b data-k="verified">-</b> facts verified</span>
+            <span class="stat"><b data-k="cells">-</b> grid cells</span>
+          </div>
+        </div>
+        <a href="/lab/ai-intern?lang=en" class="btn btn-lime go">Open →</a>
+      </article>
+
+      <article class="exp soon">
+        <div>
+          <div class="head"><span class="status off">Next</span></div>
+          <h2>Next experiment</h2>
+          <p class="what">Something else that could change how the industry works, run and published the same way. Proposals go to <a href="/en#contact" style="color:var(--lime)">contact</a>.</p>
+        </div>
+      </article>
+    </div>
+    <p class="note">The numbers are read live from the intern's public record.</p>
+  </div>
+</section>
+
+<footer><div class="container"><p>© 2026 Neo Vibe Lab · Seoul · <a href="/">neovibelab.com</a></p></div></footer>
+</div>
+
+<script>
+// 언어 전환 - URL ?lang= > localStorage > 브라우저 언어 순. 두 언어 본문이 다 DOM에 있고 표시만 바꾼다.
+(function(){
+  const root=document.documentElement;
+  const q=new URLSearchParams(location.search).get('lang');
+  let saved=null; try{saved=localStorage.getItem('intern-lang')}catch(e){}
+  const guess=(navigator.language||'ko').toLowerCase().startsWith('ko')?'ko':'en';
+  let ui=(q==='en'||q==='ko')?q:(saved||guess);
+  function apply(l){
+    ui=l; root.setAttribute('data-ui',l); root.setAttribute('lang',l);
+    document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('on',b.dataset.set===l));
+    document.querySelectorAll('.nav-links a[data-ko]').forEach(a=>{a.href=a.dataset[l];a.textContent=a.dataset[l+'T'];});
+    try{localStorage.setItem('intern-lang',l)}catch(e){}
+    // 새로 보이는 요소의 fade 재관찰
+    document.querySelectorAll('[data-lang="'+l+'"] .fade').forEach(el=>{el.classList.add('visible')});
+  }
+  document.querySelectorAll('.lang-toggle button').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.set)));
+  apply(ui);
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
+  },{threshold:0.12});
+  document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+})();
+</script>
+
+<script>
+// 실험 카드 숫자 - 인턴 사이트의 공개 기록(stats.json). 못 읽으면 그대로 둔다.
+(function(){
+  fetch('https://nvl-intern.vercel.app/data/stats.json',{mode:'cors'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(s){
+    if(!s.length)return;
+    var last=s[s.length-1];
+    var ct=s.reduce(function(a,x){return a+(x.claims_total||0)},0), cv=s.reduce(function(a,x){return a+(x.claims_verified||0)},0);
+    var cells={};s.forEach(function(x){cells[x.factor+'|'+x.to_stage]=1});
+    var v={day:last.day,pieces:s.length,verified:ct?Math.round(cv/ct*100)+'%':'-',cells:Object.keys(cells).length+'/21'};
+    document.querySelectorAll('b[data-k]').forEach(function(b){if(v[b.dataset.k]!==undefined)b.textContent=v[b.dataset.k]});
+  }).catch(function(){});
+})();
+</script>
+
+</body>
+</html>
