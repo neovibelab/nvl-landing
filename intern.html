@@ -153,6 +153,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
   .masthead{padding:120px 0 44px}
   section{padding:56px 0}
   .metrics{grid-template-columns:1fr 1fr}
+  .metrics div:last-child{grid-column:span 2}
   .stages{grid-template-columns:1fr}
   .grid-wrap{grid-template-columns:84px repeat(3,1fr)}
   .grid-wrap>div{padding:10px 8px;min-height:52px}
@@ -161,6 +162,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
 }
 @media(max-width:540px){
   .metrics{grid-template-columns:1fr}
+  .metrics div:last-child{grid-column:auto}
   .nav-right a.nav-home{display:none}
 }
 </style>
