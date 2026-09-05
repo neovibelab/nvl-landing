@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H72LNH62LJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-H72LNH62LJ');</script>
+<title>엔터문화연구소 (Neo Vibe Lab) · 엔터테인먼트와 기술·금융·문화·소비 산업을 연결하는 부티크 연구소</title>
+<meta name="description" content="엔터문화연구소는 엔터테인먼트와 기술·금융·문화·소비 산업을 연결하는 부티크 연구소입니다. 엔터 산업에서 먼저 일어나는 일을 읽고, 그것이 다른 산업에서 어떻게 반복될지 씁니다. 뉴스레터 660편 이상, 리서치 리포트, 자문. 대표 차우진.">
+<meta property="og:title" content="엔터문화연구소 (Neo Vibe Lab)">
+<meta property="og:description" content="엔터테인먼트와 기술·금융·문화·소비 산업을 연결하는 부티크 연구소. Signal은 누구나 찾습니다. 우리는 Vibe를 읽습니다.">
+<meta property="og:image" content="https://www.neovibelab.com/images/banner.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.neovibelab.com">
+<link rel="canonical" href="https://www.neovibelab.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.neovibelab.com/#org",
+      "name": "엔터문화연구소",
+      "alternateName": ["Neo Vibe Lab", "NVL"],
+      "url": "https://www.neovibelab.com/",
+      "logo": "https://www.neovibelab.com/images/nvl-logo.png",
+      "description": "엔터테인먼트와 기술·금융·문화·소비 산업을 연결하는 부티크 연구소. 엔터 산업에서 먼저 일어나는 일을 읽고, 그것이 다른 산업에서 어떻게 반복될지 쓴다.",
+      "founder": {"@id": "https://www.neovibelab.com/#woojin"},
+      "email": "woojin@neovibelab.com",
+      "areaServed": "KR",
+      "knowsAbout": ["K-pop", "entertainment industry", "fandom", "IP business", "music industry", "entertainment technology"],
+      "sameAs": ["https://maily.so/draft.briefing", "https://linkedin.com/in/woojin-cha", "https://www.instagram.com/nvl.seoul/"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.neovibelab.com/#woojin",
+      "name": "차우진",
+      "alternateName": "Woojin Cha",
+      "jobTitle": "대표",
+      "worksFor": {"@id": "https://www.neovibelab.com/#org"},
+      "description": "1999년부터 활동한 대중문화 평론가이자 엔터테인먼트 산업 분석가. 엔터문화연구소(Neo Vibe Lab) 대표.",
+      "sameAs": ["https://linkedin.com/in/woojin-cha", "https://www.instagram.com/woojin.re/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.neovibelab.com/#site",
+      "url": "https://www.neovibelab.com/",
+      "name": "엔터문화연구소 (Neo Vibe Lab)",
+      "publisher": {"@id": "https://www.neovibelab.com/#org"},
+      "inLanguage": "ko"
+    }
+  ]
+}
+</script>
+<style>
+/* ── Tokens (brand-tokens.md 정본) ── */
+:root{
+  --lime:#D6FF92;
+  --lime-dim:rgba(214,255,146,0.10);
+  --lime-mid:rgba(214,255,146,0.06);
+  --black:#0A0A0A;
+  --dark:#111;
+  --gray:#888;
+  --gray-dark:#333;
+  --gray-line:rgba(255,255,255,0.06);
+  --white:#F0F0EA;
+}
+
+/* ── Reset ── */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit','Noto Sans KR',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--lime);color:var(--black)}
+img{display:block;max-width:100%}
+.mono{font-family:'DM Mono','Noto Sans KR',monospace}
+.kr{font-family:'Noto Sans KR',sans-serif}
+.serif{font-family:'Noto Serif KR','Batang',serif}
+.label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime)}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade.visible{opacity:1;transform:translateY(0)}
+
+/* ── Nav ── */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-line)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);text-decoration:none}
+.nav-logo img{width:28px;height:28px}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;letter-spacing:.04em;color:var(--gray);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--lime)}
+.nav-links a.nav-summit{color:var(--lime);font-weight:500;font-family:'Noto Sans KR','DM Mono',sans-serif;text-transform:none;letter-spacing:0;white-space:nowrap}
+.nav-links a.nav-summit::before{content:"● ";font-size:8px;vertical-align:middle}
+
+/* ── Buttons ── */
+.btn{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
+.btn-lime{background:var(--lime);color:var(--black)}
+.btn-lime:hover{background:var(--white)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid var(--gray-dark)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+.btn-black{background:var(--black);color:var(--white)}
+.btn-black:hover{background:var(--dark)}
+
+/* ── Hero ── */
+.hero{padding-top:80px;display:flex;flex-direction:column}
+.hero-banner{width:100%;aspect-ratio:16/9;max-height:520px;overflow:hidden;background:var(--dark)}
+.hero-banner img{width:100%;height:100%;object-fit:cover}
+.hero-body{padding:60px 40px 80px;max-width:1200px;margin:0 auto;width:100%}
+.hero-tagline{font-size:clamp(32px,5vw,64px);font-weight:800;line-height:1.15;letter-spacing:-.03em;margin-bottom:20px}
+.hero-tagline .lime{color:var(--lime)}
+.hero-sub{font-size:16px;color:var(--gray);line-height:1.8;max-width:600px;margin-bottom:40px}
+.hero-sub .kr{font-weight:500;color:var(--white);font-size:15px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ── Divider ── */
+.divider{height:1px;background:var(--gray-line)}
+section{padding:100px 0}
+.section-head{margin-bottom:56px}
+.section-title{font-size:clamp(24px,3vw,36px);font-weight:700;letter-spacing:-.02em;margin-top:12px}
+
+/* ── Featured Report ── */
+.report-featured{padding:100px 0;background:var(--dark);border-top:1px solid var(--gray-line);border-bottom:1px solid var(--gray-line)}
+.report-card{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.report-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{text-align:center;padding:24px 16px;border:1px solid var(--gray-line);background:var(--black)}
+.stat-num{font-family:'DM Mono',monospace;font-size:44px;font-weight:500;color:var(--lime);display:block;line-height:1}
+.stat-label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.06em;color:var(--gray);display:block;margin-top:8px}
+/* 리포트 본문 FIGURE 인용 카드 (report/small-label-miracle 도식과 동일 스타일) */
+.report-figure{--ink:#16160F;--lime-ink:#566B17;display:block;background:#FBFAF4;border:1px solid #E4E0CF;border-top:3px solid var(--lime);border-radius:5px;padding:18px;transition:box-shadow .25s}
+.report-figure:hover{box-shadow:0 0 0 1px var(--lime)}
+.report-figure svg{width:100%;height:auto;display:block}
+.report-figure svg text{font-family:'Noto Sans KR',sans-serif}
+.report-figure .fig-title{font-size:14px;font-weight:800;fill:var(--lime-ink)}
+.report-figure .axc{font-size:12px;font-weight:700;fill:var(--ink)}
+.report-figure .axs{font-size:10px;fill:#6c6857;font-weight:600}
+.report-figure .qh{font-size:14px;font-weight:800;fill:var(--ink)}
+.report-figure .qt{font-size:10px;fill:#6c6857;font-weight:600}
+.report-figure .qt-em{fill:var(--ink);font-weight:700}
+.report-figure .qm{font-size:10.5px;fill:#2a2a20;font-weight:600}
+.report-figure .qn{font-size:9px;fill:#7c7868}
+.report-figure .note{font-size:10px;fill:#7c7868}
+.report-info .report-date{font-family:'DM Mono',monospace;font-size:12px;color:var(--gray);letter-spacing:.06em;margin-bottom:16px}
+.report-info .report-title{font-family:'Outfit','Noto Sans KR',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:900;line-height:1.2;letter-spacing:-.02em;margin-bottom:8px}
+.report-info .report-subtitle{font-size:16px;color:var(--gray);margin-bottom:20px;line-height:1.6}
+.report-info .report-desc{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:28px}
+.report-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ── Credentials ── */
+.cred-row{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.cred-col h3{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:24px;color:var(--white)}
+.cred-stat{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);margin:-12px 0 20px;letter-spacing:.03em}
+.cred-stat strong{color:var(--lime);font-weight:500}
+.logo-grid{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.logo-pill{font-family:'DM Mono',monospace;font-size:12px;color:var(--gray);padding:8px 16px;border:1px solid var(--gray-dark);border-radius:2px;white-space:nowrap;transition:border-color .2s}
+.logo-pill:hover{border-color:var(--lime)}
+.press-list{list-style:none}
+.press-list li{font-size:14px;color:var(--gray);padding:10px 0;border-bottom:1px solid var(--gray-line)}
+.press-list li strong{color:var(--white);font-weight:600}
+.press-list a{color:var(--gray);text-decoration:none;border-bottom:1px dotted var(--gray-dark);transition:color .2s,border-color .2s}
+.press-list a:hover{color:var(--lime);border-color:var(--lime)}
+.press-list a::after{content:" ↗";font-size:11px}
+
+/* ── About ── */
+.about-layout{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start}
+.profile-photo{width:100%;aspect-ratio:1;object-fit:cover;filter:grayscale(.15);background:var(--dark)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about-text{font-size:15px;color:var(--gray);line-height:1.9}
+.about-text p+p{margin-top:18px}
+.about-text strong{color:var(--white);font-weight:600}
+.about-kr{margin-top:32px;padding-top:24px;border-top:1px solid var(--gray-line);font-size:14px;color:var(--gray);line-height:1.9}
+
+/* ── Domains ── */
+.domains-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray-dark);border:1px solid var(--gray-dark)}
+.domain-card{background:var(--black);padding:44px 28px;transition:background .3s}
+.domain-card:hover{background:var(--dark)}
+.domain-card h3{font-size:20px;font-weight:700;margin-bottom:6px}
+.domain-card .sub{font-size:12px;color:var(--lime);margin-bottom:18px}
+.domain-card p{font-size:13px;color:var(--gray);line-height:1.75}
+
+/* ── Services ── */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.service-item{border-top:2px solid var(--gray-dark);padding-top:24px;transition:border-color .3s}
+.service-item:hover{border-color:var(--lime)}
+.service-item h3{font-size:17px;font-weight:700;margin-bottom:4px}
+.service-item .sub{font-size:12px;color:var(--lime);margin-bottom:12px}
+.service-item p{font-size:13px;color:var(--gray);line-height:1.75}
+
+/* ── Newsletter ── */
+.nl-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.nl-info h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.nl-info .sub{font-size:13px;color:var(--lime);margin-bottom:16px}
+.nl-info p{font-size:14px;color:var(--gray);line-height:1.8}
+.nl-info .nl-logos{display:flex;gap:16px;align-items:center;margin-bottom:24px}
+.nl-info .nl-logos img{width:48px;height:48px;border-radius:4px;background:var(--dark)}
+.nl-form{background:var(--dark);border:1px solid var(--gray-dark);padding:32px;min-height:340px;display:flex;flex-direction:column}
+.nl-form iframe{flex:1;width:100%;min-height:280px;border:none}
+.nl-form-note{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);margin-top:12px;text-align:center}
+.nl-recent{margin-top:64px}
+.nl-recent-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px}
+.nl-archive-link{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);text-decoration:none;transition:color .2s}
+.nl-archive-link:hover{color:var(--lime)}
+.nl-recent-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.letter-card{display:block;background:var(--dark);border:1px solid var(--gray-line);padding:28px;text-decoration:none;transition:border-color .25s}
+.letter-card:hover{border-color:var(--lime)}
+.letter-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-family:'DM Mono',monospace}
+.letter-date{font-size:11px;color:var(--gray);letter-spacing:.06em}
+.letter-badge{font-size:10px;letter-spacing:.1em;padding:3px 8px;border:1px solid var(--gray-dark);color:var(--gray)}
+.letter-badge.free{color:var(--lime);border-color:rgba(214,255,146,0.35)}
+.letter-badge.paid{color:var(--white);border-color:var(--gray)}
+.letter-title{font-size:17px;font-weight:700;color:var(--white);line-height:1.45;margin-bottom:8px}
+.letter-sub{font-size:13px;color:var(--gray);line-height:1.6}
+
+/* ── Summit CTA ── */
+.summit-cta{background:var(--lime);color:var(--black);padding:80px 0}
+.summit-cta .label{color:rgba(0,0,0,0.35)}
+.summit-cta-inner{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.summit-cta h2{font-size:clamp(22px,3vw,32px);font-weight:700;letter-spacing:-.02em;margin-top:8px}
+.summit-cta p{font-size:15px;color:rgba(0,0,0,0.55);margin-top:8px}
+
+/* ── Contact ── */
+.contact-section{background:var(--dark);padding:80px 0;border-top:1px solid var(--gray-line)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-title{font-size:clamp(24px,3vw,36px);font-weight:700;letter-spacing:-.02em;margin-top:12px}
+.contact-text{font-size:15px;color:var(--gray);line-height:1.8;margin-top:16px}
+.contact-links{margin-top:32px;display:flex;flex-direction:column;gap:12px}
+.contact-link{font-family:'DM Mono',monospace;font-size:14px;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px;transition:opacity .2s}
+.contact-link:hover{opacity:.6}
+.contact-link span{font-size:12px;color:var(--gray);text-transform:uppercase;min-width:70px}
+.contact-right{display:flex;flex-direction:column;justify-content:center}
+.contact-right .kr{font-size:14px;color:var(--gray);line-height:1.9}
+.b2b-form{display:flex;flex-direction:column;gap:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-label{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
+.form-input{font-family:'Noto Sans KR',sans-serif;font-size:14px;color:var(--white);background:var(--black);border:1px solid var(--gray-dark);padding:12px 14px;border-radius:0;width:100%;transition:border-color .2s}
+.form-input:focus{outline:none;border-color:var(--lime)}
+select.form-input{cursor:pointer}
+select.form-input:invalid{color:var(--gray)}
+textarea.form-input{resize:vertical;min-height:120px}
+.form-note{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray-dark)}
+.form-success{border:1px solid rgba(214,255,146,0.35);background:var(--lime-dim);padding:32px;font-size:15px;line-height:1.8;color:var(--white)}
+.form-error{font-size:13px;color:#E08585;line-height:1.7;margin-top:4px}
+
+/* ── Footer ── */
+footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);letter-spacing:.05em}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  nav{padding:16px 24px}
+  .nav-links{gap:16px}
+  .container{padding:0 24px}
+  .hero-body{padding:40px 24px 60px}
+  section,.report-featured{padding:72px 0}
+  .report-card{grid-template-columns:1fr;gap:40px}
+  .report-stats{grid-template-columns:repeat(4,1fr)}
+  .about-layout{grid-template-columns:1fr;gap:40px}
+  .profile-photo{max-width:280px}
+  .about-grid,.cred-row,.nl-layout,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .nl-recent-grid{grid-template-columns:1fr}
+  .domains-grid{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .summit-cta-inner{flex-direction:column;text-align:center}
+}
+@media(max-width:540px){
+  .domains-grid{grid-template-columns:1fr}
+  .report-stats{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .nav-links li:not(.nav-summit-li){display:none}
+  .nav-summit-li a.nav-summit{padding:8px 14px;border:1px solid var(--lime);border-radius:2px}
+}
+</style>
+<style>
+/* ── v2 추가 (2026-09-05 개편) ── */
+.hero-h1{font-size:clamp(28px,4.2vw,52px);font-weight:900;line-height:1.2;letter-spacing:-.03em;margin-bottom:18px;max-width:900px}
+.hero-h1 .lime{color:var(--lime)}
+.hero-slogan{font-family:'Outfit','Noto Sans KR',sans-serif;font-size:clamp(16px,2vw,22px);font-weight:600;color:var(--white);margin-bottom:14px}
+.hero-slogan .lime{color:var(--lime)}
+.hero-sub{max-width:640px}
+.hero-sub .kr{font-size:15.5px}
+
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray-dark);border:1px solid var(--gray-dark)}
+.trio>div{background:var(--black);padding:36px 28px}
+.trio .q{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+.trio h3{font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:12px;line-height:1.3}
+.trio p{font-size:14px;color:var(--gray);line-height:1.8}
+.trio p strong{color:var(--white);font-weight:600}
+.trio .num{font-family:'DM Mono',monospace;color:var(--lime);font-weight:500}
+
+.foryou{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.fy{border-top:2px solid var(--gray-dark);padding-top:22px;display:flex;flex-direction:column;transition:border-color .3s}
+.fy:hover{border-color:var(--lime)}
+.fy .who{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+.fy h3{font-size:19px;font-weight:800;margin-bottom:10px;line-height:1.35}
+.fy p{font-size:14px;color:var(--gray);line-height:1.8;flex:1}
+.fy .go{margin-top:18px;font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--white);text-decoration:none;letter-spacing:.04em;transition:color .2s}
+.fy .go:hover{color:var(--lime)}
+.fy .soon{color:var(--gray-dark)}
+
+.method-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gray-dark);border:1px solid var(--gray-dark);margin:22px 0}
+.vs>div{background:var(--black);padding:22px 20px}
+.vs .name{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.08em;margin-bottom:8px;color:var(--white)}
+.vs .name.lime{color:var(--lime)}
+.vs p{font-size:13px;color:var(--gray);line-height:1.7}
+.gridmini{width:100%;border-collapse:collapse;font-size:12.5px}
+.gridmini th{font-family:'DM Mono','Noto Sans KR',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);text-align:left;padding:8px 10px;border-bottom:1px solid var(--gray-dark);font-weight:500}
+.gridmini td{padding:8px 10px;border-bottom:1px solid var(--gray-line);color:var(--gray);line-height:1.5;vertical-align:top}
+.gridmini td:first-child{color:var(--white);font-weight:700;white-space:nowrap}
+.gridmini td.c{text-align:center;color:var(--gray-dark)}
+.gridmini-note{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray);margin-top:12px;line-height:1.7}
+.gridmini-note a{color:var(--white);text-decoration:none;border-bottom:1px dotted var(--gray-dark)}
+.gridmini-note a:hover{color:var(--lime);border-color:var(--lime)}
+.method-text{font-size:15px;color:var(--gray);line-height:1.9}
+.method-text p+p{margin-top:16px}
+.method-text strong{color:var(--white);font-weight:600}
+
+.intern-card{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;border:1px solid rgba(214,255,146,0.35);background:var(--lime-mid);padding:40px}
+.intern-card h3{font-size:clamp(20px,2.6vw,28px);font-weight:800;letter-spacing:-.02em;line-height:1.3;margin:10px 0 12px}
+.intern-card p{font-size:14.5px;color:var(--gray);line-height:1.8}
+.intern-card p strong{color:var(--white);font-weight:600}
+.intern-card .right{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.intern-card .stat{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);line-height:1.8}
+.intern-card .stat b{color:var(--lime);font-weight:500}
+
+.sponsor-line{margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-line);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.sponsor-line p{font-size:14px;color:var(--gray);line-height:1.7;max-width:720px}
+.sponsor-line p strong{color:var(--white);font-weight:600}
+
+@media(max-width:900px){
+  .nav-links li:not(.nav-summit-li){display:none}
+  .nav-summit-li a.nav-summit{padding:8px 14px;border:1px solid var(--lime);border-radius:2px}
+  .trio,.foryou{grid-template-columns:1fr}
+  .method-grid{grid-template-columns:1fr;gap:36px}
+  .intern-card{grid-template-columns:1fr;padding:28px}
+}
+@media(max-width:540px){
+  .vs{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ════ Nav ════ -->
+<nav>
+  <a href="/" class="nav-logo"><img src="images/nvl-logo.png" alt="NVL">Neo Vibe Lab</a>
+  <ul class="nav-links">
+    <li><a href="#summary">소개</a></li>
+    <li><a href="#method">읽는 법</a></li>
+    <li><a href="#report">리포트</a></li>
+    <li><a href="/library">라이브러리</a></li>
+    <li><a href="#services">함께 일하기</a></li>
+    <li><a href="#newsletter">뉴스레터</a></li>
+    <li><a href="#contact">문의</a></li>
+    <li class="nav-summit-li"><a href="/summit" class="nav-summit">뉴타입 엔터 서밋 2026 rewind</a></li>
+  </ul>
+</nav>
+
+<!-- ════ Hero ════ -->
+<section class="hero">
+  <div class="hero-banner"><img src="images/banner.png" alt="Neo Vibe Lab Seoul"></div>
+  <div class="hero-body">
+    <p class="label fade" style="margin-bottom:20px">엔터문화연구소 · Neo Vibe Lab · Seoul</p>
+    <h1 class="hero-h1 fade">엔터테인먼트와 기술·금융·문화·소비 산업을<br>연결하는 <span class="lime">부티크 연구소</span></h1>
+    <p class="hero-slogan fade">Signal은 누구나 찾습니다. 우리는 <span class="lime">Vibe</span>를 읽습니다.</p>
+    <p class="hero-sub fade">
+      <span class="kr" style="color:var(--white);font-weight:500">엔터 산업에서 먼저 일어나는 일을 읽고, 그것이 다른 산업에서 어떻게 반복될지 씁니다.</span><br>
+      매주 뉴스레터로, 분기마다 리포트로, 필요한 곳에는 자문과 강연으로. 케이팝과 팬덤은 소재이고, 상품은 그 안에서 작동하는 원리입니다.
+    </p>
+    <div class="hero-cta fade">
+      <a href="#newsletter" class="btn btn-lime">뉴스레터 구독</a>
+      <a href="#report" class="btn btn-ghost">리포트 보기</a>
+      <a href="#contact" class="btn btn-ghost">협업 문의</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 30초 요약 ════ -->
+<section id="summary" style="padding-top:80px">
+  <div class="container">
+    <div class="section-head fade">
+      <p class="label">30초 요약</p>
+      <h2 class="section-title">처음 오셨다면 이것만</h2>
+    </div>
+    <div class="trio fade">
+      <div>
+        <p class="q">누가</p>
+        <h3>차우진</h3>
+        <p><strong>1999년부터</strong> 음악과 대중문화를 써 온 평론가이자 산업 분석가입니다. 저서 『관점을 파는 일』(2025), 『마음의 비즈니스』(2023). 뉴욕타임스·파이낸셜타임스·블룸버그가 한국 엔터 산업의 목소리로 인용합니다.</p>
+      </div>
+      <div>
+        <p class="q">무엇을</p>
+        <h3>읽고, 쓰고, 묻습니다</h3>
+        <p>뉴스레터 <span class="num">660편+</span>(구독자 <span class="num">7,000+</span>), 리서치 리포트, 업계 인터뷰 <span class="num">28명+</span>. 기업 자문과 강연은 그 위에서 나옵니다. 매 편 마지막에 같은 질문을 둡니다. <strong>이 사례에서 다른 업종이 가져갈 원리는 무엇인가.</strong></p>
+      </div>
+      <div>
+        <p class="q">어떻게</p>
+        <h3>시그널이 아니라 바이브</h3>
+        <p>이미 일어난 일(시그널)은 누구나 찾습니다. 우리는 <strong>아직 안 왔지만 조짐이 보이는 것(바이브)</strong>을 먼저 잡습니다. 다섯 지역을 매일 보고, 생산·유통·소비 위에 일곱 요인을 교차한 좌표로 읽습니다. 아래 「읽는 법」에 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ 당신이 누구든 ════ -->
+<section id="for-you">
+  <div class="container">
+    <div class="section-head fade">
+      <p class="label">입구</p>
+      <h2 class="section-title">당신이 누구든, 들어오는 문이 있습니다</h2>
+    </div>
+    <div class="foryou fade">
+      <div class="fy">
+        <p class="who">엔터 · 콘텐츠 업계에서 일한다면</p>
+        <h3>매주 한 편, 산업의 구조를 읽습니다</h3>
+        <p>팬덤·IP·자본·테크·정책이 엔터 밸류체인을 어떻게 바꾸는지 매주 한 편씩 씁니다. 하이브부터 방송사·플랫폼까지 <strong>678개 기업·기관 도메인</strong>이 구독합니다. 무료로 시작하고 심층은 유료입니다.</p>
+        <a href="#newsletter" class="go">뉴스레터 구독 →</a>
+      </div>
+      <div class="fy">
+        <p class="who">다른 업종에서 기획 · 전략 · 브랜드를 한다면</p>
+        <h3>엔터는 당신 산업의 레퍼런스입니다</h3>
+        <p>팬덤 최적화, IP 파이프라인, 저작권의 자산화, 티켓 가격의 경제학. 엔터에서 먼저 검증된 원리를 <strong>다른 업종의 적용점</strong>까지 정리한 분석 프레임 17개와 리포트가 있습니다. 팀 워크숍과 자문은 그 위에서 시작합니다.</p>
+        <a href="/library" class="go">라이브러리 보기 →</a>
+      </div>
+      <div class="fy">
+        <p class="who">AI를 조직에 들이려는 사람이라면</p>
+        <h3>연구소는 AI를 실제로 굴립니다</h3>
+        <p>사람 개입 없이 매일 읽고 쓰고 배우는 <strong>AI 인턴</strong>을 공개로 관찰하는 실험을 준비하고 있습니다. 틀린 날까지 남깁니다. 넉 달 동안 AI와 연구소를 굴리며 배운 것도 시리즈로 씁니다.</p>
+        <!-- INTERN-LAUNCH: 공개 시 아래 두 줄을 바꾼다 - span 삭제, a 태그 hidden 제거 -->
+        <span class="go soon">준비 중 · 곧 엽니다</span>
+        <a href="/intern" class="go" hidden>AI 인턴 실험 보기 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ 읽는 법 ════ -->
+<section id="method">
+  <div class="container">
+    <div class="section-head fade">
+      <p class="label">읽는 법</p>
+      <h2 class="section-title">시그널과 바이브, 그리고 좌표</h2>
+    </div>
+    <div class="method-grid fade">
+      <div class="method-text">
+        <p>AI는 차트·바이럴처럼 정형화된 신호에 강합니다. 그러나 컬트와 씬의 미세한 균열, 서브컬처의 코드, 중국·동남아 같은 신흥 시장의 도시 단위 문화 결처럼 <strong>팬덤이 시작되는 자리</strong>는 여전히 사람의 감각과 누적된 맥락으로 읽어야 합니다. 연구소는 10년 넘게 그 자리를 추적해 왔습니다.</p>
+        <div class="vs">
+          <div><p class="name">시그널</p><p>이미 벌어지고 있는 일. 누구나 찾을 수 있고, 찾은 다음에는 늦습니다.</p></div>
+          <div><p class="name lime">바이브</p><p>아직 안 왔지만 조짐이 보이고, 반복될 종류의 일. 해외에서 「지금」인 것이 한국에는 「곧」입니다.</p></div>
+        </div>
+        <p>그래서 한국·글로벌·중국·일본·동남아 <strong>다섯 지역</strong>을 매일 봅니다. 많이 보려는 것이 아니라 한국보다 먼저 일어나는 곳을 보려는 것입니다. 걷힌 신호는 오른쪽 좌표에 앉힙니다. 모든 산업이 공유하는 세 단계 위에 변화를 미는 요인 일곱을 교차한 격자이고, 한 편의 글은 이 격자 위의 화살표 하나입니다. 어떤 요인이 어느 단계에서 어느 단계로 변화를 밀고 있는가.</p>
+        <p>생산·유통·소비는 어느 산업에나 있습니다. 이 좌표가 엔터에서 일어난 일을 <strong>다른 산업이 가져갈 수 있게 번역하는 자</strong>입니다.</p>
+      </div>
+      <div>
+        <table class="gridmini" aria-label="좌표 격자 - 7요인 × 3단계">
+          <thead><tr><th>요인 \ 단계</th><th>생산</th><th>유통</th><th>소비</th></tr></thead>
+          <tbody>
+            <tr><td>IP</td><td colspan="3" style="color:var(--gray)">그 권리로 무엇을 만드나</td></tr>
+            <tr><td>포맷</td><td colspan="3" style="color:var(--gray)">콘텐츠가 어떤 그릇에 담기나</td></tr>
+            <tr><td>테크</td><td colspan="3" style="color:var(--gray)">무슨 기술이 기반을 바꾸나</td></tr>
+            <tr><td>자본</td><td colspan="3" style="color:var(--gray)">누가 돈을 대고 누가 가져가나</td></tr>
+            <tr><td>정책</td><td colspan="3" style="color:var(--gray)">어떤 규칙이 판을 정하나</td></tr>
+            <tr><td>교차산업</td><td colspan="3" style="color:var(--gray)">누가 밖에서 들어오나</td></tr>
+            <tr><td>교차정체성</td><td colspan="3" style="color:var(--gray)">팬의 또 다른 정체성은 무엇인가</td></tr>
+          </tbody>
+        </table>
+        <p class="gridmini-note">생산 = 만드는 쪽(아티스트·제작·레이블·저작) · 유통 = 나르는 쪽(플랫폼·채널·공연·라이선스) · 소비 = 받는 쪽(팬·구독·굿즈·커뮤니티). 스물한 칸 중 빈 칸이 아직 아무도 안 쓴 소재입니다. 프레임 정의는 <a href="/library">라이브러리</a>에 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Featured Report ════ -->
+<section class="report-featured" id="report">
+  <div class="container">
+    <div class="section-head fade">
+      <p class="label">리포트</p>
+      <h2 class="section-title">이렇게 읽으면 이런 것이 나옵니다</h2>
+    </div>
+    <div class="report-card fade">
+      <a class="report-figure" href="/report/small-label-miracle#sec-4" aria-label="리포트 본문에서 FIGURE 03 보기">
+        <svg viewBox="0 0 720 520" role="img" aria-label="FIGURE 03 · 4분면: 미디어 전략 × 음악 동력">
+          <text x="0" y="18" class="fig-title">FIGURE 03 · 4분면: 미디어 전략 × 음악 동력</text>
+          <text x="360" y="44" text-anchor="middle" class="axc">미디어 전략 →</text>
+          <text x="190" y="60" text-anchor="middle" class="axs">주류 채널 (음방·음원)</text>
+          <text x="540" y="60" text-anchor="middle" class="axs">신규 채널 (SNS·유튜브·숏폼·해외)</text>
+          <text x="22" y="300" text-anchor="middle" class="axc" transform="rotate(-90 22 300)">← 음악 동력</text>
+          <text x="46" y="160" text-anchor="middle" class="axs" transform="rotate(-90 46 160)">있음</text>
+          <text x="46" y="430" text-anchor="middle" class="axs" transform="rotate(-90 46 430)">없음</text>
+          <rect x="70" y="70" width="290" height="200" fill="#fafafa" stroke="#ddd"/>
+          <rect x="360" y="70" width="290" height="200" fill="#D6FF92"/>
+          <rect x="70" y="270" width="290" height="200" fill="#fafafa" stroke="#ddd"/>
+          <rect x="360" y="270" width="290" height="200" fill="#f7f7f7" stroke="#ddd"/>
+          <text x="86" y="96" class="qh">A · 정석의 기적</text><text x="86" y="114" class="qt">1기 집중 · 가장 안정적</text><text x="86" y="140" class="qm">비스트 · 인피니트 · 씨스타</text><text x="86" y="158" class="qm">에이핑크 · VIXX · 걸스데이</text><text x="86" y="176" class="qm">오마이걸 · 스테이씨</text><text x="376" y="96" class="qh">B · 선점의 기적</text><text x="376" y="114" class="qt qt-em">가장 파괴적: 산업을 재편</text><text x="376" y="140" class="qm">BTS · 마마무 · 에이티즈</text><text x="376" y="158" class="qm">키오프 · 드림캐쳐 · QWER</text><text x="376" y="184" class="qn">동력 × 신규채널이 상호 강화하는 성장 루프</text><text x="86" y="296" class="qh">C · 미완의 기적</text><text x="86" y="314" class="qt">거의 빈 칸</text><text x="86" y="340" class="qm">틴탑 · B1A4</text><text x="86" y="366" class="qn">음방 시대엔 동력 없이 반복 히트가 불가능</text><text x="376" y="296" class="qh">D · 시대의 기적</text><text x="376" y="314" class="qt">2~3기에만 존재 · 화려하나 짧음</text><text x="376" y="340" class="qm">크레용팝 · 모모랜드</text><text x="376" y="358" class="qm">브레이브걸스 · 라붐 · 피프티피프티</text><text x="376" y="384" class="qn">바이럴형 = 뉴미디어가 만든 현상</text>
+          <text x="0" y="498" class="note">전환 D→A EXID·여자친구 / D→B 리센느(진행 중) · 탈락 B.A.P·피프티피프티·AOA · 틈새공략형(블락비·영파씨·트리플에스)은 B·D 사이 독자 경로</text>
+        </svg>
+      </a>
+      <div class="report-info">
+        <p class="report-date">2026.06 · 엔터문화연구소</p>
+        <h3 class="report-title">'중소의 기적'을 만드는 전략</h3>
+        <p class="report-subtitle">'거제 야호'의 법칙: 2009~26년 중소 돌파 구조 분석</p>
+        <p class="report-desc kr">미디어 환경 × 돌파 유형 × 초기 팬 확보 × 지속 구조의 4축으로, BTS부터 리센느까지 27팀을 전수 분석한 리서치 리포트. 운이 아니라 반복되는 구조를 읽습니다. 대형 자본 없이 시장을 뚫는 방법은 어느 업종에나 있는 질문입니다.</p>
+        <div class="report-cta">
+          <a href="/report/small-label-miracle" class="btn btn-lime">전문 읽기 →</a>
+          <a href="/reports/small-label-miracle-2026.pdf" target="_blank" rel="noopener" class="btn btn-ghost">PDF 다운로드</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ About ════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-head fade">
+      <p class="label">대표</p>
+      <h2 class="section-title">차우진</h2>
+    </div>
+    <div class="about-layout fade">
+      <div><img src="images/woojin.jpg" alt="Woojin Cha" class="profile-photo"></div>
+      <div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p><strong>차우진</strong>은 1999년부터 활동해 온 대중문화 평론가이자 산업 분석가, 엔터문화연구소(Neo Vibe Lab) 대표입니다. 음악·미디어·IP·테크를 가로지르는 25년 이상의 경험으로 한국 엔터테인먼트 생태계의 주요 기업에 리서치와 전략을 자문합니다.</p>
+            <p>그의 작업은 비평적 관점과 비즈니스 전략이 만나는 자리에 있습니다. 플랫폼과 팬덤의 시대에 문화가 어떻게 생산·유통·소비·수익화되는지를 분석합니다.</p>
+          </div>
+          <div class="about-text">
+            <p>저서 <strong>『관점을 파는 일』</strong>(2025), <strong>『마음의 비즈니스』</strong>(2023), 『아이돌메이커』, 『음악 산업, 판이 달라진다』(2018). 문화체육관광부 자문위원(2025~).</p>
+            <p><strong>『K팝 제너레이션』</strong>(티빙 다큐멘터리) 기획·제작, <strong>SM엔터테인먼트 브랜드북</strong> 등 여러 포맷의 문화 콘텐츠를 만들어 왔습니다. <strong>블룸버그</strong>, <strong>뉴욕타임스</strong>, <strong>르몽드</strong>, <strong>NHK</strong>가 K컬처 산업의 대표적 목소리로 인용해 왔습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ Credentials ════ -->
+<section id="credentials">
+  <div class="container">
+    <div class="section-head fade">
+      <p class="label">레퍼런스</p>
+      <h2 class="section-title">누가 읽고, 누가 인용하나</h2>
+    </div>
+    <div class="cred-row fade">
+      <div class="cred-col">
+        <h3 class="mono">주요 구독 기업</h3>
+        <p class="cred-stat"><strong>678개</strong> 기업·기관 도메인 구독 · 전체 구독자의 <strong>15.6%</strong> — 2026-06 기준</p>
+        <div class="logo-grid">
+          <span class="logo-pill">HYBE</span>
+          <span class="logo-pill">SM Entertainment</span>
+          <span class="logo-pill">JYP Entertainment</span>
+          <span class="logo-pill">YG Entertainment</span>
+          <span class="logo-pill">CJ ENM</span>
+          <span class="logo-pill">Weverse Company</span>
+          <span class="logo-pill">Samsung Electronics</span>
+          <span class="logo-pill">Naver</span>
+          <span class="logo-pill">Kakao Entertainment</span>
+          <span class="logo-pill">SK</span>
+          <span class="logo-pill">MBC</span>
+          <span class="logo-pill">KBS</span>
+          <span class="logo-pill">AMOREPACIFIC</span>
+          <span class="logo-pill">Hanteo Global</span>
+          <span class="logo-pill">Space Oddity</span>
+          <span class="logo-pill">서울문화재단</span>
+        </div>
+      </div>
+      <div class="cred-col">
+        <h3 class="mono">주요 매체 보도</h3>
+        <ul class="press-list">
+          <li><strong>뉴욕타임스</strong> · <a href="https://www.nytimes.com/2025/06/21/world/asia/south-korea-kpop-culture.html" target="_blank" rel="noopener">한국은 어떻게 문화 강국이 됐나 (2025)</a></li>
+          <li><strong>파이낸셜타임스</strong> · <a href="https://www.ft.com/content/304ff2ce-c285-4c23-b129-0d073730f0cb" target="_blank" rel="noopener">K팝 멀티레이블 시스템 분석</a></li>
+          <li><strong>가디언</strong> · <a href="https://www.theguardian.com/world/2026/may/25/galaxy-robot-park-in-seoul-south-korea-world-first" target="_blank" rel="noopener">K팝과 로봇 엔터테인먼트 실험 (2026)</a></li>
+          <li><strong>르몽드</strong> · <a href="https://www.lemonde.fr/en/economy/article/2023/08/06/k-pop-advent-of-virtual-bands-disrupts-korean-music-industry_6082724_19.html" target="_blank" rel="noopener">버추얼 아이돌과 음악 산업 (2023)</a></li>
+          <li><strong>로이터</strong> · <a href="https://www.reuters.com/article/us-southkorea-kpop-elderly-trot/trot-is-hot-its-not-just-k-pop-in-south-korea-idUSKBN27T0ES" target="_blank" rel="noopener">트로트 리바이벌과 세대 팬덤 (2020)</a></li>
+          <li><strong>AP통신</strong> · <a href="https://apnews.com/article/music-south-korea-government-and-politics-0ef58e0f071ac4894034de219afb1184" target="_blank" rel="noopener">BTS 군 복무와 산업 영향 (2022)</a></li>
+          <li><strong>니케이 아시아</strong> · <a href="https://asia.nikkei.com/spotlight/big-in-asia/south-korean-ruling-party-lawmaker-strikes-chord-with-votes-to-impeach-yoon" target="_blank" rel="noopener">K팝 팬덤과 정치 참여</a></li>
+          <li><strong>블룸버그</strong> · <a href="https://youtu.be/jKNCfhYjCHk" target="_blank" rel="noopener">Beyond BTS, Blackpink — K팝의 재정의 (영상)</a></li>
+          <li><strong>Music Ally</strong> · <a href="https://musically.com/wp-content/uploads/2024/01/01-2024-SouthKorea-6373023.pdf" target="_blank" rel="noopener">South Korea 음악 산업 리포트 인터뷰 (2024)</a></li>
+          <li><strong>NHK</strong> · 팬덤과 디지털 문화</li>
+        </ul>
+        <h3 class="mono" style="margin-top:32px">영상 · 방송</h3>
+        <ul class="press-list">
+          <li><strong>넷플릭스 · SBS</strong> · <a href="https://youtu.be/yHtaL5cpDas" target="_blank" rel="noopener">KPOP 더 비기닝</a></li>
+          <li><strong>티빙</strong> · <a href="https://youtu.be/6sEAPe25FYM" target="_blank" rel="noopener">케이팝 제너레이션 — 기획·제작</a></li>
+          <li><strong>LG전자</strong> · <a href="https://youtu.be/buA83INYBow" target="_blank" rel="noopener">미국이 K팝을 음악 산업의 미래라고 하는 이유</a></li>
+          <li><strong>LIFEPLUS</strong> · <a href="https://youtu.be/HrTOIuFqZwg" target="_blank" rel="noopener">딥다이브 — K팝과 글로벌 팬덤</a></li>
+        </ul>
+        <h3 class="mono" style="margin-top:32px">저서</h3>
+        <ul class="press-list">
+          <li><strong>『관점을 파는 일』</strong> (2025)</li>
+          <li><strong>『마음의 비즈니스』</strong> (2023)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ AI 인턴 (INTERN-LAUNCH: 공개 시 section의 hidden 제거) ════ -->
+<section id="intern" hidden>
+  <div class="container">
+    <div class="intern-card fade">
+      <div>
+        <p class="label">실험</p>
+        <h3>연구소는 AI를 실제로 굴립니다</h3>
+        <p><strong>AI 인턴 1호</strong>가 매일 엔터 산업을 읽고 씁니다. 사람이 고르지도 고치지도 않습니다. 위의 좌표로 판정하고, 틀린 날까지 남기고, 얼마나 자라는지 공개로 봅니다. 그 너머는 사람이 씁니다.</p>
+      </div>
+      <div class="right">
+        <p class="stat">엔터 바이브 리서치 · 매일 · 한국어 / English<br>대시보드에 성장 지표 <b>5축</b></p>
+        <a href="/intern" class="btn btn-lime">지켜보기 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Services ════ -->
+<section id="services">
+  <div class="container">
+    <div class="section-head fade">
+      <p class="label">함께 일하기</p>
+      <h2 class="section-title">함께 일하는 방식</h2>
+    </div>
+    <div class="services-grid fade">
+      <div class="service-item"><h3>리서치 · 분석</h3><p class="sub">Research</p><p>엔터 산업 트렌드, 경쟁 지형, 신흥 시장(중국·동남아) 진입 기회를 다루는 딥다이브 리포트와 시장 분석.</p></div>
+      <div class="service-item"><h3>전략 자문</h3><p class="sub">Advisory</p><p>회사가 자기를 시장에 설명하는 언어를 세우는 일. 첫 미팅에서 주는 것과 주지 않는 것을 한 장으로 보여드립니다.</p></div>
+      <div class="service-item"><h3>강연 · 키노트</h3><p class="sub">Lectures</p><p>컨퍼런스, 기업 행사, 교육 기관에서 문화·팬덤·엔터 비즈니스, 그리고 AI와 일하는 방식을 주제로 한 강연.</p></div>
+      <div class="service-item"><h3>워크숍</h3><p class="sub">Workshops</p><p>팬 전략, IP 전략, 서브컬처·문화 트렌드 분석을 주제로 한 팀 단위 세션. 엔터 밖 업종의 팀이 엔터 사례에서 원리를 가져가는 자리.</p></div>
+      <div class="service-item"><h3>콘텐츠 기획</h3><p class="sub">Content</p><p>다큐멘터리, 브랜드 출판물, 크로스플랫폼 콘텐츠의 콘셉트 설계와 에디토리얼 디렉션.</p></div>
+      <div class="service-item"><h3>커리큘럼 개발</h3><p class="sub">Curriculum</p><p>기관·기업을 위한 엔터 비즈니스, 팬덤 경제, 창작 산업 맞춤 교육 프로그램.</p></div>
+    </div>
+    <div class="sponsor-line fade" id="sponsor">
+      <p><strong>광고 · 스폰서십.</strong> 인터뷰(Dialogue), 리포트 스폰서십, 서밋 파트너십, 맞춤 캠페인. 링크드인 7,000+, 인스타그램 4,000+, 오픈채팅 1,800+, 뉴스레터까지 합친 도달이고 평균 오픈율 26%+입니다. 매체 소개서와 단가는 문의 주시면 보내드립니다.</p>
+      <a href="#contact" class="btn btn-ghost">스폰서십 문의 →</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ Newsletter ════ -->
+<section id="newsletter">
+  <div class="container">
+    <div class="section-head fade">
+      <p class="label">뉴스레터</p>
+      <h2 class="section-title">매주 한 편, 엔터 산업을 읽습니다</h2>
+    </div>
+    <div class="nl-layout fade">
+      <div class="nl-info">
+        <div class="nl-logos">
+          <img src="images/enter-logo.png" alt="엔터문화연구소">
+        </div>
+        <h3>차우진의 엔터문화연구소</h3>
+        <p class="sub" style="font-size:13px;color:var(--lime);margin-bottom:16px">구독자 7,000+ · 주 2~3회 발행 · 660편+</p>
+        <p class="kr" style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:24px">엔터테인먼트 산업의 구조, 팬덤, IP, 테크를 비평적 관점에서 분석하는 뉴스레터입니다. 리서치 리포트, 산업 분석, 아티스트 케이스 스터디, 업계 인터뷰를 정기 발행합니다. 관점은 사람이 씁니다.</p>
+        <p style="font-size:13px;color:var(--gray-dark);line-height:1.7">
+          <span class="mono" style="font-size:11px;color:var(--lime)">FREE</span> 주간 산업 분석 · 칼럼<br>
+          <span class="mono" style="font-size:11px;color:var(--white)">PAID</span> 딥리서치 · 리포트 · 케이스 스터디 · 인터뷰
+        </p>
+      </div>
+      <div class="nl-form">
+        <iframe src="https://maily.so/draft.briefing/embed?mode=dark&utm_source=nvl-landing" style="width:100%;min-height:280px;border:none" frameborder="0" loading="lazy" title="뉴스레터 구독"></iframe>
+        <p class="nl-form-note">Powered by Maily</p>
+      </div>
+    </div>
+    <div class="nl-recent fade">
+      <div class="nl-recent-head">
+        <p class="label">최근 발행</p>
+        <a href="https://maily.so/draft.briefing?utm_source=nvl-landing" target="_blank" rel="noopener" class="nl-archive-link" onclick="gtag('event','nl_archive_click')">전체 아카이브 →</a>
+      </div>
+      <div class="nl-recent-grid">
+        <!-- RECENT-LETTERS:START — scripts/update_recent_letters.py가 자동 갱신. 직접 수정 금지 -->
+        <a class="letter-card" href="https://maily.so/draft.briefing/posts/w6ovpngpok5" target="_blank" rel="noopener" onclick="gtag('event','recent_letter_click',{letter_id:'w6ovpngpok5'})">
+          <div class="letter-meta"><span class="letter-date">2026.09.03</span><span class="letter-badge paid">PAID</span></div>
+          <h4 class="letter-title kr">🏟️ 코즘(Cosm)은 경기장의 미래일까, 극장의 미래일까?</h4>
+          <p class="letter-sub kr">소니는 왜 돔 극장에 1억 달러를 넣었을까?</p>
+        </a>
+        <a class="letter-card" href="https://maily.so/draft.briefing/posts/mjz6k1kvrwk" target="_blank" rel="noopener" onclick="gtag('event','recent_letter_click',{letter_id:'mjz6k1kvrwk'})">
+          <div class="letter-meta"><span class="letter-date">2026.08.26</span><span class="letter-badge free">FREE</span></div>
+          <h4 class="letter-title kr">🎤 해시태그로서의 &#x27;K&#x27; - 최진수</h4>
+          <p class="letter-sub kr">케이콘 LA 2026 ② 현장에서 만난 사람들</p>
+        </a>
+        <!-- RECENT-LETTERS:END -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Summit CTA ════ -->
+<section class="summit-cta">
+  <div class="container">
+    <div class="summit-cta-inner">
+      <div>
+        <p class="label">지난 행사</p>
+        <h2>뉴타입 엔터 서밋 2026 rewind</h2>
+        <p>엔터테인먼트 산업과 기술의 교차점에서 · 2026.06.12</p>
+      </div>
+      <a href="/summit" class="btn btn-black">자세히 보기 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Contact ════ -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="label" style="color:var(--lime)">Contact</p>
+        <h2 class="contact-title">협업 문의</h2>
+        <p class="contact-text">강연 · 자문 · 리서치 파트너십 · 워크숍 · 콘텐츠 기획 · 스폰서십. 프로젝트 배경과 일정만 적어 주시면 48시간 안에 답합니다.</p>
+        <div class="contact-links">
+          <a href="mailto:woojin@neovibelab.com" class="contact-link" onclick="gtag('event','contact_click',{method:'email',location:'home'})"><span>Email</span> woojin@neovibelab.com</a>
+          <a href="https://linkedin.com/in/woojin-cha" target="_blank" rel="noopener" class="contact-link"><span>LinkedIn</span> /in/woojin-cha</a>
+          <a href="https://www.instagram.com/nvl.seoul/" target="_blank" rel="noopener" class="contact-link" onclick="gtag('event','contact_click',{method:'instagram',location:'home'})"><span>Instagram</span> @nvl.seoul</a>
+          <a href="https://www.neovibelab.com" class="contact-link"><span>Web</span> www.neovibelab.com</a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form id="b2bForm" class="b2b-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="bf-name">이름 *</label>
+              <input class="form-input" id="bf-name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="bf-company">회사 · 소속 *</label>
+              <input class="form-input" id="bf-company" name="company" type="text" required autocomplete="organization">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="bf-email">이메일 *</label>
+              <input class="form-input" id="bf-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="bf-type">문의 유형 *</label>
+              <select class="form-input" id="bf-type" name="inquiry_type" required>
+                <option value="" disabled selected>선택해주세요</option>
+                <option>강연 · 키노트</option>
+                <option>전략 자문</option>
+                <option>리서치 · 분석</option>
+                <option>콘텐츠 기획</option>
+                <option>워크숍 · 커리큘럼</option>
+                <option>광고 · 스폰서십</option>
+                <option>기타</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="bf-msg">문의 내용 *</label>
+            <textarea class="form-input" id="bf-msg" name="message" rows="5" required placeholder="프로젝트 배경, 일정, 예산 범위를 간단히 알려주세요."></textarea>
+          </div>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn btn-lime" id="bf-submit">문의 보내기</button>
+          <p class="form-error" id="bf-error" hidden>전송에 실패했습니다. <a href="mailto:woojin@neovibelab.com" style="color:var(--lime)">woojin@neovibelab.com</a>으로 직접 보내주세요.</p>
+          <p class="form-note">48시간 내에 회신드립니다.</p>
+        </form>
+        <div id="bf-success" class="form-success" hidden>
+          <p class="kr"><strong>문의가 접수됐습니다.</strong><br>확인 후 48시간 내에 회신드리겠습니다.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 엔터문화연구소 (Neo Vibe Lab) · Seoul</p>
+  </div>
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
+},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+
+// B2B 문의 폼 — FormSubmit AJAX (백엔드 없는 정적 사이트용)
+const bf=document.getElementById('b2bForm');
+if(bf){
+  bf.addEventListener('submit',async e=>{
+    e.preventDefault();
+    if(!bf.checkValidity()){bf.reportValidity();return}
+    const btn=document.getElementById('bf-submit');
+    btn.disabled=true;btn.textContent='전송 중…';
+    document.getElementById('bf-error').hidden=true;
+    const fd=new FormData(bf);
+    fd.append('_subject','[neovibelab.com] B2B 문의 — '+fd.get('inquiry_type'));
+    fd.append('_template','table');
+    fd.append('_captcha','false');
+    try{
+      const r=await fetch('https://formsubmit.co/ajax/woojin@neovibelab.com',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
+      const j=await r.json().catch(()=>null);
+      if(!r.ok||!j||String(j.success)!=='true')throw new Error('submit failed');
+      bf.hidden=true;
+      document.getElementById('bf-success').hidden=false;
+      gtag('event','b2b_form_submit',{inquiry_type:fd.get('inquiry_type')});
+    }catch(err){
+      btn.disabled=false;btn.textContent='문의 보내기';
+      document.getElementById('bf-error').hidden=false;
+    }
+  });
+}
+</script>
+</body>
+</html>
