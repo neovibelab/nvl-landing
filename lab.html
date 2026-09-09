@@ -240,7 +240,8 @@ html[data-ui="en"] [data-lang="en"]{display:block}
 <script>
 // 실험 카드 숫자 - 인턴 사이트의 공개 기록(stats.json). 못 읽으면 그대로 둔다.
 (function(){
-  fetch('https://nvl-intern.vercel.app/data/stats.json',{mode:'cors'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(s){
+  fetch('https://intern.neovibelab.com/data/stats.json',{mode:'cors'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(s){
+    s=s.filter(function(x){return x.type!=='weekly'});  // 회고 행에는 day가 없다
     if(!s.length)return;
     var last=s[s.length-1];
     var ct=s.reduce(function(a,x){return a+(x.claims_total||0)},0), cv=s.reduce(function(a,x){return a+(x.claims_verified||0)},0);
