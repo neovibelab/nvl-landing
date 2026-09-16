@@ -10,6 +10,9 @@
 <meta property="og:image" content="https://www.neovibelab.com/images/banner.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.neovibelab.com/lab">
+<link rel="alternate" hreflang="ko" href="https://www.neovibelab.com/lab?lang=ko">
+<link rel="alternate" hreflang="en" href="https://www.neovibelab.com/lab?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://www.neovibelab.com/lab">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -110,7 +113,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     <li><a data-ko="/#method" data-en="/en#method" data-ko-t="읽는 법" data-en-t="Method" href="/#method">읽는 법</a></li>
     <li><a data-ko="/#report" data-en="/en#report" data-ko-t="리포트" data-en-t="Report" href="/#report">리포트</a></li>
     <li><a data-ko="/library" data-en="/library-en" data-ko-t="라이브러리" data-en-t="Library" href="/library">라이브러리</a></li>
-    <li class="lab-li"><a data-ko="/lab" data-en="/lab" data-ko-t="실험실" data-en-t="Lab" href="/lab" class="active">실험실</a></li>
+    <li class="lab-li"><a data-ko="/lab?lang=ko" data-en="/lab?lang=en" data-ko-t="실험실" data-en-t="Lab" href="/lab" class="active">실험실</a></li>
     <li><a data-ko="/#services" data-en="/en#services" data-ko-t="함께 일하기" data-en-t="Work with us" href="/#services">함께 일하기</a></li>
     <li><a data-ko="/#newsletter" data-en="/en#newsletter" data-ko-t="뉴스레터" data-en-t="Newsletter" href="/#newsletter">뉴스레터</a></li>
     <li><a data-ko="/#contact" data-en="/en#contact" data-ko-t="문의" data-en-t="Contact" href="/#contact">문의</a></li>
@@ -138,7 +141,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
       <article class="exp">
         <div>
           <div class="head"><span class="status" data-run>진행 중</span><span class="pill">매일 · 한국어 / English</span></div>
-          <h2><a href="/lab/ai-intern">AI 인턴 01 · 엔터 바이브 리서치</a></h2>
+          <h2><a href="/lab/ai-intern?lang=ko">AI 인턴 01 · 엔터 바이브 리서치</a></h2>
           <p class="what">AI 인턴이 매일 글로벌 엔터 산업 뉴스를 읽고 <strong>아직 오지 않은 변화의 조짐</strong>을 한 편 씁니다. 소재도 관점도 사람이 고르지 않고, 틀린 날도 그대로 남깁니다. 맞았는지는 90일 뒤 스스로 채점합니다.</p>
           <div class="stats">
             <span class="stat"><b data-k="day">-</b>일째</span>
@@ -147,7 +150,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
             <span class="stat"><b data-k="cells">-</b>격자 칸</span>
           </div>
         </div>
-        <a href="/lab/ai-intern" class="btn btn-lime go">보러 가기 →</a>
+        <a href="/lab/ai-intern?lang=ko" class="btn btn-lime go">보러 가기 →</a>
       </article>
 
       <article class="exp soon">
@@ -227,6 +230,8 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     try{localStorage.setItem('intern-lang',l)}catch(e){}
     // 새로 보이는 요소의 fade 재관찰
     document.querySelectorAll('[data-lang="'+l+'"] .fade').forEach(el=>{el.classList.add('visible')});
+    // 주소가 지금 보고 있는 언어를 들고 간다. 복사해서 보내면 받는 쪽도 같은 언어로 열린다.
+    try{const u=new URL(location.href);u.searchParams.set('lang',l);history.replaceState(null,'',u)}catch(e){}
   }
   document.querySelectorAll('.lang-toggle button').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.set)));
   apply(ui);
