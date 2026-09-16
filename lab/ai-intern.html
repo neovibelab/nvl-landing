@@ -768,14 +768,16 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     const box=document.querySelector('[data-lang="'+l+'"] .subscribe');
     if(box)box.id='subscribe';
     // 글꼴·이미지가 늦게 들어오면 자리가 밀리므로 다음 프레임에 맞춘다
-    if(location.hash==='#subscribe'&&box)requestAnimationFrame(()=>box.scrollIntoView({block:'start'}));
+    // behavior:'instant' - html에 scroll-behavior:smooth가 걸려 있어 그냥 부르면 8천 픽셀을 미끄러진다.
+    // 다른 페이지에서 앵커로 들어온 사람은 **이미 그 자리에 있어야** 한다.
+    if(location.hash==='#subscribe'&&box)requestAnimationFrame(()=>box.scrollIntoView({block:'start',behavior:'instant'}));
   }
   document.querySelectorAll('.lang-toggle button').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.set)));
   apply(ui);
   // 늦게 들어오는 자원이 자리를 또 밀 수 있다. 다 뜬 뒤 한 번 더 맞춘다.
   // 늦게 들어오는 자원이 자리를 또 민다. 다 뜬 뒤, 그리고 한 번 더.
   const settle=()=>{const t=document.getElementById('subscribe');
-    if(location.hash==='#subscribe'&&t)t.scrollIntoView({block:'start'})};
+    if(location.hash==='#subscribe'&&t)t.scrollIntoView({block:'start',behavior:'instant'})};
   addEventListener('load',()=>{settle();setTimeout(settle,400)});
   const observer=new IntersectionObserver(entries=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
