@@ -758,9 +758,20 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     try{localStorage.setItem('intern-lang',l)}catch(e){}
     // 새로 보이는 요소의 fade 재관찰
     document.querySelectorAll('[data-lang="'+l+'"] .fade').forEach(el=>{el.classList.add('visible')});
+    // 주소가 지금 보고 있는 언어를 들고 간다. 복사해서 보내면 받는 쪽도 같은 언어로 열린다.
+    try{const u=new URL(location.href);u.searchParams.set('lang',l);history.replaceState(null,'',u)}catch(e){}
+    // #subscribe 앵커는 보이는 쪽 구독 칸에만 붙인다(id는 겹칠 수 없다).
+    document.querySelectorAll('.subscribe[id]').forEach(el=>el.removeAttribute('id'));
+    const box=document.querySelector('[data-lang="'+l+'"] .subscribe');
+    if(box)box.id='subscribe';
+    // 글꼴·이미지가 늦게 들어오면 자리가 밀리므로 다음 프레임에 맞춘다
+    if(location.hash==='#subscribe'&&box)requestAnimationFrame(()=>box.scrollIntoView({block:'center'}));
   }
   document.querySelectorAll('.lang-toggle button').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.set)));
   apply(ui);
+  // 늦게 들어오는 자원이 자리를 또 밀 수 있다. 다 뜬 뒤 한 번 더 맞춘다.
+  addEventListener('load',()=>{const t=document.getElementById('subscribe');
+    if(location.hash==='#subscribe'&&t)t.scrollIntoView({block:'center'})});
   const observer=new IntersectionObserver(entries=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
   },{threshold:0.12});
