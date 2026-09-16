@@ -135,7 +135,7 @@ section{padding:72px 0;border-bottom:1px solid var(--gray-line)}
 .grade-row span{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;padding:8px 14px;border:1px solid var(--gray-dark);color:var(--white)}
 
 /* ── Subscribe ── */
-.subscribe{background:var(--dark);border:1px solid var(--gray-dark);padding:36px;margin:8px 0}
+.subscribe{background:var(--dark);border:1px solid var(--gray-dark);padding:36px;margin:8px 0;scroll-margin-top:96px}
 .subscribe h3{font-size:20px;font-weight:700;margin-bottom:6px}
 .subscribe .hint{font-size:13px;color:var(--gray);line-height:1.7;margin-bottom:22px}
 .sub-form{display:flex;flex-direction:column;gap:14px}
@@ -768,13 +768,15 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     const box=document.querySelector('[data-lang="'+l+'"] .subscribe');
     if(box)box.id='subscribe';
     // 글꼴·이미지가 늦게 들어오면 자리가 밀리므로 다음 프레임에 맞춘다
-    if(location.hash==='#subscribe'&&box)requestAnimationFrame(()=>box.scrollIntoView({block:'center'}));
+    if(location.hash==='#subscribe'&&box)requestAnimationFrame(()=>box.scrollIntoView({block:'start'}));
   }
   document.querySelectorAll('.lang-toggle button').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.set)));
   apply(ui);
   // 늦게 들어오는 자원이 자리를 또 밀 수 있다. 다 뜬 뒤 한 번 더 맞춘다.
-  addEventListener('load',()=>{const t=document.getElementById('subscribe');
-    if(location.hash==='#subscribe'&&t)t.scrollIntoView({block:'center'})});
+  // 늦게 들어오는 자원이 자리를 또 민다. 다 뜬 뒤, 그리고 한 번 더.
+  const settle=()=>{const t=document.getElementById('subscribe');
+    if(location.hash==='#subscribe'&&t)t.scrollIntoView({block:'start'})};
+  addEventListener('load',()=>{settle();setTimeout(settle,400)});
   const observer=new IntersectionObserver(entries=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
   },{threshold:0.12});
