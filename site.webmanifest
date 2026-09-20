@@ -1,0 +1,12 @@
+{
+  "name": "엔터문화연구소 (Neo Vibe Lab)",
+  "short_name": "Neo Vibe Lab",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "icons": [
+    { "src": "/images/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
