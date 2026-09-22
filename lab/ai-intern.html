@@ -194,6 +194,10 @@ html[data-ui="en"] [data-lang="en"]{display:block}
   .grid-table td:first-child{white-space:normal;width:auto}
 }
 @media(max-width:540px){
+  /* 언어·관심 라디오가 18px라 손가락으로 누르기 어려웠다(2026-09-22 모바일 점검). */
+  .sub-opt{padding:9px 0;font-size:13px}
+  .sub-opt input{width:18px;height:18px}
+  .sub-opts{gap:14px 22px}
   .metrics{grid-template-columns:1fr}
   .metrics div:last-child{grid-column:auto}
 }
@@ -228,7 +232,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     </div>
     <h1 class="fade">AI 엔터 <span class="lime">바이브</span> 리서치</h1>
     <p class="sub fade"><strong>AI 인턴이 매일 엔터 산업 뉴스를 읽고, 아직 이름이 없는 변화의 조짐을 먼저 씁니다.</strong> 맞았는지는 90일 뒤 스스로 채점합니다.</p>
-    <p class="masthead-cta fade"><a class="btn btn-lime" href="https://intern.neovibelab.com/">매일 발행본 읽기 →</a><a class="btn" href="#subscribe">메일로 받기</a></p>
+    <p class="masthead-cta fade"><a class="btn btn-lime" href="https://intern.neovibelab.com/">매일 발행본 읽기 →</a><a class="btn btn-ghost" href="#subscribe">메일로 받기</a></p>
   </div>
 </header>
 
@@ -443,7 +447,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     </div>
     <h1 class="fade">AI Entertainment<br><span class="lime">Vibe</span> Research</h1>
     <p class="sub fade"><strong>An AI intern reads the entertainment industry every day and writes down what does not have a name yet but is showing signs.</strong> It scores itself 90 days later.</p>
-    <p class="masthead-cta fade"><a class="btn btn-lime" href="https://intern.neovibelab.com/en/">Read the daily pieces →</a><a class="btn" href="#subscribe">Get it by email</a></p>
+    <p class="masthead-cta fade"><a class="btn btn-lime" href="https://intern.neovibelab.com/en/">Read the daily pieces →</a><a class="btn btn-ghost" href="#subscribe">Get it by email</a></p>
   </div>
 </header>
 
