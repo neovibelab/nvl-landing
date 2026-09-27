@@ -584,7 +584,7 @@ footer .foot-links a:hover{color:var(--lime)}
       <div>
         <p class="label" style="color:var(--lime)">Contact</p>
         <h2 class="contact-title">협업 문의</h2>
-        <p class="contact-text">강연 · 자문 · 리서치 · 워크숍 · 콘텐츠 기획 · 스폰서십. 프로젝트 배경과 일정만 적어 주시면 48시간 안에 답합니다.</p>
+        <p class="contact-text">강연 · 자문 · 리서치 · 워크숍 · 콘텐츠 기획 · 스폰서십. 프로젝트 배경과 일정만 적어 주시면 영업일 3일 안에 답합니다.</p>
         <div class="contact-links">
           <a href="mailto:woojin@neovibelab.com" class="contact-link" onclick="gtag('event','contact_click',{method:'email',location:'home'})"><span>Email</span> woojin@neovibelab.com</a>
           <a href="https://linkedin.com/in/woojin-cha" target="_blank" rel="noopener" class="contact-link"><span>LinkedIn</span> /in/woojin-cha</a>
@@ -609,18 +609,22 @@ footer .foot-links a:hover{color:var(--lime)}
               <input class="form-input" id="bf-email" name="email" type="email" required autocomplete="email">
             </div>
             <div class="form-field">
-              <label class="form-label" for="bf-type">문의 유형 *</label>
-              <select class="form-input" id="bf-type" name="inquiry_type" required>
-                <option value="" disabled selected>선택해주세요</option>
-                <option>강연 · 키노트</option>
-                <option>전략 자문</option>
-                <option>리서치 · 분석</option>
-                <option>콘텐츠 기획</option>
-                <option>워크숍 · 커리큘럼</option>
-                <option>광고 · 스폰서십</option>
-                <option>기타</option>
-              </select>
+              <label class="form-label" for="bf-phone">연락처 (선택)</label>
+              <input class="form-input" id="bf-phone" name="phone" type="tel" autocomplete="tel" placeholder="010-0000-0000">
             </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="bf-type">문의 유형 *</label>
+            <select class="form-input" id="bf-type" name="inquiry_type" required>
+              <option value="" disabled selected>선택해주세요</option>
+              <option>강연 · 키노트</option>
+              <option>전략 자문</option>
+              <option>리서치 · 분석</option>
+              <option>콘텐츠 기획</option>
+              <option>워크숍 · 커리큘럼</option>
+              <option>광고 · 스폰서십</option>
+              <option>기타</option>
+            </select>
           </div>
           <div class="form-field">
             <label class="form-label" for="bf-msg">문의 내용 *</label>
@@ -629,10 +633,10 @@ footer .foot-links a:hover{color:var(--lime)}
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn btn-lime" id="bf-submit">문의 보내기</button>
           <p class="form-error" id="bf-error" hidden>전송에 실패했습니다. <a href="mailto:woojin@neovibelab.com" style="color:var(--lime)">woojin@neovibelab.com</a>으로 직접 보내주세요.</p>
-          <p class="form-note">48시간 내에 회신드립니다.</p>
+          <p class="form-note">영업일 3일 안에 woojin@neovibelab.com에서 회신합니다. 접수 확인 메일이 바로 갑니다.</p>
         </form>
         <div id="bf-success" class="form-success" hidden>
-          <p class="kr"><strong>문의가 접수됐습니다.</strong><br>확인 후 48시간 내에 회신드리겠습니다.</p>
+          <p class="kr"><strong>문의가 접수됐습니다.</strong><br>입력하신 메일로 접수 확인이 갔습니다. 영업일 3일 안에 회신합니다.<br>메일이 보이지 않으면 스팸함을 확인해 주세요.</p>
         </div>
       </div>
     </div>
@@ -665,6 +669,8 @@ if(bf){
     fd.append('_subject','[neovibelab.com] B2B 문의 — '+fd.get('inquiry_type'));
     fd.append('_template','table');
     fd.append('_captcha','false');
+    // 문의자에게 즉시 접수 확인 (FormSubmit이 email 필드 주소로 보낸다)
+    fd.append('_autoresponse','문의를 받았습니다. 내용을 확인하고 영업일 3일 안에 woojin@neovibelab.com에서 회신합니다. 회신이 보이지 않으면 스팸함을 확인하거나 이 주소로 직접 메일 주세요. - 엔터문화연구소 차우진');
     try{
       const r=await fetch('https://formsubmit.co/ajax/woojin@neovibelab.com',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
       const j=await r.json().catch(()=>null);
