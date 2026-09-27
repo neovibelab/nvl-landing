@@ -611,10 +611,10 @@ footer .foot-links a:hover{color:var(--lime)}
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn btn-lime" id="bf-submit">Send</button>
           <p class="form-error" id="bf-error" hidden>Sending failed. <a href="mailto:woojin@neovibelab.com" style="color:var(--lime)">woojin@neovibelab.com</a>: please email directly.</p>
-          <p class="form-note">We reply from woojin@neovibelab.com within 3 business days. A confirmation email goes out right away.</p>
+          <p class="form-note">We reply from woojin@neovibelab.com within 3 business days.</p>
         </form>
         <div id="bf-success" class="form-success" hidden>
-          <p class="kr"><strong>Received.</strong><br>A confirmation is on its way to your inbox. We reply within 3 business days.<br>If you don't see it, please check your spam folder.</p>
+          <p class="kr"><strong>Received.</strong><br>We reply from woojin@neovibelab.com within 3 business days.<br>If you don't see our reply, please check your spam folder.</p>
         </div>
       </div>
     </div>
@@ -647,8 +647,6 @@ if(bf){
     fd.append('_subject','[neovibelab.com] B2B 문의 — '+fd.get('inquiry_type'));
     fd.append('_template','table');
     fd.append('_captcha','false');
-    // 문의자에게 즉시 접수 확인 (FormSubmit이 email 필드 주소로 보낸다)
-    fd.append('_autoresponse','Thanks, we received your inquiry. We will reply from woojin@neovibelab.com within 3 business days. If you do not see our reply, please check your spam folder or write to that address directly. - Woojin Cha, Neo Vibe Lab');
     try{
       const r=await fetch('https://formsubmit.co/ajax/woojin@neovibelab.com',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
       const j=await r.json().catch(()=>null);
