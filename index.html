@@ -190,7 +190,7 @@ section{padding:100px 0}
 .nl-info .nl-logos img{width:48px;height:48px;border-radius:4px;background:var(--dark)}
 .nl-form{background:var(--dark);border:1px solid var(--gray-dark);padding:32px;min-height:340px;display:flex;flex-direction:column}
 .nl-form iframe{flex:1;width:100%;min-height:280px;border:none}
-.nl-form-note{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);margin-top:12px;text-align:center}
+.nl-form-note{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray);margin-top:12px;text-align:center}
 .nl-recent{margin-top:64px}
 .nl-recent-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px}
 .nl-archive-link{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);text-decoration:none;transition:color .2s}
@@ -233,12 +233,12 @@ section{padding:100px 0}
 select.form-input{cursor:pointer}
 select.form-input:invalid{color:var(--gray)}
 textarea.form-input{resize:vertical;min-height:120px}
-.form-note{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray-dark)}
+.form-note{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray)}
 .form-success{border:1px solid rgba(214,255,146,0.35);background:var(--lime-dim);padding:32px;font-size:15px;line-height:1.8;color:var(--white)}
 .form-error{font-size:13px;color:#E08585;line-height:1.7;margin-top:4px}
 
 /* ── Footer ── */
-footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);letter-spacing:.05em}
+footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray);letter-spacing:.05em}
 
 /* ── Responsive ── */
 @media(max-width:900px){
@@ -346,20 +346,20 @@ footer .foot-links a:hover{color:var(--lime)}
 <section class="hero">
   <div class="hero-banner"><img src="images/banner.png" alt="Neo Vibe Lab Seoul"></div>
   <div class="hero-body">
-    <p class="label fade" style="margin-bottom:20px">엔터문화연구소 · Neo Vibe Lab · Seoul</p>
-    <h1 class="hero-h1 fade">Signal은 누구나 찾습니다.<br>우리는 <span class="lime">Vibe</span>를 읽습니다.</h1>
-    <p class="hero-def fade">엔터테인먼트와 기술·금융·문화·소비 산업을 연결하는 부티크 연구소.</p>
-    <p class="hero-sub fade">
+    <p class="label" style="margin-bottom:20px">엔터문화연구소 · Neo Vibe Lab · Seoul</p>
+    <h1 class="hero-h1">Signal은 누구나 찾습니다.<br>우리는 <span class="lime">Vibe</span>를 읽습니다.</h1>
+    <p class="hero-def">엔터테인먼트와 기술·금융·문화·소비 산업을 연결하는 부티크 연구소.</p>
+    <p class="hero-sub">
       <span class="kr" style="color:var(--white);font-weight:500">음악에서 바이브를 찾습니다. 케이팝·팬덤·IP·공연의 변화가 다른 산업의 미래를 먼저 보여주기 때문입니다.</span><br>
       그 원리를 다른 업종에 옮기고, 다른 업종이 여기서 배울 것을 씁니다. 매주 뉴스레터로, 분기마다 리포트로, 필요한 곳에는 자문과 강연으로.
     </p>
-    <div class="hero-cta fade">
+    <div class="hero-cta">
       <a href="#newsletter" class="btn btn-lime">뉴스레터 구독</a>
       <a href="#report" class="btn btn-ghost">리포트 보기</a>
       <a href="#contact" class="btn btn-ghost">협업 문의</a>
     </div>
   </div>
-  <div class="stats-wrap fade">
+  <div class="stats-wrap">
     <div class="stats">
       <div><div class="n">660+</div><div class="l">뉴스레터 발행</div></div>
       <div><div class="n">7,000+</div><div class="l">구독자</div></div>
@@ -392,7 +392,7 @@ footer .foot-links a:hover{color:var(--lime)}
       <div class="fy">
         <p class="who">AI를 조직에 들이려는 사람이라면</p>
         <h3>연구소는 AI를 실제로 굴립니다</h3>
-        <p>사람 개입 없이 매일 읽고 쓰고 배우는 <strong>AI 인턴</strong>을 공개로 관찰하는 실험을 준비하고 있습니다. 틀린 날까지 남깁니다.</p>
+        <p>사람 개입 없이 매일 읽고 쓰고 배우는 <strong>AI 인턴</strong>을 공개로 관찰하는 실험을 하고 있습니다. 틀린 날까지 남깁니다.</p>
         <!-- INTERN-LAUNCH: 공개 시 span 삭제, a 태그 hidden 제거 -->
         <a href="/lab/ai-intern?lang=ko" class="go">AI 인턴 실험 보기 →</a>
       </div>
@@ -472,7 +472,7 @@ footer .foot-links a:hover{color:var(--lime)}
       <h2 class="section-title">차우진</h2>
     </div>
     <div class="who-grid fade">
-      <div><img src="images/woojin.jpg" alt="Woojin Cha" class="profile-photo"></div>
+      <div><img src="images/woojin-600.jpg" width="600" height="600" loading="lazy" alt="Woojin Cha" class="profile-photo"></div>
       <div>
         <div class="who-text">
           <p>1999년부터 활동해 온 대중문화 평론가이자 산업 분석가, 엔터문화연구소(Neo Vibe Lab) 대표입니다. 음악·미디어·IP·테크를 가로지르는 25년 이상의 경험으로 한국 엔터테인먼트 생태계의 주요 기업에 리서치와 전략을 자문합니다. 문화체육관광부 자문위원(2025~).</p>
@@ -503,7 +503,7 @@ footer .foot-links a:hover{color:var(--lime)}
         <p><strong>AI 인턴 1호</strong>가 매일 엔터 산업을 읽고 씁니다. 사람이 고르지도 고치지도 않습니다. 위의 좌표로 판정하고, 틀린 날까지 남기고, 얼마나 자라는지 공개로 봅니다. 그 너머는 사람이 씁니다.</p>
       </div>
       <div class="right">
-        <p class="stat">엔터 바이브 리서치 · 매일 · 한국어 / English<br>세계 다섯 지역 · 성장 지표 <b>5축</b></p>
+        <p class="stat">AI 엔터 바이브 리서치 · 월~금 · 한국어 / English<br>세계 다섯 지역 · 성장 지표 <b>6축</b></p>
         <a href="/lab/ai-intern?lang=ko" class="btn btn-lime">지켜보기 →</a>
       </div>
     </div>
@@ -544,7 +544,7 @@ footer .foot-links a:hover{color:var(--lime)}
         <h3>차우진의 엔터문화연구소</h3>
         <p class="sub" style="font-size:13px;color:var(--lime);margin-bottom:16px">구독자 7,000+ · 주 2~3회 · 660편+</p>
         <p class="kr" style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:24px">음악을 중심으로 엔터 산업의 구조, 팬덤, IP, 테크를 비평적 관점에서 읽습니다. 리서치 리포트, 산업 분석, 케이스 스터디, 업계 인터뷰. 관점은 사람이 씁니다.</p>
-        <p style="font-size:13px;color:var(--gray-dark);line-height:1.7">
+        <p style="font-size:13px;color:var(--gray);line-height:1.7">
           <span class="mono" style="font-size:11px;color:var(--lime)">FREE</span> 주간 산업 분석 · 칼럼<br>
           <span class="mono" style="font-size:11px;color:var(--white)">PAID</span> 딥리서치 · 리포트 · 케이스 스터디 · 인터뷰
         </p>

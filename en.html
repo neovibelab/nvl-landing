@@ -190,7 +190,7 @@ section{padding:100px 0}
 .nl-info .nl-logos img{width:48px;height:48px;border-radius:4px;background:var(--dark)}
 .nl-form{background:var(--dark);border:1px solid var(--gray-dark);padding:32px;min-height:340px;display:flex;flex-direction:column}
 .nl-form iframe{flex:1;width:100%;min-height:280px;border:none}
-.nl-form-note{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);margin-top:12px;text-align:center}
+.nl-form-note{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray);margin-top:12px;text-align:center}
 .nl-recent{margin-top:64px}
 .nl-recent-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px}
 .nl-archive-link{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);text-decoration:none;transition:color .2s}
@@ -233,12 +233,12 @@ section{padding:100px 0}
 select.form-input{cursor:pointer}
 select.form-input:invalid{color:var(--gray)}
 textarea.form-input{resize:vertical;min-height:120px}
-.form-note{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray-dark)}
+.form-note{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray)}
 .form-success{border:1px solid rgba(214,255,146,0.35);background:var(--lime-dim);padding:32px;font-size:15px;line-height:1.8;color:var(--white)}
 .form-error{font-size:13px;color:#E08585;line-height:1.7;margin-top:4px}
 
 /* ── Footer ── */
-footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);letter-spacing:.05em}
+footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray);letter-spacing:.05em}
 
 /* ── Responsive ── */
 @media(max-width:900px){
@@ -346,20 +346,20 @@ footer .foot-links a:hover{color:var(--lime)}
 <section class="hero">
   <div class="hero-banner"><img src="images/banner.png" alt="Neo Vibe Lab Seoul"></div>
   <div class="hero-body">
-    <p class="label fade" style="margin-bottom:20px">Neo Vibe Lab · Seoul</p>
-    <h1 class="hero-h1 fade">Anyone can find the signal.<br>We read the <span class="lime">vibe</span>.</h1>
-    <p class="hero-def fade">A boutique research lab connecting entertainment with technology, finance, culture and consumer industries.</p>
-    <p class="hero-sub fade">
+    <p class="label" style="margin-bottom:20px">Neo Vibe Lab · Seoul</p>
+    <h1 class="hero-h1">Anyone can find the signal.<br>We read the <span class="lime">vibe</span>.</h1>
+    <p class="hero-def">A boutique research lab connecting entertainment with technology, finance, culture and consumer industries.</p>
+    <p class="hero-sub">
       <span class="kr" style="color:var(--white);font-weight:500">We find the vibe in music. What is changing in K-pop, fandom, IP and live shows the future of other industries first.</span><br>
       We carry those principles into other industries, and write down what other industries can learn here. Weekly in the newsletter, quarterly in reports, and in advisory and talks where needed.
     </p>
-    <div class="hero-cta fade">
+    <div class="hero-cta">
       <a href="#newsletter" class="btn btn-lime">Newsletter</a>
       <a href="#report" class="btn btn-ghost">Read the report</a>
       <a href="#contact" class="btn btn-ghost">Work with us</a>
     </div>
   </div>
-  <div class="stats-wrap fade">
+  <div class="stats-wrap">
     <div class="stats">
       <div><div class="n">660+</div><div class="l">newsletter issues</div></div>
       <div><div class="n">7,000+</div><div class="l">subscribers</div></div>
@@ -392,7 +392,7 @@ footer .foot-links a:hover{color:var(--lime)}
       <div class="fy">
         <p class="who">If you are bringing AI into your organization</p>
         <h3>We actually run AI here</h3>
-        <p>We are preparing a public experiment: an <strong>AI intern</strong> that reads, writes and learns every day with no human in the loop. The wrong days stay on record too.</p>
+        <p>We are running a public experiment: an <strong>AI intern</strong> that reads, writes and learns every day with no human in the loop. The wrong days stay on record too.</p>
         <!-- INTERN-LAUNCH: 공개 시 span 삭제, a 태그 hidden 제거 -->
         <a href="/lab/ai-intern?lang=en" class="go">See the AI intern →</a>
       </div>
@@ -472,7 +472,7 @@ footer .foot-links a:hover{color:var(--lime)}
       <h2 class="section-title">Woojin Cha</h2>
     </div>
     <div class="who-grid fade">
-      <div><img src="images/woojin.jpg" alt="Woojin Cha" class="profile-photo"></div>
+      <div><img src="images/woojin-600.jpg" width="600" height="600" loading="lazy" alt="Woojin Cha" class="profile-photo"></div>
       <div>
         <div class="who-text">
           <p>Pop culture critic and industry analyst since 1999, founder of Neo Vibe Lab. Over 25 years across music, media, IP and technology, advising major companies in the Korean entertainment ecosystem on research and strategy. Advisor to the Ministry of Culture, Sports and Tourism (2025~).</p>
@@ -503,7 +503,7 @@ footer .foot-links a:hover{color:var(--lime)}
         <p><strong>AI Intern 01</strong> reads and writes about the entertainment industry every day. No human picks or edits. It calls the grid above, keeps the wrong days on record, and grows in public. Beyond that, a human writes.</p>
       </div>
       <div class="right">
-        <p class="stat">Entertainment Vibe Research · daily · English / 한국어<br>five regions · <b>5</b> growth metrics</p>
+        <p class="stat">AI Entertainment Vibe Research · weekdays · English / 한국어<br>five regions · <b>6</b> growth metrics</p>
         <a href="/lab/ai-intern?lang=en" class="btn btn-lime">Watch it grow →</a>
       </div>
     </div>
@@ -544,7 +544,7 @@ footer .foot-links a:hover{color:var(--lime)}
         <h3>Neo Vibe Lab on LinkedIn</h3>
         <p class="sub" style="font-size:13px;color:var(--lime);margin-bottom:16px">3,000+ subscribers · weekly · free</p>
         <p class="kr" style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:24px">Cases from Korean and global entertainment, closed with one line on what another industry would take from them. Written by Woojin Cha. The Korean newsletter (660+ issues, free and paid) is the deep end; this is the English edition.</p>
-        <p style="font-size:13px;color:var(--gray-dark);line-height:1.7"><span class="mono" style="font-size:11px;color:var(--lime)">FREE</span> weekly · LinkedIn newsletter<br><span class="mono" style="font-size:11px;color:var(--white)">KO</span> full archive in Korean at maily.so</p>
+        <p style="font-size:13px;color:var(--gray);line-height:1.7"><span class="mono" style="font-size:11px;color:var(--lime)">FREE</span> weekly · LinkedIn newsletter<br><span class="mono" style="font-size:11px;color:var(--white)">KO</span> full archive in Korean at maily.so</p>
       </div>
       <div class="nl-form" style="justify-content:center;align-items:flex-start;gap:14px">
         <a href="https://linkedin.com/in/woojin-cha" target="_blank" rel="noopener" class="btn btn-lime">Subscribe on LinkedIn →</a>
