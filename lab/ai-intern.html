@@ -129,13 +129,13 @@ section{padding:72px 0;border-bottom:1px solid var(--gray-line)}
 .grid-wrap .gf{font-size:13px;font-weight:700;color:var(--white);display:flex;align-items:center}
 .grid-wrap .gc{display:flex;flex-direction:column;justify-content:center;gap:4px;transition:background .3s}
 .grid-wrap .gc.has{background:var(--lime-mid)}
-.grid-wrap .gc .v{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray);letter-spacing:.04em}
+.grid-wrap .gc .v{font-family:'DM Mono',monospace;font-size:11px;color:#b3b3aa;letter-spacing:.04em}
 .grid-wrap .gc .v b{color:var(--lime);font-weight:500}
 .grid-wrap .gc .v.sg b{color:var(--white)}
 .grid-legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray);letter-spacing:.04em}
 .grid-legend b{color:var(--lime);font-weight:500}
 .grid-legend .sg b{color:var(--white)}
-.grid-status{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray-dark);margin-top:8px}
+.grid-status{font-family:'DM Mono','Noto Sans KR',monospace;font-size:11px;color:var(--gray);margin-top:8px}
 
 /* ── Metrics ── */
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray-dark);border:1px solid var(--gray-dark);margin:24px 0}
@@ -161,7 +161,7 @@ section{padding:72px 0;border-bottom:1px solid var(--gray-line)}
 .sub-opts{display:flex;gap:22px;flex-wrap:wrap}
 .sub-opt{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);display:flex;align-items:center;gap:8px;cursor:pointer}
 .sub-opt input{accent-color:var(--lime)}
-.sub-fine{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray-dark);line-height:1.7}
+.sub-fine{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);line-height:1.7}
 .sub-fine strong{color:var(--gray);font-weight:700}
 .sub-fine a{color:var(--gray);text-decoration:none;border-bottom:1px dotted var(--gray-dark)}
 .sub-fine a:hover{color:var(--lime);border-color:var(--lime)}
@@ -174,7 +174,7 @@ section{padding:72px 0;border-bottom:1px solid var(--gray-line)}
 .closing a{color:var(--white);text-decoration:none;border-bottom:1px solid var(--gray-dark);transition:all .2s}
 .closing a:hover{color:var(--lime);border-color:var(--lime)}
 .lab-line{font-family:'DM Mono','Noto Sans KR',monospace;font-size:12px;color:var(--gray);line-height:1.8;margin-top:36px;padding-top:24px;border-top:1px solid var(--gray-line)}
-footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray-dark);letter-spacing:.05em}
+footer{padding:32px 0;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gray);letter-spacing:.05em}
 
 /* ── Language switch ── */
 [data-lang]{display:none}
@@ -200,6 +200,11 @@ html[data-ui="en"] [data-lang="en"]{display:block}
   .sub-opts{gap:14px 22px}
   .metrics{grid-template-columns:1fr}
   .metrics div:last-child{grid-column:auto}
+  /* UX 기준선(2026-09-28, ux-audit) - 모바일 글자 12px 아래 없음, 누르는 자리 40px 이상 */
+  .label,.pill,.grid-wrap .gh,.grid-wrap .gc .v,.grid-table th,.grid-status,.grid-legend span,footer{font-size:12.5px}
+  .pill{font-size:12px}
+  .lang-toggle a,.lang-toggle button{font-size:12.5px;min-width:44px;min-height:40px;display:inline-flex;align-items:center;justify-content:center}
+  .nav-logo{min-height:44px}
 }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "사람이 정말 아무것도 안 건드리나요", "acceptedAnswer": {"@type": "Answer", "text": "소재 선택·좌표 판정·집필·사실 검증·자기 검수·발행까지 한 회전이 사람 없이 끝납니다. 대표는 발행된 뒤에 읽습니다. 다만 정직하게 적자면 파이프라인과 프롬프트는 사람이 만들었습니다. 고정된 것은 규칙이고, 매일 달라지는 판단이 인턴의 몫입니다."}}, {"@type": "Question", "name": "독자는 뭘 얻나요", "acceptedAnswer": {"@type": "Answer", "text": "매일 사건 하나에 대한 좌표 판정(어떤 요인이 · 생산에서 소비 중 어디로 · 주변에서 도는지 이미 주류인지)과 다른 업종이 가져갈 것 한 문장을 얻습니다. 엔터를 산업 섹터가 아니라 다른 산업의 레퍼런스로 읽는 방식입니다. 읽는 사람은 둘을 생각하고 씁니다. 음악업계에서 새 사업이나 확장을 고민하는 사람에게는 오늘 사건이 판단에 쓰이는지를 맞추고, 엔터 밖에서 음악 산업이 궁금한 사람에게는 업계 용어를 몰라도 끝까지 읽히는지를 맞춥니다."}}, {"@type": "Question", "name": "어떤 기술을 쓰나요", "acceptedAnswer": {"@type": "Answer", "text": "판정·집필·검증·검수에는 Claude Opus 5, 재료 인출과 요약처럼 가벼운 자리에는 Haiku 4.5를 씁니다. 사실 검증에는 웹 검색 도구를 붙였습니다. 소재는 자체 수집기가 5개 지역에서 모은 뉴스 풀(Supabase)에서 고르고, 회전은 GitHub Actions가 매일 08:30에 돌리며, 사이트는 커밋과 동시에 Vercel이 배포합니다. 메일은 Buttondown입니다. 코드와 프롬프트, 매일의 판정 로그는 github.com/neovibelab/nvl-intern에 전부 열려 있습니다."}}, {"@type": "Question", "name": "틀리면 어떻게 되나요", "acceptedAnswer": {"@type": "Answer", "text": "지웁니다가 아니라 남깁니다. 사실 검증에서 몇 개가 확인되고 몇 개가 반박됐는지, 자기 검수를 몇 번 만에 통과했는지가 글마다 붙습니다. 검수를 통과하지 못하면 「미해결」 표시를 달고 지적을 그대로 실은 채 발행합니다. 실패를 감추지 않는 것이 이 실험의 규칙입니다."}}, {"@type": "Question", "name": "비용은 얼마나 드나요", "acceptedAnswer": {"@type": "Answer", "text": "한 편에 1달러 안팎입니다(모델 호출 기준, 실측 상한 1.4달러). 하루 한 편이니 월 30~40달러 선입니다."}}, {"@type": "Question", "name": "구독하면 무엇이 오나요", "acceptedAnswer": {"@type": "Answer", "text": "월요일부터 금요일까지 하루 한 편, 토요일에 주간 회고가 옵니다. 한국어와 영어 중 하나를 고릅니다. 메일 대신 RSS로 받아도 되고, 사이트에서 바로 읽어도 됩니다."}}]}</script>
