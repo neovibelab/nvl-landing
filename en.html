@@ -125,6 +125,7 @@ section{padding:100px 0}
 .report-figure{--ink:#16160F;--lime-ink:#566B17;display:block;background:#FBFAF4;border:1px solid #E4E0CF;border-top:3px solid var(--lime);border-radius:5px;padding:18px;transition:box-shadow .25s}
 .report-figure:hover{box-shadow:0 0 0 1px var(--lime)}
 .report-figure svg{width:100%;height:auto;display:block}
+.report-figure{text-decoration:none;color:#16160F}
 .report-figure .fig-m{display:none}
 .report-figure svg text{font-family:'Noto Sans KR',sans-serif}
 .report-figure .fig-title{font-size:14px;font-weight:800;fill:var(--lime-ink)}
@@ -342,7 +343,7 @@ footer .foot-links a:hover{color:var(--lime)}
   /* FIGURE 03 - 720px 도표가 327px로 줄면 도표 안 글자가 9~10px이 된다. 같은 내용을 글로 다시 짠다 */
   .report-figure{padding:14px}
   .report-figure svg{display:none}
-  .report-figure .fig-m{display:block;color:#16160F;font-family:'Noto Sans KR',sans-serif}
+  .report-figure .fig-m{display:block;color:#16160F;font-family:'Noto Sans KR',sans-serif;word-break:keep-all}
   .fig-m .fm-title{font-size:14px;font-weight:800;color:#566B17;margin-bottom:6px;line-height:1.5}
   .fig-m .fm-axis{font-size:12.5px;font-weight:700;margin-bottom:8px}
   .fig-m .fm-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
