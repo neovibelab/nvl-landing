@@ -728,15 +728,16 @@ if(bf){
 </script>
 <a class="m-sub" href="https://maily.so/draft.briefing?utm_source=nvl-landing&amp;utm_medium=sticky" target="_blank" rel="noopener" onclick="gtag('event','nl_subscribe_click',{location:'sticky'})">뉴스레터 구독 ↗</a>
 <script>
-/* 모바일 하단 고정 구독 버튼 - 첫 화면 버튼이 안 보이고, 뉴스레터·문의 구역이 화면 밖일 때만 */
+/* 모바일 하단 고정 구독 버튼 - 첫 화면 버튼이 안 보이고, 뉴스레터·문의 구역이 화면 밖일 때만.
+   스크롤 이벤트 + 위치 계산으로 판정한다(IntersectionObserver는 화면 갱신 주기에 묶여 가상 시간·숨은 창에서 늦게 돈다) */
 (function(){
   var b=document.querySelector('.m-sub'),hero=document.querySelector('.hero-cta');
-  if(!b||!hero||!('IntersectionObserver' in window))return;
-  var zones=[].slice.call(document.querySelectorAll('#newsletter,#contact')),heroIn=true,inZone={};
-  function upd(){var z=zones.some(function(x){return inZone[x.id]});b.classList.toggle('show',!heroIn&&!z)}
-  new IntersectionObserver(function(es){es.forEach(function(e){heroIn=e.isIntersecting});upd()}).observe(hero);
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){inZone[e.target.id]=e.isIntersecting});upd()});
-  zones.forEach(function(x){io.observe(x)});
+  if(!b||!hero)return;
+  var zones=[].slice.call(document.querySelectorAll('#newsletter,#contact'));
+  function inView(el){var r=el.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight}
+  function upd(){b.classList.toggle('show',!inView(hero)&&!zones.some(inView))}
+  addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+  window.__mSubUpd=upd;
 })();
 </script>
 </body>
