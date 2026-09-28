@@ -125,6 +125,7 @@ section{padding:100px 0}
 .report-figure{--ink:#16160F;--lime-ink:#566B17;display:block;background:#FBFAF4;border:1px solid #E4E0CF;border-top:3px solid var(--lime);border-radius:5px;padding:18px;transition:box-shadow .25s}
 .report-figure:hover{box-shadow:0 0 0 1px var(--lime)}
 .report-figure svg{width:100%;height:auto;display:block}
+.report-figure .fig-m{display:none}
 .report-figure svg text{font-family:'Noto Sans KR',sans-serif}
 .report-figure .fig-title{font-size:14px;font-weight:800;fill:var(--lime-ink)}
 .report-figure .axc{font-size:12px;font-weight:700;fill:var(--ink)}
@@ -324,6 +325,36 @@ footer .foot-links a:hover{color:var(--lime)}
   .intern-card{grid-template-columns:1fr;padding:28px}
 }
 @media(max-width:540px){.vs{grid-template-columns:1fr}}
+
+/* ── 모바일 가독성·터치 영역 (2026-09-28 UX 기준선, 대표 지시) ──
+   브랜드 정본의 글자 크기는 데스크톱 기준이다 - 모바일은 따로 잡는다(대표: 「모바일 기준은 아니므로 무시해도 돼」).
+   글자는 12px 아래로 두지 않고, 누르는 자리는 높이 44px(애플 권장)을 맞춘다. */
+@media(max-width:540px){
+  .label,.stat-label,.stats .l,.fy .who,.who-refs h4,.form-label,.form-note,.nl-form-note,.letter-date,footer{font-size:12.5px}
+  .letter-badge{font-size:11.5px}
+  .fy .go,.nl-archive-link{display:inline-flex;align-items:center;min-height:44px;font-size:13.5px}
+  .fy .go{margin-top:6px}
+  .contact-link{min-height:44px}
+  .contact-link span{font-size:12.5px}
+  .lang-toggle a,.lang-toggle button{font-size:12.5px;min-width:44px;min-height:40px;display:inline-flex;align-items:center;justify-content:center}
+  .foot-links a{display:inline-block;padding:12px 4px}
+  /* FIGURE 03 - 720px 도표가 327px로 줄면 도표 안 글자가 9~10px이 된다. 같은 내용을 글로 다시 짠다 */
+  .report-figure{padding:14px}
+  .report-figure svg{display:none}
+  .report-figure .fig-m{display:block;color:#16160F;font-family:'Noto Sans KR',sans-serif}
+  .fig-m .fm-title{font-size:14px;font-weight:800;color:#566B17;margin-bottom:6px;line-height:1.5}
+  .fig-m .fm-axis{font-size:12.5px;font-weight:700;margin-bottom:8px}
+  .fig-m .fm-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .fig-m .fm-col{font-size:12px;font-weight:600;color:#6c6857;line-height:1.4}
+  .fig-m .fm-q{background:#fafafa;border:1px solid #ddd;padding:10px 9px;display:flex;flex-direction:column;gap:3px;line-height:1.45}
+  .fig-m .fm-q.fm-lime{background:#D6FF92;border-color:#D6FF92}
+  .fig-m .fm-tag{font-size:11.5px;color:#6c6857;font-weight:600}
+  .fig-m .fm-q b{font-size:14px;font-weight:800}
+  .fig-m .fm-qt,.fig-m .fm-qt-em{font-size:12.5px;color:#4a473a;font-weight:600}
+  .fig-m .fm-qm{font-size:13px;color:#2a2a20;font-weight:600}
+  .fig-m .fm-qn{font-size:12px;color:#5f5b4c}
+  .fig-m .fm-note{font-size:12px;color:#5f5b4c;margin-top:10px;line-height:1.6}
+}
 </style>
 </head>
 <body>
@@ -379,8 +410,8 @@ footer .foot-links a:hover{color:var(--lime)}
     <div class="foryou fade">
       <div class="fy">
         <p class="who">If you work in entertainment or content</p>
-        <h3>One piece a week on how the industry is built</h3>
-        <p>How fandom, IP, capital, tech and policy are reshaping the entertainment value chain, with music at the center. And how what happened first in another region repeats here. Korean weekly, free to start; an English edition on LinkedIn.</p>
+        <h3>One to three pieces a week on how the industry is built</h3>
+        <p>How fandom, IP, capital, tech and policy are reshaping the entertainment value chain, with music at the center. And how what happened first in another region repeats here. In Korean, one to three pieces a week, free to start; an English edition on LinkedIn.</p>
         <a href="#newsletter" class="go">Newsletter →</a>
       </div>
       <div class="fy">
@@ -448,7 +479,7 @@ footer .foot-links a:hover{color:var(--lime)}
           <rect x="360" y="270" width="290" height="200" fill="#f7f7f7" stroke="#ddd"/>
           <text x="86" y="96" class="qh">A · 정석의 기적</text><text x="86" y="114" class="qt">1기 집중 · 가장 안정적</text><text x="86" y="140" class="qm">비스트 · 인피니트 · 씨스타</text><text x="86" y="158" class="qm">에이핑크 · VIXX · 걸스데이</text><text x="86" y="176" class="qm">오마이걸 · 스테이씨</text><text x="376" y="96" class="qh">B · 선점의 기적</text><text x="376" y="114" class="qt qt-em">가장 파괴적: 산업을 재편</text><text x="376" y="140" class="qm">BTS · 마마무 · 에이티즈</text><text x="376" y="158" class="qm">키오프 · 드림캐쳐 · QWER</text><text x="376" y="184" class="qn">동력 × 신규채널이 상호 강화하는 성장 루프</text><text x="86" y="296" class="qh">C · 미완의 기적</text><text x="86" y="314" class="qt">거의 빈 칸</text><text x="86" y="340" class="qm">틴탑 · B1A4</text><text x="86" y="366" class="qn">음방 시대엔 동력 없이 반복 히트가 불가능</text><text x="376" y="296" class="qh">D · 시대의 기적</text><text x="376" y="314" class="qt">2~3기에만 존재 · 화려하나 짧음</text><text x="376" y="340" class="qm">크레용팝 · 모모랜드</text><text x="376" y="358" class="qm">브레이브걸스 · 라붐 · 피프티피프티</text><text x="376" y="384" class="qn">바이럴형 = 뉴미디어가 만든 현상</text>
           <text x="0" y="498" class="note">전환 D→A EXID·여자친구 / D→B 리센느(진행 중) · 탈락 B.A.P·피프티피프티·AOA · 틈새공략형(블락비·영파씨·트리플에스)은 B·D 사이 독자 경로</text>
-        </svg>
+        </svg><div class="fig-m"><p class="fm-title">FIGURE 03 · 4분면: 미디어 전략 × 음악 동력</p><p class="fm-axis">미디어 전략 →</p><div class="fm-grid"><p class="fm-col">주류 채널 (음방·음원)</p><p class="fm-col">신규 채널 (SNS·유튜브·숏폼·해외)</p><div class="fm-q"><span class="fm-tag">음악 동력 있음</span><b>A · 정석의 기적</b><span class="fm-qt">1기 집중 · 가장 안정적</span><span class="fm-qm">비스트 · 인피니트 · 씨스타</span><span class="fm-qm">에이핑크 · VIXX · 걸스데이</span><span class="fm-qm">오마이걸 · 스테이씨</span></div><div class="fm-q fm-lime"><span class="fm-tag">음악 동력 있음</span><b>B · 선점의 기적</b><span class="fm-qt">가장 파괴적: 산업을 재편</span><span class="fm-qm">BTS · 마마무 · 에이티즈</span><span class="fm-qm">키오프 · 드림캐쳐 · QWER</span><span class="fm-qn">동력 × 신규채널이 상호 강화하는 성장 루프</span></div><div class="fm-q"><span class="fm-tag">음악 동력 없음</span><b>C · 미완의 기적</b><span class="fm-qt">거의 빈 칸</span><span class="fm-qm">틴탑 · B1A4</span><span class="fm-qn">음방 시대엔 동력 없이 반복 히트가 불가능</span></div><div class="fm-q"><span class="fm-tag">음악 동력 없음</span><b>D · 시대의 기적</b><span class="fm-qt">2~3기에만 존재 · 화려하나 짧음</span><span class="fm-qm">크레용팝 · 모모랜드</span><span class="fm-qm">브레이브걸스 · 라붐 · 피프티피프티</span><span class="fm-qn">바이럴형 = 뉴미디어가 만든 현상</span></div></div><p class="fm-note">전환 D→A EXID·여자친구 / D→B 리센느(진행 중) · 탈락 B.A.P·피프티피프티·AOA · 틈새공략형(블락비·영파씨·트리플에스)은 B·D 사이 독자 경로</p></div>
       </a>
       <div class="report-info">
         <p class="report-date">2026.06 · Neo Vibe Lab</p>
@@ -536,7 +567,7 @@ footer .foot-links a:hover{color:var(--lime)}
   <div class="container">
     <div class="section-head fade">
       <p class="label">Newsletter</p>
-      <h2 class="section-title">One piece a week on the entertainment industry</h2>
+      <h2 class="section-title">One to three pieces a week on the entertainment industry</h2>
     </div>
         <div class="nl-layout fade">
       <div class="nl-info">
