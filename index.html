@@ -357,6 +357,15 @@ footer .foot-links a:hover{color:var(--lime)}
   .fig-m .fm-qn{font-size:12px;color:#5f5b4c}
   .fig-m .fm-note{font-size:12px;color:#5f5b4c;margin-top:10px;line-height:1.6}
 }
+
+/* ── 모바일 하단 고정 구독 버튼 (2026-09-28, 대표 지시 - 모바일 메뉴 대신) ──
+   첫 화면 버튼이 보이는 동안은 숨고, 뉴스레터·문의 폼이 화면에 있으면 폼을 가리지 않게 숨는다. */
+.m-sub{display:none}
+@media(max-width:540px){
+  .m-sub{display:flex;position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;min-height:50px;align-items:center;justify-content:center;background:var(--lime);color:var(--black);font-weight:800;font-size:15px;letter-spacing:.01em;text-decoration:none;border-radius:2px;box-shadow:0 8px 28px rgba(0,0,0,.55);transform:translateY(160%);transition:transform .25s ease;pointer-events:none}
+  .m-sub.show{transform:none;pointer-events:auto}
+  footer{padding-bottom:88px}
+}
 </style>
 </head>
 <body>
@@ -716,6 +725,19 @@ if(bf){
     }
   });
 }
+</script>
+<a class="m-sub" href="https://maily.so/draft.briefing?utm_source=nvl-landing&amp;utm_medium=sticky" target="_blank" rel="noopener" onclick="gtag('event','nl_subscribe_click',{location:'sticky'})">뉴스레터 구독 ↗</a>
+<script>
+/* 모바일 하단 고정 구독 버튼 - 첫 화면 버튼이 안 보이고, 뉴스레터·문의 구역이 화면 밖일 때만 */
+(function(){
+  var b=document.querySelector('.m-sub'),hero=document.querySelector('.hero-cta');
+  if(!b||!hero||!('IntersectionObserver' in window))return;
+  var zones=[].slice.call(document.querySelectorAll('#newsletter,#contact')),heroIn=true,inZone={};
+  function upd(){var z=zones.some(function(x){return inZone[x.id]});b.classList.toggle('show',!heroIn&&!z)}
+  new IntersectionObserver(function(es){es.forEach(function(e){heroIn=e.isIntersecting});upd()}).observe(hero);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){inZone[e.target.id]=e.isIntersecting});upd()});
+  zones.forEach(function(x){io.observe(x)});
+})();
 </script>
 </body>
 </html>
