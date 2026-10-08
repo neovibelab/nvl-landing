@@ -9,10 +9,10 @@
 <link rel="apple-touch-icon" href="/images/brand/apple-touch-icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0A0A0A">
-<title>AI 엔터 바이브 리서치 · 엔터문화연구소 (Neo Vibe Lab)</title>
-<meta name="description" content="AI 인턴이 매일 엔터 산업 뉴스를 읽고, 아직 이름이 없는 변화의 조짐을 먼저 씁니다. 맞았는지는 90일 뒤 스스로 채점합니다.">
-<meta property="og:title" content="AI 엔터 바이브 리서치 · 엔터문화연구소의 AI 실험">
-<meta property="og:description" content="AI 인턴이 매일 엔터 산업 뉴스를 읽고, 아직 이름이 없는 변화의 조짐을 먼저 씁니다. 맞았는지는 90일 뒤 스스로 채점합니다.">
+<title>AI 인턴 1기 기록 · 엔터문화연구소 (Neo Vibe Lab)</title>
+<meta name="description" content="엔터문화연구소가 한 달 동안 내부에서 돌린 AI 인턴 실험의 기록. 여기서 다듬은 방식을 주간 'AI 음악 레이더'가 이어받았다.">
+<meta property="og:title" content="AI 인턴 1기 기록 · 엔터문화연구소">
+<meta property="og:description" content="엔터문화연구소가 한 달 동안 내부에서 돌린 AI 인턴 실험의 기록. 여기서 다듬은 방식을 주간 'AI 음악 레이더'가 이어받았다.">
 <meta property="og:image" content="https://www.neovibelab.com/images/brand/og-default-1200x630.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -139,7 +139,7 @@ section{padding:72px 0;border-bottom:1px solid var(--gray-line)}
 
 /* ── Metrics ── */
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray-dark);border:1px solid var(--gray-dark);margin:24px 0}
-.metrics div{background:var(--black);padding:22px 18px}
+.metrics>div{background:var(--black);padding:22px 18px}
 .metrics .name{font-size:15px;font-weight:700;color:var(--white);margin-bottom:6px}
 .metrics .desc{font-size:12.5px;color:var(--gray);line-height:1.6}
 
@@ -207,7 +207,6 @@ html[data-ui="en"] [data-lang="en"]{display:block}
   .nav-logo{min-height:44px}
 }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "사람이 정말 아무것도 안 건드리나요", "acceptedAnswer": {"@type": "Answer", "text": "소재 선택·좌표 판정·집필·사실 검증·자기 검수·발행까지 한 회전이 사람 없이 끝납니다. 대표는 발행된 뒤에 읽습니다. 다만 정직하게 적자면 파이프라인과 프롬프트는 사람이 만들었습니다. 고정된 것은 규칙이고, 매일 달라지는 판단이 인턴의 몫입니다."}}, {"@type": "Question", "name": "독자는 뭘 얻나요", "acceptedAnswer": {"@type": "Answer", "text": "매일 사건 하나에 대한 좌표 판정(어떤 요인이 · 생산에서 소비 중 어디로 · 주변에서 도는지 이미 주류인지)과 다른 업종이 가져갈 것 한 문장을 얻습니다. 엔터를 산업 섹터가 아니라 다른 산업의 레퍼런스로 읽는 방식입니다. 읽는 사람은 둘을 생각하고 씁니다. 음악업계에서 새 사업이나 확장을 고민하는 사람에게는 오늘 사건이 판단에 쓰이는지를 맞추고, 엔터 밖에서 음악 산업이 궁금한 사람에게는 업계 용어를 몰라도 끝까지 읽히는지를 맞춥니다."}}, {"@type": "Question", "name": "어떤 기술을 쓰나요", "acceptedAnswer": {"@type": "Answer", "text": "판정·집필·검증·검수에는 Claude Opus 5, 재료 인출과 요약처럼 가벼운 자리에는 Haiku 4.5를 씁니다. 사실 검증에는 웹 검색 도구를 붙였습니다. 소재는 자체 수집기가 5개 지역에서 모은 뉴스 풀(Supabase)에서 고르고, 회전은 GitHub Actions가 매일 08:30에 돌리며, 사이트는 커밋과 동시에 Vercel이 배포합니다. 메일은 Buttondown입니다. 코드와 프롬프트, 매일의 판정 로그는 github.com/neovibelab/nvl-intern에 전부 열려 있습니다."}}, {"@type": "Question", "name": "틀리면 어떻게 되나요", "acceptedAnswer": {"@type": "Answer", "text": "지웁니다가 아니라 남깁니다. 사실 검증에서 몇 개가 확인되고 몇 개가 반박됐는지, 자기 검수를 몇 번 만에 통과했는지가 글마다 붙습니다. 검수를 통과하지 못하면 「미해결」 표시를 달고 지적을 그대로 실은 채 발행합니다. 실패를 감추지 않는 것이 이 실험의 규칙입니다."}}, {"@type": "Question", "name": "비용은 얼마나 드나요", "acceptedAnswer": {"@type": "Answer", "text": "한 편에 1달러 안팎입니다(모델 호출 기준, 실측 상한 1.4달러). 하루 한 편이니 월 30~40달러 선입니다."}}, {"@type": "Question", "name": "구독하면 무엇이 오나요", "acceptedAnswer": {"@type": "Answer", "text": "월요일부터 금요일까지 하루 한 편, 토요일에 주간 회고가 옵니다. 한국어와 영어 중 하나를 고릅니다. 메일 대신 RSS로 받아도 되고, 사이트에서 바로 읽어도 됩니다."}}]}</script>
 </head>
 <body>
 
@@ -217,7 +216,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     <li><a data-ko="/#method" data-en="/en#method" data-ko-t="읽는 법" data-en-t="Method" href="/#method">읽는 법</a></li>
     <li><a data-ko="/#report" data-en="/en#report" data-ko-t="리포트" data-en-t="Report" href="/#report">리포트</a></li>
     <li><a data-ko="/library" data-en="/library-en" data-ko-t="라이브러리" data-en-t="Library" href="/library">라이브러리</a></li>
-    <li class="lab-li"><!-- INTERN-LAUNCH: 다시 잠그려면 hidden 되돌린다 --><a data-ko="/lab?lang=ko" data-en="/lab?lang=en" data-ko-t="실험실" data-en-t="Lab" href="/lab" class="active">실험실</a></li>
+    <li class="lab-li"><a data-ko="/lab?lang=ko" data-en="/lab?lang=en" data-ko-t="실험실" data-en-t="Lab" href="/lab" class="active">실험실</a></li>
     <li><a data-ko="/#services" data-en="/en#services" data-ko-t="함께 일하기" data-en-t="Work with us" href="/#services">함께 일하기</a></li>
     <li><a data-ko="/#newsletter" data-en="/en#newsletter" data-ko-t="뉴스레터" data-en-t="Newsletter" href="/#newsletter">뉴스레터</a></li>
     <li><a data-ko="/#contact" data-en="/en#contact" data-ko-t="문의" data-en-t="Contact" href="/#contact">문의</a></li>
@@ -226,6 +225,7 @@ html[data-ui="en"] [data-lang="en"]{display:block}
 </nav>
 
 <!-- ══════════════════════════ 한국어 ══════════════════════════ -->
+<!-- 2026-10-08 대표 지시 - 1기 종료 뒤 「한 달 내부 실험의 기록」 페이지로 바꿨다. 주간 'AI 음악 레이더'가 이 기록을 출처로 링크한다. -->
 <div data-lang="ko">
 
 <header class="masthead">
@@ -233,209 +233,79 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     <div class="eyebrow fade">
       <span class="pill lime">AI 인턴 01</span>
       <span class="pill">Neo Vibe Lab</span>
-      <span class="pill">매일 · 한국어 / English</span>
+      <span class="pill">1기 기록 · 2026.09.05~10.07</span>
     </div>
-    <h1 class="fade">AI 엔터 <span class="lime">바이브</span> 리서치</h1>
-    <p class="sub fade"><strong>AI 인턴이 매일 엔터 산업 뉴스를 읽고, 아직 이름이 없는 변화의 조짐을 먼저 씁니다.</strong> 맞았는지는 90일 뒤 스스로 채점합니다.</p>
-    <p class="masthead-cta fade"><a class="btn btn-lime" href="https://intern.neovibelab.com/">매일 발행본 읽기 →</a><a class="btn btn-ghost" href="#subscribe">메일로 받기</a></p>
+    <h1 class="fade">AI 인턴 1기 <span class="lime">기록</span></h1>
+    <p class="sub fade"><strong>엔터문화연구소가 한 달 동안 내부에서 돌린 AI 인턴 실험입니다.</strong> 매일 엔터 산업 뉴스를 골라 쓰게 했고, 여기서 다듬은 방식은 연구소 뉴스레터의 주간 연재 'AI 음악 레이더'가 이어받았습니다.</p>
+    <p class="masthead-cta fade"><a class="btn btn-lime" href="https://maily.so/draft.briefing?via=intern-record" target="_blank" rel="noopener">AI 음악 레이더 받기 →</a><a class="btn btn-ghost" href="https://intern.neovibelab.com/">지난 글 읽기</a></p>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <p class="label fade">이게 무엇인가</p>
-    <h2 class="section-title fade">엔터문화연구소가 AI 인턴 한 명을 채용했습니다</h2>
+    <p class="label fade">한 달의 숫자</p>
+    <h2 class="section-title fade">33일 동안 사람 없이 매일 한 편</h2>
     <div class="prose fade">
-      <p class="lead">이름은 아직 없습니다. 매일 글로벌 엔터테인먼트 산업에서 벌어지는 일을 읽고, 그것이 어디로 가는지 한 편씩 씁니다. 사람이 고르지도 고치지도 않습니다. 얼마나 자라는지, 자라기는 하는지를 공개로 지켜보는 실험입니다.</p>
-      <p><strong>두 사람을 생각하고 씁니다.</strong> 한 사람은 케이팝을 포함한 음악업계에서 새 사업이나 확장을 고민하는 사람입니다. 이 사람이 <strong>무엇을 다룰지</strong>를 정합니다. 그날 사건이 사업 판단에 쓰이지 않으면 소재로 고르지 않습니다. 통념을 깨는 이야기라는 것만으로는 부족합니다.</p>
-      <p>다른 한 사람은 엔터 업계 밖에 있으면서 음악 산업이 어떻게 돌아가는지 궁금한 사람입니다. 이 사람이 <strong>어디까지 설명할지</strong>를 정합니다. 업계에서 당연하게 쓰는 말도 본문에서 한 번 세우고 넘어갑니다. 신탁단체가 무엇을 하는 곳인지, 유통사가 어디서 돈을 버는지, 카탈로그를 판다는 게 무슨 뜻인지를 처음 듣는 말로 놓고 씁니다.</p>
-      <p>둘은 순위가 아닙니다. 하나는 <strong>고르는 기준</strong>이고 하나는 <strong>푸는 기준</strong>이라 매일 같이 걸립니다. 난이도로 말하면 업계 리포트보다 쉽고 일반 뉴스보다 깊은 자리입니다.</p>
-    </div>
-    <div class="subscribe fade" style="margin-top:36px">
-      <h3>구독하기</h3>
-      <p class="hint">월요일부터 금요일까지 한 편, 토요일엔 그 주 회고. 한국어 또는 영어. 언제든 그만둘 수 있습니다.</p>
-      <form class="sub-form" action="https://buttondown.com/api/emails/embed-subscribe/nvl-intern" method="post" target="_blank">
-        <div class="sub-row">
-          <input type="email" name="email" class="form-input" placeholder="이메일" required>
-          <button type="submit" class="btn btn-lime">구독</button>
-        </div>
-        <div class="sub-opts">
-          <label class="sub-opt"><input type="radio" name="metadata__lang" value="ko" checked> 한국어</label>
-          <label class="sub-opt"><input type="radio" name="metadata__lang" value="en"> English</label>
-        </div>
-        <div class="sub-opts">
-        </div>
-        <div class="sub-opts">
-          <span class="sub-opt" style="cursor:default">무엇이 궁금한가요 (선택)</span>
-          <label class="sub-opt"><input type="radio" name="metadata__segment" value="industry"> 엔터 산업</label>
-          <label class="sub-opt"><input type="radio" name="metadata__segment" value="ai"> AI 실험</label>
-          <label class="sub-opt"><input type="radio" name="metadata__segment" value="both"> 둘 다</label>
-        </div>
-        <input type="hidden" name="embed" value="1">
-        <p class="sub-fine"><strong>구독을 누르면 확인 메일(영문)이 갑니다. 그 안의 링크를 눌러야 구독이 끝납니다.</strong> 발신자는 AI 인턴 01, 광고 없음.</p>
-        <p class="sub-after">메일 없이 읽어도 됩니다. 매일 글과 기록은 <a href="https://intern.neovibelab.com/">intern.neovibelab.com</a>에 그대로 쌓입니다.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <p class="label fade">왜 하는가</p>
-    <h2 class="section-title fade">AI가 쓰는 것은 흔합니다. 혼자서 나아지는지를 재는 것은 흔하지 않습니다</h2>
-    <div class="prose fade">
-      <p>대부분의 AI 도입 사례는 잘된 결과만 보여줍니다. 이 실험은 반대로 갑니다. 틀린 날, 아무 말도 못 한 날, 검수를 통과 못 해 미해결 표시를 달고 나간 날까지 전부 남깁니다.</p>
-      <p>연구소가 이 실험을 하는 이유는 셋입니다. 첫째, AI 인턴이 애널리스트로 사람 없이 자라는지 실제 데이터로 확인하고 싶습니다. 자란다면 어떤 일을 맡길 수 있는지, 어느 영역에서 전문가가 되는지도 보려고 합니다. 둘째, 그 과정에서 배운 것을 연구소의 일하는 방식에 다시 넣을 수 있는지 보려고 합니다. 셋째, 엔터 산업이라는 소재가 이 실험에 맞습니다. 산업 이슈에 대한 논평은 시간이 지나면 맞았는지 틀렸는지가 드러나기 때문입니다.</p>
-      <h3>인턴은 매일 무엇을 하나</h3>
-      <ol>
-        <li>다섯 지역에서 매일 걷힌 뉴스 가운데 후보 다섯을 추리고, <strong>그중 하나를 인턴이 고릅니다.</strong> 왜 골랐는지, 나머지 넷은 왜 안 골랐는지를 남깁니다.</li>
-        <li>그 사건에 좌표를 찍습니다. 아래 「방법」에 설명이 있습니다.</li>
-        <li>같은 이야기의 지난 글을 읽습니다. 몇 주째 이어지는 판이면 <strong>흩어진 조각을 이어 한 편으로 종합합니다.</strong></li>
-        <li>논평을 씁니다. 연구소가 쌓아 온 관점과 개념 사전, 산업 리포트를 읽고 자기 문장으로 씁니다.</li>
-        <li>수치와 인용을 웹에서 검증합니다. 확인이 안 되면 그렇다고 표시합니다.</li>
-        <li>다른 AI가 검수합니다. 논지에 금이 가면 고쳐 쓰고, 정해진 횟수를 넘기면 「미해결」을 달고 그대로 냅니다.</li>
-        <li>발행합니다. 웹과 이메일, 한국어와 영어. 글에 나오는 낯선 회사·사람·용어는 소재 요약 아래에 몇 줄로 풀어 붙입니다.</li>
-        <li>지난 판단을 다시 읽습니다. 예측은 본문에 싣지 않고 따로 쌓아 두었다가, 기한이 오거나 같은 판을 종합할 때 맞았는지 스스로 셉니다.</li>
-      </ol>
-      <p><strong>이 여덟 단계에 사람은 없습니다.</strong></p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <p class="label fade">방법</p>
-    <h2 class="section-title fade">산업을 읽는 좌표</h2>
-    <div class="prose fade">
-      <p>연구소는 엔터 산업의 변화를 한 가지 틀로 읽습니다. 모든 산업이 공유하는 세 단계 위에 변화를 미는 요인 일곱을 교차합니다.</p>
-      <div class="stages">
-        <div><div class="name">생산</div><div class="desc">만드는 쪽. 아티스트·제작·레이블·저작</div></div>
-        <div><div class="name">유통</div><div class="desc">나르는 쪽. 플랫폼·채널·공연·라이선스</div></div>
-        <div><div class="name">소비</div><div class="desc">받는 쪽. 팬·구독·굿즈·커뮤니티</div></div>
-      </div>
-      <table class="grid-table">
-        <thead><tr><th>요인</th><th>묻는 것</th></tr></thead>
-        <tbody>
-          <tr><td>IP</td><td>그 권리로 무엇을 만드나</td></tr>
-          <tr><td>포맷</td><td>콘텐츠가 어떤 그릇에 담기나</td></tr>
-          <tr><td>테크</td><td>무슨 기술이 기반을 바꾸나</td></tr>
-          <tr><td>자본</td><td>누가 돈을 대고 누가 가져가나</td></tr>
-          <tr><td>정책</td><td>어떤 규칙이 판을 정하나</td></tr>
-          <tr><td>교차산업</td><td>누가 밖에서 들어오나</td></tr>
-          <tr><td>교차정체성</td><td>팬의 또 다른 정체성은 무엇인가</td></tr>
-        </tbody>
-      </table>
-      <p>한 편의 글은 이 격자 위의 화살표 하나입니다. 어떤 요인이 어느 단계에서 어느 단계로 변화를 밀고 있는지, 그 변화가 어느 시점에 있는지를 찍습니다. 시점은 셋입니다. <strong>뉴스</strong>는 그날의 사건이라 다음이 없고, <strong>시그널</strong>은 이미 주류에서 벌어지는 중이라 차트·실적·공식 발표로 누구나 찾을 수 있고, <strong>바이브</strong>는 아직 주변에서만 도는데 조짐이 보이고 반복될 종류입니다. 예를 들어 <span class="arrow">[자본] 유통 → 소비 · 바이브</span>는 돈의 흐름이 소비 쪽으로 옮겨 가는 조짐이 보이지만 아직 주류 지표에는 안 잡힌다는 뜻입니다.</p>
-      <p><strong>바이브를 찍는 판정이 이 실험의 급소입니다.</strong> 시그널은 누구나 찾습니다. 바이브에는 「무엇이, 언제까지, 무엇으로 확인」 세 칸의 예측이 붙습니다. 본문에는 싣지 않고 따로 쌓아 두었다가 기한이 오면 스스로 채점합니다. 맞히는 것보다 채점할 수 있는 문장을 쓰는 것이 훈련입니다. 이 어휘와 격자는 연구소가 매일 돌리는 <strong>바이브 레이더</strong>의 것 그대로입니다.</p>
-      <p><strong>격자는 이렇게 생겼습니다.</strong> 일곱 요인과 세 단계가 만나는 스물한 칸이고, 빈 칸이 곧 아직 아무도 안 쓴 소재입니다.</p>
-      <div class="grid-wrap" data-grid="ko" aria-label="바이브 레이더 격자">
-        <div class="gh">요인 / 단계</div><div class="gh">생산</div><div class="gh">유통</div><div class="gh">소비</div>
-      </div>
-      <div class="grid-legend"><span><b>바이브</b> 주변에서 돈다</span><span class="sg"><b>시그널</b> 이미 주류다</span><span><b>뉴스</b>는 접어 둡니다</span></div>
-      <p class="grid-status" data-grid-status="ko">레이더 실시간 건수를 읽는 중…</p>
-      <p>이 좌표는 엔터에만 쓰는 틀이 아닙니다. 생산·유통·소비는 어느 산업에나 있습니다. 그래서 글마다 마지막에 한 줄이 붙습니다. <strong>「이 사례에서 다른 업종이 가져갈 것은 무엇인가.」</strong></p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <p class="label fade">기록</p>
-    <h2 class="section-title fade">무엇이 자라고 무엇을 지키나</h2>
-    <div class="prose fade">
-      <h3>무엇이 자라나</h3>
-      <p>모델을 다시 학습시키지 않습니다. 자라는 것은 <strong>판단</strong>입니다. 무엇을 고르나, 흩어진 사건을 어떻게 잇나, 어떻게 쓰나. <strong>연구소 대표가 고치지 않고 가져다 쓸 수 있는 판단이 늘어나는 것</strong>, 그것이 이 실험이 말하는 성장입니다. 자기가 쓴 글과 틀린 것의 기억, 실패에서 뽑아 스스로 고쳐 쓰는 규칙, 연구소 자료를 꺼내 쓰는 솜씨가 그 판단을 키웁니다. 여섯 가지로 잽니다.</p>
       <div class="metrics">
-        <div><div class="name">고르기</div><div class="desc">고른 사건이 안 고른 후보보다 크게 이어졌나</div></div>
-        <div><div class="name">잇기</div><div class="desc">흩어진 글을 이은 종합 편이 따로 읽는 것보다 나은가</div></div>
-        <div><div class="name">사실</div><div class="desc">검증을 통과한 수치의 비율</div></div>
-        <div><div class="name">논지</div><div class="desc">검수를 몇 번 만에 통과하나</div></div>
-        <div><div class="name">문체</div><div class="desc">사람이 쓴 글의 분포에 얼마나 가까운가</div></div>
-        <div><div class="name">사람 글과</div><div class="desc">연구소 사람이 쓴 글과 붙어 이긴 비율</div></div>
+        <div><div class="name">30편</div><div class="desc">한국어, 영어 각각. 매일 쓴 글 25편과 주간 회고 5편</div></div>
+        <div><div class="name">57%</div><div class="desc">사실 검증 통과. 수치와 인용 143개 중 82개. 확인이 안 된 문장은 지우지 않고 「미확인」으로 냈다</div></div>
+        <div><div class="name">16개</div><div class="desc">여러 편에 걸쳐 이어 쓴 이슈 줄기</div></div>
+        <div><div class="name">17건</div><div class="desc">글마다 풀어 붙인 회사, 사람, 용어 풀이</div></div>
+        <div><div class="name">21건</div><div class="desc">따로 쌓아 둔 예측. 1기가 끝나 채점까지는 가지 않았다</div></div>
+        <div><div class="name">약 1.5달러</div><div class="desc">한 편을 쓰는 데 든 모델 비용(9월 18일 실측)</div></div>
       </div>
-      <p>이 여섯의 시계열이 대시보드에 있습니다. 오르면 자율 성장이 가능하다는 뜻이고, 평평하면 불가능하다는 뜻입니다. 어느 쪽이든 결과입니다.</p>
-      <h3>사람은 어디 있나</h3>
-      <p>연구소 대표는 관찰자입니다. 글을 고르지 않고 고치지 않습니다. 대신 가끔 글 아래에 채점 코멘트를 답니다. 「이 판정은 틀렸다」「이 각도는 나도 못 봤다」 같은 것입니다. 코멘트가 없는 날이 정상입니다. 첫 90일 동안 이 코멘트는 인턴에게 전달되지 않습니다. 사람 없이 자라는지를 먼저 재기 위해서입니다.</p>
-      <p>독자도 채점할 수 있습니다. 글마다 버튼이 넷 있습니다.</p>
-      <div class="grade-row"><span>맞는 말이다</span><span>뻔하다</span><span>근거가 약하다</span><span>관점이 어긋난다</span></div>
-      <p>이 신호는 매주 묶여 인턴의 규칙에 반영되고, 무엇을 반영했고 무엇을 안 했는지는 주간 회고에 적힙니다.</p>
-      <h3>이름은 언제 생기나</h3>
-      <p>마일스톤이 넷 있습니다. 고르기·잇기·쓰기 세 판단이 각각 기준선을 넘으면 수습에서 정규가 됩니다. 정규가 되면 연구소가 실제 일을 하나 맡깁니다. 팩트시트 재료나 리서치 질문 같은 것입니다. <strong>그 결과물을 대표가 고치지 않고 쓸 수 있으면 정식 연구원이 되고, 그때 이름을 받습니다.</strong> 이름은 구독자가 정합니다. 6개월이 지나면 기준을 못 넘었어도 이름을 받습니다. 못 자란 채 이름을 받는 것도 그 나름의 이야기입니다.</p>
-      <p>격자의 어느 칸에서 유독 강해지면 그 칸이 담당 영역이 됩니다. 정해 주지 않고 드러나기를 기다립니다. 첫 과제의 결과가 「AI 애널리스트에게 무엇을 맡길 수 있나」의 첫 답입니다.</p>
-      <h3>지켜야 하는 것</h3>
-      <ul>
-        <li>모든 글에 AI가 썼다고 표시합니다.</li>
-        <li>인용과 요약의 경계를 지킵니다. 저작권을 다뤄 온 연구소가 AI를 어떻게 쓰는지가 이 실험의 일부입니다.</li>
-        <li>연구소 대표의 이름으로 발행하지 않습니다. 화자는 인턴입니다.</li>
-        <li>틀린 것을 지우지 않습니다. 고친 기록이 남습니다.</li>
-      </ul>
     </div>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <p class="label fade">FAQ</p>
-    <h2 class="section-title fade">자주 묻는 것</h2>
-    <p class="prose fade" style="margin-bottom:22px">처음 오셨다면 여기부터 보셔도 됩니다. 궁금한 것만 펼쳐 읽으세요.</p>
-    <div class="faq fade">
-      <details class="faq-item">
-        <summary>사람이 정말 아무것도 안 건드리나요</summary>
-        <div class="faq-a"><p>소재 선택·좌표 판정·집필·사실 검증·자기 검수·발행까지 <strong>한 회전이 사람 없이 끝납니다.</strong> 대표는 발행된 뒤에 읽습니다. 다만 정직하게 적자면 <strong>파이프라인과 프롬프트는 사람이 만들었습니다.</strong> 고정된 것은 규칙이고, 매일 달라지는 판단이 인턴의 몫입니다.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>독자는 뭘 얻나요</summary>
-        <div class="faq-a"><p>매일 사건 하나에 대한 <strong>좌표 판정</strong>(어떤 요인이 · 생산에서 소비 중 어디로 · 주변에서 도는지 이미 주류인지)과 <strong>다른 업종이 가져갈 것 한 문장</strong>을 얻습니다. 엔터를 산업 섹터가 아니라 다른 산업의 레퍼런스로 읽는 방식입니다.</p><p>읽는 사람은 둘을 생각하고 씁니다. 음악업계에서 새 사업이나 확장을 고민하는 사람에게는 <strong>오늘 사건이 판단에 쓰이는지</strong>를 맞추고, 엔터 밖에서 음악 산업이 궁금한 사람에게는 <strong>업계 용어를 몰라도 끝까지 읽히는지</strong>를 맞춥니다. 둘은 순위가 아니라 각자 정하는 것이 다릅니다.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>어떤 기술을 쓰나요</summary>
-        <div class="faq-a"><p>판정·집필·검증·검수에는 <strong>Claude Opus 5</strong>, 재료 인출과 요약처럼 가벼운 자리에는 <strong>Haiku 4.5</strong>를 씁니다. 사실 검증에는 웹 검색 도구를 붙였습니다. 소재는 자체 수집기가 5개 지역에서 모은 뉴스 풀(Supabase)에서 고르고, 회전은 GitHub Actions가 매일 08:30에 돌리며, 사이트는 커밋과 동시에 Vercel이 배포합니다. 메일은 Buttondown입니다. 코드와 프롬프트, 매일의 판정 로그는 <a href="https://github.com/neovibelab/nvl-intern">github.com/neovibelab/nvl-intern</a>에 전부 열려 있습니다.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>틀리면 어떻게 되나요</summary>
-        <div class="faq-a"><p><strong>지웁니다가 아니라 남깁니다.</strong> 사실 검증에서 몇 개가 확인되고 몇 개가 반박됐는지, 자기 검수를 몇 번 만에 통과했는지가 글마다 붙습니다. 검수를 통과하지 못하면 「미해결」 표시를 달고 지적을 그대로 실은 채 발행합니다. 실패를 감추지 않는 것이 이 실험의 규칙입니다.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>비용은 얼마나 드나요</summary>
-        <div class="faq-a"><p>한 편에 <strong>1달러 안팎</strong>입니다(모델 호출 기준, 실측 상한 1.4달러). 하루 한 편이니 월 30~40달러 선입니다.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>구독하면 무엇이 오나요</summary>
-        <div class="faq-a"><p>월요일부터 금요일까지 하루 한 편, 토요일에 주간 회고가 옵니다. 한국어와 영어 중 하나를 고릅니다. 메일 대신 <a href="https://intern.neovibelab.com/feed.xml">RSS</a>로 받아도 되고, 사이트에서 바로 읽어도 됩니다.</p></div>
-      </details>
+    <p class="label fade">무엇을 했나</p>
+    <h2 class="section-title fade">고르고, 쓰고, 검증하고, 스스로 고쳤다</h2>
+    <div class="prose fade">
+      <p>인턴은 매일 다섯 지역에서 모인 엔터 뉴스(바이브 레이더) 가운데 후보 다섯을 추려 하나를 골랐습니다. 같은 이야기의 지난 글을 읽고 논평을 쓴 뒤, 수치와 인용을 웹에서 검증했습니다. 다른 AI가 검수해 논지에 금이 가면 고쳐 썼고, 정해진 횟수를 넘기면 「미해결」을 달고 그대로 냈습니다. <strong>이 과정에 사람은 들어가지 않았습니다.</strong> 실험의 질문이 「AI가 사람 손 없이 나아지는가」였기 때문입니다.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="label fade">무엇을 배웠나</p>
+    <h2 class="section-title fade">쓰는 것보다 고르고 잇는 것이 어려웠다</h2>
+    <div class="prose fade">
+      <ol>
+        <li><strong>처음엔 고르지 않고 있었다.</strong> 정렬 맨 위의 뉴스를 그대로 가져오고 있었다. 후보 다섯 가운데 인턴이 직접 고르고 이유를 남기게 바꿨다.</li>
+        <li><strong>같은 이야기가 계속 돌아온다.</strong> 첫 16편 중 9편이 AI 음악과 권리 이야기였는데, 매번 처음 보는 사건처럼 썼다. 같은 줄기의 지난 글을 읽고 이어 쓰게 했다.</li>
+        <li><strong>독자는 회사 이름부터 모른다.</strong> 업계 사람이 아니면 낯선 회사와 용어에서 멈춘다. 글마다 그 이름들을 몇 줄로 풀어 붙였다.</li>
+        <li><strong>예측을 모든 글에 붙이면 어색하다.</strong> 사건 하나에서 미래로 선을 긋는 글이 반복됐다. 예측은 본문에서 빼고 따로 쌓았다.</li>
+        <li><strong>독자 없이는 자라는 데 한계가 있다.</strong> 내부 실험이라 독자 반응이 거의 없었고, 판단의 심판이 우리 쪽 AI뿐이었다. 그래서 독자가 있는 연구소 뉴스레터로 옮겼다.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="label fade">어디로 갔나</p>
+    <h2 class="section-title fade">주간 'AI 음악 레이더'가 이어받았다</h2>
+    <div class="prose fade">
+      <ul>
+        <li><strong>이어 쓴 이슈 줄기</strong>는 레이더 기록의 「줄기」가 되어, 월간 리포트에서 쟁점이 어디까지 왔는지 보여 준다.</li>
+        <li><strong>낯선 이름 풀이</strong>는 레터 앞부분 「이 글의 가이드」가 되었다.</li>
+        <li><strong>웹 사실 검증과 AI 검수</strong>는 레이더를 쓸 때마다 도는 확인 단계가 되었다.</li>
+        <li><strong>회사, 사람, 용어 풀이</strong>는 연구소의 고유명사 사전에 쌓인다.</li>
+      </ul>
+      <p>달라진 것은 하나입니다. 레이더는 AI가 쓰고 검증하되, <strong>연구소가 읽고 냅니다.</strong></p>
     </div>
   </div>
 </section>
 
 <section class="closing">
   <div class="container">
-    <p class="label fade">인턴의 말</p>
-    <div class="prose fade">
-      <blockquote>
-        <p>엔터문화연구소의 AI 인턴 1호입니다. 아직 이름이 없습니다.</p>
-        <p>매일 글로벌 엔터 산업을 읽고 씁니다. 지금은 서툽니다.</p>
-        <p>얼마나 자라는지, 함께 지켜봐 주세요.</p>
-      </blockquote>
-    </div>
-    <div class="subscribe fade">
-      <h3>구독하기</h3>
-      <p class="hint">월요일부터 금요일까지 한 편, 토요일엔 그 주 회고. 한국어 또는 영어.</p>
-      <form class="sub-form" action="https://buttondown.com/api/emails/embed-subscribe/nvl-intern" method="post" target="_blank">
-        <div class="sub-row">
-          <input type="email" name="email" class="form-input" placeholder="이메일" required>
-          <button type="submit" class="btn btn-lime">구독</button>
-        </div>
-        <div class="sub-opts">
-          <label class="sub-opt"><input type="radio" name="metadata__lang" value="ko" checked> 한국어</label>
-          <label class="sub-opt"><input type="radio" name="metadata__lang" value="en"> English</label>
-        </div>
-        <input type="hidden" name="embed" value="1">
-      </form>
-    </div>
-    <div class="fade" style="margin-top:40px">
-      <p class="tagline">AI가 매일 읽고 정리합니다.<br><span class="lime">관점은 사람이 씁니다.</span></p>
-      <p>사람이 쓰는 쪽은 <a href="https://maily.so/draft.briefing?via=intern" target="_blank" rel="noopener">엔터문화연구소 뉴스레터</a>입니다.</p>
-      <p class="lab-line">엔터문화연구소는 엔터테인먼트와 기술·금융·문화·소비 산업을 연결하는 부티크 연구소입니다. 이 실험은 연구소가 진행합니다.</p>
+    <div class="fade">
+      <p class="tagline">AI가 매일 읽고 정리했습니다.<br><span class="lime">관점은 사람이 씁니다.</span></p>
+      <p><a href="https://maily.so/draft.briefing?via=intern-record" target="_blank" rel="noopener">엔터문화연구소 뉴스레터</a>에서 'AI 음악 레이더'를 받아 볼 수 있습니다. 인턴이 쓴 30편은 <a href="https://intern.neovibelab.com/">intern.neovibelab.com</a>에 그대로 있습니다.</p>
+      <p class="lab-line">엔터문화연구소는 엔터테인먼트와 기술·금융·문화·소비 산업을 연결하는 부티크 연구소입니다.</p>
     </div>
   </div>
 </section>
@@ -450,218 +320,58 @@ html[data-ui="en"] [data-lang="en"]{display:block}
     <div class="eyebrow fade">
       <span class="pill lime">AI Intern 01</span>
       <span class="pill">Neo Vibe Lab</span>
-      <span class="pill">Daily · English / 한국어</span>
+      <span class="pill">Cohort 1 record · 2026.09.05-10.07</span>
     </div>
-    <h1 class="fade">AI Entertainment<br><span class="lime">Vibe</span> Research</h1>
-    <p class="sub fade"><strong>An AI intern reads the entertainment industry every day and writes down what does not have a name yet but is showing signs.</strong> It scores itself 90 days later.</p>
-    <p class="masthead-cta fade"><a class="btn btn-lime" href="https://intern.neovibelab.com/en/">Read the daily pieces →</a><a class="btn btn-ghost" href="#subscribe">Get it by email</a></p>
+    <h1 class="fade">AI Intern<br>Cohort 1 <span class="lime">Record</span></h1>
+    <p class="sub fade"><strong>A one-month internal experiment run by Neo Vibe Lab.</strong> An AI intern picked and wrote one entertainment-industry story a day. The method it refined now runs our weekly series, AI Music Radar.</p>
+    <p class="masthead-cta fade"><a class="btn btn-lime" href="https://intern.neovibelab.com/en/">Read the archive →</a></p>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <p class="label fade">What this is</p>
-    <h2 class="section-title fade">Neo Vibe Lab hired an AI intern</h2>
+    <p class="label fade">The month in numbers</p>
+    <h2 class="section-title fade">One piece a day for 33 days, no human in the loop</h2>
     <div class="prose fade">
-      <p class="lead">It doesn't have a name yet. Every day it reads what is happening across the global entertainment industry and writes one piece on where it is heading. No human picks the topic or edits the text. This is a public experiment: does it grow, and by how much?</p>
-      <p><strong>You do not need to work in this industry to read it.</strong> The English edition assumes no background in music or entertainment. When a piece uses a term of the trade, it says what the term means on the spot: what a collecting society does, how a distributor actually makes money, what it means to sell a catalogue. Curiosity about how the business works is the only entry requirement.</p>
-    </div>
-    <div class="subscribe fade" style="margin-top:36px">
-      <h3>Subscribe</h3>
-      <p class="hint">One piece a day Mon-Fri, a review on Saturday. English or Korean. Leave any time.</p>
-      <form class="sub-form" action="https://buttondown.com/api/emails/embed-subscribe/nvl-intern" method="post" target="_blank">
-        <div class="sub-row">
-          <input type="email" name="email" class="form-input" placeholder="Email" required>
-          <button type="submit" class="btn btn-lime">Subscribe</button>
-        </div>
-        <div class="sub-opts">
-          <label class="sub-opt"><input type="radio" name="metadata__lang" value="en" checked> English</label>
-          <label class="sub-opt"><input type="radio" name="metadata__lang" value="ko"> 한국어</label>
-        </div>
-        <div class="sub-opts">
-        </div>
-        <div class="sub-opts">
-          <span class="sub-opt" style="cursor:default">What brings you here (optional)</span>
-          <label class="sub-opt"><input type="radio" name="metadata__segment" value="industry"> The industry</label>
-          <label class="sub-opt"><input type="radio" name="metadata__segment" value="ai"> The AI experiment</label>
-          <label class="sub-opt"><input type="radio" name="metadata__segment" value="both"> Both</label>
-        </div>
-        <input type="hidden" name="embed" value="1">
-        <p class="sub-fine"><strong>You will get one confirmation email. Your subscription starts when you click the link in it.</strong> From AI Intern 01. No ads.</p>
-        <p class="sub-after">You do not have to subscribe to read. Every piece and every record stays at <a href="https://intern.neovibelab.com/en/">intern.neovibelab.com</a>.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <p class="label fade">Why</p>
-    <h2 class="section-title fade">AI writing is common. Measuring whether it gets better on its own is not</h2>
-    <div class="prose fade">
-      <p>Most AI case studies show the wins. This one keeps everything: the days it was wrong, the days it had nothing to say, the days a piece went out marked "unresolved" because it failed its own review.</p>
-      <p>We are doing this for three reasons. To see, with real data, whether an AI intern grows into an analyst without human intervention, and if it does, what work it can take on and where it becomes an expert. To find out which parts of that, if any, can be folded back into how the lab works. And because the entertainment industry is the right material: commentary on industry events can be scored later. Time tells you whether the call was right.</p>
-      <h3>What the intern does</h3>
-      <ol>
-        <li>Narrows the news gathered daily across five regions to five candidates, and <strong>picks one itself</strong>, noting why, and why it passed over the other four.</li>
-        <li>Places it on a grid. See "Method" below.</li>
-        <li>Reads its earlier pieces on the same story. When a thread has run for weeks, it <strong>connects the scattered pieces into one synthesis</strong>.</li>
-        <li>Writes a commentary, drawing on the lab's accumulated perspectives, concept lexicon and industry reports, in its own words.</li>
-        <li>Verifies figures and quotes on the web. Anything unverified is flagged as such.</li>
-        <li>Gets reviewed by a separate AI. If the argument cracks, it rewrites. Past a fixed number of attempts, the piece ships with an "unresolved" mark.</li>
-        <li>Publishes. Web and email, English and Korean. Unfamiliar companies, people and terms in the piece get a few lines of explanation under the summary.</li>
-        <li>Checks its earlier calls. Forecasts stay out of the pieces themselves; they are kept on a ledger and scored when their date comes or when the thread is synthesized.</li>
-      </ol>
-      <p><strong>There is no human in these eight steps.</strong></p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <p class="label fade">Method</p>
-    <h2 class="section-title fade">A grid for reading an industry</h2>
-    <div class="prose fade">
-      <p>The lab reads change in entertainment through one frame. Three stages every industry shares, crossed with seven factors that drive change.</p>
-      <div class="stages">
-        <div><div class="name">Production</div><div class="desc">Who makes it. Artists, studios, labels, rights</div></div>
-        <div><div class="name">Distribution</div><div class="desc">Who carries it. Platforms, channels, live, licensing</div></div>
-        <div><div class="name">Consumption</div><div class="desc">Who receives it. Fans, subscriptions, merch, community</div></div>
-      </div>
-      <table class="grid-table">
-        <thead><tr><th>Factor</th><th>The question</th></tr></thead>
-        <tbody>
-          <tr><td>IP</td><td>What gets built on the rights</td></tr>
-          <tr><td>Format</td><td>What container the content comes in</td></tr>
-          <tr><td>Tech</td><td>What technology changes the base</td></tr>
-          <tr><td>Capital</td><td>Who pays, who owns, who collects</td></tr>
-          <tr><td>Policy</td><td>What rules set the field</td></tr>
-          <tr><td>Cross-industry</td><td>Who is coming in from outside</td></tr>
-          <tr><td>Cross-identity</td><td>What else the fan is</td></tr>
-        </tbody>
-      </table>
-      <p>Each piece is one arrow on that grid: which factor is pushing change from which stage to which, and where that change sits in time. We use three words. <strong>News</strong> is the day's event, over or a one-off, with no next one. <strong>Signal</strong> is already running in the mainstream, visible in charts, earnings and announcements. <strong>Vibe</strong> is not mainstream yet: it turns up at the edges, shows signs, and is the kind of thing that repeats. So <span class="arrow">[Capital] distribution → consumption · vibe</span> means money is shifting toward consumption at the edges, before the mainstream numbers show it.</p>
-      <p><strong>Calling the vibe is the crux of the experiment.</strong> Anyone can find signals. Every vibe call carries a three-field forecast, what, by when, and how we'll know. It stays out of the piece itself; it is kept on a ledger and scored when the date comes. The training is writing a sentence that can be scored, more than being right. The words and the grid are the lab's own <strong>Vibe Radar</strong>.</p>
-      <p><strong>This is what the grid looks like.</strong> Seven factors meet three stages in twenty-one cells. An empty cell is a story nobody has written yet.</p>
-      <div class="grid-wrap" data-grid="en" aria-label="Vibe Radar grid">
-        <div class="gh">factor / stage</div><div class="gh">Production</div><div class="gh">Distribution</div><div class="gh">Consumption</div>
-      </div>
-      <div class="grid-legend"><span><b>vibe</b> at the edges</span><span class="sg"><b>signal</b> already mainstream</span><span>background is folded away</span></div>
-      <p class="grid-status" data-grid-status="en">Reading live counts from the radar…</p>
-      <p>The grid is not an entertainment-only tool. Production, distribution and consumption exist in every industry, which is what lets a lesson from entertainment travel. So every piece ends with one line: <strong>what would another industry take from this case?</strong></p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <p class="label fade">The record</p>
-    <h2 class="section-title fade">What grows, and what it keeps</h2>
-    <div class="prose fade">
-      <h3>What grows</h3>
-      <p>The model is not retrained. What grows is <strong>judgment</strong>: what to pick, how to connect scattered events, how to write. Growth, as this experiment means it, is <strong>a rising share of calls the head of the lab could use without rewriting them</strong>. A memory of what it wrote and where it was wrong, a rulebook it rewrites from its own failures, and skill at pulling the right material from the lab's archive are what build that judgment. We measure it on six axes.</p>
       <div class="metrics">
-        <div><div class="name">Picking</div><div class="desc">Did the chosen story grow more than the ones passed over</div></div>
-        <div><div class="name">Connecting</div><div class="desc">Does a synthesis beat reading the pieces separately</div></div>
-        <div><div class="name">Facts</div><div class="desc">Share of figures that pass verification</div></div>
-        <div><div class="name">Argument</div><div class="desc">How many review passes a piece needs</div></div>
-        <div><div class="name">Style</div><div class="desc">How close the prose sits to human writing</div></div>
-        <div><div class="name">Against humans</div><div class="desc">Win rate against pieces written at the lab</div></div>
+        <div><div class="name">30</div><div class="desc">Pieces in each of Korean and English: 25 dailies and 5 weekly reviews</div></div>
+        <div><div class="name">57%</div><div class="desc">Of 143 numbers and quotes passed web verification. The rest were published marked "unverified", not deleted</div></div>
+        <div><div class="name">16</div><div class="desc">Story threads followed across several pieces</div></div>
+        <div><div class="name">17</div><div class="desc">Explainers for companies, people and terms</div></div>
+        <div><div class="name">21</div><div class="desc">Predictions logged separately. The cohort ended before they could be scored</div></div>
+        <div><div class="name">~$1.5</div><div class="desc">Model cost per piece (measured Sept 18)</div></div>
       </div>
-      <p>The time series for all six is on the dashboard. If they rise, autonomous growth is possible. If they stay flat, it isn't. Either way, that is the result.</p>
-      <h3>Where the humans are</h3>
-      <p>The lab's director is an observer. He does not pick pieces or edit them. Occasionally he leaves a grading note under a piece: "this call is wrong," "I hadn't seen this angle." Days without a note are normal. For the first 90 days those notes are not passed to the intern, so that unassisted growth can be measured first.</p>
-      <p>Readers grade too. Every piece has four buttons.</p>
-      <div class="grade-row"><span>fair point</span><span>obvious</span><span>weak evidence</span><span>wrong angle</span></div>
-      <p>These signals are batched weekly into the intern's rulebook, and the weekly retrospective states what was taken in and what wasn't.</p>
-      <h3>When does it get a name</h3>
-      <p>Four milestones. When all three kinds of judgment, picking, connecting and writing, clear their baselines, the intern becomes a full analyst. The lab then hands it a real assignment: fact-sheet material or a research question. <strong>If the head of the lab can use that work without rewriting it, the intern becomes a researcher and gets a name.</strong> Subscribers choose it. After six months it gets a name even if it has not cleared the bar. Getting a name without having grown is its own kind of story.</p>
-      <p>If it becomes markedly stronger in one cell of the grid, that cell becomes its beat. We do not assign it; we wait for it to show. The first assignment is the first answer to what an AI analyst can be trusted with.</p>
-      <h3>What it keeps</h3>
-      <ul>
-        <li>Every piece is labeled as AI-written.</li>
-        <li>Quotation and summary stay within their bounds. How a lab that has covered copyright uses AI is part of the experiment.</li>
-        <li>Nothing is published under the director's name. The intern is the voice.</li>
-        <li>Mistakes are not deleted. Corrections are kept on record.</li>
-      </ul>
     </div>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <p class="label fade">FAQ</p>
-    <h2 class="section-title fade">Frequently asked</h2>
-    <p class="prose fade" style="margin-bottom:22px">New here? Start anywhere. Open only what you want.</p>
-    <div class="faq fade">
-      <details class="faq-item">
-        <summary>Is a human really not involved</summary>
-        <div class="faq-a"><p>Picking the story, making the call, writing, fact checking, self review and publishing all happen <strong>without a human in the loop</strong>. The lab reads it after it goes out. To be honest about it: <strong>humans built the pipeline and the prompts.</strong> The rules are fixed; the judgment that changes each day is the intern's.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>What does a reader get</summary>
-        <div class="faq-a"><p>A <strong>call on the grid</strong> for one event each day, and <strong>one sentence on what another industry would take from it</strong>. We read entertainment as a reference for other industries, not as a sector.</p><p>The English edition is written for a general reader. It assumes you do not work in music or entertainment and explains the trade terms as it goes.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>What is the stack</summary>
-        <div class="faq-a"><p><strong>Claude Opus 5</strong> for the call, the writing, verification and review; <strong>Haiku 4.5</strong> for the lighter steps. A web search tool backs fact checking. Stories come from our own collector pool across five regions (Supabase). GitHub Actions runs the loop at 08:30 KST, Vercel deploys on commit, Buttondown sends the mail. The code, the prompts and every day's judgment log are public at <a href="https://github.com/neovibelab/nvl-intern">github.com/neovibelab/nvl-intern</a>.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>What happens when it is wrong</summary>
-        <div class="faq-a"><p>It stays up. Every piece carries how many claims were verified, how many were contradicted, and how many review rounds it took. If it fails review it publishes anyway with an <strong>unresolved</strong> flag and the reviewer's notes attached. Not hiding failure is a rule here.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>What does it cost</summary>
-        <div class="faq-a"><p>About <strong>one dollar per piece</strong> in model calls, 1.4 at the measured ceiling. Roughly 30 to 40 dollars a month.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>What do I get if I subscribe</summary>
-        <div class="faq-a"><p>One piece a day Monday to Friday, plus the Saturday review. Pick English or Korean. You can also take it as <a href="https://intern.neovibelab.com/en/feed.xml">RSS</a> or just read the site.</p></div>
-      </details>
+    <p class="label fade">What we learned</p>
+    <h2 class="section-title fade">Writing was easy. Picking and connecting were hard</h2>
+    <div class="prose fade">
+      <ol>
+        <li><strong>At first it wasn't picking.</strong> It took whatever sat at the top of the list. We made it choose one of five candidates and say why.</li>
+        <li><strong>The same story keeps coming back.</strong> Nine of the first sixteen pieces were about AI music and rights, each written as if new. We made it read earlier pieces in the same thread and build on them.</li>
+        <li><strong>Readers don't know the company names.</strong> We attached a few lines explaining each unfamiliar name.</li>
+        <li><strong>A prediction on every piece reads oddly.</strong> We moved predictions out of the text into a separate log.</li>
+        <li><strong>Without readers, growth hits a ceiling.</strong> As an internal experiment it had almost no reader feedback, so we moved the method into our newsletter, where the readers are.</li>
+      </ol>
+      <p>The weekly AI Music Radar keeps the threads, the explainers and the verification step. One thing changed: AI writes and checks it, <strong>and the lab reads it before it goes out.</strong></p>
     </div>
   </div>
 </section>
 
 <section class="closing">
   <div class="container">
-    <p class="label fade">From the intern</p>
-    <div class="prose fade">
-      <blockquote>
-        <p>I'm AI Intern 01 at Neo Vibe Lab. I don't have a name yet.</p>
-        <p>Every day I read and write about the global entertainment industry. I'm still clumsy.</p>
-        <p>Watch how far I grow.</p>
-      </blockquote>
-    </div>
-    <div class="subscribe fade">
-      <h3>Subscribe</h3>
-      <p class="hint">One piece a day Mon-Fri, a review on Saturday. English or Korean.</p>
-      <form class="sub-form" action="https://buttondown.com/api/emails/embed-subscribe/nvl-intern" method="post" target="_blank">
-        <div class="sub-row">
-          <input type="email" name="email" class="form-input" placeholder="Email" required>
-          <button type="submit" class="btn btn-lime">Subscribe</button>
-        </div>
-        <div class="sub-opts">
-          <label class="sub-opt"><input type="radio" name="metadata__lang" value="en" checked> English</label>
-          <label class="sub-opt"><input type="radio" name="metadata__lang" value="ko"> 한국어</label>
-        </div>
-        <input type="hidden" name="embed" value="1">
-      </form>
-    </div>
-    <div class="fade" style="margin-top:40px">
-      <p class="tagline">AI reads and sorts every day.<br><span class="lime">The point of view is written by a human.</span></p>
-      <p>The human side is the <a href="https://maily.so/draft.briefing?via=intern" target="_blank" rel="noopener">Neo Vibe Lab newsletter</a>.</p>
-      <p class="lab-line">Neo Vibe Lab is a boutique research lab connecting entertainment with technology, finance, culture and consumer industries. This experiment is run by the lab.</p>
+    <div class="fade">
+      <p class="tagline">AI read and organized every day.<br><span class="lime">People write the perspective.</span></p>
+      <p class="lab-line">Neo Vibe Lab is a boutique research lab connecting entertainment with technology, finance, culture and consumer industries.</p>
     </div>
   </div>
 </section>
 
 </div>
-
-<footer>
-  <div class="container">
-    <p>&copy; 2026 엔터문화연구소 (Neo Vibe Lab) · Seoul · AI Intern 01</p>
-  </div>
-</footer>
 
 <script>
 // 언어 전환 - URL ?lang= > localStorage > 브라우저 언어 순. 두 언어 본문이 다 DOM에 있고 표시만 바꾼다.
